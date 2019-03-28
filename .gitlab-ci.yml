@@ -7,6 +7,7 @@ cache:
     - dist-newstyle/
 
 before_script:
+  - cabal new-update
   - cabal new-build
 
 stages:
