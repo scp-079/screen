@@ -3,18 +3,24 @@ image: haskell:latest
 before_script:
   - calbal new-build
 
-build:
+stages:
+  - test
+  - deploy
+
+test:
+  stage: test
   cache:
     paths:
       - _cache
       - dist
       - dist-newstyle
   script:
-    - calbal new-exec site build
+    - calbal new-exec site rebuild
   except:
     - master
 
 pages:
+  stage: deploy
   cache:
     paths:
       - _cache
