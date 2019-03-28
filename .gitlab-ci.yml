@@ -1,20 +1,17 @@
 image: haskell:latest
 
 before_script:
-  - apt-get update && apt-get install xz-utils make
-  - export STACK_ROOT=`pwd`/.stack
-  - stack setup
-  - stack install --only-dependencies
-  - stack build
+  - calbal new-build
+  - calbal new-exec site build
 
 build:
   cache:
     paths:
       - _cache
-      - .stack
-      - public
+      - dist
+      - dist-newstyle
   script:
-    - stack exec site build
+    - calbal new-exec site build
   except:
     - master
 
@@ -22,10 +19,10 @@ pages:
   cache:
     paths:
       - _cache
-      - .stack
-      - public
+      - dist
+      - dist-newstyle
   script:
-    - stack exec site build
+    - calbal new-exec site build
   artifacts:
     paths:
       - public
