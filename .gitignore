@@ -1,0 +1,11 @@
+_cache
+dist
+dist-newstyle
+public
+.ghc.environment.*
+
+.cabal-sandbox
+cabal.sandbox.config
+.stack-work
+thumb
+thumbs.db
