@@ -1,4 +1,4 @@
-![](https://gitlab.com/SCP-079/scp-079.gitlab.io/badges/master/build.svg)
+[![pipeline status](https://gitlab.com/SCP-079/scp-079.gitlab.io/badges/master/pipeline.svg)](https://gitlab.com/SCP-079/scp-079.gitlab.io/)
 
 ---
 

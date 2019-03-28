@@ -1,7 +1,7 @@
+cabal-version: 2.2
 name: pages-hakyll
 version: 0.1.0.0
 build-type: Simple
-cabal-version: >= 2.4
 
 executable site
  main-is: site.hs
