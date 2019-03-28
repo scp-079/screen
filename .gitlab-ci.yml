@@ -1,7 +1,13 @@
 image: haskell:latest
 
+cache:
+  paths:
+    - .cabal/
+    - dist/
+    - dist-newstyle/
+
 before_script:
-  - calbal new-build
+  - cabal new-build
 
 stages:
   - test
@@ -9,25 +15,15 @@ stages:
 
 test:
   stage: test
-  cache:
-    paths:
-      - _cache
-      - dist
-      - dist-newstyle
   script:
-    - calbal new-exec site rebuild
+    - cabal new-exec site rebuild
   except:
     - master
 
 pages:
   stage: deploy
-  cache:
-    paths:
-      - _cache
-      - dist
-      - dist-newstyle
   script:
-    - calbal new-exec site build
+    - cabal new-exec site build
   artifacts:
     paths:
       - public
