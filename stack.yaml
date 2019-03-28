@@ -5,5 +5,5 @@ extra-package-dbs: []
 packages:
 - '.'
 extra-deps:
-- hakyll-4.9.1.0
+- hakyll-4.12.5.1
 resolver: lts-7.8
