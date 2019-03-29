@@ -1,6 +1,6 @@
 @import url(/fonts/pressstart2p/css.css);
 @import url(/fonts/vt323/css.css);
-@import url(/fonts/b612mono/css.css);
+@import url(/fonts/dejavusansmono/css.css);
 
 html {
     background-image: url("/images/background.gif");
@@ -130,7 +130,7 @@ footer {
 }
 
 .site-name, #cursor {
-    font-family: "Dejavu Sans Mono", "Courier New", Courier, "B612 Mono", monospace;
+    font-family: "Dejavu Sans Mono", "Courier New", "Dejavu Sans Mono Backup";
 }
 
 .site-name {
