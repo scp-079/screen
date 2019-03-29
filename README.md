@@ -9,7 +9,7 @@ SCP-079 [Hakyll] website using GitLab Pages.
 ## Site
 
 This project's static Pages are built by [GitLab CI][ci], following 
-the stepsdefined in [`.gitlab-ci.yml`](.gitlab-ci.yml).
+the steps defined in [`.gitlab-ci.yml`](.gitlab-ci.yml).
 
 ## Theme
 
