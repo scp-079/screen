@@ -2,7 +2,7 @@
 
 ---
 
-SCP-079 [Hakyll] website using GitLab Pages.
+SCP-079 [Hakyll] website is using GitLab Pages.
 
 ---
 
