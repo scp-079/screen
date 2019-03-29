@@ -24,10 +24,16 @@ to Hakyll. We made some changes to make it more suitable for our homepage.
 To work locally with this project, you'll have to follow the steps below:
 
 1. Fork, clone or download this project
-2. Build: `cabal new-update && cabal new-build`
-3. Generate the website: `cabal new-exec site build`
-4. Preview your project: `cabal new-exec site watch`
-5. Edit content
+2. Use cabal or stack:
+    - cabal:
+        1. Build: `cabal new-update && cabal new-build`
+        2. Generate the website: `cabal new-exec site build`
+        3. Preview your project: `cabal new-exec site watch`
+    - stack:
+        1. Build: `stack init && stack install`
+        2. Generate the website: `stack exec site build`
+        3. Preview your project: `stack exec site watch`
+3. Edit content
 
 Read more at Hakyll's [documentation][hakyll].
 

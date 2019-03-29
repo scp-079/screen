@@ -128,6 +128,14 @@ footer {
     display: none;
 }
 
+.site-name, #cursor {
+    font-family: "Dejavu Sans Mono", "Courier New", "Roboto Mono", monospace;
+}
+
+.site-name {
+    font-size: 13px;
+}
+
 @media only screen and (max-width: 820px) {
     .large-avatar {
         display: none;
