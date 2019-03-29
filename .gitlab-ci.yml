@@ -11,8 +11,10 @@ after_script:
 
 cache:
   paths:
+    - _cache/
     - dist/
     - dist-newstyle/
+    - public/
     - cabal.tar.gz
 
 stages:
@@ -22,7 +24,7 @@ stages:
 test:
   stage: test
   script:
-    - cabal new-exec site rebuild
+    - cabal new-exec site build || cabal new-exec site rebuild
   except:
     - master
 
