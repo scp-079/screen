@@ -28,4 +28,17 @@
     <link rel="stylesheet" href="/css/highlight.min.css">
     <script src="/js/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
+    
+    <!-- Redirect -->
+    <script>
+        if (location.hostname.search("gitlab.io") != -1) { 
+            var path;
+            if (location.pathname.lastIndexOf("/", 0) === 0) { 
+                path = location.pathname;
+            } else { 
+                path = "/" + location.pathname;
+            } 
+            location.href = "https://scp-079.org" + path + location.search + location.hash;
+        }
+    </script>
 </head>
