@@ -11,10 +11,8 @@ after_script:
 
 cache:
   paths:
-    - _cache/
     - dist/
     - dist-newstyle/
-    - public/
     - cabal.tar.gz
 
 pages:
