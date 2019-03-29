@@ -2,6 +2,10 @@
 @import url(/fonts/vt323/css.css);
 @import url(/fonts/dejavusansmono/css.css);
 
+/* Responsive */
+
+canvas,iframe,img,select,svg,textarea,video{max-width:100%}.overflow-container{overflow-x:scroll}.aspect-ratio{height:0;padding-top:56.25%;position:relative}.aspect-ratio--object{height:100%;position:absolute;top:0;right:0;bottom:0;left:0;width:100%;z-index:100}
+
 html {
     background-image: url("/images/background.gif");
 }
@@ -29,7 +33,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #00FF66;
+    background-color: green;
     border: 3px solid transparent;
     border-radius: 9px;
     background-clip: content-box;
@@ -95,21 +99,7 @@ code, code a {
 }
 
 p code {
-    color: orangered;
-}
-
-.highlighter-rouge {
-    color: rgba(255,255,255,0.4);
-}
-
-.highlight {
-    color: rgba(255,255,255,0.7);
-}
-
-.highlight {
-    border: 1px dashed rgba(255,255,255,0.3);
-    padding: 15px;
-    background-color: #0D0D0D;
+    color: red;
 }
 
 main {
@@ -134,6 +124,26 @@ footer {
     font-size: 18px;
 }
 
+blockquote {
+    margin-inline-start: 0.8em;
+    border-left: 5px solid blue;
+    padding-left: 10px;
+}
+
+.highlighter-rouge {
+    color: rgba(255,255,255,0.4);
+}
+
+.highlight {
+    color: rgba(255,255,255,0.7);
+}
+
+.highlight {
+    border: 1px dashed rgba(255,255,255,0.3);
+    padding: 15px;
+    background-color: #0D0D0D;
+}
+
 .ascii {
     color: rgba(255,255,255,1);
     font-weight: bold;
@@ -153,6 +163,22 @@ footer {
 
 .site-name {
     font-size: 13px;
+}
+
+#totop {
+  display: none;
+  margin: 1em auto 0 auto;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  padding:5px 15px 5px 15px;
+  font-size: 15px;
+  font-family: "VT323", monospace;
+}
+
+#totop:hover {
+  background-color: gray; /* Add a dark-grey background on hover */
 }
 
 @media only screen and (max-width: 820px) {
