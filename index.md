@@ -18,22 +18,6 @@ title: Home
     #cursor {
         font-size: 29px;
     }
-
-    html {
-        overflow: scroll;
-        overflow-x: hidden;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-    }
-
-    ::-webkit-scrollbar {
-        width: 0px; 
-        background: transparent;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: #00FF66;
-    }
 </style>
 
 <script>
