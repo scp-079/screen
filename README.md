@@ -19,6 +19,8 @@ This is a theme intended to use to [SCP-079](https://scp-079.org) website
 and converted from a Jekyll theme [darcli](https://github.com/gildasio/darcli) 
 to Hakyll. We made some changes to make it more suitable for our homepage.
 
+There is a post [demo](https://scp-079.org/posts/2019-03-29-post-test.html).
+
 ## Building locally
 
 To work locally with this project, you'll have to follow the steps below:
