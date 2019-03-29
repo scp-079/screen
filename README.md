@@ -30,7 +30,7 @@ To work locally with this project, you'll have to follow the steps below:
         2. Generate the website: `cabal new-exec site build`
         3. Preview your project: `cabal new-exec site watch`
     - stack:
-        1. Build: `stack init && stack install`
+        1. Build: `stack install`
         2. Generate the website: `stack exec site build`
         3. Preview your project: `stack exec site watch`
 3. Edit content
