@@ -130,7 +130,7 @@ footer {
 }
 
 .site-name, #cursor {
-    font-family: "Dejavu Sans Mono", "Courier New", "Dejavu Sans Mono Backup";
+    font-family: "Dejavu Sans Mono", "Courier New", "Dejavu Sans Mono Backup", monospace;
 }
 
 .site-name {
