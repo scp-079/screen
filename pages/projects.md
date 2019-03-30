@@ -10,4 +10,4 @@ mirrored to
 <a href="https://github.com/scp-079-telegram" target="_blank">Github</a>.
 
 - <a href="https://gitlab.com/scp-079/scp-079.gitlab.io" target="_blank">screen</a>: 
-a dark theme for Hakyll.
+A dark theme for Hakyll.
