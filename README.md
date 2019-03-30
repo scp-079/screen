@@ -42,7 +42,12 @@ Read more at Hakyll's [documentation][hakyll].
 ## GitLab User or Group Pages
 
 To use this project as your user/group website, you will need additional
-steps to modify the source code.
+steps to modify some source code files.
+
+- `templates/head.html`
+- `templates/open_graph_cards.html`
+- `templates/header.html`
+- `site.hs`
 
 ## Be Better
 

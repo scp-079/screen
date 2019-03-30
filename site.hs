@@ -15,7 +15,7 @@ config = defaultConfiguration {
 feedConfig :: FeedConfiguration
 feedConfig = FeedConfiguration
     { feedTitle       = "SCP-079"
-    , feedDescription = "SCP-079 anti-spam project for Telegram groups."
+    , feedDescription = "Anti-spam project for Telegram groups"
     , feedAuthorName  = "SCP-079"
     , feedAuthorEmail = "admin@scp-079.org"
     , feedRoot        = "https://scp-079.org"
@@ -49,7 +49,7 @@ main = hakyllWith config $ do
     create ["index.html"] $ do
         route idRoute
         compile $ do
-            let indexCtx = constField "title" "Home" `mappend`
+            let indexCtx = constField "title" "SCP-079" `mappend`
                            defaultContext
             
             makeItem ""
