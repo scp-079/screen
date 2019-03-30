@@ -26,6 +26,7 @@ There is a post [demo](https://scp-079.org/posts/2019-03-29-post-test/).
 To use this project as your user or group website, you will need 
 additional steps to modify some source code files.
 
+- `templates/archives.html`
 - `templates/head.html`
 - `templates/open_graph.html`
 - `templates/header.html`
