@@ -10,4 +10,6 @@ mirrored to
 <a href="https://github.com/scp-079-telegram" target="_blank">Github</a>.
 
 - <a href="https://gitlab.com/scp-079/scp-079.gitlab.io" target="_blank">screen</a>: 
-A dark theme for Hakyll.
+A dark theme for Hakyll
+- <a href="https://gitlab.com/scp-079/scp-079-regex" target="_blank">SCP-079 REGEX</a>: 
+A bot that can manage the regex patterns
