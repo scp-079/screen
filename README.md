@@ -1,4 +1,4 @@
-[![](https://gitlab.com/SCP-079/scp-079.gitlab.io/badges/master/pipeline.svg)](https://gitlab.com/SCP-079/scp-079.gitlab.io/)
+[![](https://gitlab.com/scp-079/scp-079.gitlab.io/badges/master/pipeline.svg)](https://gitlab.com/scp-079/scp-079.gitlab.io/)
 
 ---
 
@@ -53,7 +53,7 @@ Read more at Hakyll's [documentation][hakyll].
 ## Be Better
 
 Welcome to contribute to this 
-[project](https://gitlab.com/SCP-079/scp-079.gitlab.io/).
+[project](https://gitlab.com/scp-079/scp-079.gitlab.io/).
 
 ## Getting help
 
