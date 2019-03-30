@@ -45,7 +45,7 @@ To use this project as your user/group website, you will need additional
 steps to modify some source code files.
 
 - `templates/head.html`
-- `templates/open_graph_cards.html`
+- `templates/open_graph.html`
 - `templates/header.html`
 - `site.hs`
 
