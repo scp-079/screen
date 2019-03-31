@@ -73,6 +73,18 @@ main = hakyllWith config $ do
                 >>= relativizeUrls
                 >>= cleanIndexUrls
     
+    -- Compile 404 page
+    create ["404.html"] $ do
+        route idRoute
+        compile $ do
+            let notFoundCtx = constField "title" "404" `mappend`
+                           defaultContext
+            
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/404.html" notFoundCtx
+                >>= loadAndApplyTemplate "templates/default.html" notFoundCtx
+                >>= relativizeUrls
+    
     -- Compile pages
     match "pages/**" $ do
         route   $ cleanPageRoute

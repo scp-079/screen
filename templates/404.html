@@ -1,0 +1,30 @@
+<p style="visibility:hidden;" id="cursor">404 NOT FOUND</p>
+
+<style>
+    p {
+        font-size: 25px;
+        color: #00FF66;
+        margin-block-end: 0.1em;
+        margin-block-start: 0.1em;
+        margin-top: -0.5em;
+    }
+
+    #cursor {
+        font-size: 38px;
+        margin: 0.79em auto;
+        font-family: "VT323";
+    }
+    
+    main {
+        text-align: center;  
+    }
+</style>
+
+<script>
+    var i = 0;
+    window.setInterval(function(){
+        document.getElementById("cursor").style.visibility=(i++&1)?"hidden":"visible";
+    },1000);
+</script>
+
+<audio src="audio/page/404.ogg" autoplay></audio>
