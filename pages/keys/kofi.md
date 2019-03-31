@@ -1,0 +1,62 @@
+---
+title: Kofi Young
+---
+
+<style>
+header, nav, footer{
+    display: none;
+}
+</style>
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----<br>
+<br>
+mQINBFyfbUwBEADZPOH45Y6wbSKEuIN76lCtd7b5zUqdRc4MDjZS4XbElsM4uqeh<br>
+3mrvl/oJGcaGInAV+sdCZfnMSyRgmV30SuxBIZsxV/GvuY5Nyr+0gPRcSriQufe2<br>
+P38HtCZ2LkJzYt0WUzEavaGVfnSHI56d+NzG7wtuiNKhOdKSE3g7LxtU2qVXMgxb<br>
+F2nBSNGA/CMRO+u54LbKVVbG9Elnaxu58U4xzcohPz7utdAFDfun2o7AouGANjEj<br>
+xiFGs6h4ZMWtLXoSZzNu/Ie7aPWrnIkxAYASZB2r9S11t+ctV7NzJHsF2A0S6vcp<br>
+cqx62rOyUIBi0Jn0XAOrpoI1C3/5rtiaFm+49ukiHI1UK0ixg94YWw1hs3ltks0C<br>
+SiTxBww1NZjWNTIU78Bdtg7EAtZg3RoZfsG8lDQVr2ct36ux4khImJ8ihcnIqao9<br>
+9otHi7D5qVdWKjm79sYQH8ZrGqNLCZ54vxVmbZ7NmV6yPZoR+WGr9ujVo7xHExy0<br>
+a+4nD/UBMP9RZZOJuAL85YuBmYDFsIxNrlEuePieHHjrNCdGxJn4gz/8FqLHt5Ul<br>
+gYcgeQer0562YroIDG8+EwaP0hhr6YbBHp3Zmf2vA4HyrlGzYH8ZJRCsRoOhJw9I<br>
+JAgjMgUXv+JHhEu7HQHs/8iGIyc4ornPqQ02RFa7mZ3BH7Bdb0uR1GBOLQARAQAB<br>
+tB1Lb2ZpIFlvdW5nIDxrb2ZpQHNjcC0wNzkub3JnPokCVAQTAQoAPhYhBGVr6E1E<br>
+1YC/q0m6rRekIaMu3/BkBQJcn21MAhsDBQkDwmcABQsJCAcCBhUKCQgLAgQWAgMB<br>
+Ah4BAheAAAoJEBekIaMu3/BkaHAQANAmdeZGTeMWvqIpOUJXEs9pDHhxo3n/srXa<br>
+eBIISh0OajaKdVIQFlP51kp4cIkXzRgGWzeoWJ3SDqbtJRZnlFEc6wuvsHIf4bTJ<br>
+Nb+CDFjEFp8ZSup8Jao2BXrjWHK/mit9ND5LLFLx6olLnn7vbxpzZxTFzjslid4W<br>
+x5pb9w64nGgxrqO3cyKM7l3J4pPU0TYJ3Xl2asyVBWNMuWm58qV5EW9RCBZP5Y6w<br>
+q0+aHxdDhA6lY/sIBakyAdd5+QlV/kqrvRxL+fpq4UqY6vd/1SYzkkh7roz6Wcpn<br>
+AQRs0T8WOmAv8ZePG24MBAqTNHYvn9IaFNuaaKGQA5gBUfC9xLwcDHG9IC4LEdB9<br>
+zLHTb05p9goOJ93A23PXZpgM5Bavxqw2yVBF+UDDIDcbhRRuIFXZamvjtPPb+3Sj<br>
+wD/rN3lz8IoPRxb49EUMq8r/nlQuMpnJ30h03XI7JAdbqyxjXKfYfJDcgc+jSwxv<br>
+bx4aHvVaN2n0ctdKyr4yZT2s4a0hzIgefxt5K1biRQ8M2XOj24GHa8WbnyCIhd48<br>
+RWo5m5aLYV5+wq52sNBfGdtWwC30rdvukGAwihtbWb4ZzEQpt2ffbx9x3RGy+kjC<br>
+wNLaXDW40id6eBlJAeT2u6utJ3ECN3z3lDxrWuijnd0mUzC50wBBgic7Vo1AGPKu<br>
+p6exX4KTuQINBFyfbUwBEAClE70KzCvm8O3diE1eKrc2mlicmqxIq6+lSe2fBikP<br>
+JzrABYVSWbfirSrBbPpOnQ/4f6xxljZ/l8MWS6NsLnjpeDh4b6kvg3acG7KKuxYQ<br>
+Pg/dYNBJjqAZFBm1FFNVwmpcuNTaGKa7MFsdn6wPBLRdSQUItb3/AGcH3UI6KTCu<br>
+D/I/JWtoKRgZ5bE1anPUbLRxfyz5rIL66Fvb8vybyt/dGvxfM1QjfYNeTV41g0SU<br>
+9i4/8YNfzaVbbUWot6fn5cGNu625Y4yHxuSywQiFGOHCZU7Bii2HExmTTaq4d/i6<br>
+AUctoSalORwEahKL7Cs+YMnnKs/Ui8Q02B/dMeAFlCVWm60KN6Bj5bghrp017aBS<br>
+JzYmu/Mu0SYe+kH83CGhERjVOqsPcsCoTn/bnEF6DmF3BWYzb9uKRTrQfJ+GmCjL<br>
+Jhs3lTkVtTp+TLuYZz1h+KSdYgInCrCBF2J3EdAtA0ND9xfcopEQ2cYns+aFD0by<br>
+zjmtEqdTs8UX38JFmTZ3Cp1uoGqlGOe4PzWaY9y5SKeTTh/Y5OpCL68irjL53r7h<br>
+fw5el8yLzTmMebbY8ps88ngXwNQRC1HrYbXmI+vK/AiabXUorQdZCrLyGNMnuJay<br>
+ae/zz8FyOIDTTVkmE5othuvrWpyOjM4rlpvHWfSxEm/MFbQcyxPmYm3tuSJwJDGP<br>
+pwARAQABiQI8BBgBCgAmFiEEZWvoTUTVgL+rSbqtF6Qhoy7f8GQFAlyfbUwCGwwF<br>
+CQPCZwAACgkQF6Qhoy7f8GSXShAAsBXyNyXERLWF6LNtg3EOs8jCivHsX+9zDZBw<br>
+pm5Ls91P2jqEH5NtN+j+5S3S28tqhiiHCoii23Vlm+QG4ldEu3hrB5hj63FKRn0I<br>
+csSEk2lYtR22ZzVelmj1mWniefoXE1Jgw2a/gJOhHAUvqVVkF3KN3AEkFdM0ltRL<br>
+Iv8fxj2xSgffYBlckpw3FZPlodhJchnaGB8d5ZfbpJKXgWjQ8fy+TjXl9bQK/I7b<br>
+m0oIDX7Nee6Q/wJMwRGCjWXuTD7k8OSRncPK9cGSLy3PrXjueWxrFzfjYOXbMhd4<br>
+oH6RNTn8w/HT0XyWYDEb3YZcqquk12HVUu9xTHCRy+Sbs7lEFxWLDFSBbIyZjJZ4<br>
+EEbmzJYsqIXWylYfk7MJL9OSDjtluirmxar17ZdsNsHZScGkoz8dajGMJTxR88gU<br>
+UCWGK8HXdPnc1g4hml2i+9RxVxf2yftJvQ78lHPs632vY3DvA1zWpSRt5fHcc37Z<br>
+QtBEOvuZX/6BDMYEdwMVXSdLIdseDVALB2DSbJn02HG7htkrclL0IbuOhYHNWghE<br>
+ZyljPxwyyLG7ZxDNkmrilbIWNRWU1PQmf+ywwArg/yCjJp2trCyEEeijhpPcihcx<br>
+7DxuwAEhPZRETzIBnJFHRGtQWRa3qGGe43OrGHlo2YDHW9CeQN//xQo1omEPj1g+<br>
+Zap2EhY=<br>
+=6VvR<br>
+-----END PGP PUBLIC KEY BLOCK-----<br>

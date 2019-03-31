@@ -1,0 +1,78 @@
+<audio id="a_button" src="/audio/button/hover.ogg"/>
+<audio id="click_button" src="/audio/button/click.ogg"/>
+<audio id="dooropen1" src="/audio/door/dooropen1.ogg"/>
+<audio id="dooropen2" src="/audio/door/dooropen2.ogg"/>
+<audio id="totop1" src="/audio/button/totop1.ogg"/>
+<audio id="totop2" src="/audio/button/totop2.ogg"/>
+
+<script>
+function PlaySound(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.play();
+}
+
+function StopSound(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.pause();
+    thissound.currentTime = 0;
+}
+
+document.body.addEventListener("mouseover",function(e) {
+    e = e || window.event;
+    var targetElem = e.target || e.srcElement;
+    if (targetElem.nodeName == "A") {
+        switch(targetElem.className) {
+            case "no":
+                PlaySound("no_button")
+            break;
+            default:
+                PlaySound("a_button")
+        }
+    }
+},false);
+
+document.body.addEventListener("mouseout",function(e) {
+    e = e || window.event;
+    var targetElem = e.target || e.srcElement;
+    if (targetElem.nodeName == "A") {
+        switch(targetElem.className) {
+            case "no":
+                StopSound("no_button")
+            break;
+            default:
+                StopSound("a_button")
+        }
+    }
+},false);
+
+document.body.addEventListener("click",function(e) {
+    e = e || window.event;
+    var targetElem = e.target || e.srcElement;
+    if (targetElem.nodeName == "A") {
+        if (targetElem.className == "no") {
+            PlaySound("no_click")
+        } else {
+            PlaySound("click_button");
+            switch(targetElem.className) {
+                case "key":
+                    setTimeout(function(){ 
+                        PlaySound("dooropen3");
+                    }, 500);
+                break;
+                case "rss":
+                    setTimeout(function(){ 
+                        PlaySound("dooropen2");
+                    }, 500);
+                case "079":
+                    setTimeout(function(){ 
+                        PlaySound("dooropen079");
+                    }, 500);
+                default:
+                    setTimeout(function(){ 
+                        PlaySound("dooropen1");
+                    }, 500);
+            }
+        }
+    }
+},false);
+</script>

@@ -9,3 +9,5 @@ in <a href="https://t.me/joinchat/KDfFMg36oH09EXrRuVS63A" target="_blank">SCP-07
 
 You can also send an email to `admin@scp-079.org` if you have the 
 intention of cooperation.
+
+<audio id="audio" src="/audio/page/contact.ogg" autoplay></audio>

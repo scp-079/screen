@@ -31,7 +31,7 @@ main = hakyllWith config $ do
         staticFiles = fromGlob "static/fonts/**" .||. 
                       fromGlob "static/images/**" .||. 
                       fromGlob "static/js/**" .||. 
-                      fromGlob "static/keys/**"
+                      fromGlob "static/audio/**"
     
     match staticFiles $ do
         route $ customRoute $ joinPath . drop 1 . splitPath . toFilePath
@@ -74,7 +74,7 @@ main = hakyllWith config $ do
                 >>= cleanIndexUrls
     
     -- Compile pages
-    match "pages/*" $ do
+    match "pages/**" $ do
         route   $ cleanPageRoute
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
@@ -90,6 +90,14 @@ main = hakyllWith config $ do
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
             >>= cleanIndexHtmls
+
+    -- Compile keys page
+    match "keys/*" $ do
+        route   $ cleanRoute
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= relativizeUrls
+            >>= cleanIndexUrls
 
     -- Render Atom / Rss feeds
     create ["atom.xml"] $ do

@@ -3,18 +3,5 @@
     <a href="https://jaspervdj.be/hakyll" target="_blank">Hakyll</a>
 </footer>
 
-<button onclick="topFunction()" id="totop">Top</button>
-<script>
-    window.onscroll = function() {scrollFunction()};
-    function scrollFunction() {
-        if (document.body.scrollTop > 682 || document.documentElement.scrollTop > 682) {
-            document.getElementById("totop").style.display = "block";
-        } else {
-            document.getElementById("totop").style.display = "none";
-        }
-        }
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-    }
-</script>
+$partial("templates/totop.html")$
+$partial("templates/audio.html")$

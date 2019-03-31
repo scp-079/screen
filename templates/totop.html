@@ -1,0 +1,18 @@
+<button onclick="topFunction();PlaySound('totop2')" 
+        onmouseover="PlaySound('totop1')" 
+        onmouseout="StopSound('totop1')" 
+        id="totop">Top</button>
+<script>
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+        if (document.body.scrollTop > 682 || document.documentElement.scrollTop > 682) {
+            document.getElementById("totop").style.display = "block";
+        } else {
+            document.getElementById("totop").style.display = "none";
+        }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+    }
+</script>
