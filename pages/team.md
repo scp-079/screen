@@ -4,7 +4,7 @@ title: Team
 
 ## Team
 
-In order to avoid unnecessary troubles, it"s essential for project"s 
+In order to avoid unnecessary troubles, it's essential for project's 
 members to remain anonymous, and those who intend to join the project 
 team should pay attention to that. Anyone who wants to contribute to the 
 project is welcome.
