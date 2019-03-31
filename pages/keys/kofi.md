@@ -3,9 +3,12 @@ title: Kofi Young
 ---
 
 <style>
-header, nav, footer{
-    display: none;
-}
+    header, nav, footer{
+        display: none;
+    }
+    p {
+        overflow: auto;
+    }
 </style>
 
 -----BEGIN PGP PUBLIC KEY BLOCK-----<br>

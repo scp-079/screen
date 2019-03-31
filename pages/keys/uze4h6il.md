@@ -6,7 +6,6 @@ title: UZE4H6IL
     header, nav, footer{
         display: none;
     }
-
     p {
         overflow: auto;
     }
