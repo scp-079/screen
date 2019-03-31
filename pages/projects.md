@@ -16,6 +16,6 @@ Analysis of user activity
 - <a class="no" target="_blank">SCP-079 USER</a>: 
 Old bot
 
-<audio id="audio" src="/audio/pages/projects.ogg" autoplay></audio>
+<audio id="audio" src="/audio/page/projects.ogg" autoplay></audio>
 <audio id="no_button" src="/audio/button/no.ogg"/>
 <audio id="no_click" src="/audio/button/no_click.ogg"/>
