@@ -15,7 +15,7 @@ project is welcome.
 <a href="/kofi/" class="key" target="_blank">656B E84D 44D5 80BF AB49 BAAD 17A4 21A3 2EDF F064</a>
 - <a href="https://gitlab.com/xiao_x" target="_blank">Xiao</a> 
 <a href="/xiao/" class="key" target="_blank">C1BE CBF6 E0BD 06AF 7802 2F93 FED1 BA4A 7D9E 2E29</a> 
-- <a href="https://gitlab.com/" target="_blank">HiedaNaKan</a>
+- <a href="https://gitlab.com/HiedaNaKan" target="_blank">HiedaNaKan</a>
 <a class="no" target="_blank">XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX</a> 
 
 <style>
