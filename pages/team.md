@@ -26,6 +26,6 @@ font-weight: normal;
 </style>
 <audio id="no_button" src="/audio/button/no.ogg"/>
 <audio id="no_click" src="/audio/button/no_click.ogg"/>
-<audio id="dooropen3" src="/audio/door/dooropen3.ogg"></audio>
+<audio id="dooropen3" src="/audio/door/dooropen3.ogg"/>
 <audio src="/audio/page/team.ogg" autoplay></audio>
 
