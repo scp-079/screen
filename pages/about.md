@@ -14,4 +14,4 @@ for more details.
 All bots are hosted on ████████. 
 IP address is <a href="http://www.scp-wiki.net/scp-614" target="_blank">57.32.███.███</a>.
 
-<audio id="audio" src="/audio/page/about.ogg" autoplay></audio>
+<audio src="/audio/page/about.ogg" autoplay></audio>

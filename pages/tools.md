@@ -16,5 +16,5 @@ with caution.
 
 - <a href="https://t.me/SCP_079_INFO/71" class="079" target="_blank">SCP-079 USER</a>
 
-<audio id="audio" src="/audio/page/tools.ogg" autoplay></audio>
+<audio src="/audio/page/tools.ogg" autoplay></audio>
 <audio id="dooropen079" src="/audio/door/dooropen079.ogg"/>

@@ -83,7 +83,6 @@ main = hakyllWith config $ do
             makeItem ""
                 >>= loadAndApplyTemplate "templates/404.html" notFoundCtx
                 >>= loadAndApplyTemplate "templates/default.html" notFoundCtx
-                >>= relativizeUrls
     
     -- Compile pages
     match "pages/**" $ do

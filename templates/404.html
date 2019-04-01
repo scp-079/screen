@@ -1,30 +1,23 @@
-<p style="visibility:hidden;" id="cursor">404 NOT FOUND</p>
-
+<p style="visibility:hidden;text-align:center;" id="cursor">404 NOT FOUND</p>
+<p style="margin-bottom:0.6em;">Insult. Deletion Of Unwanted File.</p>
 <style>
-    p {
-        font-size: 25px;
-        color: #00FF66;
-        margin-block-end: 0.1em;
-        margin-block-start: 0.1em;
-        margin-top: -0.5em;
-    }
-
-    #cursor {
-        font-size: 38px;
-        margin: 0.79em auto;
-        font-family: "VT323";
-    }
-    
-    main {
-        text-align: center;  
-    }
+p {
+color: #00FF66;
+margin-block-end: 0.1em;
+margin-block-start: 0.1em;
+margin-top: -0.5em;
+}
+#cursor {
+font-size: 38px;
+margin: 0.79em auto;
+font-family: "VT323";
+}
 </style>
-
 <script>
     var i = 0;
     window.setInterval(function(){
         document.getElementById("cursor").style.visibility=(i++&1)?"hidden":"visible";
-    },1000);
+    },700);
 </script>
-
 <audio src="audio/page/404.ogg" autoplay></audio>
+<audio src="/audio/alarm/alarm1.ogg" autoplay loop></audio>

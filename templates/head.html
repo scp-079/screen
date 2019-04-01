@@ -1,43 +1,36 @@
 <head>
-    <!-- Basic information about this page -->
-    <meta charset="utf-8">
-    <title>$title$</title>
-    <link rel="icon" href="/images/fav.png">
-    
-    <!-- Style and scripts files -->
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    
-    <!-- Meta tag looking for mobile devices -->
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta name="theme-color" content="#232323">
-    
-    <!-- Good information about this page -->
-    <meta name="description" content="Anti-spam project for Telegram groups">
-    <meta name="keywords" content="SCP-079, anti-spam, project, telegram, groups">
-    <meta name="author" content="SCP-079">
-    
-    <!-- Feed links -->
-    <link rel="alternate" type="application/rss+xml" title="SCP-079's RSS Feed" href="/rss.xml">
-    <link rel="alternate" type="application/atom+xml" title="SCP-079's Atom Feed" href="/atom.xml">
-    
-    <!-- Open Graph -->
-    $partial("templates/open_graph.html")$
-    
-    <!-- Highlight -->
-    <link rel="stylesheet" href="/css/highlight.min.css">
-    <script src="/js/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    
-    <!-- Redirect -->
-    <script>
-        if (location.hostname.search("gitlab.io") != -1) { 
-            var path;
-            if (location.pathname.lastIndexOf("/", 0) === 0) { 
-                path = location.pathname;
-            } else { 
-                path = "/" + location.pathname;
-            } 
-            location.href = "https://scp-079.org" + path + location.search + location.hash;
-        }
-    </script>
+<!-- Basic information about this page -->
+<meta charset="utf-8">
+<title>$title$</title>
+<link rel="icon" href="/images/fav.png">
+<!-- Style and scripts files -->
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<!-- Meta tag looking for mobile devices -->
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="theme-color" content="#232323">
+<!-- Good information about this page -->
+<meta name="description" content="Anti-spam project for Telegram groups">
+<meta name="keywords" content="SCP-079, anti-spam, project, telegram, groups">
+<meta name="author" content="SCP-079">
+<!-- Feed links -->
+<link rel="alternate" type="application/rss+xml" title="SCP-079's RSS Feed" href="/rss.xml">
+<link rel="alternate" type="application/atom+xml" title="SCP-079's Atom Feed" href="/atom.xml">
+<!-- Open Graph -->
+$partial("templates/open_graph.html")$
+<!-- Highlight -->
+<link rel="stylesheet" href="/css/highlight.min.css">
+<script src="/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Redirect -->
+<script>
+    if (location.hostname.search("gitlab.io") != -1) { 
+        var path;
+        if (location.pathname.lastIndexOf("/", 0) === 0) { 
+            path = location.pathname;
+        } else { 
+            path = "/" + location.pathname;
+        } 
+        location.href = "https://scp-079.org" + path + location.search + location.hash;
+    }
+</script>
 </head>

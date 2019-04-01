@@ -16,5 +16,5 @@ AD6D 5622 8F5F B87F 2A24  60CC ACC0 64F9 3E44 E061
 - <a href="/xiao/" class="key" target="_blank">Xiao</a> 
 C1BE CBF6 E0BD 06AF 7802  2F93 FED1 BA4A 7D9E 2E29
 
-<audio id="audio" src="/audio/page/team.ogg" autoplay></audio>
+<audio src="/audio/page/team.ogg" autoplay></audio>
 <audio id="dooropen3" src="/audio/door/dooropen3.ogg"/>
