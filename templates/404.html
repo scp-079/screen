@@ -1,4 +1,4 @@
-<p style="visibility:hidden;text-align:center;" id="cursor">404 NOT FOUND</p>
+<p style="visibility:hidden;text-align:center;color:red" id="cursor">404 NOT FOUND</p>
 <p style="margin-bottom:0.6em;">Insult. Deletion Of Unwanted File.</p>
 <style>
 p {
@@ -16,8 +16,10 @@ font-family: "VT323";
 <script>
     var i = 0;
     window.setInterval(function(){
+        StopSound("alarm");
+        PlaySound("alarm");
         document.getElementById("cursor").style.visibility=(i++&1)?"hidden":"visible";
-    },700);
+    },2800);
 </script>
 <audio src="/audio/page/404.ogg" autoplay></audio>
-<audio src="/audio/alarm/alarm1.ogg" autoplay loop></audio>
+<audio id="alarm" src="/audio/alarm/alarm1.ogg"></audio>
