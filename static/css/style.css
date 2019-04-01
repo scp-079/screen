@@ -190,7 +190,7 @@ th {
 /* Code */
 
 pre {
-    font-family: monospace;
+    font-family: "Dejavu Sans Mono", "Dejavu Sans Mono Backup", "Courier New", monospace;
 }
 
 code, code a {
@@ -241,6 +241,13 @@ footer {
     border: 1px dashed rgba(255,255,255,0.3);
     padding: 15px;
     background-color: #0D0D0D;
+}
+
+/* Firefox */
+@-moz-document url-prefix() {
+    pre {
+       line-height: 1.135em;
+    }
 }
 
 /* Responsive */
