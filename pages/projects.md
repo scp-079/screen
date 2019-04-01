@@ -21,6 +21,8 @@ Message-flooding prevention
 Manage the regex patterns
 - <a class="no" target="_blank">SCP-079-USER</a>: 
 The old bot
+- <a href="https://gitlab.com/scp-079/scp-079-warn" target="_blank">SCP-079-WARN</a>: 
+Java implementation of Project SCP-079
 - <a href="https://gitlab.com/scp-079/scp-079.gitlab.io" target="_blank">Screen</a>: 
 A dark theme for Hakyll
 
