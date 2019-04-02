@@ -13,11 +13,12 @@ the steps defined in [`.gitlab-ci.yml`](.gitlab-ci.yml).
 
 ## Theme
 
-We call this Hakyll theme `screen`. 
+We call this Hakyll theme `Screen`. 
 
 This is a theme intended to use to [SCP-079](https://scp-079.org) website 
 and converted from a Jekyll theme [darcli](https://github.com/gildasio/darcli) 
-to Hakyll. We made some changes to make it more suitable for our homepage.
+to Hakyll. We made some changes to make it more suitable for our site 
+and responsive.
 
 There is a post [demo](https://scp-079.org/posts/2019-03-29-post-test/).
 
@@ -69,6 +70,12 @@ Welcome to contribute to this
 This project is under [GPLv3](LICENSE).
 
 The theme is based on [darcli](https://github.com/gildasio/darcli).
+
+All the sound effects files in `static/audio/` are under 
+[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), 
+and come from 
+[SCP - Containment Breach](http://www.scpcbgame.com/) 
+game.
 
 [ci]: https://about.gitlab.com/gitlab-ci/
 [hakyll]: https://jaspervdj.be/hakyll/
