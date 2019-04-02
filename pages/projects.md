@@ -13,6 +13,8 @@ By alphabetical order:
 Analysis of user activity
 - <a href="https://gitlab.com/scp-079/scp-079-captcha" target="_blank">SCP-079-CAPTCHA</a>: 
 Provide challenges for new joined members
+- <a href="https://gitlab.com/scp-079/scp-079-clean" target="_blank">SCP-079-CLEAN</a>: 
+Filter specific types of messages
 - <a href="https://gitlab.com/scp-079/scp-079-java" target="_blank">SCP-079-JAVA</a>: 
 Java implementation of Project SCP-079
 - <a href="https://gitlab.com/scp-079/scp-079-noflood" target="_blank">SCP-079-NOFLOOD</a>: 
