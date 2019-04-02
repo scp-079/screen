@@ -12,7 +12,7 @@ project is welcome.
 By alphabetical order:
 
 - <a href="https://gitlab.com/HiedaNaKan" target="_blank">HiedaNaKan</a>
-<a class="no" target="_blank">XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX</a>
+<a class="no" target="_blank">[DATA EXPUNGED]</a>
 - <a href="https://gitlab.com/kofiyoung" target="_blank">Kofi Young</a> 
 <a href="/kofi/" class="key" target="_blank">656B E84D 44D5 80BF AB49 BAAD 17A4 21A3 2EDF F064</a>
 - <a href="https://gitlab.com/uze4h6il" target="_blank">UZE4H6IL</a> 
