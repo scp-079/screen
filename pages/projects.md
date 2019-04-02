@@ -7,7 +7,18 @@ title: Projects
 Currently, all open source subprojects are hosted on 
 <a href="https://gitlab.com/scp-079" target="_blank">Gitlab</a>.
 
-By alphabetical order:
+Active projects:
+
+- <a href="https://gitlab.com/scp-079/scp-079-analyze" target="_blank">SCP-079-ANALYZE</a>: 
+Analysis of user activity
+- <a href="https://gitlab.com/scp-079/scp-079-captcha" target="_blank">SCP-079-CAPTCHA</a>: 
+Provide challenges for new joined members
+- <a href="https://gitlab.com/scp-079/scp-079-regex" target="_blank">SCP-079-REGEX</a>: 
+Manage the regex patterns
+- <a href="https://gitlab.com/scp-079/scp-079.gitlab.io" target="_blank">Screen</a>: 
+A dark theme for Hakyll
+
+All, by alphabetical order:
 
 - <a href="https://gitlab.com/scp-079/scp-079-analyze" target="_blank">SCP-079-ANALYZE</a>: 
 Analysis of user activity
