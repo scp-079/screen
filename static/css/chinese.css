@@ -17,3 +17,7 @@ h2 {
 h3 {
     font-size: 1.1em;
 }
+
+.hljs-comment {
+    font-size: 12px;
+}
