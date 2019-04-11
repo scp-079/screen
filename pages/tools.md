@@ -6,11 +6,11 @@ title: Tools
 
 By alphabetical order:
 
-- <a href="/pm/" target="_blank">SCP-079-PM</a>: 
+- <a href="/pm/">SCP-079-PM</a>: 
 Everyone can have their own private chat bot
 
-At present, there is only the old bot, which, however, is a closed source 
-user-bot. The new open source project is under development. It is 
+At present, for anti-spam bot, there is only the old bot, which, however, is a 
+closed source user-bot. The new open source project is under development. It is 
 expected to take a year to complete. The more participants, the less 
 time it takes to complete other bots.
 
