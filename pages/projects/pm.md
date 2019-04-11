@@ -18,20 +18,20 @@ title: SCP-079-PM
 
 **附录：**克隆项目：
 
-```bash
+```
 git clone https://gitlab.com/scp-079/scp-079-pm.git scp-079-pm
 cd scp-079-pm
 ```
 
 **附录：**依赖安装（考虑是否需要 virtualenv 等创建环境）：
 
-```bash
+```
 pip install -r requirements.txt
 ```
 
 **附录：**创建配置文件：
 
-```bash
+```
 cp config.ini.example config.ini
 ```
 
@@ -41,7 +41,7 @@ cp config.ini.example config.ini
 
 **附录：**运行：
 
-```bash
+```
 python3 main.py
 ```
 
