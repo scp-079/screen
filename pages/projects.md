@@ -7,6 +7,11 @@ title: Projects
 Currently, all open source subprojects are hosted on 
 <a href="https://gitlab.com/scp-079" target="_blank">Gitlab</a>.
 
+Released projects:
+
+- <a href="https://gitlab.com/scp-079/scp-079-pm" target="_blank">SCP-079-PM</a>: 
+Everyone can have their own private chat bot
+
 Active projects:
 
 - <a href="https://gitlab.com/scp-079/scp-079-regex" target="_blank">SCP-079-REGEX</a>: 
@@ -26,6 +31,8 @@ Filter specific types of messages
 Java implementation of Project SCP-079
 - <a href="https://gitlab.com/scp-079/scp-079-noflood" target="_blank">SCP-079-NOFLOOD</a>: 
 Message-flooding prevention
+- <a href="https://gitlab.com/scp-079/scp-079-pm" target="_blank">SCP-079-PM</a>: 
+Everyone can have their own private chat bot
 - <a href="https://gitlab.com/scp-079/scp-079-regex" target="_blank">SCP-079-REGEX</a>: 
 Manage the regex patterns
 - <a class="no" target="_blank">SCP-079-USER</a>: 
