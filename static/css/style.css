@@ -190,7 +190,7 @@ th {
 /* Code */
 
 pre {
-    font-family: "Dejavu Sans Mono", "Dejavu Sans Mono Backup", "Courier New", monospace;
+    font-family: "Dejavu Sans Mono", "Courier New", "Dejavu Sans Mono Backup", monospace;
 }
 
 code, code a {
