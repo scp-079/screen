@@ -66,7 +66,7 @@ python3 main.py
 api_id = [DATA EXPUNGED] 
 api_hash = [DATA EXPUNGED]
 ; 以上两条信息从官网申请获得
-app_version = 0.1.0
+app_version = 0.2.0
 device_model = VPS
 system_version = Linux
 
