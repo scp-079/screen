@@ -4,8 +4,6 @@ title: SCP-079-PM
 
 <link rel="stylesheet" href="/css/chinese.css">
 
----
-
 **项目编号：**SCP-079-PM
 
 **项目等级：**Safe
