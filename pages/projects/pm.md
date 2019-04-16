@@ -20,7 +20,7 @@ title: SCP-079-PM
 - `/block`：以此命令回复某条带 ID 的汇报消息，将某人加入黑名单，机器人将忽略黑名单用户的一切消息
 - `/unblock`：以此命令回复某条带 ID 的汇报消息，将某人从黑名单中移除
 - `/recall`：以此命令回复某条带 ID 的汇报消息，机器人将询问要撤回哪种类别的全部消息
-- 按钮：`撤回`：点击此按钮，撤回某条已发送给某人的消息
+- `按钮：撤回`：点击此按钮，撤回某条已发送给某人的消息
 
 客人：
 
@@ -32,20 +32,20 @@ title: SCP-079-PM
 
 克隆项目：
 
-```
+```bash
 git clone https://gitlab.com/scp-079/scp-079-pm.git scp-079-pm
 cd scp-079-pm
 ```
 
 依赖安装（考虑是否需要 virtualenv 等创建环境）：
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
 创建配置文件：
 
-```
+```bash
 cp config.ini.example config.ini
 ```
 
@@ -55,7 +55,7 @@ cp config.ini.example config.ini
 
 运行：
 
-```
+```bash
 python3 main.py
 ```
 
