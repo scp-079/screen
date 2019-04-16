@@ -19,7 +19,7 @@ function StopSound(soundobj) {
 document.body.addEventListener("mouseover",function(e) {
     e = e || window.event;
     var targetElem = e.target || e.srcElement;
-    if (targetElem.nodeName == "A") {
+    if (targetElem.nodeName == "A" && targetElem.className != "sourceLine") {
         switch(targetElem.className) {
             case "no":
                 PlaySound("no_button")
@@ -33,7 +33,7 @@ document.body.addEventListener("mouseover",function(e) {
 document.body.addEventListener("mouseout",function(e) {
     e = e || window.event;
     var targetElem = e.target || e.srcElement;
-    if (targetElem.nodeName == "A") {
+    if (targetElem.nodeName == "A" && targetElem.className != "sourceLine") {
         switch(targetElem.className) {
             case "no":
                 StopSound("no_button")
@@ -47,7 +47,7 @@ document.body.addEventListener("mouseout",function(e) {
 document.body.addEventListener("click",function(e) {
     e = e || window.event;
     var targetElem = e.target || e.srcElement;
-    if (targetElem.nodeName == "A") {
+    if (targetElem.nodeName == "A" && targetElem.className != "sourceLine") {
         if (targetElem.className == "no") {
             PlaySound("no_click")
         } else {
