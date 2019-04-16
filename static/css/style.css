@@ -157,10 +157,6 @@ main iframe {
     border: 1px dashed rgba(255,255,255,0.5);
 }
 
-main li {
-    font-size: 15px;
-}
-
 /* Table */
 
 table {
