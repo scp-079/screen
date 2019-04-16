@@ -79,8 +79,8 @@ port = 1080
 [plugins]
 root = plugins
 include =
-    handlers.commands
     handlers.callbacks
+    handlers.commands
     handlers.messages
 
 [custom]
