@@ -16,8 +16,8 @@ Active projects:
 
 - <a href="https://gitlab.com/scp-079/scp-079-regex" target="_blank">SCP-079-REGEX</a>: 
 Manage the regex patterns
-- <a href="https://gitlab.com/scp-079/scp-079-analyze" target="_blank">SCP-079-ANALYZE</a>: 
-Analysis of user activity
+- <a href="https://gitlab.com/scp-079/scp-079-java" target="_blank">SCP-079-JAVA</a>: 
+Java implementation of Project SCP-079
 
 All, by alphabetical order:
 
