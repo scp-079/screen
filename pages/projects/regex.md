@@ -57,7 +57,8 @@ SCP-079-REGEX-1 中的成员：
 使用了 Python 中的 <a href="https://docs.python.org/3/library/re.html" target="_blank">re</a> 模块
 
 ```python
-re.compile(pattern, re.I | re.M | re.S)
+compiled = re.compile(pattern, re.I | re.M | re.S)
+compiled.search(text)
 ```
 
 **附录：**建立机器人的方法
