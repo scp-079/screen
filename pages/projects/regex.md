@@ -10,7 +10,7 @@ title: SCP-079-REGEX
 
 **特殊收容措施：**SCP-079-REGEX 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-REGEX。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。
 
-**描述：**SCP-079-REGEX 是一个用于管理正则表达式的机器人，其项目位于 <a href="https://gitlab.com/scp-079/scp-079-regex" target="_blank">Gitlab</a> 。机器人本体位于 <a href="https://t.me/SCP_079_REGEX" target="_blank">SCP-079-REGEX</a> ，目前仅供 SCP-079 内部使用，由 SCP-079-REGEX-1 群组的成员管理，所操作的正则规则提供给其他机器人使用。 该项目由 ███ 主要负责，基于原有 █████████ 机器人修改。通过该项目建立的机器人有类似的功能：管理不同种类的正则表达式，检查可能的重复，并与项目数据交换频道进行交互。具体操作详见附录中的使用说明。
+**描述：**SCP-079-REGEX 是一个用于管理正则表达式的机器人，其项目位于 <a href="https://gitlab.com/scp-079/scp-079-regex" target="_blank">Gitlab</a> 。机器人本体位于 <a href="https://t.me/SCP_079_REGEX" class="079" target="_blank">SCP-079-REGEX</a> ，目前仅供 SCP-079 内部使用，由 SCP-079-REGEX-1 群组的成员管理，所操作的正则规则提供给其他机器人使用。 该项目由 ███ 主要负责，基于原有 █████████ 机器人修改。通过该项目建立的机器人有类似的功能：管理不同种类的正则表达式，检查可能的重复，并与项目数据交换频道进行交互。具体操作详见附录中的使用说明。
 
 **附录：**使用说明
 
@@ -133,3 +133,4 @@ reload_path = [DATA EXPUNGED]
 ```
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>
+<audio id="dooropen079" src="/audio/door/dooropen079.ogg"/>
