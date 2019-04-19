@@ -8,7 +8,7 @@ By alphabetical order:
 
 - <a href="/pm/">SCP-079-PM</a>: 
 Everyone can have their own private chat bot
-- <a href="/regex/" target="_blank">SCP-079-REGEX</a>: 
+- <a href="/regex/">SCP-079-REGEX</a>: 
 Manage the regex patterns
 
 At present, for anti-spam bot, there is only the old bot, which, however, is a 
