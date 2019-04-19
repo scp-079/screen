@@ -35,8 +35,9 @@ title: SCP-079-PM
 克隆项目：
 
 ```bash
-git clone https://gitlab.com/scp-079/scp-079-pm.git scp-079-pm
-cd scp-079-pm
+mkdir -p scp-079
+git clone https://gitlab.com/scp-079/scp-079-pm.git scp-079/pm
+cd scp-079/pm
 ```
 
 依赖安装（考虑是否需要 virtualenv 等创建环境）：
