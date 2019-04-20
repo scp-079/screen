@@ -18,10 +18,10 @@ SCP-079-REGEX-1 中的成员：
 
 基本样式：`/operation type pattern`
 
-- 例子一：`/list_nick`
-- 例子二：`/add_bio 出售银行卡`
+- 例子一：`/list nm`
+- 例子二：`/add bio 出售银行卡`
 
-对于样式：`/operation_type pattern`
+对于样式：`/operation type pattern`
 
 `operation` 应为以下任意一个：
 
