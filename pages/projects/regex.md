@@ -10,13 +10,13 @@ title: SCP-079-REGEX
 
 **特殊收容措施：**SCP-079-REGEX 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-REGEX。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。
 
-**描述：**SCP-079-REGEX 是一个用于管理正则表达式的机器人，其项目位于 <a href="https://gitlab.com/scp-079/scp-079-regex" target="_blank">Gitlab</a> 。机器人本体位于 <a href="https://t.me/SCP_079_REGEX" class="079" target="_blank">SCP-079-REGEX</a> ，目前仅供 SCP-079 内部使用，由 SCP-079-REGEX-1 群组的成员管理，所操作的正则模式提供给其他机器人使用。该项目由 ███ 主要负责，基于原有 █████████ 机器人修改。通过该项目建立的机器人有类似的功能：管理不同种类的正则表达式，检查可能的重复，并与项目数据交换频道进行交互。具体操作详见附录中的使用说明。
+**描述：**SCP-079-REGEX 是一个用于管理正则表达式的机器人，其项目位于 <a href="https://gitlab.com/scp-079/scp-079-regex" target="_blank">Gitlab</a> 。机器人本体位于 <a href="https://t.me/SCP_079_REGEX" class="079" target="_blank">SCP-079-REGEX</a> ，目前仅供 SCP-079 内部使用，由 SCP-079-REGEX-1 群组的成员管理，所操作的正则模式提供给其他机器人使用。其附属的 SCP-079-REGEX-2 频道，用于测试文字所匹配的正则情况。该项目由 ███ 主要负责，基于原有 █████████ 机器人修改。通过该项目建立的机器人有类似的功能：管理不同种类的正则表达式，检查可能的重复，并与项目数据交换频道进行交互。具体操作详见附录中的使用说明。
 
 **附录：**使用说明
 
 SCP-079-REGEX-1 中的成员：
 
-基本样式：`/operation_type pattern`
+基本样式：`/operation type pattern`
 
 - 例子一：`/list_nick`
 - 例子二：`/add_bio 出售银行卡`
@@ -25,32 +25,32 @@ SCP-079-REGEX-1 中的成员：
 
 `operation` 应为以下任意一个：
 
-- `add`：添加一个规则
-- `list`：列出所有规则
-- `remove`：删除一个规则
-- `search`：通过关键字查询规则
+- `add`、`ad`：添加一个规则
+- `list`、`ls`：列出所有规则
+- `remove`、`rm`：删除一个规则
+- `search`、`s`、`find`：通过关键字查询规则
 
 `type` 应为以下任意一个：
 
-- `avatar`：头像分析
+- `ava`：头像分析，avatar
 - `bad`：敏感检测
 - `ban`：自动封禁
 - `bio`：简介封禁
-- `delete`：自动删除
-- `emergency`：应急模式
-- `nick`：昵称封禁
-- `watch_bad`：追踪封禁
-- `watch_delete`：追踪删除
-- `sticker`：贴纸删除
+- `del`：自动删除，delete
+- `eme`：应急模式，emergency
+- `nm`：昵称封禁，name
+- `wb`：追踪封禁，watch ban
+- `wd`：追踪删除，watch delete
+- `sti`：贴纸删除，sticker
 
 `pattern` 只能在 `add`、`remove`、`search` 操作下出现
 
 更多例子：
 
-- `/list_bad`
-- `/add_watch_bad` 专业引流
-- `/remove_ban` 测试
-- `/search_nick` 微信
+- `/ls bad`
+- `/add wb 专业引流`
+- `/remove ban 测试`
+- `/find nm 微信`
 
 附加说明：
 
@@ -112,25 +112,34 @@ root = plugins
 include =
     handlers.callbacks
     handlers.commands
+    handlers.messages
 
 [custom]
-token = [DATA EXPUNGED]
-; 此处填写在 Bot Father 处获得的 token
+channel_id = [DATA EXPUNGED]
+; 此处填写测试频道 SCP-079-REGEX-2 的 ID
 creator_id = [DATA EXPUNGED]
 ; 此处填写自己帐号的 ID
-main_group_id = [DATA EXPUNGED]
-; 此处填写操作群组 SCP-079-REGEX-1 的 ID
 exchange_id = [DATA EXPUNGED]
 ; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID
+group_id = [DATA EXPUNGED]
+; 此处填写操作群组 SCP-079-REGEX-1 的 ID
+password = [DATA EXPUNGED]
+; 加密文件所用的密码
+per_page = 15
+; 每页显示的词组数量
 prefix = /!！
+; 命令前的字符
+reload_path = [DATA EXPUNGED]
+; 如果 upate 的类型设置为本地加载 (reload)，则在此输入 compiled 文件的路径
+token = [DATA EXPUNGED]
+; 此处填写在 Bot Father 处获得的 token
 update_to = USER WATCHER
 ; 需要接受数据的对象，空格分隔
 update_mode = reload
 ; 其他机器人更新数据的方式
 ; reload 代表本地加载
 ; download 代表从交换频道中下载
-reload_path = [DATA EXPUNGED]
-; 如果 upate 的类型设置为本地加载 (reload)，则在此输入 compiled 文件的路径
+
 ```
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>
