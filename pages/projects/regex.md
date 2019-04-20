@@ -52,6 +52,10 @@ SCP-079-REGEX-1 中的成员：
 - `/remove ban 测试`
 - `/find nm 微信`
 
+SCP-079-REGEX-2 中的成员：
+
+直接发送测试消息
+
 附加说明：
 
 使用了 Python 中的 <a href="https://docs.python.org/3/library/re.html" target="_blank">re</a> 模块
