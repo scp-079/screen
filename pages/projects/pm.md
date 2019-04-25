@@ -8,9 +8,9 @@ title: SCP-079-PM
 
 **项目等级：**Safe
 
-**特殊收容措施：**SCP-079-PM 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-PM。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。
+**特殊收容措施：**SCP-079-PM 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-PM 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。
 
-**描述：**SCP-079-PM 是一个用于转发私聊消息的机器人，其项目位于 <a href="https://gitlab.com/scp-079/scp-079-pm" target="_blank">Gitlab</a> 。该项目由 ███ 主要负责，并仍在完善中。机器人本体位于 <a href="https://t.me/SCP_079_PM_BOT" class="079" target="_blank">SCP-079-PM</a> ，仅供与项目管理员私聊使用。通过该项目建立的机器人有类似的功能：如果客人向运行中的机器人发送任意消息，此消息将会被转发至机器人主人与该机器人的私聊对话中，并附加客人的来源信息，当主人回复某条包含客人 ID 的来源汇报消息后，机器人将把主人回复的消息转发给客人，以此实现通过 Bot 的主客私聊功能。除此之外，还具有一些聊天所需的必要功能，详见附录中的使用说明。
+**描述：**SCP-079-PM 是一个用于转发私聊消息的机器人，其项目位于 <a href="https://gitlab.com/scp-079/scp-079-pm" target="_blank">Gitlab</a> 。该项目由 ███ 主要负责。机器人本体位于 <a href="https://t.me/SCP_079_PM_BOT" class="079" target="_blank">SCP-079-PM</a> ，仅供与项目管理员私聊使用。通过该项目建立的机器人有类似的功能：如果客人向运行中的机器人发送任意消息，此消息将会被转发至机器人主人与该机器人的私聊对话中，并附加客人的来源信息，当主人回复某条包含客人 ID 的来源汇报消息后，机器人将把主人回复的消息转发给客人，以此实现通过 Bot 的主客私聊功能。除此之外，还具有一些聊天所需的必要功能，详见附录中的使用说明。
 
 **附录：**使用说明
 
@@ -19,9 +19,12 @@ title: SCP-079-PM
 - `基本` ：回复某条汇报消息，即可回复对应的用户
 - `/start`：首次使用以此命令激活机器人
 - `/block`：以此命令回复某条带 ID 的汇报消息，将某人加入黑名单，机器人将忽略黑名单用户的一切消息
+- `/clear` ：发送此命令，将询问清空哪种储存的数据
+- `/direct` ：此命令回复某条带 ID 的汇报消息，与某人展开直接对话，期间发送的非回复类消息将直接发送给该用户，也可以通过回复其他带 ID 的汇报消息给另外的人发送消息
+- `/leave` ：如果当前有正在进行的直接对话，发送此条命令即可退出直接对话模式
+- `/now` ：查看当前进行的直接对话
 - `/unblock`：以此命令回复某条带 ID 的汇报消息，将某人从黑名单中移除。或者在命令后添加 ID，例如 `/unblock 12345678`
 - `/recall`：以此命令回复某条带 ID 的汇报消息，机器人将询问要撤回哪种类别的全部消息
-- `/clear` ：发送此命令，将询问清空哪种储存的数据
 - `按钮：撤回`：点击此按钮，撤回某条已发送给某人的消息
 
 客人：
@@ -54,12 +57,12 @@ cp config.ini.example config.ini
 
 修改配置文件：
 
-需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。 API ID 与 API Hash 在 https://my.telegram.org 处获取。
+需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。 API ID 与 API Hash 在 <a href="https://my.telegram.org" target="_blank">官网</a> 获取。
 
 运行：
 
 ```bash
-python3 main.py
+python main.py
 ```
 
 **文件#config.ini：**
@@ -70,12 +73,6 @@ api_id = [DATA EXPUNGED]
 api_hash = [DATA EXPUNGED]
 ; 以上两条信息从官网申请获得
 
-[proxy]
-enabled = False
-; 可根据需要自行决定是否启用 SOCKS5 代理
-hostname = 127.0.0.1
-port = 1080
-
 [plugins]
 root = plugins
 include =
@@ -83,12 +80,24 @@ include =
     handlers.commands
     handlers.messages
 
+[proxy]
+enabled = False
+; 可根据需要自行决定是否使用 SOCKS5 代理
+hostname = 127.0.0.1
+port = 1080
+
+[basic]
+bot_token = [DATA EXPUNGED]
+; 此处填写在 @BotFather 处获得的 token
+prefix = /!
+; 命令前的可用字符，如在群组中使用非常规命令前缀，需要机器人有获取普通消息的权限
+
+[channels]
+test_group_id = 0
+
 [custom]
-token = [DATA EXPUNGED]
-; 此处填写在 Bot Father 处获得的 token
-creator_id = [DATA EXPUNGED]
+host_id = [DATA EXPUNGED]
 ; 此处填写自己帐号的 ID
-prefix = /!！
 ```
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>

@@ -43,6 +43,7 @@ SCP-079-REGEX-1 中的成员：
 - `wb`：追踪封禁，watch ban
 - `wd`：追踪删除，watch delete
 - `sti`：贴纸删除，sticker
+- `test` ：测试用例
 
 `pattern` 只能在 `add`、`remove`、`search` 操作下出现
 
@@ -56,16 +57,21 @@ SCP-079-REGEX-1 中的成员：
 
 SCP-079-TEST 中的成员：
 
-直接发送测试消息
+- 直接发送测试消息
+- 发送 `/version` 检查机器人版本
 
 附加说明：
 
 使用了 Python 中的 <a href="https://docs.python.org/3/library/re.html" target="_blank">re</a> 模块
 
 ```python
-compiled[type] = re.compile(pattern, re.I | re.M | re.S)
-compiled.search(text)
+regex = ["regex1", "regex2"]
+pattern = "|".join(regex)
+compiled["type"] = re.compile(pattern, re.I | re.M | re.S)
+compiled.search("text")
 ```
+
+机器人收到的词组已经是转义后的结果，例如用户发送了 `\b`，机器人收到的为 `\\b`
 
 **附录：**建立机器人的方法
 
@@ -116,7 +122,7 @@ include =
 
 [proxy]
 enabled = False
-; 可根据需要自行决定是否启用 SOCKS5 代理
+; 可根据需要自行决定是否使用 SOCKS5 代理
 hostname = 127.0.0.1
 port = 1080
 
@@ -124,7 +130,7 @@ port = 1080
 bot_token = [DATA EXPUNGED]
 ; 此处填写在 @BotFather 处获得的 token
 prefix = /!
-; 命令前的可用字符
+; 命令前的可用字符，如在群组中使用非常规命令前缀，需要机器人有获取普通消息的权限
 
 [channels]
 exchange_channel_id = [DATA EXPUNGED]
