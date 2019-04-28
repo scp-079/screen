@@ -106,3 +106,4 @@ host_id = [DATA EXPUNGED]
 ```
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>
+<audio id="dooropen079" src="/audio/door/dooropen079.ogg"/>

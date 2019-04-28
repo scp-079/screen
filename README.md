@@ -71,7 +71,7 @@ This project is under [GPLv3](LICENSE).
 
 The theme is based on [darcli](https://github.com/gildasio/darcli).
 
-All the sound effects files in `static/audio/` are under 
+All the sound effects in `static/audio/` are under 
 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), 
 and come from 
 [SCP - Containment Breach](http://www.scpcbgame.com/) 
