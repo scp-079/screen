@@ -10,7 +10,7 @@ title: SCP-079-REGEX
 
 **特殊收容措施：**SCP-079-REGEX 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-REGEX 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出，另外还需在系统中安装 `opencc` ，如在 Ubuntu 下，执行 `sudo apt update && sudo apt install opencc` 。其应该作为频道 SCP-079-EXCHANGE 的管理员，并加入 SCP-079-TEST 群组。
 
-**描述：**SCP-079-REGEX 是一个用于管理正则表达式的机器人，其项目位于 <a href="https://gitlab.com/scp-079/scp-079-regex" target="_blank">Gitlab</a> 。机器人本体位于 <a href="https://t.me/SCP_079_REGEX" class="079" target="_blank">SCP-079-REGEX</a> ，仅供 SCP-079 内部使用，并由同名群组 SCP-079-REGEX 的成员管理，所操作的正则模式提供给其他机器人使用。其加入了 SCP-079-TEST ，用于测试文字所匹配的正则情况。该项目由 ███ 主要负责，基于原有 █████████ 机器人修改。通过该项目建立的机器人有类似的功能：管理不同种类的正则表达式、检查可能的重复、检索模式，并与项目数据交换频道进行交互。具体操作详见附录中的使用说明。
+**描述：**SCP-079-REGEX 是一个用于管理正则表达式的机器人，其项目位于 <a href="https://gitlab.com/scp-079/scp-079-regex" target="_blank">Gitlab</a> 。机器人本体位于 <a href="https://t.me/SCP_079_REGEX_BOT" class="079" target="_blank">SCP-079-REGEX</a> ，仅供 SCP-079 内部使用，并由同名群组 SCP-079-REGEX 的成员管理，所操作的正则模式提供给其他机器人使用。其加入了 SCP-079-TEST ，用于测试文字所匹配的正则情况。该项目由 ███ 主要负责，基于原有 █████████ 机器人修改。通过该项目建立的机器人有类似的功能：管理不同种类的正则表达式、检查可能的重复、检索模式，并与项目数据交换频道进行交互。具体操作详见附录中的使用说明。
 
 **附录：**使用说明
 
