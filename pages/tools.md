@@ -6,10 +6,14 @@ title: Tools
 
 By alphabetical order:
 
+- <a href="/config/">SCP-079-CONFIG</a>: 
+Manage the settings of each bot
 - <a href="/pm/">SCP-079-PM</a>: 
 Everyone can have their own private chat bot
 - <a href="/regex/">SCP-079-REGEX</a>: 
 Manage the regex patterns
+- <a href="/warn/">SCP-079-WARN</a>: 
+Warn or ban someone by admin commands
 
 At present, for anti-spam bot, there is only the old bot, which, however, is a 
 closed source user-bot. The new open source project is under development. It is 

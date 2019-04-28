@@ -10,13 +10,13 @@ title: SCP-079-PM
 
 **特殊收容措施：**SCP-079-PM 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-PM 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。
 
-**描述：**SCP-079-PM 是一个用于转发私聊消息的机器人，其项目位于 <a href="https://gitlab.com/scp-079/scp-079-pm" target="_blank">Gitlab</a> 。该项目由 ███ 主要负责。机器人本体位于 <a href="https://t.me/SCP_079_PM_BOT" class="079" target="_blank">SCP-079-PM</a> ，仅供与项目管理员私聊使用。通过该项目建立的机器人有类似的功能：如果客人向运行中的机器人发送任意消息，此消息将会被转发至机器人主人与该机器人的私聊对话中，并附加客人的来源信息，当主人回复某条包含客人 ID 的来源汇报消息后，机器人将把主人回复的消息转发给客人，以此实现通过 Bot 的主客私聊功能。除此之外，还具有一些聊天所需的必要功能，详见附录中的使用说明。
+**描述：**SCP-079-PM 是一个用于转发私聊消息的机器人，其项目位于 <a href="https://gitlab.com/scp-079/scp-079-pm" target="_blank">Gitlab</a> 。该项目由 ███ 主要负责。机器人本体位于 <a href="https://t.me/SCP_079_PM_BOT" class="079" target="_blank">SCP-079-PM</a> ，仅供与项目管理员私聊使用。其加入了 SCP-079-TEST ，用于测试运行状态。通过该项目建立的机器人有类似的功能：如果客人向运行中的机器人发送任意消息，此消息将会被转发至机器人主人与该机器人的私聊对话中，并附加客人的来源信息，当主人回复某条包含客人 ID 的来源汇报消息后，机器人将把主人回复的消息转发给客人，以此实现通过 Bot 的主客私聊功能。除此之外，还具有一些聊天所需的必要功能，详见附录中的使用说明。
 
 **附录：**使用说明
 
 机器人所有者：
 
-- `基本` ：回复某条汇报消息，即可回复对应的用户
+- `基本` ：回复某条汇报消息，即可回复对应的用户；回复某条来自用户的非汇报消息，则以 reply 该条消息的方式回复给该用户；编辑某条消息的文字部分，将同步给对应用户
 - `/start`：首次使用以此命令激活机器人
 - `/block`：以此命令回复某条带 ID 的汇报消息，将某人加入黑名单，机器人将忽略黑名单用户的一切消息
 - `/clear` ：发送此命令，将询问清空哪种储存的数据
@@ -29,9 +29,13 @@ title: SCP-079-PM
 
 客人：
 
-- `基本` ：直接向机器人发送消息，将转发给机器人所有者
+- `基本` ：直接向机器人发送消息，将转发给机器人所有者；编辑某条消息的文字部分，将同步给机器人所有者
 - `/start`：开始与机器人的对话
 - 发送过于频繁时，将需要等待 15 分钟才能继续发送消息
+
+SCP-079-TEST 中的成员：
+
+- `/version` ：检查机器人版本
 
 **附录：**建立机器人的方法
 
@@ -76,9 +80,9 @@ api_hash = [DATA EXPUNGED]
 [plugins]
 root = plugins
 include =
-    handlers.callbacks
-    handlers.commands
-    handlers.messages
+    handlers.callback
+    handlers.command
+    handlers.message
 
 [proxy]
 enabled = False
@@ -94,6 +98,7 @@ prefix = /!
 
 [channels]
 test_group_id = 0
+; 此处填写测试群组 SCP-079-TEST 的 ID（可选）
 
 [custom]
 host_id = [DATA EXPUNGED]

@@ -9,10 +9,14 @@ Currently, all open source subprojects are hosted on
 
 Released projects:
 
+- <a href="https://gitlab.com/scp-079/scp-079-config" target="_blank">SCP-079-CONFIG</a>: 
+Manage the settings of each bot
 - <a href="https://gitlab.com/scp-079/scp-079-pm" target="_blank">SCP-079-PM</a>: 
 Everyone can have their own private chat bot
 - <a href="https://gitlab.com/scp-079/scp-079-regex" target="_blank">SCP-079-REGEX</a>: 
 Manage the regex patterns
+- <a href="https://gitlab.com/scp-079/scp-079-warn" target="_blank">SCP-079-WARN</a>: 
+Warn or ban someone by admin commands
 
 All, by alphabetical order:
 
@@ -20,6 +24,8 @@ All, by alphabetical order:
 Analysis of user activity
 - <a href="https://gitlab.com/scp-079/scp-079-captcha" target="_blank">SCP-079-CAPTCHA</a>: 
 Provide challenges for new joined members
+- <a href="https://gitlab.com/scp-079/scp-079-config" target="_blank">SCP-079-CONFIG</a>: 
+Manage the settings of each bot
 - <a href="https://gitlab.com/scp-079/scp-079-clean" target="_blank">SCP-079-CLEAN</a>: 
 Filter specific types of messages
 - <a href="https://gitlab.com/scp-079/scp-079-java" target="_blank">SCP-079-JAVA</a>: 
@@ -33,7 +39,7 @@ Manage the regex patterns
 - <a class="no" target="_blank">SCP-079-USER</a>: 
 The old bot
 - <a href="https://gitlab.com/scp-079/scp-079-warn" target="_blank">SCP-079-WARN</a>: 
-Warn or ban someone by admin
+Warn or ban someone by admin commands
 - <a href="https://gitlab.com/scp-079/scp-079.gitlab.io" target="_blank">Screen</a>: 
 A dark theme for Hakyll
 
