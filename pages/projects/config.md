@@ -22,39 +22,21 @@ SCP-079-TEST 中的成员：
 
 - `/version` ：检查机器人版本
 
-**附录：**建立机器人的方法
+**附录：**自建机器人的方法
+
+可先查看<a href="/how/">自建说明书</a>
 
 克隆项目：
 
 ```bash
-mkdir -p scp-079
-git clone https://gitlab.com/scp-079/scp-079-config.git scp-079/config
-cd scp-079/config
-```
-
-依赖安装（考虑是否需要 virtualenv 等创建环境）：
-
-```bash
-pip install -r requirements.txt
-```
-
-创建配置文件：
-
-```bash
-cp config.ini.example config.ini
-```
-
-修改配置文件：
-
-需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。 API ID 与 API Hash 在 <a href="https://my.telegram.org" target="_blank">官网</a> 获取。
-
-运行：
-
-```bash
-python main.py
+git clone https://gitlab.com/scp-079/scp-079-config.git ~/bots/scp-079/config
 ```
 
 **文件#config.ini：**
+
+修改配置文件：
+
+需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。 API ID 与 API Hash 在 <a href="https://my.telegram.org" target="_blank">官网</a> 获取
 
 ```ini
 [pyrogram]
@@ -90,13 +72,8 @@ exchange_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID
 test_group_id = [DATA EXPUNGED]
 ; 此处填写测试群组 SCP-079-TEST 的 ID
-
-[custom]
-warn_link = [DATA EXPUNGED]
-; 此处填写 SCP-079-WARN 的项目网址
-warn_name = [DATA EXPUNGED]
-; 此处填写 SCP-079-WARN 的项目名称
-
+config_channel_username = [DATA EXPUNGED]
+; 此处填写 SCP-079-CONFIG 频道的链接名（不带 @）
 ```
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>

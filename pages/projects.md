@@ -11,6 +11,8 @@ Released projects:
 
 - <a href="https://gitlab.com/scp-079/scp-079-config" target="_blank">SCP-079-CONFIG</a>: 
 Manage the settings of each bot
+- <a href="https://gitlab.com/scp-079/scp-079-noporn" target="_blank">SCP-079-NOPORN</a>: 
+Auto delete NSFW media messages
 - <a href="https://gitlab.com/scp-079/scp-079-pm" target="_blank">SCP-079-PM</a>: 
 Everyone can have their own private chat bot
 - <a href="https://gitlab.com/scp-079/scp-079-regex" target="_blank">SCP-079-REGEX</a>: 
@@ -30,6 +32,8 @@ Manage the settings of each bot
 Filter specific types of messages
 - <a href="https://gitlab.com/scp-079/scp-079-java" target="_blank">SCP-079-JAVA</a>: 
 Java implementation of Project SCP-079
+- <a href="https://gitlab.com/scp-079/scp-079-noporn" target="_blank">SCP-079-NOPORN</a>: 
+Auto delete NSFW media messages
 - <a href="https://gitlab.com/scp-079/scp-079-noflood" target="_blank">SCP-079-NOFLOOD</a>: 
 Message-flooding prevention
 - <a href="https://gitlab.com/scp-079/scp-079-pm" target="_blank">SCP-079-PM</a>: 

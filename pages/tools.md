@@ -8,6 +8,8 @@ By alphabetical order:
 
 - <a href="/config/">SCP-079-CONFIG</a>: 
 Manage the settings of each bot
+- <a href="/noporn/">SCP-079-NOPORN</a>: 
+Auto delete NSFW media messages
 - <a href="/pm/">SCP-079-PM</a>: 
 Everyone can have their own private chat bot
 - <a href="/regex/">SCP-079-REGEX</a>: 

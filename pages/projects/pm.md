@@ -37,39 +37,21 @@ SCP-079-TEST 中的成员：
 
 - `/version` ：检查机器人版本
 
-**附录：**建立机器人的方法
+**附录：**自建机器人的方法
+
+可先查看<a href="/how/">自建说明书</a>
 
 克隆项目：
 
 ```bash
-mkdir -p scp-079
-git clone https://gitlab.com/scp-079/scp-079-pm.git scp-079/pm
-cd scp-079/pm
-```
-
-依赖安装（考虑是否需要 virtualenv 等创建环境）：
-
-```bash
-pip install -r requirements.txt
-```
-
-创建配置文件：
-
-```bash
-cp config.ini.example config.ini
-```
-
-修改配置文件：
-
-需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。 API ID 与 API Hash 在 <a href="https://my.telegram.org" target="_blank">官网</a> 获取。
-
-运行：
-
-```bash
-python main.py
+git clone https://gitlab.com/scp-079/scp-079-pm.git ~/bots/scp-079/pm
 ```
 
 **文件#config.ini：**
+
+修改配置文件：
+
+需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。 API ID 与 API Hash 在 <a href="https://my.telegram.org" target="_blank">官网</a> 获取
 
 ```ini
 [pyrogram]
@@ -97,6 +79,8 @@ prefix = /!
 ; 命令前的可用字符，如在群组中使用非常规命令前缀，需要机器人有获取普通消息的权限
 
 [channels]
+exchange_channel_id = 0
+; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID（可选）
 test_group_id = 0
 ; 此处填写测试群组 SCP-079-TEST 的 ID（可选）
 

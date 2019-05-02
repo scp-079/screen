@@ -73,40 +73,27 @@ compiled.search("text")
 
 机器人收到的词组已经是转义后的结果，例如用户发送了 `\b`，机器人收到的为 `\\b`
 
-**附录：**建立机器人的方法
+**附录：**自建机器人的方法
+
+可先查看<a href="/how/">自建说明书</a>
 
 克隆项目：
 
 ```bash
-mkdir -p scp-079
-git clone https://gitlab.com/scp-079/scp-079-regex.git scp-079/regex
-cd scp-079/regex
+git clone https://gitlab.com/scp-079/scp-079-regex.git ~/bots/scp-079/regex
 ```
 
-依赖安装（考虑是否需要 virtualenv 等创建环境）：
+依赖安装：
 
 ```bash
 sudo apt update && sudo apt install opencc
-pip install -r requirements.txt
-```
-
-创建配置文件：
-
-```bash
-cp config.ini.example config.ini
-```
-
-修改配置文件：
-
-需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。 API ID 与 API Hash 在 <a href="https://my.telegram.org" target="_blank">官网</a> 获取。
-
-运行：
-
-```bash
-python main.py
 ```
 
 **文件#config.ini：**
+
+修改配置文件：
+
+需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。 API ID 与 API Hash 在 <a href="https://my.telegram.org" target="_blank">官网</a> 获取
 
 ```ini
 [pyrogram]
