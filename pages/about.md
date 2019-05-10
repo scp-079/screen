@@ -14,6 +14,11 @@ for more details.
 Follow our announcement channel to get updates: 
 <a href="http://t.me/SCP_079_INFO" target="_blank">SCP-079-INFO</a>.
 
+Learn more:
+
+- [Design Principles](/principles/)
+- [Data Exchange Method](/exchange/)
+
 All bots are hosted on ████████. 
 IP address is <a href="http://www.scp-wiki.net/scp-614" target="_blank">57.32.███.███</a>.
 
