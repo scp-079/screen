@@ -1,24 +1,22 @@
 image: haskell:latest
 
 before_script:
-  - rm -rf /root/.cabal || true
-  - tar -xzf cabal.tar.gz -C / || true
-  - cabal new-update
-  - cabal new-build
-
-after_script:
-  - tar -czf cabal.tar.gz /root/.cabal || true
+  - export STACK_ROOT=`pwd`/.stack
+  - stack install
 
 cache:
   paths:
+    - .stack/
+    - .stack-work/
+    - _cache/
     - dist/
     - dist-newstyle/
-    - cabal.tar.gz
+    - public/
 
 pages:
   stage: deploy
   script:
-    - cabal new-exec site build
+    - stack exec site build || stack exec site rebuild
   artifacts:
     paths:
       - public
