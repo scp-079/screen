@@ -43,7 +43,7 @@ Everyone can have their own private chat bot
 - <a href="https://gitlab.com/scp-079/scp-079-regex" target="_blank">SCP-079-REGEX</a>: 
 Manage the regex patterns
 - <a class="no" target="_blank">SCP-079-USER</a>: 
-The old bot
+The old user bot
 - <a href="https://gitlab.com/scp-079/scp-079-warn" target="_blank">SCP-079-WARN</a>: 
 Warn or ban someone by admin commands
 
