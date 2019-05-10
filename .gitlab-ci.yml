@@ -1,6 +1,8 @@
 image: haskell:latest
 
 before_script:
+  - rm -rf /root/.cabal || true
+  - tar -xzf cabal.tar.gz -C / || true
   - cabal new-update
   - cabal new-build
 
