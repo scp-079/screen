@@ -19,6 +19,8 @@ Everyone can have their own private chat bot
 Manage the regex patterns
 - <a href="https://gitlab.com/scp-079/scp-079-warn" target="_blank">SCP-079-WARN</a>: 
 Warn or ban someone by admin commands
+- <a href="https://gitlab.com/scp-079/scp-079.gitlab.io" target="_blank">Screen</a>: 
+A dark theme for Hakyll
 
 All, by alphabetical order:
 
@@ -44,8 +46,6 @@ Manage the regex patterns
 The old bot
 - <a href="https://gitlab.com/scp-079/scp-079-warn" target="_blank">SCP-079-WARN</a>: 
 Warn or ban someone by admin commands
-- <a href="https://gitlab.com/scp-079/scp-079.gitlab.io" target="_blank">Screen</a>: 
-A dark theme for Hakyll
 
 <audio src="/audio/page/projects.ogg" autoplay></audio>
 <audio id="no_button" src="/audio/button/no.ogg"/>

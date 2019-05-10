@@ -50,7 +50,7 @@ sudo apt update && sudo apt install caffe-cpu -y
 克隆复查项目：
 
 ```bash
-git clone -b recheck --single-branch https://gitlab.com/scp-079/scp-079-noporn.git ~/bots/scp-079/noporn-recheck
+git clone -b recheck --single-branch https://gitlab.com/scp-079/scp-079-noporn.git ~/bots/scp-079/recheck
 ```
 
 依赖安装：

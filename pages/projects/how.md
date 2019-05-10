@@ -109,7 +109,7 @@ mkdir -p ~/.config/systemd/user
 新建文件：
 
 ```bash
-vim ~/config/systemd/user/scp-079-regex.service
+vim ~/.config/systemd/user/scp-079-regex.service
 ```
 
 添加如下内容：

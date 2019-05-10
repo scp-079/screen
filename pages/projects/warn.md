@@ -112,8 +112,12 @@ debug_channel_id = [DATA EXPUNGED]
 ; 此处填写调试频道 SCP-079-DEBUG 的 ID
 exchange_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID
+logging_channel_id = [DATA EXPUNGED]
+; 此处填写证据存放频道 SCP-079-LOGGING 的 ID
 test_group_id = [DATA EXPUNGED]
 ; 此处填写测试群组 SCP-079-TEST 的 ID
+logging_channel_username = [DATA EXPUNGED]
+; 此处填写 SCP-079-LOGGING 频道的链接名（不带 @）
 
 [custom]
 default_group_link = [DATA EXPUNGED]

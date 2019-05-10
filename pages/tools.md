@@ -6,15 +6,15 @@ title: Tools
 
 By alphabetical order:
 
-- <a href="/config/">SCP-079-CONFIG</a>: 
+- [SCP-079-CONFIG](/config/): 
 Manage the settings of each bot
-- <a href="/noporn/">SCP-079-NOPORN</a>: 
+- [SCP-079-NOPORN](/noporn/): 
 Auto delete NSFW media messages
-- <a href="/pm/">SCP-079-PM</a>: 
+- [SCP-079-PM](/pm/): 
 Everyone can have their own private chat bot
-- <a href="/regex/">SCP-079-REGEX</a>: 
+- [SCP-079-REGEX](/regex/): 
 Manage the regex patterns
-- <a href="/warn/">SCP-079-WARN</a>: 
+- [SCP-079-WARN](/warn/): 
 Warn or ban someone by admin commands
 
 At present, for anti-spam bot, there is only the old bot, which, however, is a 
