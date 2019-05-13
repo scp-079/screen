@@ -3310,7 +3310,7 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                         List[str]
                     
                     hide:
-                        True
+                        bool
 
                 Config:
                     ask:
