@@ -2449,7 +2449,40 @@ exchange_text = format_data(
 )
 ```
 
-情形 3：向 MANAGE 请求。由于没有在管理员列表中找到 SCP-079-USER ，或其权限缺失而请求离开某个群组
+情形 3：向 CONFIG 询问。由于群管理在群组中发送 `/config tip` 命令，故 TIP 令 CONFIG 在 SCP-079-CONFIG 频道中开启一个更新设置的会话
+
+```python
+exchange_text = format_data(
+    sender="TIP",
+    receviers=[
+        "CONFIG"
+    ],
+    action="config",
+    action_type="ask",
+    data={
+        "project_name": "SCP-079-TIP",
+        "project_link": "https://scp-079.org/tip/",
+        "group_id": -10012345678,
+        "group_name": "SCP-079-CHAT",
+        "group_link": "https://t.me/SCP_079_CHAT",
+        "user_id": 12345678,
+        "config": {
+            "default": False,
+            "locked": 1512345678,
+            "channel": True,
+            "recheck": True
+        },
+        "default": {
+            "default": True,
+            "locked": 0,
+            "ot": False, # 开启 OT 警告
+            "welcome": False # 启用欢迎信息
+        }
+    }
+)
+```
+
+情形 4：向 MANAGE 请求。由于没有在管理员列表中找到 SCP-079-USER ，或其权限缺失而请求离开某个群组
 
 ```python
 exchange_text = format_data(
@@ -2468,7 +2501,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 4：向 MANAGE 请求。由于管理权限缺失而请求离开某个群组
+情形 5：向 MANAGE 请求。由于管理权限缺失而请求离开某个群组
 
 ```python
 exchange_text = format_data(
