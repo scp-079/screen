@@ -11,12 +11,10 @@ project is welcome.
 
 By alphabetical order:
 
-- <a href="https://gitlab.com/HiedaNaKan" target="_blank">HiedaNaKan</a>
-<a class="no" target="_blank">[DATA EXPUNGED]</a>
 - <a href="https://gitlab.com/kofiyoung" target="_blank">Kofi Young</a> 
 <a href="/kofi/" class="key" target="_blank">656B E84D 44D5 80BF AB49 BAAD 17A4 21A3 2EDF F064</a>
-- <a href="https://gitlab.com/NyanChanMeow" target="_blank">NyanChan</a>
-<a class="no" target="_blank">[DATA EXPUNGED]</a>
+- <a href="https://t.me/verifyunknow" target="_blank">unknow</a> 
+<a href="/unknow/" class="key" target="_blank">E91F 9BF7 6B1C 3FDA E03A F6E6 97F1 F251 65CD DFA5</a>
 - <a href="https://gitlab.com/uze4h6il" target="_blank">UZE4H6IL</a> 
 <a href="/uze4h6il/" class="key" target="_blank">AD6D 5622 8F5F B87F 2A24 60CC ACC0 64F9 3E44 E061</a>
 - <a href="https://gitlab.com/xiao_x" target="_blank">Xiao</a> 
@@ -32,4 +30,3 @@ font-weight: normal;
 <audio id="no_click" src="/audio/button/no_click.ogg"/>
 <audio id="dooropen3" src="/audio/door/dooropen3.ogg"/>
 <audio src="/audio/page/team.ogg" autoplay></audio>
-

@@ -22,31 +22,6 @@ Warn or ban someone by admin commands
 - <a href="https://gitlab.com/scp-079/scp-079.gitlab.io" target="_blank">Screen</a>: 
 A dark theme for Hakyll
 
-All, by alphabetical order:
-
-- <a href="https://gitlab.com/scp-079/scp-079-analyze" target="_blank">SCP-079-ANALYZE</a>: 
-Analysis of user activity
-- <a href="https://gitlab.com/scp-079/scp-079-captcha" target="_blank">SCP-079-CAPTCHA</a>: 
-Provide challenges for new joined members
-- <a href="https://gitlab.com/scp-079/scp-079-config" target="_blank">SCP-079-CONFIG</a>: 
-Manage the settings of each bot
-- <a href="https://gitlab.com/scp-079/scp-079-clean" target="_blank">SCP-079-CLEAN</a>: 
-Filter specific types of messages
-- <a href="https://gitlab.com/scp-079/scp-079-java" target="_blank">SCP-079-JAVA</a>: 
-Java implementation of Project SCP-079
-- <a href="https://gitlab.com/scp-079/scp-079-noporn" target="_blank">SCP-079-NOPORN</a>: 
-Auto delete NSFW media messages
-- <a href="https://gitlab.com/scp-079/scp-079-noflood" target="_blank">SCP-079-NOFLOOD</a>: 
-Message-flooding prevention
-- <a href="https://gitlab.com/scp-079/scp-079-pm" target="_blank">SCP-079-PM</a>: 
-Everyone can have their own private chat bot
-- <a href="https://gitlab.com/scp-079/scp-079-regex" target="_blank">SCP-079-REGEX</a>: 
-Manage the regex patterns
-- <a class="no" target="_blank">SCP-079-USER</a>: 
-The old user bot
-- <a href="https://gitlab.com/scp-079/scp-079-warn" target="_blank">SCP-079-WARN</a>: 
-Warn or ban someone by admin commands
-
 <audio src="/audio/page/projects.ogg" autoplay></audio>
 <audio id="no_button" src="/audio/button/no.ogg"/>
 <audio id="no_click" src="/audio/button/no_click.ogg"/>
