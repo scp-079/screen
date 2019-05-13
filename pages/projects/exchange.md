@@ -471,12 +471,12 @@ exchange_text = format_data(
         "user_id": 12345678,
         "config": {
             "default": False,
-            "locked": 1512345678,
+            "lock": 1512345678,
             "auto": True
         },
         "default": {
             "default": True,
-            "locked": 0,
+            "lock": 0,
             "auto": False
         }
     }
@@ -673,7 +673,7 @@ exchange_text = format_data(
         "user_id": 12345678,
         "config": {
             "default": False,
-            "locked": 1512345678,
+            "lock": 1512345678,
             "con": True,
             "via": False,
             "ani": False,
@@ -701,7 +701,7 @@ exchange_text = format_data(
         },
         "default": {
             "default": True,
-            "locked": 0,
+            "lock": 0,
             "con": True, # 联系人
             "via": False, # 通过 Bot 发送的消息
             "ani": False, # GIF 动图
@@ -882,7 +882,7 @@ exchange_text = format_data(
         "config": {
             "default": False,
             "limit": 4,
-            "locked": 1512345678,
+            "lock": 1512345678,
             "mention": True,
             "report": {
                 "auto": False,
@@ -969,7 +969,7 @@ exchange_text = format_data(
         "user_id": 12345678,
         "config": {
             "default": False,
-            "locked": 1512345678,
+            "lock": 1512345678,
             "name": [
                 "fa",
                 "ur",
@@ -982,7 +982,7 @@ exchange_text = format_data(
         },
         "default": {
             "default": True,
-            "locked": 0,
+            "lock": 0,
             "name": [
                 "fa",
                 "ur",
@@ -1576,12 +1576,12 @@ exchange_text = format_data(
         "user_id": 12345678,
         "config": {
             "default": False,
-            "locked": 1512345678,
+            "lock": 1512345678,
             "limit": 10
         },
         "default": {
             "default": True,
-            "locked": 0,
+            "lock": 0,
             "limit": 20 # 默认的发送频率为每 10 秒 20 条
         }
     }
@@ -1849,13 +1849,13 @@ exchange_text = format_data(
         "user_id": 12345678,
         "config": {
             "default": False,
-            "locked": 1512345678,
+            "lock": 1512345678,
             "channel": True,
             "recheck": True
         },
         "default": {
             "default": True,
-            "locked": 0,
+            "lock": 0,
             "channel": True, # 过滤 porn-ios 频道转发过来的消息
             "recheck": False # 启用媒体过滤功能
         }
@@ -2122,12 +2122,12 @@ exchange_text = format_data(
         "user_id": 12345678,
         "config": {
             "default": False,
-            "locked": 1512345678,
+            "lock": 1512345678,
             "auto": True
         },
         "default": {
             "default": True,
-            "locked": 0,
+            "lock": 0,
             "auto": False
         }
     }
@@ -2706,7 +2706,7 @@ exchange_text = format_data(
         "user_id": 12345678,
         "config": {
             "default": False,
-            "locked": 1512345678,
+            "lock": 1512345678,
             "ot": False,
             "welcome": False,
             "rm": False,
@@ -2714,7 +2714,7 @@ exchange_text = format_data(
         },
         "default": {
             "default": True,
-            "locked": 0,
+            "lock": 0,
             "ot": False, # 开启 OT 警告
             "welcome": False, # 启用欢迎信息
             "rm": False, # 开启 RM 警告
@@ -3002,7 +3002,7 @@ exchange_text = format_data(
         "user_id": 12345678,
         "config": {
             "default": False,
-            "locked": 1512345678,
+            "lock": 1512345678,
             "limit": 3,
             "mention": True,
             "report": {
@@ -3012,7 +3012,7 @@ exchange_text = format_data(
         },
         "default": {
             "default": True,
-            "locked": 0,
+            "lock": 0,
             "limit": 3,
             "mention": False,
             "report": {
