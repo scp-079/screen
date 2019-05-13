@@ -124,7 +124,8 @@ exchange_text = format_data(
     action_type="delete",
     data={
         "group_id": -10012345678,
-        "user_id": 12345678
+        "user_id": 12345678,
+        "type": "single"
     }
 )
 ```
@@ -207,7 +208,8 @@ exchange_text = format_data(
     action_type="delete",
     data={
         "group_id": -10012345678,
-        "user_id": 12345678
+        "user_id": 12345678,
+        "type": "single"
     }
 )
 ```
@@ -463,7 +465,8 @@ exchange_text = format_data(
     action_type="delete",
     data={
         "group_id": -10012345678,
-        "user_id": 12345678
+        "user_id": 12345678,
+        "type": "single"
     }
 )
 ```
@@ -554,30 +557,30 @@ exchange_text = format_data(
         "default": {
             "default": True,
             "locked": 0,
-            "con": True,
-            "via": False,
-            "ani": False,
-            "bmd": False,
-            "vid": False,
-            "vdn": True,
-            "sti": False,
-            "pho": False,
-            "aud": False,
-            "voi": True,
-            "gam": False,
-            "url": False,
-            "new": True,
-            "lef": True,
-            "loc": True,
-            "doc": False,
-            "exe": True,
-            "bat": True,
-            "aff": True,
-            "sho": True,
-            "tgl": False,
-            "tgp": False,
-            "cim": False,
-            "qrc": False
+            "con": True, # 联系人
+            "via": False, # 通过 Bot 发送的消息
+            "ani": False, # GIF 动图
+            "bmd": False, # 传统机器人命令
+            "vid": False, # 视频
+            "vdn": True, # 圆视频
+            "sti": False, # 贴纸
+            "pho": False, # 图片
+            "aud": False, # 音频
+            "voi": True, # 语音
+            "gam": False, # 游戏
+            "url": False, # 网址
+            "new": True, # 加群消息（保留最后一条）
+            "lef": True, # 离群消息
+            "loc": True, # 定位地址
+            "doc": False, # 文件
+            "exe": True, # EXE 与 APK 文件
+            "bat": True, # BAT 与 CMD 文件
+            "aff": True, # 传统 AFF 链接、支付宝淘宝红包、大陆 APP 的各类活动推广分享
+            "sho": True, # 短链接
+            "tgl": False, # TG 链接
+            "tgp": False, # TG 代理
+            "cim": False, # 大陆即时通讯软件的联系方式
+            "qrc": False # 二维码
         }
     }
 )
