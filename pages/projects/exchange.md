@@ -739,7 +739,7 @@ exchange_text = format_data(
 1. 默认不允许清真类语言昵称，默认删除清真类语言、俄语
 2. 群组自行重新定义用户昵称不允许的语言，不允许的语言出现将限制该用户
 3. 根据某用户触及默认敏感语言的群组数量，进行 lang 评分
-4. 群组自行重新定义用户发言不允许的语言，不允许的语言将被自动删除。如用户评分过高时触及默认删除的语言，将进行追踪封禁类收录，并分享给其他机器人
+4. 群组自行重新定义用户发言不允许的语言，不允许的语言将被自动删除。如用户评分过高时触及默认删除的语言，或受到追踪删除时触发，将进行追踪封禁类收录，并分享给其他机器人
 5. 支持检测的语言： af, ar, bg, bn, ca, cs, cy, da, de, el, en, es, et, fa, fi, fr, gu, he, hi, hr, hu, id, it, ja, kn, ko, lt, lv, mk, ml, mr, ne, nl, no, pa, pl, pt, ro, ru, sk, sl, so, sq, sv, sw, ta, te, th, tl, tr, uk, ur, vi, zh-cn, zh-tw 。参见： https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 6. 项目等级为：**Euclid**
 
@@ -1256,7 +1256,7 @@ exchange_text = format_data(
 2. 群组可自行调整频率上限
 3. 超过上限者将被删除其在该群组中的所有消息，直到用户主动沉默一定时间后该限制解除
 4. 根据某用户触发频率上限的群组数量，进行 noflood 评分
-5. 如用户评分过高时触发频率上限，将进行追踪封禁类收录，并分享给其他机器人
+5. 如用户评分过高时触发频率上限，或受到追踪删除时触发，将进行追踪封禁类收录，并分享给其他机器人
 6. 项目等级为：**Euclid**
 
 NOFLOOD 能够向 ANALYZE、BACKUP、CAPTCHA、CLEAN、CONFIG、LANG、MANAGE、NOPORN、NOSPAM、RECHECK、USER、WATCH 发送数据
@@ -1513,7 +1513,7 @@ exchange_text = format_data(
 2. 群组可自行选择启用其他模型作为媒体复查机制
 3. 触发 NSFW 检测者将被删除媒体消息，直到用户主动不再发送媒体消息一定时间后，该限制自动解除
 4. 根据某用户触发 NSFW 的群组数量，进行 noporn 评分
-5. 如用户评分过高时触发 NSFW，将进行追踪封禁类收录，并分享给其他机器人
+5. 如用户评分过高时触发 NSFW，或受到追踪删除时触发，将进行追踪封禁类收录，并分享给其他机器人
 6. 项目等级为：**Euclid**
 
 NOPORN 能够向 ANALYZE、BACKUP、CAPTCHA、CLEAN、CONFIG、LANG、MANAGE、NOFLOOD、NOSPAM、RECHECK、USER、WATCH 发送数据
@@ -2030,7 +2030,9 @@ exchange_text = format_data(
 此机器人与 SCP-079-NOPORN 共用同一 token
 
 1. 如果群组开启了复查功能，则使用其他模型复查媒体消息，检查 NSFW 情况
-2. 项目等级为：**Euclid**
+2. 根据某用户触发 NSFW 的群组数量，进行 noporn 评分
+3. 如用户评分过高时触发 NSFW，或受到追踪删除时触发，将进行追踪封禁类收录，并分享给其他机器人
+4. 项目等级为：**Euclid**
 
 RECHECK 能够向 ANALYZE、BACKUP、CAPTCHA、CLEAN、CONFIG、LANG、MANAGE、NOFLOOD、NOPORN、NOSPAM、USER、WATCH 发送数据
 
@@ -2143,7 +2145,8 @@ exchange_text = format_data(
     action_type="watch",
     data={
         "id": 12345678,
-        "type": "ban"
+        "type": "ban",
+        "until"="gAAAAABc1SZjduLGl1872VS6dD3osVJaOSQqdlSHy3SpDXeV4yu2FLbEung8neVMonokt5yI8qaLic8bi44X-y073-pGX6LtxKNQilSvci_gk5xHj4HNPFE=" # 将追踪截止的时间戳转为加密字符串
     }
 )
 ```
@@ -2174,7 +2177,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 8：向 USER 发送协助请求，调用 delete all 功能，删除某用户全部消息
+情形 8：向 USER 发送协助请求，调用 delete all 功能，删除某用户全部消息，范围：所有群组（评分过高或受追踪时的触发）
 
 ```python
 exchange_text = format_data(
@@ -2186,12 +2189,13 @@ exchange_text = format_data(
     action_type="delete",
     data={
         "group_id": -10012345678,
-        "user_id": 12345678
+        "user_id": 12345678,
+        "type": "global"
     }
 )
 ```
 
-情形 12：向 USER 发送协助请求，调用 global ban 功能，用于查找某用户与机器人的所有共同群组，删除其全部消息，并对其进行限制
+情形 9：向 USER 发送协助请求，调用 global ban 功能，用于查找某用户与机器人的所有共同群组，删除其全部消息，并对其进行限制
 
 ```python
 exchange_text = format_data(
