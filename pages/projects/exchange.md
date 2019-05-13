@@ -2469,14 +2469,18 @@ exchange_text = format_data(
         "config": {
             "default": False,
             "locked": 1512345678,
-            "channel": True,
-            "recheck": True
+            "ot": False,
+            "welcome": False,
+            "rm": False,
+            "custom": True
         },
         "default": {
             "default": True,
             "locked": 0,
             "ot": False, # 开启 OT 警告
-            "welcome": False # 启用欢迎信息
+            "welcome": False, # 启用欢迎信息
+            "rm": False, # 开启 RM 警告
+            "custom": False # 自定义关键词
         }
     }
 )
