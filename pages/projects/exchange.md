@@ -1199,7 +1199,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 9：向其他 Bot（CAPTCHA、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）添加白名单用户
+情形 9：向其他 Bot（CAPTCHA、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）添加白名单用户，移除同理
 
 ```python
 exchange_text = format_data(
@@ -1244,6 +1244,50 @@ exchange_text = format_data(
     data={
         "id": 12345678,
         "type": "user"
+    }
+)
+```
+
+情形 11：向其他 Bot（ANALYZE、CAPTCHA、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）移除受追踪用户
+
+```python
+exchange_text = format_data(
+    sender="MANAGE",
+    receviers=[
+        "ANALYZE",
+        "CAPTCHA",
+        "LANG",
+        "NOFLOOD",
+        "NOPORN",
+        "NOSPAM",
+        "RECHECK",
+        "USER",
+        "WATCH"
+    ],
+    action="remove",
+    action_type="watch",
+    data={
+        "id": 12345678,
+        "type": "all"
+    }
+)
+```
+
+情形 12：向其他 Bot（NOPORN、RECHECK、WATCH）添加贴纸白名单，移除同理
+
+```python
+exchange_text = format_data(
+    sender="MANAGE",
+    receviers=[
+        "NOPORN",
+        "RECHECK",
+        "WATCH"
+    ],
+    action="add",
+    action_type="except",
+    data={
+        "id": "file id",
+        "type": "sticker"
     }
 )
 ```
@@ -2710,7 +2754,8 @@ exchange_text = format_data(
     action_type="watch",
     data={
         "id": 12345678,
-        "type": "ban"
+        "type": "ban",
+        "until"="gAAAAABc1SZjduLGl1872VS6dD3osVJaOSQqdlSHy3SpDXeV4yu2FLbEung8neVMonokt5yI8qaLic8bi44X-y073-pGX6LtxKNQilSvci_gk5xHj4HNPFE=" # 将追踪截止的时间戳转为加密字符串
     }
 )
 ```
@@ -2793,16 +2838,23 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
         data (Union[dict, int, list, str]):
             Additional data required for operation.
                 Add / Remove:
-                    bad / except:
+                    bad:
                         {
                             "id":  12345678,
-                            "type": "user / channel"
+                            "type": "user"
+                        }
+
+                    except:
+                        {
+                            "id":  12345678 / "file id",
+                            "type": "user / sticker"
                         }
 
                     watch:
                         {
                             "id": 12345678,
-                            "type": "all / ban / delete"
+                            "type": "ban / delete",
+                            "until": "encrypted string"
                         }
 
                 Appeal:
@@ -2925,6 +2977,25 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                             "group_name": "Group Name",
                             "group_link": "link to group",
                             "reason": "user / permissions"
+                        }
+
+                Remove:
+                    bad:
+                        {
+                            "id":  12345678,
+                            "type": "user"
+                        }
+                    
+                    except:
+                        {
+                            "id":  12345678 / "file id",
+                            "type": "user / sticker"
+                        }
+
+                    watch:
+                        {
+                            "id": 12345678,
+                            "type": "all"
                         }
 
                 Update
