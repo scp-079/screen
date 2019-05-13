@@ -8,7 +8,7 @@ title: SCP-079-CONFIG
 
 **项目等级：**Safe
 
-**特殊收容措施：**SCP-079-CONFIG 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-CONFIG 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。其应该作为频道 SCP-079-EXCHANGE 、频道 SCP-079-CONFIG  的管理员，并加入 SCP-079-TEST 群组。
+**特殊收容措施：**SCP-079-CONFIG 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-CONFIG 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。其应该作为频道 SCP-079-EXCHANGE 、频道 SCP-079-CONFIG、频道 SCP-079-HIDE 的管理员，并加入 SCP-079-TEST 群组。
 
 **描述：**SCP-079-CONFIG 是一个用于管理各机器人设置的机器人，其项目位于 <a href="https://gitlab.com/scp-079/scp-079-config" target="_blank">Gitlab</a> 。机器人本体位于 <a href="https://t.me/SCP_079_CONFIG_BOT" class="079" target="_blank">SCP-079-CONFIG</a> ，并不接受任何直接管理。其加入了 SCP-079-TEST ，用于其运行状态。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：根据其他机器人的请求，在 SCP-079-CONFIG 频道中提供带按钮的设置会话，每个会话的有效时间为 5 分钟。具体操作详见附录中的使用说明。
 
@@ -72,6 +72,9 @@ debug_channel_id = [DATA EXPUNGED]
 ; 此处填写调试频道 SCP-079-DEBUG 的 ID
 exchange_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID
+; 关于数据交换频道的详情，请查看 https://scp-079.org/exchange/
+hide_channel_id = [DATA EXPUNGED]
+; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
 test_group_id = [DATA EXPUNGED]
 ; 此处填写测试群组 SCP-079-TEST 的 ID
 config_channel_username = [DATA EXPUNGED]

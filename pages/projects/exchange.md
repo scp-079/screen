@@ -108,6 +108,20 @@ exchange_text = format_data(
 )
 ```
 
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
+)
+```
+
 ---
 
 ## [SCP-079-APPEAL](#目录)
@@ -179,6 +193,20 @@ exchange_text = format_data(
         "user_id": 12345678,
         "type": "single"
     }
+)
+```
+
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
 )
 ```
 
@@ -269,6 +297,20 @@ exchange_text = format_data(
 )
 ```
 
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
+)
+```
+
 ---
 
 ## [SCP-079-BACKUP](#目录)
@@ -338,6 +380,34 @@ exchange_text = format_data(
             "USER"
         ]
     }
+)
+```
+
+特殊情形 1：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
+)
+```
+
+特殊情形 2：向所有 bot 发送恢复原数据交换频道指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=False
 )
 ```
 
@@ -527,6 +597,20 @@ exchange_text = format_data(
         "user_id": 12345678,
         "type": "single"
     }
+)
+```
+
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
 )
 ```
 
@@ -723,6 +807,20 @@ exchange_text = format_data(
 )
 ```
 
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
+)
+```
+
 ---
 
 ## [SCP-079-CONFIG](#目录)
@@ -792,6 +890,20 @@ exchange_text = format_data(
             }
         }
     }
+)
+```
+
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
 )
 ```
 
@@ -1071,6 +1183,20 @@ exchange_text = format_data(
         "group_id": -10012345678,
         "user_id": 12345678
     }
+)
+```
+
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
 )
 ```
 
@@ -1360,6 +1486,34 @@ exchange_text = format_data(
 )
 ```
 
+特殊情形 1：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
+)
+```
+
+特殊情形 2：向所有 bot 发送恢复原数据交换频道指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=False
+)
+```
+
 ---
 
 ## [SCP-079-NOFLOOD](#目录)
@@ -1616,6 +1770,20 @@ exchange_text = format_data(
         "group_id": -10012345678,
         "user_id": 12345678
     }
+)
+```
+
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
 )
 ```
 
@@ -1880,6 +2048,20 @@ exchange_text = format_data(
 )
 ```
 
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
+)
+```
+
 ---
 
 ## [SCP-079-NOSPAM](#目录)
@@ -2106,6 +2288,20 @@ exchange_text = format_data(
 )
 ```
 
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
+)
+```
+
 ---
 
 ## [SCP-079-PM](#目录)
@@ -2142,6 +2338,20 @@ exchange_text = format_data(
     action="backup",
     action_type="status",
     data="awake"
+)
+```
+
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
 )
 ```
 
@@ -2334,6 +2544,20 @@ exchange_text = format_data(
 )
 ```
 
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
+)
+```
+
 ---
 
 ## [SCP-079-REGEX](#目录)
@@ -2403,6 +2627,20 @@ exchange_text = format_data(
     action="update",
     action_type="download",
     data="compiled"
+)
+```
+
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
 )
 ```
 
@@ -2521,6 +2759,20 @@ exchange_text = format_data(
         "group_link": "https://t.me/SCP_079_CHAT",
         "reason"： "permissions"
     }
+)
+```
+
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
 )
 ```
 
@@ -2677,6 +2929,20 @@ exchange_text = format_data(
 )
 ```
 
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
+)
+```
+
 ---
 
 ## [SCP-079-WARN](#目录)
@@ -2819,6 +3085,20 @@ exchange_text = format_data(
 )
 ```
 
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
+)
+```
+
 ---
 
 ## [SCP-079-WATCH](#目录)
@@ -2885,6 +3165,20 @@ exchange_text = format_data(
 )
 ```
 
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
+)
+```
+
 ---
 
 ## [文件](#目录)
@@ -2928,6 +3222,8 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                     reply - Send a appeal reply
 
                 When action is backup:
+                    emergency - Let bots enable emergency mode in groups
+                    hide - Use HIDE channel to exchange data
                     pickle - Pickle file
                     status - Bot(s) status
 
@@ -2961,7 +3257,6 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                     preview - Update a message's preview
                     reload - Update the data from local machines
                     score - Update user's score
-                    status - Update bot's status
 
 
         data (Union[dict, int, list, str]):
@@ -3013,6 +3308,9 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                     
                     stop:
                         List[str]
+                    
+                    hide:
+                        True
 
                 Config:
                     ask:
