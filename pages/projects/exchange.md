@@ -14,7 +14,55 @@ title: SCP-079-EXCHANGE
 
 **附录：**机器人数据交换和职能的消息介绍
 
-## 前提
+---
+
+## 目录
+
+[前提](#前提)
+
+[SCP-079-ANALYZE](#scp-079-analyze)
+
+[SCP-079-APPEAL](#scp-079-appeal)
+
+[SCP-079-APPLY](#scp-079-apply)
+
+[SCP-079-BACKUP](#scp-079-backup)
+
+[SCP-079-CAPTCHA](#scp-079-captcha)
+
+[SCP-079-CLEAN](#scp-079-clean)
+
+[SCP-079-CONFIG](#scp-079-config)
+
+[SCP-079-LANG](#scp-079-lang)
+
+[SCP-079-MANAGE](#scp-079-manage)
+
+[SCP-079-NOFLOOD](#scp-079-noflood)
+
+[SCP-079-NOPORN](#scp-079-noporn)
+
+[SCP-079-NOSPAM](#scp-079-nospam)
+
+[SCP-079-PM](#scp-079-pm)
+
+[SCP-079-RECHECK](#scp-079-recheck)
+
+[SCP-079-REGEX](#scp-079-regex)
+
+[SCP-079-TIP](#scp-079-tip)
+
+[SCP-079-USER](#scp-079-user)
+
+[SCP-079-WARN](#scp-079-warn)
+
+[SCP-079-WATCH](#scp-079-watch)
+
+[文件](#文件)
+
+---
+
+## [前提](#目录)
 
 请先查看[设计和管理原则](/principles/)，和[项目等级说明](/classes/)
 
@@ -22,49 +70,7 @@ title: SCP-079-EXCHANGE
 
 ---
 
-## 目录
-
-[SCP-079-ANALYZE](./#scp-079-analyze)
-
-[SCP-079-APPEAL](./#scp-079-appeal)
-
-[SCP-079-APPLY](./#scp-079-apply)
-
-[SCP-079-BACKUP](./#scp-079-backup)
-
-[SCP-079-CAPTCHA](./#scp-079-captcha)
-
-[SCP-079-CLEAN](./#scp-079-clean)
-
-[SCP-079-CONFIG](./#scp-079-config)
-
-[SCP-079-LANG](./#scp-079-lang)
-
-[SCP-079-MANAGE](./#scp-079-manage)
-
-[SCP-079-NOFLOOD](./#scp-079-noflood)
-
-[SCP-079-NOPORN](./#scp-079-noporn)
-
-[SCP-079-NOSPAM](./#scp-079-nospam)
-
-[SCP-079-PM](./#scp-079-pm)
-
-[SCP-079-RECHECK](./#scp-079-recheck)
-
-[SCP-079-REGEX](./#scp-079-regex)
-
-[SCP-079-TIP](./#scp-079-tip)
-
-[SCP-079-USER](./#scp-079-user)
-
-[SCP-079-WARN](./#scp-079-warn)
-
-[SCP-079-WATCH](./#scp-079-watch)
-
----
-
-## [SCP-079-ANALYZE](./#目录)
+## [SCP-079-ANALYZE](#目录)
 
 此机器人用于进行每日所有群组的统计数据图表展示
 
@@ -102,7 +108,9 @@ exchange_text = format_data(
 )
 ```
 
-## [SCP-079-APPEAL](./#目录)
+---
+
+## [SCP-079-APPEAL](#目录)
 
 此机器人用于进行申诉功能
 
@@ -174,7 +182,9 @@ exchange_text = format_data(
 )
 ```
 
-## [SCP-079-APPLY](./#目录)
+---
+
+## [SCP-079-APPLY](#目录)
 
 此机器人用于进行使用申请
 
@@ -258,7 +268,9 @@ exchange_text = format_data(
 )
 ```
 
-## [SCP-079-BACKUP](./#目录)
+---
+
+## [SCP-079-BACKUP](#目录)
 
 此机器人用于每日备份所有机器人的数据，并在宕机时启动备份机器人
 
@@ -328,7 +340,9 @@ exchange_text = format_data(
 )
 ```
 
-## [SCP-079-CAPTCHA](./#目录)
+---
+
+## [SCP-079-CAPTCHA](#目录)
 
 此机器人用于进行加群验证
 
@@ -515,7 +529,9 @@ exchange_text = format_data(
 )
 ```
 
-## [SCP-079-CLEAN](./#目录)
+---
+
+## [SCP-079-CLEAN](#目录)
 
 此机器人用户过滤某类型消息
 
@@ -706,7 +722,9 @@ exchange_text = format_data(
 )
 ```
 
-## [SCP-079-CONFIG](./#目录)
+---
+
+## [SCP-079-CONFIG](#目录)
 
 此机器人用于在专用频道提供针对某机器人的群组设置按钮
 
@@ -776,7 +794,9 @@ exchange_text = format_data(
 )
 ```
 
-## [SCP-079-LANG](./#目录)
+---
+
+## [SCP-079-LANG](#目录)
 
 此机器人用于根据群组设置过滤某种语言的消息、用户，删除或封禁
 
@@ -1053,7 +1073,9 @@ exchange_text = format_data(
 )
 ```
 
-## [SCP-079-MANAGE](./#目录)
+---
+
+## [SCP-079-MANAGE](#目录)
 
 此机器人用于对其他机器人的加群、退群、名单收录情况进行管理
 
@@ -1336,7 +1358,9 @@ exchange_text = format_data(
 )
 ```
 
-## [SCP-079-NOFLOOD](./#目录)
+---
+
+## [SCP-079-NOFLOOD](#目录)
 
 此机器人用于根据群组设置限制用户发送消息的频率
 
@@ -1593,7 +1617,9 @@ exchange_text = format_data(
 )
 ```
 
-## [SCP-079-NOPORN](./#目录)
+---
+
+## [SCP-079-NOPORN](#目录)
 
 此机器人用于自动删除 NSFW 媒体消息
 
@@ -1852,7 +1878,9 @@ exchange_text = format_data(
 )
 ```
 
-## [SCP-079-NOSPAM](./#目录)
+---
+
+## [SCP-079-NOSPAM](#目录)
 
 此机器人用于自动删除广告消息，或限制广告用户
 
@@ -2076,7 +2104,9 @@ exchange_text = format_data(
 )
 ```
 
-## [SCP-079-PM](./#目录)
+---
+
+## [SCP-079-PM](#目录)
 
 此机器人用于作为可自搭建的私聊机器人的演示版本
 
@@ -2113,7 +2143,9 @@ exchange_text = format_data(
 )
 ```
 
-## [SCP-079-RECHECK](./#目录)
+---
+
+## [SCP-079-RECHECK](#目录)
 
 此机器人与 SCP-079-NOPORN 共用同一 token
 
@@ -2300,7 +2332,9 @@ exchange_text = format_data(
 )
 ```
 
-## [SCP-079-REGEX](./#目录)
+---
+
+## [SCP-079-REGEX](#目录)
 
 此机器人用户管理正则库
 
@@ -2370,7 +2404,9 @@ exchange_text = format_data(
 )
 ```
 
-## [SCP-079-TIP](./#目录)
+---
+
+## [SCP-079-TIP](#目录)
 
 此机器人用于发送群组的各种自定义提示
 
@@ -2449,7 +2485,9 @@ exchange_text = format_data(
 )
 ```
 
-## [SCP-079-USER](./#目录)
+---
+
+## [SCP-079-USER](#目录)
 
 此机器人用于协助其他机器人
 
@@ -2600,7 +2638,9 @@ exchange_text = format_data(
 )
 ```
 
-## [SCP-079-WARN](./#目录)
+---
+
+## [SCP-079-WARN](#目录)
 
 此机器人用于响应群管理命令，封禁或警告某用户
 
@@ -2740,7 +2780,9 @@ exchange_text = format_data(
 )
 ```
 
-## [SCP-079-WATCH](./#目录)
+---
+
+## [SCP-079-WATCH](#目录)
 
 此机器人用于进行敏感追踪
 
@@ -2803,6 +2845,10 @@ exchange_text = format_data(
     }
 )
 ```
+
+---
+
+## [文件](#目录)
 
 **文件#etc.py：**
 
