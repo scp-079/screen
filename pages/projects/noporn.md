@@ -10,7 +10,7 @@ title: SCP-079-NOPORN
 
 **特殊收容措施：**SCP-079-NOPORN 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-NOPORN 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。务必要注意，其只能通过 SCP-079-USER 邀请入群，并由其赋予管理权限，如果有任何未授权的恶意使用，将可能给其他机器人的工作带来影响。其应该作为频道 SCP-079-EXCHANGE 的管理员，并加入 SCP-079-TEST 群组。
 
-**描述：**SCP-079-NOPORN 是一个用于群组成员管理的机器人，其项目位于 <a href="https://gitlab.com/scp-079/scp-079-noporn" target="_blank">Gitlab</a> 。机器人本体位于 <a href="https://t.me/SCP_079_NOPORN_BOT" class="079" target="_blank">SCP-079-NOPORN</a> ，仅供经过授权的群组使用，并由群组 SCP-079-MANAGE 中的成员对其进群、退群操作进行管理。其加入了 SCP-079-TEST ，用于测试基本功能的使用。该项目由 ███ 主要负责，基于原有 SCP-079-USER 机器人修改。通过该项目建立的机器人有类似的功能：删除群组中的 NSFW 消息，对于在多个群组中以 NSFW 内容 spam 的用户进行封禁，根据管理员的设置，过滤转发自受 Telegram 官方限制频道的消息，并提供双方案评价媒体消息的媒体复查功能。具体操作详见附录中的使用说明。
+**描述：**SCP-079-NOPORN 是一个用于群组成员管理的机器人，其项目位于 <a href="https://gitlab.com/scp-079/scp-079-noporn" target="_blank">Gitlab</a> 。机器人本体位于 <a href="https://t.me/SCP_079_NOPORN_BOT" class="079" target="_blank">SCP-079-NOPORN</a> ，仅供经过授权的群组使用，并由群组 SCP-079-MANAGE 中的成员对其进群、退群操作进行管理。其加入了 SCP-079-TEST ，用于测试分析结果。该项目由 ███ 主要负责，基于原有 SCP-079-USER 机器人修改。通过该项目建立的机器人有类似的功能：删除群组中的 NSFW 消息，对于在多个群组中以 NSFW 内容 spam 的用户进行封禁，根据管理员的设置，过滤转发自受 Telegram 官方限制频道的消息，并提供双方案评价媒体消息的媒体复查功能。具体操作详见附录中的使用说明。
 
 **附录：**使用说明
 
@@ -102,6 +102,8 @@ noporn_id = [DATA EXPUNGED]
 ; SCP-079-NOPORN 的 ID
 nospam_id = [DATA EXPUNGED]
 ; SCP-079-NOSPAM 的 ID
+tip_id = [DATA EXPUNGED]
+; SCP-079-TIP 的 ID
 user_id = [DATA EXPUNGED]
 ; SCP-079-USER 的 ID
 warn_id = [DATA EXPUNGED]
@@ -112,6 +114,9 @@ debug_channel_id = [DATA EXPUNGED]
 ; 此处填写调试频道 SCP-079-DEBUG 的 ID
 exchange_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID
+; 关于数据交换频道的详情，请查看 https://scp-079.org/exchange/
+hide_channel_id = [DATA EXPUNGED]
+; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
 logging_channel_id = [DATA EXPUNGED]
 ; 此处填写证据存放频道 SCP-079-LOGGING 的 ID
 test_group_id = [DATA EXPUNGED]
