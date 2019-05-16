@@ -1214,9 +1214,9 @@ exchange_text = format_data(
 6. 接受各机器人的自主退群通知，在 MANAGE 群组中提示
 7. 在 MANAGE 群组中提供手动移除用户黑名单的功能
 8. 在 MANAGE 群组中提供手动添加频道黑名单的功能
-9. 在 MANAGE 群组中提供手动添加和移除用户、贴纸白名单的功能
+9. 在 MANAGE 群组中提供手动添加和移除频道、贴纸、用户白名单的功能
 10. 在 MANAGE 群组中提供手动通知各机器人退出某群组的功能
-11. 驻守 SCP-079-LOGGING 频道，作为管理员，拥有编辑消息权限。等待 `/error` 命令，此命令若正确地被回复到某证据的附加消息上，则根据该消息的等级，若为封禁：解禁某用户并编辑附加消息添加 “已解封” 标签，若为删除：编辑附加消息添加 “已解明” 标签，表示已发现此错误；加入 SCP-079-ERROR 频道，作为管理员，转发误判消息到该频道中，并附加必要消息及执行者 ID
+11. 驻守 SCP-079-LOGGING 频道，作为管理员，拥有编辑消息权限。等待 `/error` 命令，此命令若正确地被回复到某证据的附加消息上，则根据该消息的等级，若为封禁：解禁某用户并编辑附加消息添加 “已解封” 标签，若为删除：编辑附加消息添加 “已解明” 标签，表示已发现此错误，并根据项目编号针对 file id 添加相应的暂时白名单；加入 SCP-079-ERROR 频道，作为管理员，转发误判消息到该频道中，并附加必要消息及执行者 ID
 12. 项目等级为：**Safe**
 
 MANAGE 能够向 ANALYZE、APPEAL、APPLY、BACKUP、CAPTCHA、CLEAN、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH 发送数据
@@ -1507,6 +1507,26 @@ exchange_text = format_data(
     data={
         "id": "file id",
         "type": "sticker"
+    }
+)
+```
+
+情形 14：向其他 Bot（NOPORN、NOSPAM、RECHECK、WATCH）添加 file id 短暂白名单，移除同理
+
+```python
+exchange_text = format_data(
+    sender="MANAGE",
+    receviers=[
+        "NOPORN",
+        "NOSPAM",
+        "RECHECK",
+        "WATCH"
+    ],
+    action="add",
+    action_type="except",
+    data={
+        "id": "file id",
+        "type": "tmp"
     }
 )
 ```
@@ -2930,7 +2950,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 8：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK）发生某条消息的链接预览
+情形 8：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK）发送某条消息的链接预览
 
 ```python
 exchange_text = format_data(
