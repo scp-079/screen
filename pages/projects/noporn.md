@@ -61,6 +61,8 @@ sudo apt update && sudo apt install libatlas-base-dev libblas-dev libhdf5-dev li
 
 **文件#config.ini：**
 
+（主要版本）
+
 修改配置文件：
 
 需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。 API ID 与 API Hash 在 <a href="https://my.telegram.org" target="_blank">官网</a> 获取
@@ -127,16 +129,116 @@ logging_channel_username = [DATA EXPUNGED]
 [custom]
 default_group_link = [DATA EXPUNGED]
 ; 此处填写调试信息中默认的群组链接
+image_size = [DATA EXPUNGED]
+; 分析图片文档的最大大小，超过此大小则不下载文件进行 NSFW 分析，单位为 KB
 project_link = [DATA EXPUNGED]
 ; 此处填写项目网址
 project_name = [DATA EXPUNGED]
 ; 此处填写项目名称
 reset_day = [DATA EXPUNGED]
 ; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
+threshold_porn = [DATA EXPUNGED]
+; 判断 NSFW 的阈值，0 至 1 之间的小数，大于此阈值则认为图片为 NSFW
+time_ban = [DATA EXPUNGED]
+; 建议追踪封禁状态维持的时间，单位为秒
 user_name = [DATA EXPUNGED]
 ; 此处填写 SCP-079-USER 的项目名称
 
 [encrypt]
+key = [DATA EXPUNGED]
+; 加密字符串所用的密码
+password = [DATA EXPUNGED]
+; 加密文件所用的密码
+```
+
+（复查版本）
+
+```ini
+[pyrogram]
+api_id = [DATA EXPUNGED]
+api_hash = [DATA EXPUNGED]
+; 以上两条信息从官网申请获得
+
+[plugins]
+root = plugins
+include =
+    handlers.command
+    handlers.message
+
+[proxy]
+enabled = False
+; 可根据需要自行决定是否使用 SOCKS5 代理
+hostname = 127.0.0.1
+port = 1080
+
+[basic]
+bot_token = [DATA EXPUNGED]
+; 此处填写在 @BotFather 处获得的 token
+prefix = /!
+; 命令前的可用字符，如在群组中使用非常规命令前缀，需要机器人有获取普通消息的权限
+
+[bots]
+clean_id = [DATA EXPUNGED]
+; SCP-079-CLEAN 的 ID
+captcha_id = [DATA EXPUNGED]
+; SCP-079-CAPTCHA 的 ID
+lang_id = [DATA EXPUNGED]
+; SCP-079-LANG 的 ID
+noflood_id = [DATA EXPUNGED]
+; SCP-079-NOFLOOD 的 ID
+noporn_id = [DATA EXPUNGED]
+; SCP-079-NOPORN 的 ID
+nospam_id = [DATA EXPUNGED]
+; SCP-079-NOSPAM 的 ID
+tip_id = [DATA EXPUNGED]
+; SCP-079-TIP 的 ID
+user_id = [DATA EXPUNGED]
+; SCP-079-USER 的 ID
+warn_id = [DATA EXPUNGED]
+; SCP-079-WARN 的 ID
+
+[channels]
+debug_channel_id = [DATA EXPUNGED]
+; 此处填写调试频道 SCP-079-DEBUG 的 ID
+exchange_channel_id = [DATA EXPUNGED]
+; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID
+; 关于数据交换频道的详情，请查看 https://scp-079.org/exchange/
+hide_channel_id = [DATA EXPUNGED]
+; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
+logging_channel_id = [DATA EXPUNGED]
+; 此处填写证据存放频道 SCP-079-LOGGING 的 ID
+test_group_id = [DATA EXPUNGED]
+; 此处填写测试群组 SCP-079-TEST 的 ID
+logging_channel_username = [DATA EXPUNGED]
+; 此处填写 SCP-079-LOGGING 频道的链接名（不带 @）
+
+[custom]
+default_group_link = [DATA EXPUNGED]
+; 此处填写调试信息中默认的群组链接
+image_size = [DATA EXPUNGED]
+; 分析图片文档的最大大小，超过此大小则不下载文件进行 NSFW 分析，单位为 KB
+project_link = [DATA EXPUNGED]
+; 此处填写项目网址
+project_name = [DATA EXPUNGED]
+; 此处填写项目名称
+reset_day = [DATA EXPUNGED]
+; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
+threshold_drawings = [DATA EXPUNGED]
+; 判断 drawing 的阈值，0 至 1 之间的小数，大于此阈值可能判断图片为 drawing
+threshold_drawings_hentai = [DATA EXPUNGED]
+; 判断 drawing 和 hentai 加和的阈值，0 至 2 之间的小数，大于此阈值可能判断图片为 NSFW
+threshold_hentai = [DATA EXPUNGED]
+; 判断 hentai 的阈值，0 至 1 之间的小数，大于此阈值可能判断图片为 NSFW
+threshold_porn = [DATA EXPUNGED]
+; 判断 porn 的阈值，0 至 2 之间的小数，大于此阈值则认为图片为 NSFW
+time_ban = [DATA EXPUNGED]
+; 建议追踪封禁状态维持的时间，单位为秒
+user_name = [DATA EXPUNGED]
+; 此处填写 SCP-079-USER 的项目名称
+
+[encrypt]
+key = [DATA EXPUNGED]
+; 加密字符串所用的密码
 password = [DATA EXPUNGED]
 ; 加密文件所用的密码
 ```

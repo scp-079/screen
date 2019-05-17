@@ -422,7 +422,7 @@ exchange_text = format_data(
 3. 如验证通过，将给出负分（仅当用户综合评分大于等于 1.5 时）-0.5，如验证失败，将给出正分 0.5
 4. 项目等级为：**Euclid**
 
-CAPTCHA 能够向 ANALYZE、BACKUP、CONFIG、LANG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER 发送数据
+CAPTCHA 能够向 ANALYZE、BACKUP、CLEAN、CONFIG、LANG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER 发送数据
 
 情形 1：向 BACKUP 传送数据备份文件。每日 UTC 时间 20:00 。`exchange_text` 文本作为该文件的 `caption`
 
@@ -559,13 +559,14 @@ exchange_text = format_data(
 )
 ```
 
-情形 8：向其他 Bot（ANALYZE、LANG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK）更新用户分数
+情形 8：向其他 Bot（ANALYZE、CLEAN、LANG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK）更新用户分数
 
 ```python
 exchange_text = format_data(
     sender="CAPTCHA",
     receviers=[
         "ANALYZE",
+        "CLEAN",
         "LANG",
         "MANAGE",
         "NOFLOOD",
@@ -621,7 +622,7 @@ exchange_text = format_data(
 此机器人用户过滤某类型消息
 
 1. 根据群组自定义设置自动删除某类别消息
-2. 不参与评分、没有封禁操作
+2. 针对 AFF、BAT、CON、EXE、LOC、SHO、TGL、TGP 类型的消息进行较低分数的记录
 3. 项目等级为：**Safe**
 
 CLEAN 能够向 ANALYZE、BACKUP、CAPTCHA、LANG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER 发送数据
@@ -803,6 +804,29 @@ exchange_text = format_data(
     data={
         "group_id": -10012345678,
         "message_id": 123
+    }
+)
+```
+
+情形 8：向其他 Bot（ANALYZE、LANG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK）更新用户分数
+
+```python
+exchange_text = format_data(
+    sender="CLEAN",
+    receviers=[
+        "ANALYZE",
+        "LANG",
+        "MANAGE",
+        "NOFLOOD",
+        "NOPORN",
+        "NOSPAM",
+        "RECHECK"
+    ],
+    action="update",
+    action_type="score",
+    data={
+        "id": 12345678,
+        "score": -0.5
     }
 )
 ```
@@ -1077,13 +1101,14 @@ exchange_text = format_data(
 )
 ```
 
-情形 8：向其他 Bot（ANALYZE、CAPTCHA、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK）更新用户分数
+情形 8：向其他 Bot（ANALYZE、CLEAN、CAPTCHA、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK）更新用户分数
 
 ```python
 exchange_text = format_data(
     sender="LANG",
     receviers=[
         "ANALYZE",
+        "CLEAN",
         "CAPTCHA",
         "MANAGE",
         "NOFLOOD",
@@ -1709,13 +1734,14 @@ exchange_text = format_data(
 )
 ```
 
-情形 8：向其他 Bot（ANALYZE、CAPTCHA、LANG、MANAGE、NOPORN、NOSPAM、RECHECK）更新用户分数
+情形 8：向其他 Bot（ANALYZE、CLEAN、CAPTCHA、LANG、MANAGE、NOPORN、NOSPAM、RECHECK）更新用户分数
 
 ```python
 exchange_text = format_data(
     sender="NOFLOOD",
     receviers=[
         "ANALYZE",
+        "CLEAN",
         "CAPTCHA",
         "LANG",
         "MANAGE",
@@ -1985,13 +2011,14 @@ exchange_text = format_data(
 )
 ```
 
-情形 8：向其他 Bot（ANALYZE、CAPTCHA、LANG、MANAGE、NOFLOOD、NOSPAM、RECHECK）更新用户分数
+情形 8：向其他 Bot（ANALYZE、CLEAN、CAPTCHA、LANG、MANAGE、NOFLOOD、NOSPAM、RECHECK）更新用户分数
 
 ```python
 exchange_text = format_data(
     sender="NOPORN",
     receviers=[
         "ANALYZE",
+        "CLEAN",
         "CAPTCHA",
         "LANG",
         "MANAGE",
@@ -2479,13 +2506,14 @@ exchange_text = format_data(
 )
 ```
 
-情形 5：向其他 Bot（ANALYZE、CAPTCHA、LANG、MANAGE、NOFLOOD、NOPORN、NOSPAM）更新用户分数
+情形 5：向其他 Bot（ANALYZE、CLEAN、CAPTCHA、LANG、MANAGE、NOFLOOD、NOPORN、NOSPAM）更新用户分数
 
 ```python
 exchange_text = format_data(
     sender="RECHECK",
     receviers=[
         "ANALYZE",
+        "CLEAN",
         "CAPTCHA",
         "LANG",
         "MANAGE",
@@ -3107,13 +3135,14 @@ exchange_text = format_data(
 )
 ```
 
-情形 6：向其他 Bot（ANALYZE、CAPTCHA、LANG、MANAGE、NOFLOOD、NOSPAM、RECHECK）更新用户分数
+情形 6：向其他 Bot（ANALYZE、CLEAN、CAPTCHA、LANG、MANAGE、NOFLOOD、NOSPAM、RECHECK）更新用户分数
 
 ```python
 exchange_text = format_data(
     sender="WARN",
     receviers=[
         "ANALYZE",
+        "CLEAN",
         "CAPTCHA",
         "LANG",
         "MANAGE",
