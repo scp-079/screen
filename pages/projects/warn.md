@@ -16,37 +16,38 @@ title: SCP-079-WARN
 
 群组中的管理员：
 
-- `/config warn` ：通过 SCP-079-CONFIG 调整机器人设置，机器人将回报前往设置的链接
-- `/ban` ：以此命令回复某用户发送的消息或有效的回报消息，封禁该用户
-- `/warn` ：以此命令回复某用户发送的消息或有效的回报消息，警告该用户
-- `/forgive` ：以此命令回复某用户发送的消息或有效的回报消息，清除该用户警告，或解禁该用户，或重置该用户的举报状态
-- `按钮：解禁` ：当某用户被封禁后，点击此按钮解禁该用户
-- `按钮：撤销` ：当某用户被警告后，点击此按钮撤销该用户的警告
-- `按钮：警告` ：当某用户被举报时，点击此按钮警告被举报的用户
-- `按钮：封禁` ：当某用户被举报时，点击此按钮封禁被举报的用户
-- `按钮：取消` ：当某用户被举报时，点击此按钮取消该举报
-- `按钮：滥用` ：当某用户被手动举报时，点击此按钮警告举报人
+- `/config warn`：通过 SCP-079-CONFIG 调整机器人设置，机器人将回报前往设置的链接
+- `/ban`：以此命令回复某用户发送的消息或有效的回报消息，封禁该用户
+- `/warn`：以此命令回复某用户发送的消息或有效的回报消息，警告该用户
+- `/forgive`：以此命令回复某用户发送的消息或有效的回报消息，清除该用户警告，或解禁该用户，或重置该用户的举报状态
+- `按钮：解禁`：当某用户被封禁后，点击此按钮解禁该用户
+- `按钮：撤销`：当某用户被警告后，点击此按钮撤销该用户的警告
+- `按钮：警告`：当某用户被举报时，点击此按钮警告被举报的用户
+- `按钮：封禁`：当某用户被举报时，点击此按钮封禁被举报的用户
+- `按钮：取消`：当某用户被举报时，点击此按钮取消该举报
+- `按钮：滥用`：当某用户被手动举报时，点击此按钮警告举报人
+- `/undo`：对应按钮 “解禁” 和 “撤销”，以此命令回复某条由 `/ban` 或 `/warn` 触发的有效汇报消息，解禁某用户或撤销某用户警告
 
 除使用 `/config warn` 外，管理员也可以通过 `/warn_config` 命令在群组中手动调整设置：
 
-- `/warn_config show` ：显示当前设置
-- `/warn_config default` ：恢复为默认设置
-- `/warn_config limit 5` ：设置警告上限，上限应介于 2 和 5 之间，默认为 3
-- `/warn_config mention off` ：关闭呼叫管理功能（默认设置） 
-- `/warn_config mention on` ：打开呼叫管理功能
-- `/warn_config report off` ：关闭所有举报功能（默认设置）
-- `/warn_config report auto` ：仅启用自动举报功能，仅当 SCP-079-NOSPAM 在该群组中时真正有效
-- `/warn_config report manual` ：仅启用手动举报功能
-- `/warn_config report both` ：同时启动自动和手动举报功能
+- `/warn_config show`：显示当前设置
+- `/warn_config default`：恢复为默认设置
+- `/warn_config limit 5`：设置警告上限，上限应介于 2 和 5 之间，默认为 3
+- `/warn_config mention off`：关闭呼叫管理功能（默认设置） 
+- `/warn_config mention on`：打开呼叫管理功能
+- `/warn_config report off`：关闭所有举报功能（默认设置）
+- `/warn_config report auto`：仅启用自动举报功能，仅当 SCP-079-NOSPAM 在该群组中时真正有效
+- `/warn_config report manual`：仅启用手动举报功能
+- `/warn_config report both`：同时启动自动和手动举报功能
 
 群组中的普通成员：
 
-- `/admin`、`/admins` ：发送此命令，呼叫至多 6 名管理员，仅在群组启用呼叫管理功能时有效
-- `/report` ：以此命令回复某用户发送的消息，向至多 6 名管理员举报该用户，仅在群组启用手动举报功能时有效
+- `/admin`、`/admins`：发送此命令，呼叫至多 6 名管理员，仅在群组启用呼叫管理功能时有效
+- `/report`：以此命令回复某用户发送的消息，向至多 6 名管理员举报该用户，仅在群组启用手动举报功能时有效
 
 SCP-079-TEST 中的成员：
 
-- `/version` ：检查机器人版本
+- `/version`：检查机器人版本
 
 **附录：**自建机器人的方法
 
@@ -102,6 +103,8 @@ noporn_id = [DATA EXPUNGED]
 ; SCP-079-NOPORN 的 ID
 nospam_id = [DATA EXPUNGED]
 ; SCP-079-NOSPAM 的 ID
+tip_id = [DATA EXPUNGED]
+; SCP-079-TIP 的 ID
 user_id = [DATA EXPUNGED]
 ; SCP-079-USER 的 ID
 warn_id = [DATA EXPUNGED]
@@ -113,6 +116,8 @@ debug_channel_id = [DATA EXPUNGED]
 exchange_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID
 ; 关于数据交换频道的详情，请查看 https://scp-079.org/exchange/
+hide_channel_id = [DATA EXPUNGED]
+; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
 logging_channel_id = [DATA EXPUNGED]
 ; 此处填写证据存放频道 SCP-079-LOGGING 的 ID
 test_group_id = [DATA EXPUNGED]

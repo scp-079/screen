@@ -16,16 +16,16 @@ title: SCP-079-NOPORN
 
 群组中的管理员：
 
-- `/config noporn` ：通过 SCP-079-CONFIG 调整机器人设置，机器人将回报前往设置的链接
+- `/config noporn`：通过 SCP-079-CONFIG 调整机器人设置，机器人将回报前往设置的链接
 
 除使用 `/config noporn` 外，管理员也可以通过 `/noporn_config` 命令在群组中手动调整设置：
 
-- `/noporn_config show` ：显示当前设置
-- `/noporn_config default` ：恢复为默认设置
-- `/noporn_config channel off` ：关闭过滤受限频道消息功能
-- `/noporn_config channel on` ：打开过滤受限频道消息功能（默认设置）
-- `/noporn_config recheck off` ：关闭媒体复查功能（默认设置）
-- `/noporn_config recheck on` ：打开媒体复查功能
+- `/noporn_config show`：显示当前设置
+- `/noporn_config default`：恢复为默认设置
+- `/noporn_config channel off`：关闭过滤受限频道消息功能
+- `/noporn_config channel on` 打开过滤受限频道消息功能（默认设置）
+- `/noporn_config recheck off`：关闭媒体复查功能（默认设置）
+- `/noporn_config recheck on`：打开媒体复查功能
 
 SCP-079-TEST 中的成员：
 
