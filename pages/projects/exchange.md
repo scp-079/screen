@@ -621,8 +621,8 @@ exchange_text = format_data(
 
 此机器人用户过滤某类型消息
 
-1. 根据群组自定义设置自动删除某类别消息
-2. 针对 AFF、BAT、CON、EXE、LOC、SHO、TGL、TGP 类型的消息进行较低分数的记录
+1. 根据群组自定义设置自动删除某类别消息，在群组开启 AFF、BAT、EXE、SHO、TGL、TGP 消息过滤时，将具有封禁功能
+2. 针对 AFF、BAT、EXE、LOC、SHO、TGL、TGP 类型的消息进行较低分数的记录
 3. 项目等级为：**Safe**
 
 CLEAN 能够向 ANALYZE、BACKUP、CAPTCHA、LANG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER 发送数据
@@ -719,10 +719,10 @@ exchange_text = format_data(
             "lef": True, # 离群消息
             "loc": True, # 定位地址
             "doc": False, # 文件
-            "exe": True, # EXE 与 APK 文件
-            "bat": True, # BAT 与 CMD 文件
-            "aff": True, # 传统 AFF 链接、支付宝淘宝红包、大陆 APP 的各类活动推广分享
-            "sho": True, # 短链接
+            "exe": False, # EXE 与 APK 文件
+            "bat": False, # BAT 与 CMD 文件
+            "aff": False, # 传统 AFF 链接、支付宝淘宝红包、大陆 APP 的各类活动推广分享
+            "sho": False, # 短链接
             "tgl": False, # TG 链接
             "tgp": False, # TG 代理
             "cim": False, # 大陆即时通讯软件的联系方式
@@ -3182,7 +3182,7 @@ exchange_text = format_data(
 1. 对新入群用户的行为进行一定考量，举一个简单理想化的例子：如某用户有加群行为，并在一个时间段内在多个群组中发送疑似广告内容，则此机器人应给出某种处理建议，其他机器人根据其建议酌情对用户再次发生的可疑行为选择处理方式
 2. 根据规则，判断是否应该建议封禁某用户
 3. 根据规则，判断是否应该建议删除某用户发送的消息
-4. 此机器人涉及的方面广泛，涵盖了部分其他机器人的功能，由于需要对消息预览进行独立的检查，此机器人应该作为 userbot
+4. 此机器人涉及的方面广泛，涵盖了部分其他机器人的功能，由于需要对消息预览进行独立的检查，此机器人应该作为 userbot ，并应保持匿名性
 5. 项目等级为：**Keter**
 
 WATCH 能够向 ANALYZE、APPLY、BACKUP、CAPTCHA、LANG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK 发送数据
