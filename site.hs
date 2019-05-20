@@ -31,7 +31,8 @@ main = hakyllWith config $ do
         staticFiles = fromGlob "static/fonts/**" .||. 
                       fromGlob "static/images/**" .||. 
                       fromGlob "static/js/**" .||. 
-                      fromGlob "static/audio/**"
+                      fromGlob "static/audio/**" .||. 
+                      fromGlob "static/uploads/**"
     
     match staticFiles $ do
         route $ customRoute $ joinPath . drop 1 . splitPath . toFilePath
