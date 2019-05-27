@@ -16,7 +16,7 @@ title: SCP-079-WARN
 
 群组中的管理员：
 
-- `/config warn`：通过 SCP-079-CONFIG 调整机器人设置，机器人将回报前往设置的链接
+- `/config warn`：通过 [SCP-079-CONFIG](/config/) 调整机器人设置，机器人将回报前往设置的链接，5 分钟内设置将被锁定，无法查看和更改设置
 - `/ban`：以此命令回复某用户发送的消息或有效的回报消息，封禁该用户
 - `/warn`：以此命令回复某用户发送的消息或有效的回报消息，警告该用户
 - `/forgive`：以此命令回复某用户发送的消息或有效的回报消息，清除该用户警告，或解禁该用户，或重置该用户的举报状态
@@ -32,17 +32,17 @@ title: SCP-079-WARN
 - `/report cancel`：对应按钮 “取消”，以此命令回复某条举报汇报消息，取消该条举报
 - `/report spam`：对应按钮 “滥用”，以此命令回复某条举报汇报消息，警告举报者
 
-除使用 `/config warn` 外，管理员也可以通过 `/warn_config` 命令在群组中手动调整设置：
+除使用 `/config warn` 外，管理员也可以通过 `/config_warn` 命令在群组中手动调整设置：
 
-- `/warn_config show`：显示当前设置
-- `/warn_config default`：恢复为默认设置
-- `/warn_config limit 5`：设置警告上限，上限应介于 2 和 5 之间，默认为 3
-- `/warn_config mention off`：关闭呼叫管理功能（默认设置） 
-- `/warn_config mention on`：打开呼叫管理功能
-- `/warn_config report off`：关闭所有举报功能（默认设置）
-- `/warn_config report auto`：仅启用自动举报功能，仅当 SCP-079-NOSPAM 在该群组中时真正有效
-- `/warn_config report manual`：仅启用手动举报功能
-- `/warn_config report both`：同时启动自动和手动举报功能
+- `/config_warn show`：显示当前设置
+- `/config_warn default`：恢复为默认设置
+- `/config_warn limit 5`：设置警告上限，上限应介于 2 和 5 之间，默认为 3
+- `/config_warn mention off`：关闭呼叫管理功能（默认设置） 
+- `/config_warn mention on`：打开呼叫管理功能
+- `/config_warn report off`：关闭所有举报功能（默认设置）
+- `/config_warn report auto`：仅启用自动举报功能，仅当 SCP-079-NOSPAM 在该群组中时真正有效
+- `/config_warn report manual`：仅启用手动举报功能
+- `/config_warn report both`：同时启动自动和手动举报功能
 
 群组中的普通成员：
 
@@ -124,10 +124,10 @@ hide_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
 logging_channel_id = [DATA EXPUNGED]
 ; 此处填写证据存放频道 SCP-079-LOGGING 的 ID
-test_group_id = [DATA EXPUNGED]
-; 此处填写测试群组 SCP-079-TEST 的 ID
 logging_channel_username = [DATA EXPUNGED]
 ; 此处填写 SCP-079-LOGGING 频道的链接名（不带 @）
+test_group_id = [DATA EXPUNGED]
+; 此处填写测试群组 SCP-079-TEST 的 ID
 
 [custom]
 default_group_link = [DATA EXPUNGED]

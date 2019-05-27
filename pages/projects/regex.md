@@ -41,6 +41,7 @@ SCP-079-REGEX 中的成员：
 - `bio`：简介封禁
 - `del`：自动删除，delete
 - `eme`：应急模式，emergency
+- `iml`：IM 链接，IM link
 - `nm`：昵称封禁，name
 - `rm`：RM 类笑话
 - `sho`：短链接，short

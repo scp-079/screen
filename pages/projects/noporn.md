@@ -16,16 +16,16 @@ title: SCP-079-NOPORN
 
 群组中的管理员：
 
-- `/config noporn`：通过 SCP-079-CONFIG 调整机器人设置，机器人将回报前往设置的链接
+- `/config noporn`：通过 [SCP-079-CONFIG](/config/) 调整机器人设置，机器人将回报前往设置的链接，5 分钟内设置将被锁定，无法查看和更改设置
 
-除使用 `/config noporn` 外，管理员也可以通过 `/noporn_config` 命令在群组中手动调整设置：
+除使用 `/config noporn` 外，管理员也可以通过 `/config_noporn` 命令在群组中手动调整设置：
 
-- `/noporn_config show`：显示当前设置
-- `/noporn_config default`：恢复为默认设置
-- `/noporn_config channel off`：关闭过滤受限频道消息功能
-- `/noporn_config channel on` 打开过滤受限频道消息功能（默认设置）
-- `/noporn_config recheck off`：关闭媒体复查功能（默认设置）
-- `/noporn_config recheck on`：打开媒体复查功能
+- `/config_noporn show`：显示当前设置
+- `/config_noporn default`：恢复为默认设置
+- `/config_noporn channel off`：关闭过滤受限频道消息功能
+- `/config_noporn channel on` 打开过滤受限频道消息功能（默认设置）
+- `/config_noporn recheck off`：关闭媒体复查功能（默认设置）
+- `/config_noporn recheck on`：打开媒体复查功能
 
 SCP-079-TEST 中的成员：
 
@@ -121,10 +121,10 @@ hide_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
 logging_channel_id = [DATA EXPUNGED]
 ; 此处填写证据存放频道 SCP-079-LOGGING 的 ID
-test_group_id = [DATA EXPUNGED]
-; 此处填写测试群组 SCP-079-TEST 的 ID
 logging_channel_username = [DATA EXPUNGED]
 ; 此处填写 SCP-079-LOGGING 频道的链接名（不带 @）
+test_group_id = [DATA EXPUNGED]
+; 此处填写测试群组 SCP-079-TEST 的 ID
 
 [custom]
 default_group_link = [DATA EXPUNGED]
@@ -135,6 +135,8 @@ project_link = [DATA EXPUNGED]
 ; 此处填写项目网址
 project_name = [DATA EXPUNGED]
 ; 此处填写项目名称
+punish_time = [DATA EXPUNGED]
+; 惩罚用户的时间，期间用户发送的所有媒体消息将被删除，并且，在此期间内若其发送媒体消息将重新计时
 reset_day = [DATA EXPUNGED]
 ; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
 threshold_porn = [DATA EXPUNGED]
@@ -221,6 +223,8 @@ project_link = [DATA EXPUNGED]
 ; 此处填写项目网址
 project_name = [DATA EXPUNGED]
 ; 此处填写项目名称
+punish_time = [DATA EXPUNGED]
+; 惩罚用户的时间，期间用户发送的所有媒体消息将被删除，并且，在此期间内若其发送媒体消息将重新计时
 reset_day = [DATA EXPUNGED]
 ; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
 threshold_drawings = [DATA EXPUNGED]

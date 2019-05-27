@@ -550,8 +550,8 @@ exchange_text = format_data(
         "RECHECK",
         "USER"
     ],
-    action="declare",
-    action_type="delete",
+    action="update",
+    action_type="declare",
     data={
         "group_id": -10012345678,
         "message_id": 123
@@ -686,18 +686,18 @@ exchange_text = format_data(
             "aud": False,
             "voi": False,
             "gam": True,
-            "url": False,
-            "new": True,
-            "lef": False,
+            "ser": False,
+            "ttd": False,
+            "sde": False,
             "loc": False,
             "doc": False,
             "exe": True,
-            "bat": False,
+            "tcl": False,
             "aff": True,
             "sho": True,
             "tgl": False,
             "tgp": False,
-            "cim": False,
+            "iml": False,
             "qrc": False
         },
         "default": {
@@ -706,7 +706,7 @@ exchange_text = format_data(
             "con": True, # 联系人
             "via": False, # 通过 Bot 发送的消息
             "ani": False, # GIF 动图
-            "bmd": False, # 传统机器人命令
+            "bmd": False, # 以 / 和 ! 为前缀的机器人命令
             "vid": False, # 视频
             "vdn": True, # 圆视频
             "sti": False, # 贴纸
@@ -714,18 +714,18 @@ exchange_text = format_data(
             "aud": False, # 音频
             "voi": True, # 语音
             "gam": False, # 游戏
-            "url": False, # 网址
-            "new": True, # 加群消息（保留最后一条）
-            "lef": True, # 离群消息
+            "ser": True, # 服务类消息，对于加群消息将保留最后一条
+            "ttd": False, # 定时删除贴纸和动图（二至三小时后）
+            "sde": False, # 群员可否自助删除自己所发所有消息
             "loc": True, # 定位地址
             "doc": False, # 文件
-            "exe": False, # EXE 与 APK 文件
-            "bat": False, # BAT 与 CMD 文件
+            "exe": False, # EXE、APK、BAT、CMD 文件
+            "tcl": False, # 每日定时清除位于群组和黑名单中的 Deleted Account
             "aff": False, # 传统 AFF 链接、支付宝淘宝红包、大陆 APP 的各类活动推广分享
             "sho": False, # 短链接
             "tgl": False, # TG 链接
             "tgp": False, # TG 代理
-            "cim": False, # 大陆即时通讯软件的联系方式
+            "iml": False, # 即时通讯软件的邀请链接或联系方式
             "qrc": False # 二维码
         }
     }
@@ -784,7 +784,25 @@ exchange_text = format_data(
 )
 ```
 
-情形 7：向其他 Bot（ANALYZE、CAPTCHA、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费
+情形 7：向 USER 发送协助请求，调用 delete all 功能，用于实现 /dafm 功能
+
+```python
+exchange_text = format_data(
+    sender="CLEAN",
+    receviers=[
+        "USER"
+    ],
+    action="help",
+    action_type="delete",
+    data={
+        "group_id": -10012345678,
+        "user_id": 12345678,
+        "type": "single"
+    }
+)
+```
+
+情形 8：向其他 Bot（ANALYZE、CAPTCHA、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费
 
 ```python
 exchange_text = format_data(
@@ -799,8 +817,8 @@ exchange_text = format_data(
         "RECHECK",
         "USER"
     ],
-    action="declare",
-    action_type="delete",
+    action="update",
+    action_type="declare",
     data={
         "group_id": -10012345678,
         "message_id": 123
@@ -808,7 +826,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 8：向其他 Bot（ANALYZE、LANG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK）更新用户分数
+情形 9：向其他 Bot（ANALYZE、LANG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK）更新用户分数
 
 ```python
 exchange_text = format_data(
@@ -857,7 +875,7 @@ exchange_text = format_data(
 4. 用户提交新的设置后，把数据传送回给请求的机器人
 5. 项目等级为：**Safe**
 
-CONFIG 能够向 BACKUP、CAPTCHA、CLEAN、LANG、NOFLOOD、NOPORN、NOSPAM 发送数据。对所有这些接收者的数据，其操作仅可为 `config` ，操作类型可为 `commit` 、`reply`
+CONFIG 能够向 BACKUP、CAPTCHA、CLEAN、LANG、NOFLOOD、NOPORN、NOSPAM、USER 发送数据。对所有这些接收者的数据，其操作仅可为 `config` ，操作类型可为 `commit` 、`reply`
 
 情形 1：向 BACKUP 汇报在线状态。每个小时的第 30 分钟
 
@@ -873,7 +891,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 2：向其他 Bot（CAPTCHA、CLEAN、LANG、NOFLOOD、NOPORN、NOSPAM）回复设置请求的对话链接。这里以 WARN 为例：
+情形 2：向其他 Bot（CAPTCHA、CLEAN、LANG、NOFLOOD、NOPORN、NOSPAM、USER）回复设置请求的对话链接。这里以 WARN 为例：
 
 ```python
 exchange_text = format_data(
@@ -891,7 +909,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 3：向其他 Bot（CAPTCHA、CLEAN、LANG、NOFLOOD、NOPORN、NOSPAM）提交新的设置。这里以 WARN 为例：
+情形 3：向其他 Bot（CAPTCHA、CLEAN、LANG、NOFLOOD、NOPORN、NOSPAM、USER）提交新的设置。这里以 WARN 为例：
 
 ```python
 exchange_text = format_data(
@@ -905,8 +923,8 @@ exchange_text = format_data(
         "group_id": -10012345678,
         "config": {
             "default": False,
-            "limit": 4,
             "lock": 1512345678,
+            "limit": 4,
             "mention": True,
             "report": {
                 "auto": False,
@@ -994,32 +1012,40 @@ exchange_text = format_data(
         "config": {
             "default": False,
             "lock": 1512345678,
-            "name": [
-                "fa",
-                "ur",
-                "ja"
-            ],
-            "text": [
-                "fa",
-                "ru"
-            ]
+            "name": {
+                "enable": True,
+                "lang": [
+                    "fa",
+                    "ur",
+                    "ja"
+                ],
+            "text": {
+                "enable": True,
+                "lang": [
+                    "fa",
+                    "ru"
+                ]
         },
         "default": {
             "default": True,
             "lock": 0,
-            "name": [
-                "fa",
-                "ur",
-                "ar"
-            ],
-            "text": [
-                "fa",
-                "ur",
-                "ar",
-                "bn",
-                "ru",
-                "bg"
-            ]
+            "name": {
+                "enable": True,
+                "lang": [
+                    "fa",
+                    "ur",
+                    "ar"
+                ],
+            "text": 
+                "enable": True,
+                "lang": [
+                    "fa",
+                    "ur",
+                    "ar",
+                    "bn",
+                    "ru",
+                    "bg"
+                ]
         }
     }
 )
@@ -1092,8 +1118,8 @@ exchange_text = format_data(
         "RECHECK",
         "USER"
     ],
-    action="declare",
-    action_type="delete",
+    action="update",
+    action_type="declare",
     data={
         "group_id": -10012345678,
         "message_id": 123
@@ -1725,8 +1751,8 @@ exchange_text = format_data(
         "RECHECK",
         "USER"
     ],
-    action="declare",
-    action_type="delete",
+    action="update",
+    action_type="declare",
     data={
         "group_id": -10012345678,
         "message_id": 123
@@ -2002,8 +2028,8 @@ exchange_text = format_data(
         "RECHECK",
         "USER"
     ],
-    action="declare",
-    action_type="delete",
+    action="update",
+    action_type="declare",
     data={
         "group_id": -10012345678,
         "message_id": 123
@@ -2273,8 +2299,8 @@ exchange_text = format_data(
         "RECHECK",
         "USER"
     ],
-    action="declare",
-    action_type="delete",
+    action="update",
+    action_type="declare",
     data={
         "group_id": -10012345678,
         "message_id": 123
@@ -2497,8 +2523,8 @@ exchange_text = format_data(
         "NOSPAM",
         "USER"
     ],
-    action="declare",
-    action_type="delete",
+    action="update",
+    action_type="declare",
     data={
         "group_id": -10012345678,
         "message_id": 123
@@ -2860,7 +2886,8 @@ exchange_text = format_data(
 3. 接管删除黑名单用户发言、限制黑名单用户的任务，对管理员手动解封再入群的黑名单用户实行单群组白名单放行
 3. 接受 APPLY 与 MANAGE 的通知，在 MANAGE 批准后加入某个群组，自动、或受 MANAGE 的要求更新加入群组成功与否。在 MANAGE 进一步批准同意后，邀请其他机器人并赋予管理权限
 4. 向其他机器人提供消息链接预览
-5. 项目等级为：**Euclid**
+5. 配合 CLEAN 实现群员自助删除所发全部消息的功能
+6. 项目等级为：**Euclid**
 
 USER 能够向 BACKUP、CLEAN、LANG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK 发送数据
 
@@ -2892,7 +2919,40 @@ exchange_text = format_data(
 )
 ```
 
-情形 3：向 MANAGE 请求。由于管理权限缺失而请求离开某个群组
+情形 3：向 CONFIG 询问。由于群管理在群组中发送 `/config user` 命令，故 USER 令 CONFIG 在 SCP-079-CONFIG 频道中开启一个更新设置的会话
+
+```python
+exchange_text = format_data(
+    sender="CAPTCHA",
+    receviers=[
+        "CONFIG"
+    ],
+    action="config",
+    action_type="ask",
+    data={
+        "project_name": "SCP-079-USER",
+        "project_link": "https://scp-079.org/user/",
+        "group_id": -10012345678,
+        "group_name": "SCP-079-CHAT",
+        "group_link": "https://t.me/SCP_079_CHAT",
+        "user_id": 12345678,
+        "config": {
+            "default": False,
+            "lock": 1512345678,
+            "subscribe": True,
+            "dafm": True
+        },
+        "default": {
+            "default": True,
+            "lock": 0,
+            "subscribe": True, # 订阅黑名单列表
+            "dafm": False # 开启群员自助删除所有消息功能
+        }
+    }
+)
+```
+
+情形 4：向 MANAGE 请求。由于管理权限缺失而请求离开某个群组
 
 ```python
 exchange_text = format_data(
@@ -2911,7 +2971,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 4：向 MANAGE 更新加入申请群组的状况。针对申请编号 `ds3FsdX1`，USER 已成功加入群组，提供的链接有效
+情形 5：向 MANAGE 更新加入申请群组的状况。针对申请编号 `ds3FsdX1`，USER 已成功加入群组，提供的链接有效
 
 ```python
 exchange_text = format_data(
@@ -2928,7 +2988,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 5：向 MANAGE 更新加入申请群组的状况。针对申请编号 `ds3FsdX1`，申请人在该群组没有全部拥有四项权限：删除消息、封禁用户、添加用户、添加管理员
+情形 6：向 MANAGE 更新加入申请群组的状况。针对申请编号 `ds3FsdX1`，申请人在该群组没有全部拥有四项权限：删除消息、封禁用户、添加用户、添加管理员
 
 ```python
 exchange_text = format_data(
@@ -2945,7 +3005,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 6：向 MANAGE 更新加入申请群组的状况。针对申请编号 `ds3FsdX1`，机器人尚未拥有四项权限：删除消息、封禁用户、添加用户、添加管理员
+情形 7：向 MANAGE 更新加入申请群组的状况。针对申请编号 `ds3FsdX1`，机器人尚未拥有四项权限：删除消息、封禁用户、添加用户、添加管理员
 
 ```python
 exchange_text = format_data(
@@ -2962,7 +3022,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 7：向 MANAGE 更新加入申请群组的状况。针对申请编号 `ds3FsdX1`，申请人提供的入群链接无效
+情形 8：向 MANAGE 更新加入申请群组的状况。针对申请编号 `ds3FsdX1`，申请人提供的入群链接无效
 
 ```python
 exchange_text = format_data(
@@ -2979,7 +3039,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 8：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK）发送某条消息的链接预览
+情形 9：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK）发送某条消息的链接预览
 
 ```python
 exchange_text = format_data(
@@ -3277,7 +3337,6 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                 appeal - User's appeal
                 backup - Send backup data
                 config - Update bot config
-                declare - Declare a message
                 help - Let others bot do something
                 join - Let bots join some group
                 leave - Let bots leave some group
@@ -3307,10 +3366,6 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                     commit - Update group's configurations
                     reply - CONFIG reply the config link to bot
 
-                When action is declare:
-                    ban - The bot has banned the user who sent the message
-                    delete - The message has been deleted
-
                 When action is help:
                     ban - Let USER ban a user globally
                     delete - Let USER delete a user's all messages in some group
@@ -3328,6 +3383,7 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                     request - Send a leave request to MANAGE
 
                 When action is update:
+                    declare - Declare a message
                     download - Download the data, then update
                     preview - Update a message's preview
                     reload - Update the data from local machines
@@ -3413,12 +3469,6 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                             "config_link": "link to config"
                         }
 
-                Declare:
-                    {
-                        "group_id": -10012345678,
-                        "message_id": 123
-                    }
-
                 Help:
                     ban / delete:
                         {
@@ -3501,6 +3551,12 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                         }
 
                 Update
+                    declare:
+                        {
+                            "group_id": -10012345678,
+                            "message_id": 123
+                        }
+                    
                     download:
                         "filename"
 

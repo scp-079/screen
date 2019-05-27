@@ -14,6 +14,8 @@ Auto delete NSFW media messages
 Everyone can have their own private chat bot
 - [SCP-079-REGEX](/regex/): 
 Manage the regex patterns
+- [SCP-079-USER](/user/): 
+Invite and help other bots
 - [SCP-079-WARN](/warn/): 
 Warn or ban someone by admin commands
 

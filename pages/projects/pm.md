@@ -103,6 +103,8 @@ host_id = [DATA EXPUNGED]
 ; 此处填写自己帐号的 ID
 host_name = [DATA EXPUNGED]
 ; 此处填写自定义昵称
+reset_day = [DATA EXPUNGED]
+; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
 ```
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>

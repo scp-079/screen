@@ -5,7 +5,7 @@ title: Projects
 ## Projects
 
 Currently, all open source subprojects are hosted on 
-<a href="https://gitlab.com/scp-079" target="_blank">Gitlab</a>.
+<a href="https://gitlab.com/scp-079" target="_blank">Gitlab</a>. All projects will remain closed until we officially open the public service.
 
 Released projects:
 
@@ -17,11 +17,11 @@ Auto delete NSFW media messages
 Everyone can have their own private chat bot
 - <a href="https://gitlab.com/scp-079/scp-079-regex" target="_blank">SCP-079-REGEX</a>: 
 Manage the regex patterns
+- <a href="https://gitlab.com/scp-079/scp-079-user" target="_blank">SCP-079-USER</a>: 
+Invite and help other bots
 - <a href="https://gitlab.com/scp-079/scp-079-warn" target="_blank">SCP-079-WARN</a>: 
 Warn or ban someone by admin commands
 - <a href="https://gitlab.com/scp-079/scp-079.gitlab.io" target="_blank">Screen</a>: 
 A dark theme for Hakyll
 
 <audio src="/audio/page/projects.ogg" autoplay></audio>
-<audio id="no_button" src="/audio/button/no.ogg"/>
-<audio id="no_click" src="/audio/button/no_click.ogg"/>
