@@ -77,8 +77,6 @@ hide_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
 test_group_id = [DATA EXPUNGED]
 ; 此处填写测试群组 SCP-079-TEST 的 ID
-config_channel_username = [DATA EXPUNGED]
-; 此处填写 SCP-079-CONFIG 频道的链接名（不带 @）
 ```
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>

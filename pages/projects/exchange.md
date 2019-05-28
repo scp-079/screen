@@ -844,7 +844,7 @@ exchange_text = format_data(
     action_type="score",
     data={
         "id": 12345678,
-        "score": -0.5
+        "score": 0.3
     }
 )
 ```
