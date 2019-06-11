@@ -45,12 +45,14 @@ SCP-079-REGEX 中的成员：
 - `nm`：昵称封禁，name
 - `rm`：RM 类笑话
 - `sho`：短链接，short
+- `spc`：特殊中文字符，special chinese character
+- `spe`：特殊英文字符，special english character
+- `sti`：贴纸删除，sticker
 - `tgl`：TG 链接，telegram link
 - `tgp`：TG 代理，telegram proxy（MTProxy）
 - `wb`：追踪封禁，watch ban
 - `wd`：追踪删除，watch delete
-- `sti`：贴纸删除，sticker
-- `test` ：测试用例
+- `test`：测试用例
 
 `pattern` 只能在 `add`、`remove`、`search` 操作下出现
 
@@ -77,6 +79,11 @@ SCP-079-REGEX 中的成员：
 - `/ask cancel`：对应 “取消”
 - `/page previous`：对应 “上一页”
 - `/page next`：对应 “下一页”
+
+其他命令：
+
+- `/ls`：后面不跟类别，显示已有的所有类别及代号
+- `/s 关键词`：忽略类别，则默认搜索所有类别含关键词的规则
 
 SCP-079-TEST 中的成员：
 

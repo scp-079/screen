@@ -9,8 +9,12 @@ Currently, all open source subprojects are hosted on
 
 Released projects:
 
+- <a href="https://gitlab.com/scp-079/scp-079-clean" target="_blank">SCP-079-CLEAN</a>: 
+Filter specific types of messages
 - <a href="https://gitlab.com/scp-079/scp-079-config" target="_blank">SCP-079-CONFIG</a>: 
 Manage the settings of each bot
+- <a href="https://gitlab.com/scp-079/scp-079-manage" target="_blank">SCP-079-MANAGE</a>: 
+One ring to rule them all
 - <a href="https://gitlab.com/scp-079/scp-079-noporn" target="_blank">SCP-079-NOPORN</a>: 
 Auto delete NSFW media messages
 - <a href="https://gitlab.com/scp-079/scp-079-pm" target="_blank">SCP-079-PM</a>: 

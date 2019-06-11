@@ -29,7 +29,8 @@ title: SCP-079-NOPORN
 
 SCP-079-TEST 中的成员：
 
-- `/version` ：检查机器人版本
+- `转发图片、视频等消息`：显示分析结果
+- `/version`：检查机器人版本
 
 **附录：**自建机器人的方法
 
@@ -128,7 +129,7 @@ test_group_id = [DATA EXPUNGED]
 default_group_link = [DATA EXPUNGED]
 ; 此处填写调试信息中默认的群组链接
 image_size = [DATA EXPUNGED]
-; 分析图片文档的最大大小，超过此大小则不下载文件进行 NSFW 分析，单位为 KB
+; 分析图片文档的最大大小，超过此大小则不通过下载原文件进行 NSFW 分析，单位为 B
 project_link = [DATA EXPUNGED]
 ; 此处填写项目网址
 project_name = [DATA EXPUNGED]
@@ -214,7 +215,7 @@ test_group_id = [DATA EXPUNGED]
 default_group_link = [DATA EXPUNGED]
 ; 此处填写调试信息中默认的群组链接
 image_size = [DATA EXPUNGED]
-; 分析图片文档的最大大小，超过此大小则不下载文件进行 NSFW 分析，单位为 KB
+; 分析图片文档的最大大小，超过此大小则不通过下载原文件进行 NSFW 分析，单位为 B
 project_link = [DATA EXPUNGED]
 ; 此处填写项目网址
 project_name = [DATA EXPUNGED]

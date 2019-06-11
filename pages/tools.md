@@ -6,8 +6,12 @@ title: Tools
 
 By alphabetical order:
 
+- [SCP-079-CLEAN](/clean/): 
+Filter specific types of messages
 - [SCP-079-CONFIG](/config/): 
 Manage the settings of each bot
+- [SCP-079-MANAGE](/manage/): 
+One ring to rule them all
 - [SCP-079-NOPORN](/noporn/): 
 Auto delete NSFW media messages
 - [SCP-079-PM](/pm/): 

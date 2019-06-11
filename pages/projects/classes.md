@@ -18,7 +18,6 @@ title: Classes
 - [SCP-079-APPEAL](/appeal/)
 - [SCP-079-APPLY](/apply/)
 - [SCP-079-BACKUP](/backup/)
-- [SCP-079-CLEAN](/clean/)
 - [SCP-079-CONFIG](/config/)
 - [SCP-079-MANAGE](/manage/)
 - [SCP-079-PM](/pm/)
@@ -32,6 +31,7 @@ title: Classes
 开发中的 Euclid 级项目：
 
 - [SCP-079-CAPTCHA](/captcha/)
+- [SCP-079-CLEAN](/clean/)
 - [SCP-079-LANG](/lang/)
 - [SCP-079-NOFLOOD](/noflood/)
 - [SCP-079-NOPORN](/noporn/)

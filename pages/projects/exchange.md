@@ -66,7 +66,7 @@ title: SCP-079-EXCHANGE
 
 请先查看[设计和管理原则](/principles/)，和[项目等级说明](/classes/)
 
-注意：此页面列出的信息可能随时更改。发送到 SCP-079-EXCHANGE 的文本 `exchange_text` 以调用 `format_data` 函数的方式呈现，此函数请见页面最后的文件 `etc.py`
+注意：此页面列出的信息可能随时更改。发送到 SCP-079-EXCHANGE 的文本 `exchange_text` 以调用 `format_data` 函数的方式呈现，此函数请见页面最后的文件 `channel.py`
 
 ---
 
@@ -174,7 +174,10 @@ exchange_text = format_data(
     ],
     action="appeal",
     action_type="request",
-    data=12345678
+    data={
+        "user_id": 12345678,
+        "record_id": 123
+    }
 )
 ```
 
@@ -535,7 +538,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 7：向其他 Bot（ANALYZE、CLEAN、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费，若 action type 为 ban，则代表同时将发送消息的用户进行了限制
+情形 7：向其他 Bot（ANALYZE、CLEAN、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费
 
 ```python
 exchange_text = format_data(
@@ -619,10 +622,10 @@ exchange_text = format_data(
 
 ## [SCP-079-CLEAN](#目录)
 
-此机器人用户过滤某类型消息
+此机器人用于过滤某类型消息
 
-1. 根据群组自定义设置自动删除某类别消息，在群组开启 AFF、BAT、EXE、SHO、TGL、TGP 消息过滤时，将具有封禁功能
-2. 针对 AFF、BAT、EXE、LOC、SHO、TGL、TGP 类型的消息进行较低分数的记录
+1. 根据群组自定义设置自动删除某类别消息，在群组开启 AFF、EXE、SHO、TGL、TGP、QRC 消息过滤时，将具有封禁功能
+2. 针对 AFF、EXE、LOC、SHO、TGL、TGP、QRC 类型的消息进行较低分数的记录
 3. 项目等级为：**Safe**
 
 CLEAN 能够向 ANALYZE、BACKUP、CAPTCHA、LANG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER 发送数据
@@ -1103,7 +1106,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 7：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费，若 action type 为 ban，则代表同时将发送消息的用户进行了限制
+情形 7：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费
 
 ```python
 exchange_text = format_data(
@@ -1736,7 +1739,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 7：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、LANG、NOPORN、NOSPAM、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费，若 action type 为 ban，则代表同时将发送消息的用户进行了限制
+情形 7：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、LANG、NOPORN、NOSPAM、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费
 
 ```python
 exchange_text = format_data(
@@ -2012,7 +2015,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 7：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、LANG、NOFLOOD、NOSPAM、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费，若 action type 为 ban，则代表同时将发送消息的用户进行了限制
+情形 7：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、LANG、NOFLOOD、NOSPAM、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费
 
 ```python
 exchange_text = format_data(
@@ -2284,7 +2287,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 7：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、LANG、NOFLOOD、NOPORN、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费，若 action type 为 ban，则代表同时将发送消息的用户进行了限制
+情形 7：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、LANG、NOFLOOD、NOPORN、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费
 
 ```python
 exchange_text = format_data(
@@ -2308,7 +2311,56 @@ exchange_text = format_data(
 )
 ```
 
-情形 8：向其他 Bot（ANALYZE、APPEAL、CAPTCHA、LANG、MANAGE、NOFLOOD、NOPORN、RECHECK、USER、WATCH）添加黑名单用户，频道同理
+情形 8：向其他 Bot（ANALYZE、CLEAN、CAPTCHA、LANG、MANAGE、NOFLOOD、NOPORN、RECHECK）更新用户分数
+
+```python
+exchange_text = format_data(
+    sender="NOSPAM",
+    receviers=[
+        "ANALYZE",
+        "CLEAN",
+        "CAPTCHA",
+        "LANG",
+        "MANAGE",
+        "NOFLOOD",
+        "NOPORN",
+        "RECHECK"
+    ],
+    action="update",
+    action_type="score",
+    data={
+        "id": 12345678,
+        "score": 0.4
+    }
+)
+```
+
+情形 9：向其他 Bot（ANALYZE、CAPTCHA、LANG、MANAGE、NOFLOOD、NOPORN、RECHECK、WATCH）更新用户追踪状态，以 watch ban 为例
+
+```python
+exchange_text = format_data(
+    sender="NOSPAM",
+    receviers=[
+        "ANALYZE",
+        "CAPTCHA",
+        "LANG",
+        "MANAGE",
+        "NOFLOOD",
+        "NOPORN",
+        "RECHECK",
+        "WATCH"
+    ],
+    action="add",
+    action_type="watch",
+    data={
+        "id": 12345678,
+        "type": "ban",
+        "until"="gAAAAABc1SZjduLGl1872VS6dD3osVJaOSQqdlSHy3SpDXeV4yu2FLbEung8neVMonokt5yI8qaLic8bi44X-y073-pGX6LtxKNQilSvci_gk5xHj4HNPFE=" # 将追踪截止的时间戳转为加密字符串
+    }
+)
+```
+
+情形 10：向其他 Bot（ANALYZE、APPEAL、CAPTCHA、LANG、MANAGE、NOFLOOD、NOPORN、RECHECK、USER、WATCH）添加黑名单用户，频道同理
 
 ```python
 exchange_text = format_data(
@@ -2334,7 +2386,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 9：向 USER 发送协助请求，调用 delete all 功能，删除某用户全部消息
+情形 11：向 USER 发送协助请求，调用 delete all 功能，删除某用户全部消息
 
 ```python
 exchange_text = format_data(
@@ -2351,7 +2403,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 10：向 USER 发送协助请求，调用 global ban 功能，用于查找某用户与机器人的所有共同群组，删除其全部消息，并对其进行限制
+情形 12：向 USER 发送协助请求，调用 global ban 功能，用于查找某用户与机器人的所有共同群组，删除其全部消息，并对其进行限制
 
 ```python
 exchange_text = format_data(
@@ -2368,7 +2420,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 11：向 WARN 发送自动警告。WARN 会根据群组设置决定是否相应
+情形 13：向 WARN 发送自动警告。WARN 会根据群组设置决定是否相应
 
 ```python
 exchange_text = format_data(
@@ -2508,7 +2560,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 4：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、LANG、NOFLOOD、NOPORN、NOSPAM、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费，若 action type 为 ban，则代表同时将发送消息的用户进行了限制
+情形 4：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、LANG、NOFLOOD、NOPORN、NOSPAM、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费
 
 ```python
 exchange_text = format_data(
@@ -3039,7 +3091,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 9：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK）发送某条消息的链接预览
+情形 9：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK）发送某条消息的链接预览文件。`exchange_text` 文本作为该文件的 `caption`
 
 ```python
 exchange_text = format_data(
@@ -3056,9 +3108,7 @@ exchange_text = format_data(
     data={
         "group_id": -10012345678,
         "user_id": 12345678,
-        "message_id": 123,
-        "text": "some text",
-        "image": "file_id"
+        "message_id": 123
     }
 )
 ```
@@ -3318,7 +3368,7 @@ exchange_text = format_data(
 
 ## [文件](#目录)
 
-**文件#etc.py：**
+**文件#channel.py：**
 
 ```python
 def format_data(sender: str, receivers: List[str], action: str, action_type: str, data: Union[dict, int, list, str]) -> str:
@@ -3401,8 +3451,8 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
 
                     except:
                         {
-                            "id":  12345678 / "file id",
-                            "type": "user / sticker"
+                            "id":  12345678 / "file id" / "hash",
+                            "type": "user / sticker / tmp"
                         }
 
                     watch:
@@ -3414,7 +3464,10 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
 
                 Appeal:
                     request:
-                        12345678
+                        {
+                            "user_id": 12345678,
+                            "record_id": 123
+                        }
                     
                     reply:
                         {
@@ -3563,9 +3616,7 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                     preview: {
                         "group_id": -10012345678,
                         "user_id": 12345678,
-                        "message_id": 123,
-                        "text": "some text",
-                        "image": "file_id"
+                        "message_id": 123
                     }
 
                     reload:

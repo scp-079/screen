@@ -8,7 +8,7 @@ title: SCP-079-USER
 
 **项目等级：**Euclid
 
-**特殊收容措施：**SCP-079-USER 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-WARN 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。务必要注意，其只能通过 SCP-079-USER 邀请入群，并由其赋予管理权限，如果有任何未授权的恶意使用，将可能给其他机器人的工作带来影响。其应该作为频道 SCP-079-EXCHANGE 的管理员，并加入 SCP-079-TEST 群组。
+**特殊收容措施：**SCP-079-USER 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-USER 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。务必要注意，其应该关闭被陌生人拉入群组的设置，如果有任何未授权的恶意使用，将可能给其他机器人的工作带来影响。其应该作为频道 SCP-079-EXCHANGE 、频道 SCP-079-HIDE 、频道 SCP-079-LOGGING 的管理员，并加入 SCP-079-TEST 群组。
 
 **描述：**SCP-079-USER 是一个用于协助、邀请其他机器人的机器人，其项目位于 <a href="https://gitlab.com/scp-079/scp-079-user" target="_blank">Gitlab</a> 。机器人本体位于 <a href="https://t.me/SCP_079_USER_BOT" class="079" target="_blank">SCP-079-USER</a> ，仅供经过授权的群组使用，并由群组 SCP-079-MANAGE 中的成员对其进群、退群操作进行管理。其加入了 SCP-079-TEST ，用于测试基本功能的使用。该项目由 ███ 主要负责，基于原有 SCP-079-USER 机器人修改。通过该项目建立的机器人有类似的功能：根据群组订阅设置，对某用户进行全局封禁或删除消息，根据 MANAGE 和 APPLY 提供的指令，邀请其他机器人入群。机器人将每月定时清除用户数据（黑名单）。对于再次进入群组中的已封禁黑名单用户，将视为群组单独白名单放行，此时大部分机器人将不对此用户进行任何处理。具体操作详见附录中的使用说明。
 
@@ -16,7 +16,7 @@ title: SCP-079-USER
 
 群组中的管理员：
 
-- `/config user`：通过 [SCP-079-CONFIG](/config/) 调整机器人设置，机器人将回报前往设置的链接，5 分钟内设置将被锁定，无法查看和更改设置
+- `/config user`：通过 [SCP-079-CONFIG](/config/) 调整机器人设置，机器人将回报前往设置的链接，5 分钟内设置将被锁定，无法再次查看和更改设置
 
 除使用 `/config user` 外，管理员也可以通过 `/config_user` 命令在群组中手动调整设置：
 
@@ -27,6 +27,7 @@ title: SCP-079-USER
 
 SCP-079-TEST 中的成员：
 
+- `/mention 12345678`：通过 ID 查询用户
 - `/version`：检查机器人版本
 
 **附录：**自建机器人的方法
