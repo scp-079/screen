@@ -34,6 +34,8 @@ title: SCP-079-EXCHANGE
 
 [SCP-079-CONFIG](#scp-079-config)
 
+[SCP-079-HIDE](#scp-079-hide)
+
 [SCP-079-LANG](#scp-079-lang)
 
 [SCP-079-MANAGE](#scp-079-manage)
@@ -870,17 +872,15 @@ exchange_text = format_data(
 
 ## [SCP-079-CONFIG](#目录)
 
-此机器人用于在专用频道提供针对某机器人的群组设置按钮
+[此机器人](/config/)用于在专用频道提供针对某机器人的群组设置按钮
 
-1. 此机器人加入 SCP-079-CONFIG 频道，作为管理员
-2. 在 SCP-079-EXCHANGE 频道中等待来自其他机器人的设置请求
-3. 收到请求，在 CONFIG 频道中发送设置会话，有效时间 5 分钟
-4. 用户提交新的设置后，把数据传送回给请求的机器人
-5. 项目等级为：**Safe**
+1. 在 SCP-079-EXCHANGE 频道中等待来自其他机器人的设置请求
+2. 收到请求，在 CONFIG 频道中发送设置会话，有效时间 5 分钟
+3. 用户提交新的设置后，把数据传送回给请求的机器人
 
-CONFIG 能够向 BACKUP、CAPTCHA、CLEAN、LANG、NOFLOOD、NOPORN、NOSPAM、USER 发送数据。对所有这些接收者的数据，其操作仅可为 `config` ，操作类型可为 `commit` 、`reply`
+CONFIG 能够向 BACKUP、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER、WARN 发送数据。对所有这些接收者的数据，其操作仅可为 `config` ，操作类型可为 `commit` 、`reply`
 
-情形 1：向 BACKUP 汇报在线状态。每个小时的第 30 分钟
+情形 1：向 BACKUP 汇报在线状态。每个小时的第 30 分钟：
 
 ```python
 exchange_text = format_data(
@@ -894,7 +894,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 2：向其他 Bot（CAPTCHA、CLEAN、LANG、NOFLOOD、NOPORN、NOSPAM、USER）回复设置请求的对话链接。这里以 WARN 为例：
+情形 2：向其他 Bot（CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER）回复设置请求的对话链接。这里以 WARN 为例：
 
 ```python
 exchange_text = format_data(
@@ -912,7 +912,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 3：向其他 Bot（CAPTCHA、CLEAN、LANG、NOFLOOD、NOPORN、NOSPAM、USER）提交新的设置。这里以 WARN 为例：
+情形 3：向其他 Bot（CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER）提交新的设置。这里以 WARN 为例：
 
 ```python
 exchange_text = format_data(
@@ -954,6 +954,47 @@ exchange_text = format_data(
 
 ---
 
+## [SCP-079-HIDE](#目录)
+
+[此机器人](/hide/)用于在 HIDE 频道和 EXCHANGE 频道间转发消息，以保护消息发送者的真实身份
+
+1. 在 SCP-079-EXCHANGE 频道中等待来自其他机器人的消息，特定消息转发至 HIDE 频道
+2. 在 SCP-079-HIDE 频道中等待来自其他机器人的消息，特定消息转发至 EXCHANGE 频道
+
+HIDE 能够向 BACKUP、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER、WATCH 发送数据
+
+情形 1：向 BACKUP 汇报在线状态。每个小时的第 30 分钟：
+
+```python
+exchange_text = format_data(
+    sender="HIDE",
+    receviers=[
+        "BACKUP"
+    ],
+    action="backup",
+    action_type="status",
+    data="awake"
+)
+```
+
+情形 2：在 HIDE 或 EXCHANGE 频道中转发特定消息
+
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
+)
+```
+
+---
+
 ## [SCP-079-LANG](#目录)
 
 此机器人用于根据群组设置过滤某种语言的消息、用户，删除或封禁
@@ -963,7 +1004,6 @@ exchange_text = format_data(
 3. 根据某用户触及默认敏感语言的群组数量，进行 lang 评分
 4. 群组自行重新定义用户发言不允许的语言，不允许的语言将被自动删除。如用户评分过高时触及默认删除的语言，或受到追踪删除时触发，将进行追踪封禁类收录，并分享给其他机器人
 5. 支持检测的语言： af, ar, bg, bn, ca, cs, cy, da, de, el, en, es, et, fa, fi, fr, gu, he, hi, hr, hu, id, it, ja, kn, ko, lt, lv, mk, ml, mr, ne, nl, no, pa, pl, pt, ro, ru, sk, sl, so, sq, sv, sw, ta, te, th, tl, tr, uk, ur, vi, zh-cn, zh-tw 。参见： https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
-6. 项目等级为：**Euclid**
 
 LANG 能够向 ANALYZE、BACKUP、CAPTCHA、CLEAN、CONFIG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH 发送数据
 

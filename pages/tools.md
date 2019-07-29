@@ -10,6 +10,8 @@ By alphabetical order:
 Filter specific types of messages
 - [SCP-079-CONFIG](/config/): 
 Manage the settings of each bot
+- [SCP-079-HIDE](/hide/): 
+Hide the real watcher
 - [SCP-079-MANAGE](/manage/): 
 One ring to rule them all
 - [SCP-079-NOPORN](/noporn/): 
