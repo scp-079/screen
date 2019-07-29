@@ -1332,30 +1332,6 @@ exchange_text = format_data(
 )
 ```
 
-```python
-exchange_text = format_data(
-    sender="MANAGE",
-    receviers=[
-        "ANALYZE",
-        "APPEAL",
-        "CAPTCHA",
-        "LANG",
-        "NOFLOOD",
-        "NOPORN",
-        "NOSPAM",
-        "RECHECK",
-        "USER",
-        "WATCH"
-    ],
-    action="remove",
-    action_type="bad",
-    data={
-        "id": 12345678,
-        "type": "user"
-    }
-)
-```
-
 情形 2：向 APPLY、USER 发送批准加入的回复。针对申请编号 `ds3FsdX1`，同意使用 NOPORN、NOSPAM
 
 ```python
@@ -2496,10 +2472,10 @@ exchange_text = format_data(
 
 ## [SCP-079-PM](#目录)
 
-此机器人用于作为可自搭建的私聊机器人的演示版本
+[此机器人](/pm/)用于作为可自搭建的私聊机器人的演示版本
 
 1. 联系此演示机器人，将与 @SCP_079 展开对话
-2. 项目等级为：**Safe**
+2. 此机器人代码可用于自行创建私聊机器人
 
 PM 能够向 BACKUP 发送数据
 

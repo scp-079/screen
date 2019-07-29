@@ -10,7 +10,7 @@ title: SCP-079-MANAGE
 
 **特殊收容措施：**SCP-079-MANAGE 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-MANAGE 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。其应该作为频道 SCP-079-EXCHANGE 、频道 SCP-079-HIDE 、频道 SCP-079-LOGGING（仅赋予编辑消息权限）的管理员，并加入 SCP-079-TEST 群组。
 
-**描述：**SCP-079-MANAGE 是一个管理其他机器人的机器人，其项目位于 <a href="https://gitlab.com/scp-079/scp-079-manage" target="_blank">Gitlab</a> 。机器人本体位于 <a href="https://t.me/SCP_079_MANAGE_BOT" class="079" target="_blank">SCP-079-MANAGE</a> ，并由群组 SCP-079-MANAGE 中的成员对其所有操作进行管理。其加入了 SCP-079-TEST ，用于测试在线状态及版本。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：对用户、消息进行解禁或解明，处理申诉，处理使用申请，处理机器人退群请求，命令机器人退出某群组，添加或删除频道黑、白名单，检查用户名单收录状态。具体操作详见附录中的使用说明。
+**描述：**SCP-079-MANAGE 是一个管理其他机器人的机器人，其项目位于 <a href="https://gitlab.com/scp-079/scp-079-manage" target="_blank">Gitlab</a>  ，镜像同步并开源于 <a href="https://github.com/scp-079/scp-079-manage" target="_blank">GitHub</a> 机器人本体位于 <a href="https://t.me/SCP_079_MANAGE_BOT" class="079" target="_blank">SCP-079-MANAGE</a> ，并由群组 SCP-079-MANAGE 中的成员对其所有操作进行管理。其加入了 SCP-079-TEST ，用于测试在线状态及版本。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：对用户、消息进行解禁或解明，处理申诉，处理使用申请，处理机器人退群请求，命令机器人退出某群组，添加或删除频道黑、白名单，检查用户名单收录状态。具体操作详见附录中的使用说明。
 
 **附录：**使用说明
 
@@ -33,7 +33,7 @@ SCP-079-TEST 中的成员：
 克隆项目：
 
 ```bash
-git clone https://gitlab.com/scp-079/scp-079-manage.git ~/bots/scp-079/manage
+git clone https://github.com/scp-079/scp-079-manage.git ~/bots/scp-079/manage
 ```
 
 **文件#config.ini：**
@@ -85,8 +85,6 @@ test_group_id = [DATA EXPUNGED]
 ; 此处填写测试群组 SCP-079-TEST 的 ID
 
 [custom]
-image_size = [DATA EXPUNGED]
-; 分析图片文档的最大大小，超过此大小其他机器人则不通过下载原文件进行分析，单位为 B
 project_link = [DATA EXPUNGED]
 ; 此处填写项目网址
 project_name = [DATA EXPUNGED]
