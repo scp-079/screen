@@ -6,7 +6,7 @@ title: How to setup
 
 # 自建说明书
 
-这篇文章以建立 SCP-079-REGEX 为例，用于介绍如何自建 SCP-079 机器人。文章所用环境为 Ubuntu 18.04 ，Python 3.6.7 ，用户名为 `ubuntu` 。
+这篇文章以建立 SCP-079-REGEX 为例，用于介绍如何自建 SCP-079 机器人。文章所用环境为 Ubuntu 18.04 ，Python 3.6.7 ，用户名为 `ubuntu`
 
 ## 更新软件库
 
@@ -22,29 +22,29 @@ sudo apt autoremove -y
 sudo apt install build-essential git python3-dev vim virtualenv -y
 ```
 
+## 根据项目的说明安装依赖
+
+有些项目需要额外安装其他软件包，请查看项目的说明文件 `README.md` 中 `Requirements.txt` 一节
+
 ## 创建虚拟环境
 
 ```bash
-cd ~
-virtualenv -p python3 bots
+mkdir -p ~/bots
+cd ~/bots
+virtualenv -p python3 scp-079 # 如需使用 NOPORN，请根据其 README.md 的命令操作
 ```
 
 ## 克隆某个项目
 
-例如，使用 `SCP-079-REGEX` ，根据项目中的单独使用说明克隆：
+例如，使用 `SCP-079-REGEX` ，根据项目中的[单独使用说明](/regex/)克隆：
 
 ```bash
-mkdir -p ~/bots/scp-079
-git clone https://gitlab.com/scp-079/scp-079-regex.git ~/bots/scp-079/regex
+git clone https://github.com/scp-079/scp-079-regex.git ~/bots/scp-079/regex
 ```
-
-## 根据项目的说明安装依赖
-
-有些项目需要额外安装其他软件包，请查看项目的单独说明网页。
 
 ## 更改配置文件
 
-根据需要修改项目的 `config.ini` 文件。
+根据需要修改项目的 `config.ini` 文件：
 
 ```bash
 cp ~/bots/scp-079/regex/config.ini.example ~/bots/scp-079/regex/config.ini
@@ -87,7 +87,7 @@ vim ~/bots/scp-079/regex/update.sh
 
 cd ~/bots/scp-079/regex
 git pull
-source ../../bin/activate
+source ../bin/activate
 pip install -r requirements.txt
 deactivate
 systemctl --user restart scp-079-regex
@@ -121,7 +121,7 @@ After=default.target
 
 [Service]
 WorkingDirectory=/home/ubuntu/bots/scp-079/regex
-ExecStart=/home/ubuntu/bots/bin/python main.py
+ExecStart=/home/ubuntu/bots/scp-079/bin/python main.py
 Restart=on-abort
 
 [Install]

@@ -877,6 +877,7 @@ exchange_text = format_data(
 1. 在 SCP-079-EXCHANGE 频道中等待来自其他机器人的设置请求
 2. 收到请求，在 CONFIG 频道中发送设置会话，有效时间 5 分钟
 3. 用户提交新的设置后，把数据传送回给请求的机器人
+4. 项目等级为：**Safe**
 
 CONFIG 能够向 BACKUP、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER、WARN 发送数据。对所有这些接收者的数据，其操作仅可为 `config` ，操作类型可为 `commit` 、`reply`
 
@@ -960,6 +961,7 @@ exchange_text = format_data(
 
 1. 在 SCP-079-EXCHANGE 频道中等待来自其他机器人的消息，特定消息转发至 HIDE 频道
 2. 在 SCP-079-HIDE 频道中等待来自其他机器人的消息，特定消息转发至 EXCHANGE 频道
+3. 项目等级为：**Safe**
 
 HIDE 能够向 BACKUP、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER、WATCH 发送数据
 

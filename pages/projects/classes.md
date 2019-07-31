@@ -19,6 +19,7 @@ title: Classes
 - [SCP-079-APPLY](/apply/)
 - [SCP-079-BACKUP](/backup/)
 - [SCP-079-CONFIG](/config/)
+- [SCP-079-HIDE](/hide/)
 - [SCP-079-MANAGE](/manage/)
 - [SCP-079-PM](/pm/)
 - [SCP-079-REGEX](/regex/)
