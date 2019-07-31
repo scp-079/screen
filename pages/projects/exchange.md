@@ -1540,7 +1540,27 @@ exchange_text = format_data(
 )
 ```
 
-情形 12：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK、WATCH）添加内容长期白名单，移除同理
+情形 12：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK、WATCH）添加内容短暂黑名单，移除同理
+
+```python
+exchange_text = format_data(
+    sender="MANAGE",
+    receviers=[
+        "NOPORN",
+        "NOSPAM",
+        "RECHECK",
+        "WATCH"
+    ],
+    action="add",
+    action_type="bad",
+    data={
+        "id": 123,
+        "type": "content"
+    }
+)
+```
+
+情形 13：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK、WATCH）添加内容长期白名单，移除同理
 
 ```python
 exchange_text = format_data(
@@ -1554,13 +1574,13 @@ exchange_text = format_data(
     action="add",
     action_type="except",
     data={
-        "id": "123",
+        "id": 123,
         "type": "long"
     }
 )
 ```
 
-情形 13：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK、WATCH）添加内容短暂白名单，移除同理
+情形 14：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK、WATCH）添加内容短暂白名单，移除同理
 
 ```python
 exchange_text = format_data(
@@ -1574,7 +1594,7 @@ exchange_text = format_data(
     action="add",
     action_type="except",
     data={
-        "id": "123",
+        "id": 123,
         "type": "tmp"
     }
 )
@@ -3440,8 +3460,8 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                 Add / Remove:
                     bad:
                         {
-                            "id":  12345678,
-                            "type": "user"
+                            "id":  -10012345678 / 123 / 12345678,
+                            "type": "channel / content / user"
                         }
 
                     except:
