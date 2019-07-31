@@ -24,7 +24,7 @@ sudo apt install build-essential git python3-dev vim virtualenv -y
 
 ## 根据项目的说明安装依赖
 
-有些项目需要额外安装其他软件包，请查看项目的说明文件 `README.md` 中 `Requirements.txt` 一节
+有些项目需要额外安装其他软件包，请查看项目的说明文件 `README.md` 中 `Requirements` 一节
 
 ## 创建虚拟环境
 
