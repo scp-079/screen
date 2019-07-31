@@ -1308,12 +1308,13 @@ exchange_text = format_data(
 4. 接受 BACKUP 机器人的状态通知，出现宕机则在 MANAGE 群组中提供启用备份的处理选项
 5. 接受各机器人的退群申请，在 MANAGE 群组中提供处理选项
 6. 接受各机器人的自主退群通知，在 MANAGE 群组中提示
-7. 在 MANAGE 群组中提供手动移除用户黑名单的功能
-8. 在 MANAGE 群组中提供手动添加频道黑名单的功能
-9. 在 MANAGE 群组中提供手动添加和移除频道、贴纸、用户白名单的功能
+7. 在 MANAGE 群组中提供手动移除用户黑名单、用户受追踪状态的功能
+8. 在 MANAGE 群组中提供手动添加和移除频道黑名单的功能
+9. 在 MANAGE 群组中提供手动添加和移除针对内容的黑、白名单的功能
 10. 在 MANAGE 群组中提供手动通知各机器人退出某群组的功能
-11. 驻守 SCP-079-LOGGING 频道，作为管理员，拥有编辑消息权限。等待 `/error` 命令，此命令若正确地被回复到某证据的附加消息上，则根据该消息的等级，若为封禁：解禁某用户并编辑附加消息添加 “已解封” 标签，若为删除：编辑附加消息添加 “已解明” 标签，表示已发现此错误，并根据项目编号针对 file id 添加相应的暂时白名单；加入 SCP-079-ERROR 频道，作为管理员，转发误判消息到该频道中，并附加必要消息及执行者 ID
-12. 项目等级为：**Safe**
+11. 驻守 SCP-079-LOGGING 频道，作为管理员，拥有编辑消息权限。若出现解除错误的操作，则根据该消息的等级，若为封禁：解禁某用户并编辑附加消息添加 “已解封” 标签，若为删除：编辑附加消息添加 “已解明” 标签，表示已发现此错误
+12. 加入 SCP-079-ERROR 频道，作为管理员，转发误判消息到该频道中，并附加必要消息及执行者 ID
+13. 项目等级为：**Safe**
 
 MANAGE 能够向 ANALYZE、APPEAL、APPLY、BACKUP、CAPTCHA、CLEAN、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH 发送数据
 
@@ -1447,7 +1448,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 8：向其他 Bot（CAPTCHA、CLEAN、LANG、NOFLOOD、NOPORN、NOSPAM、USER）批准退出或命令推出某群组。因某种原因
+情形 8：向其他 Bot（CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER、WARN）批准退出或命令推出某群组。因某种原因
 
 ```python
 exchange_text = format_data(
@@ -1465,31 +1466,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 9：向其他 Bot（CAPTCHA、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）添加白名单用户，移除同理
-
-```python
-exchange_text = format_data(
-    sender="MANAGE",
-    receviers=[
-        "CAPTCHA",
-        "LANG",
-        "NOFLOOD",
-        "NOPORN",
-        "NOSPAM",
-        "RECHECK",
-        "USER",
-        "WATCH"
-    ],
-    action="add",
-    action_type="except",
-    data={
-        "id": 12345678,
-        "type": "user"
-    }
-)
-```
-
-情形 10：向其他 Bot（ANALYZE、CAPTCHA、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）移除黑名单用户
+情形 9：向其他 Bot（ANALYZE、CAPTCHA、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）移除黑名单用户
 
 ```python
 exchange_text = format_data(
@@ -1514,7 +1491,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 11：向其他 Bot（ANALYZE、CAPTCHA、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）移除受追踪用户
+情形 10：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）移除受追踪用户
 
 ```python
 exchange_text = format_data(
@@ -1539,7 +1516,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 12：向其他 Bot（CAPTCHA、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）添加黑名单频道，从该频道转发的消息将被自动删除，预计使用频率极低
+情形 11：向其他 Bot（CAPTCHA、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）添加黑名单频道，从该频道转发的消息将被自动删除，预计使用频率极低
 
 ```python
 exchange_text = format_data(
@@ -1563,7 +1540,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 13：向其他 Bot（NOPORN、NOSPAM、RECHECK、WATCH）添加贴纸白名单，移除同理
+情形 12：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK、WATCH）添加内容长期白名单，移除同理
 
 ```python
 exchange_text = format_data(
@@ -1577,13 +1554,13 @@ exchange_text = format_data(
     action="add",
     action_type="except",
     data={
-        "id": "file id",
-        "type": "sticker"
+        "id": "123",
+        "type": "long"
     }
 )
 ```
 
-情形 14：向其他 Bot（NOPORN、NOSPAM、RECHECK、WATCH）添加 file id 短暂白名单，移除同理
+情形 13：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK、WATCH）添加内容短暂白名单，移除同理
 
 ```python
 exchange_text = format_data(
@@ -1597,7 +1574,7 @@ exchange_text = format_data(
     action="add",
     action_type="except",
     data={
-        "id": "file id",
+        "id": "123",
         "type": "tmp"
     }
 )

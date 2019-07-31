@@ -34,6 +34,7 @@ title: Classes
 - [SCP-079-CAPTCHA](/captcha/)
 - [SCP-079-CLEAN](/clean/)
 - [SCP-079-LANG](/lang/)
+- [SCP-079-LONG](/long/)
 - [SCP-079-NOFLOOD](/noflood/)
 - [SCP-079-NOPORN](/noporn/)
 - [SCP-079-NOSPAM](/nospam/)

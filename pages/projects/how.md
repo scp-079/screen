@@ -22,7 +22,7 @@ sudo apt autoremove -y
 sudo apt install build-essential git python3-dev vim virtualenv -y
 ```
 
-## 根据项目的说明安装依赖
+## 其他依赖
 
 有些项目需要额外安装其他软件包，请查看项目的说明文件 `README.md` 中 `Requirements` 一节
 
@@ -33,6 +33,10 @@ mkdir -p ~/bots
 cd ~/bots
 virtualenv -p python3 scp-079 # 如需使用 NOPORN，请根据其 README.md 的命令操作
 ```
+
+## 环境配置
+
+通过 pip 安装需要的包，请查看项目的说明文件 `README.md` 中 `Requirements` 一节
 
 ## 克隆某个项目
 
