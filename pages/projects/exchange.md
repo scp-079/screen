@@ -3446,8 +3446,8 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
 
                     except:
                         {
-                            "id":  12345678 / "file id" / "hash",
-                            "type": "user / sticker / tmp"
+                            "id":  "file id or hash",
+                            "type": "long / tmp"
                         }
 
                     watch:
