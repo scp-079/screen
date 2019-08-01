@@ -12,6 +12,8 @@ title: SCP-079-CONFIG
 
 **描述：**SCP-079-CONFIG 是一个用于管理各机器人设置的机器人，其项目位于 GitLab ，镜像同步并开源于 <a href="https://github.com/scp-079/scp-079-config" target="_blank">GitHub</a> 。机器人本体位于 <a href="https://t.me/SCP_079_CONFIG_BOT" class="079" target="_blank">SCP-079-CONFIG</a> ，并不接受任何直接管理。其加入了 SCP-079-TEST 群组，用于其自身运行状态。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：根据其他机器人的请求，在 SCP-079-CONFIG 频道中提供带按钮的设置会话，每个会话的有效时间为 5 分钟。具体操作详见附录中的使用说明。
 
+---
+
 **附录：**使用说明
 
 发起设置请求的群组管理员：
@@ -24,6 +26,8 @@ SCP-079-TEST 中的成员：
 
 - `/version` ：检查机器人版本
 
+---
+
 **附录：**自建机器人的方法
 
 可先查看<a href="/how/">自建说明书</a>
@@ -33,6 +37,8 @@ SCP-079-TEST 中的成员：
 ```bash
 git clone https://github.com/scp-079/scp-079-config.git ~/bots/scp-079/config
 ```
+
+---
 
 **文件#config.ini：**
 
@@ -68,6 +74,8 @@ prefix = /!
 [channels]
 config_channel_id = [DATA EXPUNGED]
 ; 此处填写设置频道 SCP-079-CONFIG 的 ID
+critical_channel_id = [DATA EXPUNGED]
+; 此处填写紧急频道 SCP-079-CRITICAL 的 ID
 debug_channel_id = [DATA EXPUNGED]
 ; 此处填写调试频道 SCP-079-DEBUG 的 ID
 exchange_channel_id = [DATA EXPUNGED]
@@ -77,6 +85,89 @@ hide_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
 test_group_id = [DATA EXPUNGED]
 ; 此处填写测试群组 SCP-079-TEST 的 ID
+```
+
+---
+
+**附录：**开发备忘
+
+1. 在 SCP-079-EXCHANGE 频道中等待来自其他机器人的设置请求
+2. 收到请求，在 CONFIG 频道中发送设置会话，有效时间 5 分钟
+3. 用户提交新的设置后，把数据传送回给请求的机器人
+4. 项目等级为：**Safe**
+
+CONFIG 能够向 BACKUP、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER、WARN 发送数据。对所有这些接收者的数据，其操作仅可为 `config` ，操作类型可为 `commit` 、`reply`
+
+情形 1：向 BACKUP 汇报在线状态。每个小时的第 30 分钟：
+
+```python
+exchange_text = format_data(
+    sender="CONFIG",
+    receviers=[
+        "BACKUP"
+    ],
+    action="backup",
+    action_type="status",
+    data="awake"
+)
+```
+
+情形 2：向其他 Bot（CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER）回复设置请求的对话链接。这里以 WARN 为例：
+
+```python
+exchange_text = format_data(
+    sender="CONFIG",
+    receviers=[
+        "WARN"
+    ],
+    action="config",
+    action_type="reply",
+    data={
+        "group_id": -10012345678,
+        "user_id": 12345678,
+        "config_link": "https://t.me/SCP_079_CONFIG/123"
+    }
+)
+```
+
+情形 3：向其他 Bot（CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER）提交新的设置。这里以 WARN 为例：
+
+```python
+exchange_text = format_data(
+    sender="CONFIG",
+    receviers=[
+        "WARN"
+    ],
+    action="config",
+    action_type="reply",
+    data={
+        "group_id": -10012345678,
+        "config": {
+            "default": False,
+            "lock": 1512345678,
+            "limit": 4,
+            "mention": True,
+            "report": {
+                "auto": False,
+                "manual": True
+            }
+        }
+    }
+)
+```
+
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="CONFIG",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
+)
 ```
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>

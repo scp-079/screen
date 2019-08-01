@@ -8,13 +8,289 @@ title: SCP-079-EXCHANGE
 
 **项目等级：**Safe
 
-**特殊收容措施：**SCP-079-EXCHANGE 应该设置成为一个私有频道，开启消息签名（确保机器人的越权操作也有迹可查），并赋予各机器人唯一一项权限：发送消息
+**特殊收容措施：**SCP-079-EXCHANGE 应该设置成为一个私有频道，开启消息签名（确保机器人的越权操作也有迹可查），并赋予各机器人唯一一项权限：发送消息。
 
-**描述：**SCP-079-EXCHANGE 是一个用于数据交换的频道。其具体定义的格式以及每个机器人发送数据所表达的意义，可见附录
-
-**附录：**机器人数据交换和职能的消息介绍
+**描述：**SCP-079-EXCHANGE 是一个用于各机器人之间进行数据交换的频道。每个机器人发送数据所表达的意义，可见[各项目单独页面](/tools/)中的 `附录：开发备忘` 一节，其交换文本的格式化方法请见本页文件 `channel.py` 。
 
 ---
+
+**文件#channel.py：**
+
+```python
+def format_data(sender: str, receivers: List[str], action: str, action_type: str, data: Union[dict, int, list, str]) -> str:
+    """Make a unified format string for data exchange.
+
+    Args:
+        sender (str):
+            The sender's name.
+
+        receivers (list of str):
+            The receivers' names.
+
+        action (str):
+            The action that the data receivers need to take. It can be any of the followings:
+                add - Add id to some list
+                appeal - User's appeal
+                backup - Send backup data
+                config - Update bot config
+                help - Let others bot do something
+                join - Let bots join some group
+                leave - Let bots leave some group
+                remove - Remove id in some list
+                update - Update some data
+
+        action_type (str):
+            Type of action. It can be any of the followings:
+                When action is add or remove:
+                    bad - Spam channel or user
+                    except - Exception channel or user
+                    watch - Suspicious user.
+                            Recommended to ban user or delete user's messages when meets certain conditions
+
+                When action is appeal:
+                    request - Send a appeal request
+                    reply - Send a appeal reply
+
+                When action is backup:
+                    emergency - Let bots enable emergency mode in groups
+                    hide - Use HIDE channel to exchange data
+                    pickle - Pickle file
+                    status - Bot(s) status
+
+                When action is config:
+                    ask - Let CONFIG provide config options in CONFIG Channel
+                    commit - Update group's configurations
+                    reply - CONFIG reply the config link to bot
+
+                When action is help:
+                    ban - Let USER ban a user globally
+                    delete - Let USER delete a user's all messages in some group
+                    report - Let WARN alert admins
+
+                When action is join:
+                    approve - Let USER invite bots to a group
+                    request - Send a join request to MANAGE
+                    status - Send USER permission status to MANAGE
+                    update - Let USER update the permission status
+
+                When action is leave:
+                    approve - Let bot leave a group
+                    info - Send auto left group info to MANAGE
+                    request - Send a leave request to MANAGE
+
+                When action is update:
+                    declare - Declare a message
+                    download - Download the data, then update
+                    preview - Update a message's preview
+                    reload - Update the data from local machines
+                    score - Update user's score
+
+
+        data (Union[dict, int, list, str]):
+            Additional data required for operation.
+                Add / Remove:
+                    bad:
+                        {
+                            "id":  -10012345678 / 123 / 12345678,
+                            "type": "channel / content / user"
+                        }
+
+                    except:
+                        {
+                            "id":  "file id or hash",
+                            "type": "long / tmp"
+                        }
+
+                    watch:
+                        {
+                            "id": 12345678,
+                            "type": "all / ban / delete",
+                            "until": "encrypted string"
+                        }
+
+                Appeal:
+                    request:
+                        {
+                            "user_id": 12345678,
+                            "record_id": 123
+                        }
+                    
+                    reply:
+                        {
+                            "user_id": 12345678,
+                            "result": True / False
+                        }
+
+                Backup:
+                    file type:
+                        "filename"
+                    
+                    status:
+                        "awake"
+                        
+                        {
+                            "type": "up / down",
+                            "bots": List[str]
+                        }
+                    
+                    start:
+                        List[str]
+                    
+                    stop:
+                        List[str]
+                    
+                    hide:
+                        bool
+
+                Config:
+                    ask:
+                        {
+                            "project_name": "Project name",
+                            "project_link": "Link to project",
+                            "group_id": -10012345678,
+                            "group_name": "Group Name",
+                            "group_link": "link to group",
+                            "user_id": 12345678
+                            "config": dict,
+                            "default": dict
+                        }
+
+                    commit:
+                        {
+                            "group_id": -10012345678,
+                            "config": dict
+                        }
+
+                    reply:
+                        {
+                            "group_id": -10012345678,
+                            "user_id": 12345678,
+                            "config_link": "link to config"
+                        }
+
+                Help:
+                    ban / delete:
+                        {
+                            "group_id": -10012345678,
+                            "user_id": 12345678
+                        }
+
+                    report:
+                        {
+                            "group_id": -10012345678,
+                            "user_id": 12345678,
+                            "message_id": 123
+                        }
+
+                Join:
+                    approve:
+                        {
+                            "id": "random",
+                            "bots": List[str]
+                        }
+                    
+                    reject:
+                        {
+                            "id": "random",
+                            "reason": "reason here"
+                        }
+
+                    request:
+                        {
+                            "id": "random",
+                            "bots": List[str],
+                            "group_link": "link to group",
+                            "user_id": 12345678
+                        }
+
+                    status:
+                        {
+                            "id": "random",
+                            "status": "left / permission / invalid" / -10012345678
+                        }
+
+                    update:
+                        "random id"
+
+                Leave:
+                    approve:
+                        {
+                            "group_id": -10012345678,
+                            "reason": "reason here"
+                        }
+
+                    info:
+                        -10012345678
+
+                    request:
+                        {
+                            "group_id": -10012345678,
+                            "group_name": "Group Name",
+                            "group_link": "link to group",
+                            "reason": "user / permissions"
+                        }
+
+                Remove:
+                    bad:
+                        {
+                            "id":  12345678,
+                            "type": "user"
+                        }
+                    
+                    except:
+                        {
+                            "id":  12345678 / "file id",
+                            "type": "user / sticker"
+                        }
+
+                    watch:
+                        {
+                            "id": 12345678,
+                            "type": "all"
+                        }
+
+                Update
+                    declare:
+                        {
+                            "group_id": -10012345678,
+                            "message_id": 123
+                        }
+                    
+                    download:
+                        "filename"
+
+                    preview: {
+                        "group_id": -10012345678,
+                        "user_id": 12345678,
+                        "message_id": 123
+                    }
+
+                    reload:
+                        "path"
+
+                    score:
+                        {
+                            "id": 12345678,
+                            "score": 3.2
+                        }
+
+    Returns:
+        A formatted string.
+    """
+    data = {
+        "from": sender,
+        "to": receivers,
+        "action": action,
+        "type": action_type,
+        "data": data
+    }
+
+    return code_block(dumps(data, indent=4))
+```
+
+---
+
+# 以下内容即将作废，各部分转移至各项目的单独介绍页面
 
 ## 目录
 
@@ -114,7 +390,7 @@ exchange_text = format_data(
 
 ```python
 exchange_text = format_data(
-    sender="EMERGENCY",
+    sender="ANALYZE",
     receviers=[
         "EMERGENCY"
     ],
@@ -205,7 +481,7 @@ exchange_text = format_data(
 
 ```python
 exchange_text = format_data(
-    sender="EMERGENCY",
+    sender="APPEAL",
     receviers=[
         "EMERGENCY"
     ],
@@ -306,7 +582,7 @@ exchange_text = format_data(
 
 ```python
 exchange_text = format_data(
-    sender="EMERGENCY",
+    sender="APPLY",
     receviers=[
         "EMERGENCY"
     ],
@@ -406,7 +682,7 @@ exchange_text = format_data(
 
 ```python
 exchange_text = format_data(
-    sender="EMERGENCY",
+    sender="BACKUP",
     receviers=[
         "EMERGENCY"
     ],
@@ -610,7 +886,7 @@ exchange_text = format_data(
 
 ```python
 exchange_text = format_data(
-    sender="EMERGENCY",
+    sender="CAPTCHA",
     receviers=[
         "EMERGENCY"
     ],
@@ -858,92 +1134,7 @@ exchange_text = format_data(
 
 ```python
 exchange_text = format_data(
-    sender="EMERGENCY",
-    receviers=[
-        "EMERGENCY"
-    ],
-    action="backup",
-    action_type="hide",
-    data=True
-)
-```
-
----
-
-## [SCP-079-CONFIG](#目录)
-
-[此机器人](/config/)用于在专用频道提供针对某机器人的群组设置按钮
-
-1. 在 SCP-079-EXCHANGE 频道中等待来自其他机器人的设置请求
-2. 收到请求，在 CONFIG 频道中发送设置会话，有效时间 5 分钟
-3. 用户提交新的设置后，把数据传送回给请求的机器人
-4. 项目等级为：**Safe**
-
-CONFIG 能够向 BACKUP、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER、WARN 发送数据。对所有这些接收者的数据，其操作仅可为 `config` ，操作类型可为 `commit` 、`reply`
-
-情形 1：向 BACKUP 汇报在线状态。每个小时的第 30 分钟：
-
-```python
-exchange_text = format_data(
-    sender="CONFIG",
-    receviers=[
-        "BACKUP"
-    ],
-    action="backup",
-    action_type="status",
-    data="awake"
-)
-```
-
-情形 2：向其他 Bot（CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER）回复设置请求的对话链接。这里以 WARN 为例：
-
-```python
-exchange_text = format_data(
-    sender="CONFIG",
-    receviers=[
-        "WARN"
-    ],
-    action="config",
-    action_type="reply",
-    data={
-        "group_id": -10012345678,
-        "user_id": 12345678,
-        "config_link": "https://t.me/SCP_079_CONFIG/123"
-    }
-)
-```
-
-情形 3：向其他 Bot（CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER）提交新的设置。这里以 WARN 为例：
-
-```python
-exchange_text = format_data(
-    sender="CONFIG",
-    receviers=[
-        "WARN"
-    ],
-    action="config",
-    action_type="reply",
-    data={
-        "group_id": -10012345678,
-        "config": {
-            "default": False,
-            "lock": 1512345678,
-            "limit": 4,
-            "mention": True,
-            "report": {
-                "auto": False,
-                "manual": True
-            }
-        }
-    }
-)
-```
-
-特殊情形：向所有 bot 发送数据交换频道转移指令
-
-```python
-exchange_text = format_data(
-    sender="EMERGENCY",
+    sender="CLEAN",
     receviers=[
         "EMERGENCY"
     ],
@@ -985,7 +1176,7 @@ exchange_text = format_data(
 
 ```python
 exchange_text = format_data(
-    sender="EMERGENCY",
+    sender="HIDE",
     receviers=[
         "EMERGENCY"
     ],
@@ -1286,7 +1477,7 @@ exchange_text = format_data(
 
 ```python
 exchange_text = format_data(
-    sender="EMERGENCY",
+    sender="LANG",
     receviers=[
         "EMERGENCY"
     ],
@@ -1604,7 +1795,7 @@ exchange_text = format_data(
 
 ```python
 exchange_text = format_data(
-    sender="EMERGENCY",
+    sender="MANAGE",
     receviers=[
         "EMERGENCY"
     ],
@@ -1618,7 +1809,7 @@ exchange_text = format_data(
 
 ```python
 exchange_text = format_data(
-    sender="EMERGENCY",
+    sender="MANAGE",
     receviers=[
         "EMERGENCY"
     ],
@@ -1892,7 +2083,7 @@ exchange_text = format_data(
 
 ```python
 exchange_text = format_data(
-    sender="EMERGENCY",
+    sender="NOFLOOD",
     receviers=[
         "EMERGENCY"
     ],
@@ -3377,284 +3568,6 @@ exchange_text = format_data(
     action_type="hide",
     data=True
 )
-```
-
----
-
-## [文件](#目录)
-
-**文件#channel.py：**
-
-```python
-def format_data(sender: str, receivers: List[str], action: str, action_type: str, data: Union[dict, int, list, str]) -> str:
-    """Make a unified format string for data exchange.
-
-    Args:
-        sender (str):
-            The sender's name.
-
-        receivers (list of str):
-            The receivers' names.
-
-        action (str):
-            The action that the data receivers need to take. It can be any of the followings:
-                add - Add id to some list
-                appeal - User's appeal
-                backup - Send backup data
-                config - Update bot config
-                help - Let others bot do something
-                join - Let bots join some group
-                leave - Let bots leave some group
-                remove - Remove id in some list
-                update - Update some data
-
-        action_type (str):
-            Type of action. It can be any of the followings:
-                When action is add or remove:
-                    bad - Spam channel or user
-                    except - Exception channel or user
-                    watch - Suspicious user.
-                            Recommended to ban user or delete user's messages when meets certain conditions
-
-                When action is appeal:
-                    request - Send a appeal request
-                    reply - Send a appeal reply
-
-                When action is backup:
-                    emergency - Let bots enable emergency mode in groups
-                    hide - Use HIDE channel to exchange data
-                    pickle - Pickle file
-                    status - Bot(s) status
-
-                When action is config:
-                    ask - Let CONFIG provide config options in CONFIG Channel
-                    commit - Update group's configurations
-                    reply - CONFIG reply the config link to bot
-
-                When action is help:
-                    ban - Let USER ban a user globally
-                    delete - Let USER delete a user's all messages in some group
-                    report - Let WARN alert admins
-
-                When action is join:
-                    approve - Let USER invite bots to a group
-                    request - Send a join request to MANAGE
-                    status - Send USER permission status to MANAGE
-                    update - Let USER update the permission status
-
-                When action is leave:
-                    approve - Let bot leave a group
-                    info - Send auto left group info to MANAGE
-                    request - Send a leave request to MANAGE
-
-                When action is update:
-                    declare - Declare a message
-                    download - Download the data, then update
-                    preview - Update a message's preview
-                    reload - Update the data from local machines
-                    score - Update user's score
-
-
-        data (Union[dict, int, list, str]):
-            Additional data required for operation.
-                Add / Remove:
-                    bad:
-                        {
-                            "id":  -10012345678 / 123 / 12345678,
-                            "type": "channel / content / user"
-                        }
-
-                    except:
-                        {
-                            "id":  "file id or hash",
-                            "type": "long / tmp"
-                        }
-
-                    watch:
-                        {
-                            "id": 12345678,
-                            "type": "ban / delete",
-                            "until": "encrypted string"
-                        }
-
-                Appeal:
-                    request:
-                        {
-                            "user_id": 12345678,
-                            "record_id": 123
-                        }
-                    
-                    reply:
-                        {
-                            "user_id": 12345678,
-                            "result": True / False
-                        }
-
-                Backup:
-                    file type:
-                        "filename"
-                    
-                    status:
-                        "awake"
-                        
-                        {
-                            "type": "up / down",
-                            "bots": List[str]
-                        }
-                    
-                    start:
-                        List[str]
-                    
-                    stop:
-                        List[str]
-                    
-                    hide:
-                        bool
-
-                Config:
-                    ask:
-                        {
-                            "project_name": "Project name",
-                            "project_link": "Link to project",
-                            "group_id": -10012345678,
-                            "group_name": "Group Name",
-                            "group_link": "link to group",
-                            "user_id": 12345678
-                            "config": dict,
-                            "default": dict
-                        }
-
-                    commit:
-                        {
-                            "group_id": -10012345678,
-                            "config": dict
-                        }
-
-                    reply:
-                        {
-                            "group_id": -10012345678,
-                            "user_id": 12345678,
-                            "config_link": "link to config"
-                        }
-
-                Help:
-                    ban / delete:
-                        {
-                            "group_id": -10012345678,
-                            "user_id": 12345678
-                        }
-
-                    report:
-                        {
-                            "group_id": -10012345678,
-                            "user_id": 12345678,
-                            "message_id": 123
-                        }
-
-                Join:
-                    approve:
-                        {
-                            "id": "random",
-                            "bots": List[str]
-                        }
-                    
-                    reject:
-                        {
-                            "id": "random",
-                            "reason": "reason here"
-                        }
-
-                    request:
-                        {
-                            "id": "random",
-                            "bots": List[str],
-                            "group_link": "link to group",
-                            "user_id": 12345678
-                        }
-
-                    status:
-                        {
-                            "id": "random",
-                            "status": "left / permission / invalid" / -10012345678
-                        }
-
-                    update:
-                        "random id"
-
-                Leave:
-                    approve:
-                        {
-                            "group_id": -10012345678,
-                            "reason": "reason here"
-                        }
-
-                    info:
-                        -10012345678
-
-                    request:
-                        {
-                            "group_id": -10012345678,
-                            "group_name": "Group Name",
-                            "group_link": "link to group",
-                            "reason": "user / permissions"
-                        }
-
-                Remove:
-                    bad:
-                        {
-                            "id":  12345678,
-                            "type": "user"
-                        }
-                    
-                    except:
-                        {
-                            "id":  12345678 / "file id",
-                            "type": "user / sticker"
-                        }
-
-                    watch:
-                        {
-                            "id": 12345678,
-                            "type": "all"
-                        }
-
-                Update
-                    declare:
-                        {
-                            "group_id": -10012345678,
-                            "message_id": 123
-                        }
-                    
-                    download:
-                        "filename"
-
-                    preview: {
-                        "group_id": -10012345678,
-                        "user_id": 12345678,
-                        "message_id": 123
-                    }
-
-                    reload:
-                        "path"
-
-                    score:
-                        {
-                            "id": 12345678,
-                            "score": 3.2
-                        }
-
-    Returns:
-        A formatted string.
-    """
-    data = {
-        "from": sender,
-        "to": receivers,
-        "action": action,
-        "type": action_type,
-        "data": data
-    }
-
-    return code_block(dumps(data, indent=4))
 ```
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>
