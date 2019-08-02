@@ -963,7 +963,7 @@ exchange_text = format_data(
             "vid": True,
             "vdn": True,
             "sti": False,
-            "pho": False,
+            "ast": False,
             "aud": False,
             "voi": False,
             "gam": True,
@@ -987,20 +987,20 @@ exchange_text = format_data(
             "con": True, # 联系人
             "via": False, # 通过 Bot 发送的消息
             "ani": False, # GIF 动图
-            "bmd": False, # 以 / 和 ! 为前缀的机器人命令
+            "bmd": False, # 以 / 为前缀的机器人命令
             "vid": False, # 视频
             "vdn": True, # 圆视频
             "sti": False, # 贴纸
-            "pho": False, # 图片
+            "ast": False, # 动态贴纸
             "aud": False, # 音频
             "voi": True, # 语音
             "gam": False, # 游戏
             "ser": True, # 服务类消息，对于加群消息将保留最后一条
-            "ttd": False, # 定时删除贴纸和动图（二至三小时后）
+            "ttd": False, # 定时删除贴纸，动态贴纸，和 GIF 动图（三小时后）
             "sde": False, # 群员可否自助删除自己所发所有消息
             "loc": True, # 定位地址
             "doc": False, # 文件
-            "exe": False, # EXE、APK、BAT、CMD 文件
+            "exe": False, # EXE、APK、BAT、CMD、COM 文件
             "tcl": False, # 每日定时清除位于群组和黑名单中的 Deleted Account
             "aff": False, # 传统 AFF 链接、支付宝淘宝红包、大陆 APP 的各类活动推广分享
             "sho": False, # 短链接
@@ -1135,48 +1135,6 @@ exchange_text = format_data(
 ```python
 exchange_text = format_data(
     sender="CLEAN",
-    receviers=[
-        "EMERGENCY"
-    ],
-    action="backup",
-    action_type="hide",
-    data=True
-)
-```
-
----
-
-## [SCP-079-HIDE](#目录)
-
-[此机器人](/hide/)用于在 HIDE 频道和 EXCHANGE 频道间转发消息，以保护消息发送者的真实身份
-
-1. 在 SCP-079-EXCHANGE 频道中等待来自其他机器人的消息，特定消息转发至 HIDE 频道
-2. 在 SCP-079-HIDE 频道中等待来自其他机器人的消息，特定消息转发至 EXCHANGE 频道
-3. 项目等级为：**Safe**
-
-HIDE 能够向 BACKUP、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER、WATCH 发送数据
-
-情形 1：向 BACKUP 汇报在线状态。每个小时的第 30 分钟：
-
-```python
-exchange_text = format_data(
-    sender="HIDE",
-    receviers=[
-        "BACKUP"
-    ],
-    action="backup",
-    action_type="status",
-    data="awake"
-)
-```
-
-情形 2：在 HIDE 或 EXCHANGE 频道中转发特定消息
-
-特殊情形：向所有 bot 发送数据交换频道转移指令
-
-```python
-exchange_text = format_data(
-    sender="HIDE",
     receviers=[
         "EMERGENCY"
     ],
@@ -1484,338 +1442,6 @@ exchange_text = format_data(
     action="backup",
     action_type="hide",
     data=True
-)
-```
-
----
-
-## [SCP-079-MANAGE](#目录)
-
-此机器人用于对其他机器人的加群、退群、名单收录情况进行管理
-
-1. 此机器人加入 SCP-079-MANAGE 群组
-2. 接受 APPEAL 机器人的申诉请求，在 MANAGE 群组中提供解封选项
-3. 接受 APPLY 机器人的使用申请，在 MANAGE 群组中提供相关信息，并提供处理选项，MANAGE 群组的管理员初步同意后，通知 USER 加入该群组，并等待该群组管理员赋予其必要的四项权限，USER 可主动或被动地将权限情况更新至 MANAGE ，若一切就绪且得到 MANAGE 批准，USER 可以将群主申请的机器人拉入群中
-4. 接受 BACKUP 机器人的状态通知，出现宕机则在 MANAGE 群组中提供启用备份的处理选项
-5. 接受各机器人的退群申请，在 MANAGE 群组中提供处理选项
-6. 接受各机器人的自主退群通知，在 MANAGE 群组中提示
-7. 在 MANAGE 群组中提供手动移除用户黑名单、用户受追踪状态的功能
-8. 在 MANAGE 群组中提供手动添加和移除频道黑名单的功能
-9. 在 MANAGE 群组中提供手动添加和移除针对内容的黑、白名单的功能
-10. 在 MANAGE 群组中提供手动通知各机器人退出某群组的功能
-11. 驻守 SCP-079-LOGGING 频道，作为管理员，拥有编辑消息权限。若出现解除错误的操作，则根据该消息的等级，若为封禁：解禁某用户并编辑附加消息添加 “已解封” 标签，若为删除：编辑附加消息添加 “已解明” 标签，表示已发现此错误
-12. 加入 SCP-079-ERROR 频道，作为管理员，转发误判消息到该频道中，并附加必要消息及执行者 ID
-13. 项目等级为：**Safe**
-
-MANAGE 能够向 ANALYZE、APPEAL、APPLY、BACKUP、CAPTCHA、CLEAN、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH 发送数据
-
-情形 1：向 APPEAL 回复申诉请求处理结果。同意用户的解封诉求，并向其他 Bot（ANALYZE、APPEAL、APPLY、CAPTCHA、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）发送移除黑名单指令
-
-```python
-exchange_text = format_data(
-    sender="MANAGE",
-    receviers=[
-        "APPEAL"
-    ],
-    action="appeal",
-    action_type="reply",
-    data={
-        "user_id": 12345678,
-        "result": True
-    }
-)
-```
-
-情形 2：向 APPLY、USER 发送批准加入的回复。针对申请编号 `ds3FsdX1`，同意使用 NOPORN、NOSPAM
-
-```python
-exchange_text = format_data(
-    sender="MANAGE",
-    receviers=[
-        "APPLY",
-        "USER"
-    ],
-    action="join",
-    action_type="approve",
-    data={
-        "id": "ds3FsdX1",
-        "bots": [
-            "NOPORN",
-            "NOSPAM"
-        ]
-    }
-)
-```
-
-情形 3：向 APPLY、USER 发送拒绝加入的回复。针对申请编号 `ds3FsdX1`，附加某种原因
-
-```python
-exchange_text = format_data(
-    sender="MANAGE",
-    receviers=[
-        "APPLY",
-        "USER"
-    ],
-    action="join",
-    action_type="reject",
-    data={
-        "id": "ds3FsdX1",
-        "result": "some reason"
-    }
-)
-```
-
-情形 4：向 BACKUP 传送数据备份文件。每日 UTC 时间 20:00 。`exchange_text` 文本作为该文件的 `caption`
-
-```python
-exchange_text = format_data(
-    sender="MANAGE",
-    receviers=[
-        "BACKUP"
-    ],
-    action="backup",
-    action_type="pickle",
-    data="bad_ids"
-)
-```
-
-情形 5：向 BACKUP 汇报在线状态。每个小时的第 30 分钟
-
-```python
-exchange_text = format_data(
-    sender="MANAGE",
-    receviers=[
-        "BACKUP"
-    ],
-    action="backup",
-    action_type="status",
-    data="awake"
-)
-```
-
-情形 5：向 BACKUP 批准启用备份。例如启用 NOPORN 备份副本
-
-```python
-exchange_text = format_data(
-    sender="MANAGE",
-    receviers=[
-        "BACKUP"
-    ],
-    action="backup",
-    action_type="start",
-    data=[
-        "NOPORN"
-    ]
-)
-```
-
-情形 6：向 BACKUP 命令停止备份副本。例如停止 NOPORN 备份副本
-
-```python
-exchange_text = format_data(
-    sender="MANAGE",
-    receviers=[
-        "BACKUP"
-    ],
-    action="backup",
-    action_type="stop",
-    data=[
-        "NOPORN"
-    ]
-)
-```
-
-情形 7：向 USER 发送加入群组的状态更新请求。针对申请编号 `ds3FsdX1`，由于项目管理员的要求，通知 USER 更新加入的已申请群组的状况
-
-```python
-exchange_text = format_data(
-    sender="MANAGE",
-    receviers=[
-        "USER"
-    ],
-    action="join",
-    action_type="update",
-    data="ds3FsdX1"
-)
-```
-
-情形 8：向其他 Bot（CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER、WARN）批准退出或命令推出某群组。因某种原因
-
-```python
-exchange_text = format_data(
-    sender="MANAGE",
-    receviers=[
-        "LANG",
-        "NOFLOOD"
-    ],
-    action="leave",
-    action_type="approve",
-    data={
-        "group_id": -10012345678,
-        "reason": "some reason"
-    }
-)
-```
-
-情形 9：向其他 Bot（ANALYZE、CAPTCHA、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）移除黑名单用户
-
-```python
-exchange_text = format_data(
-    sender="MANAGE",
-    receviers=[
-        "ANALYZE",
-        "CAPTCHA",
-        "LANG",
-        "NOFLOOD",
-        "NOPORN",
-        "NOSPAM",
-        "RECHECK",
-        "USER",
-        "WATCH"
-    ],
-    action="remove",
-    action_type="bad",
-    data={
-        "id": 12345678,
-        "type": "user"
-    }
-)
-```
-
-情形 10：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）移除受追踪用户
-
-```python
-exchange_text = format_data(
-    sender="MANAGE",
-    receviers=[
-        "ANALYZE",
-        "CAPTCHA",
-        "LANG",
-        "NOFLOOD",
-        "NOPORN",
-        "NOSPAM",
-        "RECHECK",
-        "USER",
-        "WATCH"
-    ],
-    action="remove",
-    action_type="watch",
-    data={
-        "id": 12345678,
-        "type": "all"
-    }
-)
-```
-
-情形 11：向其他 Bot（CAPTCHA、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）添加黑名单频道，从该频道转发的消息将被自动删除，预计使用频率极低
-
-```python
-exchange_text = format_data(
-    sender="MANAGE",
-    receviers=[
-        "CAPTCHA",
-        "LANG",
-        "NOFLOOD",
-        "NOPORN",
-        "NOSPAM",
-        "RECHECK",
-        "USER",
-        "WATCH"
-    ],
-    action="add",
-    action_type="bad",
-    data={
-        "id": -10012345678,
-        "type": "channel"
-    }
-)
-```
-
-情形 12：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK、WATCH）添加内容短暂黑名单，移除同理
-
-```python
-exchange_text = format_data(
-    sender="MANAGE",
-    receviers=[
-        "NOPORN",
-        "NOSPAM",
-        "RECHECK",
-        "WATCH"
-    ],
-    action="add",
-    action_type="bad",
-    data={
-        "id": 123,
-        "type": "content"
-    }
-)
-```
-
-情形 13：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK、WATCH）添加内容长期白名单，移除同理
-
-```python
-exchange_text = format_data(
-    sender="MANAGE",
-    receviers=[
-        "NOPORN",
-        "NOSPAM",
-        "RECHECK",
-        "WATCH"
-    ],
-    action="add",
-    action_type="except",
-    data={
-        "id": 123,
-        "type": "long"
-    }
-)
-```
-
-情形 14：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK、WATCH）添加内容短暂白名单，移除同理
-
-```python
-exchange_text = format_data(
-    sender="MANAGE",
-    receviers=[
-        "NOPORN",
-        "NOSPAM",
-        "RECHECK",
-        "WATCH"
-    ],
-    action="add",
-    action_type="except",
-    data={
-        "id": 123,
-        "type": "tmp"
-    }
-)
-```
-
-特殊情形 1：向所有 bot 发送数据交换频道转移指令
-
-```python
-exchange_text = format_data(
-    sender="MANAGE",
-    receviers=[
-        "EMERGENCY"
-    ],
-    action="backup",
-    action_type="hide",
-    data=True
-)
-```
-
-特殊情形 2：向所有 bot 发送恢复原数据交换频道指令
-
-```python
-exchange_text = format_data(
-    sender="MANAGE",
-    receviers=[
-        "EMERGENCY"
-    ],
-    action="backup",
-    action_type="hide",
-    data=False
 )
 ```
 

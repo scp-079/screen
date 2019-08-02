@@ -8,15 +8,19 @@ title: SCP-079-HIDE
 
 **项目等级：**Safe
 
-**特殊收容措施：**SCP-079-HIDE 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-HIDE 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。其应该作为频道 SCP-079-EXCHANGE 、频道 SCP-079-HIDE 的管理员，并加入 SCP-079-TEST 群组。
+**特殊收容措施：**SCP-079-HIDE 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-HIDE 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。其应该作为频道 SCP-079-CRITICAL 、频道 SCP-079-EXCHANGE 、频道 SCP-079-HIDE 的管理员，并加入 SCP-079-TEST 群组。
 
 **描述：**SCP-079-HIDE 是一个用于隐藏频道消息真实发布者的机器人，用于保护关键机器人的真实身份，使其不被 spammer 知晓，其项目位于 GitLab ，镜像同步并开源于 <a href="https://gitlab.com/scp-079/scp-079-hide" target="_blank">GitHub</a> 。机器人本体位于 <a href="https://t.me/SCP_079_HIDE_BOT" class="079" target="_blank">SCP-079-CONFIG</a> ，并不接受任何直接管理。其加入了 SCP-079-TEST 群组，用于其自身运行状态。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：根据其他机器人的请求，在 SCP-079-EXCHANGE 频道中转发相应信息。具体操作详见附录中的使用说明。
+
+---
 
 **附录：**使用说明
 
 SCP-079-TEST 中的成员：
 
 - `/version` ：检查机器人版本
+
+---
 
 **附录：**自建机器人的方法
 
@@ -27,6 +31,8 @@ SCP-079-TEST 中的成员：
 ```bash
 git clone https://github.com/scp-079/scp-079-hide.git ~/bots/scp-079/config
 ```
+
+---
 
 **文件#config.ini：**
 
@@ -59,6 +65,8 @@ prefix = /!
 ; 命令前的可用字符，如在群组中使用非常规命令前缀，需要机器人有获取普通消息的权限
 
 [channels]
+critical_channel_id = [DATA EXPUNGED]
+; 此处填写紧急频道 SCP-079-CRITICAL 的 ID
 exchange_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID
 ; 关于数据交换频道的详情，请查看 https://scp-079.org/exchange/
@@ -66,6 +74,49 @@ hide_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
 test_group_id = [DATA EXPUNGED]
 ; 此处填写测试群组 SCP-079-TEST 的 ID
+```
+
+---
+
+**附录：**开发备忘
+
+1. 在 SCP-079-EXCHANGE 频道中等待来自其他机器人的消息，特定消息转发至 HIDE 频道
+2. 在 SCP-079-HIDE 频道中等待来自其他机器人的消息，特定消息转发至 EXCHANGE 频道
+
+HIDE 能够向 BACKUP、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER、WATCH 发送数据
+
+情形 1：向 BACKUP 汇报在线状态。每个小时的第 30 分钟：
+
+```python
+exchange_text = format_data(
+    sender="HIDE",
+    receviers=[
+        "BACKUP"
+    ],
+    action="backup",
+    action_type="status",
+    data="awake"
+)
+```
+
+情形 2：在 HIDE 或 EXCHANGE 频道中转发特定消息
+
+```python
+    # 略
+```
+
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="HIDE",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
+)
 ```
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>
