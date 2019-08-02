@@ -294,8 +294,6 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
 
 ## 目录
 
-[前提](#前提)
-
 [SCP-079-ANALYZE](#scp-079-analyze)
 
 [SCP-079-APPEAL](#scp-079-appeal)
@@ -307,10 +305,6 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
 [SCP-079-CAPTCHA](#scp-079-captcha)
 
 [SCP-079-CLEAN](#scp-079-clean)
-
-[SCP-079-CONFIG](#scp-079-config)
-
-[SCP-079-HIDE](#scp-079-hide)
 
 [SCP-079-LANG](#scp-079-lang)
 
@@ -335,16 +329,6 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
 [SCP-079-WARN](#scp-079-warn)
 
 [SCP-079-WATCH](#scp-079-watch)
-
-[文件](#文件)
-
----
-
-## [前提](#目录)
-
-请先查看[设计和管理原则](/principles/)，和[项目等级说明](/classes/)
-
-注意：此页面列出的信息可能随时更改。发送到 SCP-079-EXCHANGE 的文本 `exchange_text` 以调用 `format_data` 函数的方式呈现，此函数请见页面最后的文件 `channel.py`
 
 ---
 

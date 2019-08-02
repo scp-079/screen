@@ -102,7 +102,7 @@ exchange_text = format_data(
 情形 2：在 HIDE 或 EXCHANGE 频道中转发特定消息
 
 ```python
-    # 略
+# 略
 ```
 
 特殊情形：向所有 bot 发送数据交换频道转移指令
