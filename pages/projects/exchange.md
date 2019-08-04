@@ -2053,7 +2053,6 @@ exchange_text = format_data(
 1. 如果群组开启了复查功能，则使用其他模型复查媒体消息，检查 NSFW 情况
 2. 根据某用户触发 NSFW 的群组数量，进行 noporn 评分
 3. 如用户评分过高时触发 NSFW，或受到追踪删除时触发，将进行追踪封禁类收录，并分享给其他机器人
-4. 项目等级为：**Euclid**
 
 RECHECK 能够向 ANALYZE、BACKUP、CAPTCHA、CLEAN、CONFIG、LANG、MANAGE、NOFLOOD、NOPORN、NOSPAM、USER、WATCH 发送数据
 
