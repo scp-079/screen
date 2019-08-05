@@ -1711,7 +1711,6 @@ exchange_text = format_data(
 1. 本身具有默认规则（内容与行为）
 2. 群组可自行开启基于机器学习的实验特性
 3. 根据 WATCH 的建议、各机器人的综合评分调整限制用户的处理方式
-4. 项目等级为：**Euclid**
 
 NOSPAM 能够向 ANALYZE、BACKUP、CAPTCHA、CLEAN、CONFIG、LANG、MANAGE、NOFLOOD、NOPORN、RECHECK、USER、WARN、WATCH 发送数据
 
