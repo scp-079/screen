@@ -2830,7 +2830,6 @@ exchange_text = format_data(
 2. 根据规则，判断是否应该建议封禁某用户
 3. 根据规则，判断是否应该建议删除某用户发送的消息
 4. 此机器人涉及的方面广泛，涵盖了部分其他机器人的功能，由于需要对消息预览进行独立的检查，此机器人应该作为 userbot ，并应保持匿名性
-5. 项目等级为：**Keter**
 
 WATCH 能够向 ANALYZE、APPLY、BACKUP、CAPTCHA、LANG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK 发送数据
 
