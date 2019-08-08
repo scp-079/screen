@@ -2475,7 +2475,6 @@ exchange_text = format_data(
 3. 接受 APPLY 与 MANAGE 的通知，在 MANAGE 批准后加入某个群组，自动、或受 MANAGE 的要求更新加入群组成功与否。在 MANAGE 进一步批准同意后，邀请其他机器人并赋予管理权限
 4. 向其他机器人提供消息链接预览
 5. 配合 CLEAN 实现群员自助删除所发全部消息的功能
-6. 项目等级为：**Euclid**
 
 USER 能够向 BACKUP、CLEAN、LANG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK 发送数据
 
