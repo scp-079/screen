@@ -14,6 +14,8 @@ Manage the settings of each bot
 Hide the real watcher
 - [SCP-079-MANAGE](/manage/): 
 One ring to rule them all
+- [SCP-079-MIRROR](/mirror/):
+What will I see
 - [SCP-079-NOPORN](/noporn/): 
 Auto delete NSFW media messages
 - [SCP-079-PM](/pm/): 

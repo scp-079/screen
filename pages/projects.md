@@ -16,6 +16,8 @@ Manage the settings of each bot
 Hide the real watcher
 - <a href="https://github.com/scp-079/scp-079-manage" target="_blank">SCP-079-MANAGE</a>: 
 One ring to rule them all
+- <a href="https://github.com/scp-079/scp-079-mirror" target="_blank">SCP-079-MIRROR</a>: 
+What will I see
 - <a href="https://github.com/scp-079/scp-079-noporn" target="_blank">SCP-079-NOPORN</a>: 
 Auto delete NSFW media messages
 - <a href="https://github.com/scp-079/scp-079-pm" target="_blank">SCP-079-PM</a>: 
