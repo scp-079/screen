@@ -28,7 +28,7 @@ Manage the regex patterns
 Invite and help other bots
 - <a href="https://github.com/scp-079/scp-079-warn" target="_blank">SCP-079-WARN</a>: 
 Warn or ban someone by admin commands
-- <a href="https://github.com/scp-079/scp-079.gitlab.io" target="_blank">Screen</a>: 
+- <a href="https://github.com/scp-079/screen" target="_blank">Screen</a>: 
 A dark theme for Hakyll
 
 <audio src="/audio/page/projects.ogg" autoplay></audio>

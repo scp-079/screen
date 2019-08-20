@@ -8,9 +8,9 @@ title: SCP-079-MANAGE
 
 **项目等级：**Safe
 
-**特殊收容措施：**SCP-079-MANAGE 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-MANAGE 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。其应该作为频道 SCP-079-CRITICAL 、频道 SCP-079-EXCHANGE 、频道 SCP-079-HIDE 、频道 SCP-079-LOGGING（仅赋予编辑消息、删除消息权限）的管理员，并加入 SCP-079-TEST 群组。
+**特殊收容措施：**SCP-079-MANAGE 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-MANAGE 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。其应该作为频道 SCP-079-CRITICAL 、频道 SCP-079-EXCHANGE 、频道 SCP-079-HIDE 、频道 SCP-079-LOGGING 的管理员，并加入 SCP-079-TEST 群组。
 
-**描述：**SCP-079-MANAGE 是一个管理其他机器人的机器人，其项目位于 <a href="https://gitlab.com/scp-079/scp-079-manage" target="_blank">Gitlab</a>  ，镜像同步并开源于 <a href="https://github.com/scp-079/scp-079-manage" target="_blank">GitHub</a> 机器人本体位于 <a href="https://t.me/SCP_079_MANAGE_BOT" class="079" target="_blank">SCP-079-MANAGE</a> ，并由群组 SCP-079-MANAGE 中的成员对其所有操作进行管理。其加入了 SCP-079-TEST ，用于测试在线状态及版本。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：对用户、消息进行解禁或解明，处理申诉，处理使用申请，处理机器人退群请求，命令机器人退出某群组，添加或删除频道黑、白名单，检查用户名单收录状态。具体操作详见附录中的使用说明。
+**描述：**SCP-079-MANAGE 是一个管理其他机器人的机器人，其项目位于 GitLab  ，镜像同步并开源于 <a href="https://github.com/scp-079/scp-079-manage" target="_blank">GitHub</a> 机器人本体位于 <a href="https://t.me/SCP_079_MANAGE_BOT" class="079" target="_blank">SCP-079-MANAGE</a> ，并由群组 SCP-079-MANAGE 中的成员对其所有操作进行管理。其加入了 SCP-079-TEST ，用于测试在线状态及版本。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：对用户、消息进行解禁或解明、收录、重置，处理申诉，处理使用申请，处理机器人退群请求，命令机器人退出某群组，添加或删除频道黑、白名单，检查用户名单收录状态。具体操作详见附录中的使用说明。
 
 ---
 
@@ -18,11 +18,14 @@ title: SCP-079-MANAGE
 
 SCP-079-MANAGE 中的成员：
 
-- `基本`：转发 LOGGING 频道的汇报消息。如有可能，机器人将询问是否解禁某用户或解明某消息，以带按钮（处理、取消）的消息呈现
+- `基本`：向 MANAGE 群组中转发 LOGGING 频道的汇报消息。如有可能，机器人将询问是否解禁某用户或解明、收录、重置某消息，以带按钮（处理、删除、取消）的消息呈现
 - `按钮：处理`：解禁某用户或解明某消息
+- `按钮：删除`：删除原始证据消息
 - `按钮：取消`：取消解禁或解明请求
 - `/error process`：对应按钮 “处理”，以此命令回复某条带按钮的相应有效消息，解禁某用户或解明某消息
+- `/error delete`：对应按钮 “删除”，以此命令回复某条带按钮的相应有效消息，删除原始证据消息
 - `/error cancel`：对应按钮 “取消”，以此命令回复某条带按钮的相应有效消息，取消解禁或解明请求
+- `/error [action] [reason]`：对应某个按钮，以此命令回复某条带按钮的相应有效消息，执行相应操作，并附加某种原因，例如 `/error delete 涉及隐私`
 
 SCP-079-TEST 中的成员：
 
@@ -121,12 +124,12 @@ password = [DATA EXPUNGED]
 8. 在 MANAGE 群组中提供手动添加和移除频道黑名单的功能
 9. 在 MANAGE 群组中提供手动添加和移除针对内容的黑、白名单的功能
 10. 在 MANAGE 群组中提供手动通知各机器人退出某群组的功能
-11. 驻守 SCP-079-LOGGING 频道，作为管理员，拥有编辑消息、删除权限。若出现解除错误的操作，则根据该消息的等级，若为封禁：解禁某用户并编辑附加消息添加 “已解封” 标签，若为删除：编辑附加消息添加 “已解明” 标签，表示已发现此错误。若出现添加内容黑名单的操作，则根据管理员的命令将内容指派给某个机器人作为短期内容白名单，编辑附加消息添加 “已收录” 标签。若出现因隐私信息、危害信息而进行的删除存档操作，编辑附加信息添加 “已删除操作”，并提供原因
+11. 驻守 SCP-079-LOGGING 频道，作为管理员，拥有编辑消息、删除权限。若出现解除错误的操作，则根据该消息的等级：若为封禁，解禁某用户并编辑附加消息添加 “已解封” 标签；若为删除，编辑附加消息添加 “已解明” 标签，表示已发现此错误。若出现添加内容黑名单的操作，则根据管理员的命令将内容指派给某个机器人作为短期内容白名单，编辑附加消息添加 “已收录” 标签。若出现因隐私信息、危害信息而进行的删除存档操作，编辑附加信息添加 “已删除”，并提供原因
 12. 加入 SCP-079-ERROR 频道，作为管理员，转发误判消息到该频道中，并附加必要消息及执行者 ID
 
-MANAGE 能够向 ANALYZE、APPEAL、APPLY、BACKUP、CAPTCHA、CLEAN、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH 发送数据
+MANAGE 能够向 ANALYZE、APPEAL、APPLY、BACKUP、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH 发送数据
 
-情形 1：向 APPEAL 回复申诉请求处理结果。同意用户的解封诉求，并向其他 Bot（ANALYZE、APPEAL、APPLY、CAPTCHA、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）发送移除黑名单指令
+情形 1：向 APPEAL 回复申诉请求处理结果。同意用户的解封诉求，并向其他 Bot（ANALYZE、APPEAL、APPLY、CAPTCHA、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）发送移除黑名单指令
 
 ```python
 exchange_text = format_data(
@@ -274,7 +277,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 9：向其他 Bot（ANALYZE、CAPTCHA、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）移除黑名单用户
+情形 9：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）移除黑名单用户
 
 ```python
 exchange_text = format_data(
@@ -283,6 +286,7 @@ exchange_text = format_data(
         "ANALYZE",
         "CAPTCHA",
         "LANG",
+        "LONG",
         "NOFLOOD",
         "NOPORN",
         "NOSPAM",
@@ -308,6 +312,7 @@ exchange_text = format_data(
         "ANALYZE",
         "CAPTCHA",
         "LANG",
+        "LONG",
         "NOFLOOD",
         "NOPORN",
         "NOSPAM",
@@ -324,7 +329,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 11：向其他 Bot（CAPTCHA、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）添加黑名单频道，从该频道转发的消息将被自动删除，预计使用频率极低
+情形 11：向其他 Bot（CAPTCHA、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）添加黑名单频道，从该频道转发的消息将被自动删除，预计使用频率极低，移除同理
 
 ```python
 exchange_text = format_data(
@@ -348,36 +353,46 @@ exchange_text = format_data(
 )
 ```
 
-情形 12：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK、WATCH）添加内容短暂黑名单，移除同理
+情形 12：向 NOSPAM 添加内容短暂黑名单，移除同理
 
 ```python
 exchange_text = format_data(
     sender="MANAGE",
     receviers=[
-        "NOPORN",
-        "NOSPAM",
-        "RECHECK",
-        "WATCH"
+        "NOSPAM"
     ],
     action="add",
     action_type="bad",
     data={
         "id": 123,
-        "type": "content"
+        "type": "long"
     }
 )
-```
 
-情形 13：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK、WATCH）添加内容长期白名单，移除同理
+情形 13：向 NOSPAM 添加内容短暂黑名单，移除同理
 
 ```python
 exchange_text = format_data(
     sender="MANAGE",
     receviers=[
-        "NOPORN",
-        "NOSPAM",
-        "RECHECK",
-        "WATCH"
+        "NOSPAM"
+    ],
+    action="add",
+    action_type="bad",
+    data={
+        "id": 123,
+        "type": "tmp"
+    }
+)
+```
+
+情形 14：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK）添加内容长期白名单，移除同理
+
+```python
+exchange_text = format_data(
+    sender="MANAGE",
+    receviers=[
+        "NOPORN"
     ],
     action="add",
     action_type="except",
@@ -388,16 +403,13 @@ exchange_text = format_data(
 )
 ```
 
-情形 14：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK、WATCH）添加内容短暂白名单，移除同理
+情形 15：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK）添加内容短暂白名单，移除同理
 
 ```python
 exchange_text = format_data(
     sender="MANAGE",
     receviers=[
-        "NOPORN",
-        "NOSPAM",
-        "RECHECK",
-        "WATCH"
+        "NOSPAM"
     ],
     action="add",
     action_type="except",

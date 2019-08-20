@@ -12,7 +12,7 @@ stories. See <a href="http://www.scp-wiki.net/scp-079" target="_blank">SCP-079</
 for more details.
 
 Follow our announcement channel to get updates: 
-<a href="http://t.me/SCP_079_INFO" target="_blank">SCP-079-INFO</a>.
+<a href="https://t.me/SCP_079_INFO" target="_blank">SCP-079-INFO</a>.
 
 Learn more:
 
