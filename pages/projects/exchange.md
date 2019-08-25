@@ -38,6 +38,7 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                 leave - Let bots leave some group
                 remove - Remove id in some list
                 update - Update some data
+                version - update WATCH's version
 
         action_type (str):
             Type of action. It can be any of the followings:
@@ -84,7 +85,10 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                     download - Download the data, then update
                     preview - Update a message's preview
                     score - Update user's score
-
+                
+                When action is version:
+                    ask - Let WATCH send version data
+                    reply - Let HIDE send version text to TEST group
 
         data (Union[dict, int, list, str]):
             Additional data required for operation.
@@ -272,6 +276,20 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                         {
                             "id": 12345678,
                             "score": 3.2
+                        }
+                
+                Version
+                    ask:
+                        {
+                            "admin_id": 12345678,
+                            "message_id": 123
+                        }
+                    
+                    reply:
+                        {
+                            "admin_id": 12345678,
+                            "message_id": 123,
+                            "version": "0.0.1"
                         }
 
     Returns:

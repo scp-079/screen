@@ -1,10 +1,10 @@
 ---
-title: SCP-079-NOPORN
+title: SCP-079-RECHECK
 ---
 
 <link rel="stylesheet" href="/css/chinese.css">
 
-**项目编号：**SCP-079-NOPORN
+**项目编号：**SCP-079-RECHECK
 
 **项目等级：**Euclid
 

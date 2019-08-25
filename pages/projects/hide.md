@@ -105,6 +105,23 @@ exchange_text = format_data(
 # 略
 ```
 
+情形 3：向 WATCH 请求更新版本信息
+
+```python
+exchange_text = format_data(
+    sender="HIDE",
+    receviers=[
+        "WATCH"
+    ],
+    action="version",
+    action_type="ask",
+    data={
+        "admin_id": 12345678,
+        "message_id": 123
+    }
+)
+```
+
 特殊情形：向所有 bot 发送数据交换频道转移指令
 
 ```python
