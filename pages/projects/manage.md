@@ -8,9 +8,9 @@ title: SCP-079-MANAGE
 
 **项目等级：**Safe
 
-**特殊收容措施：**SCP-079-MANAGE 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-MANAGE 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。其应该作为频道 SCP-079-CRITICAL 、频道 SCP-079-EXCHANGE 、频道 SCP-079-HIDE 、频道 SCP-079-LOGGING 的管理员，并加入 SCP-079-TEST 群组。
+**特殊收容措施：**SCP-079-MANAGE 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-MANAGE 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。其应该作为频道 SCP-079-CRITICAL 、频道 SCP-079-EXCHANGE 、频道 SCP-079-HIDE 、频道 SCP-079-LOGGING 的管理员，并加入 SCP-079-MANAGE 、SCP-079-TEST 群组。
 
-**描述：**SCP-079-MANAGE 是一个管理其他机器人的机器人，其项目位于 GitLab  ，镜像同步并开源于 <a href="https://github.com/scp-079/scp-079-manage" target="_blank">GitHub</a> 机器人本体位于 <a href="https://t.me/SCP_079_MANAGE_BOT" class="079" target="_blank">SCP-079-MANAGE</a> ，并由群组 SCP-079-MANAGE 中的成员对其所有操作进行管理。其加入了 SCP-079-TEST ，用于测试在线状态及版本。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：对用户、消息进行解禁或解明、收录、重置，处理申诉，处理使用申请，处理机器人退群请求，命令机器人退出某群组，添加或删除频道黑、白名单，检查用户名单收录状态。具体操作详见附录中的使用说明。
+**描述：**SCP-079-MANAGE 是一个管理其他机器人的机器人，其项目位于 GitLab  ，镜像同步并开源于 <a href="https://github.com/scp-079/scp-079-manage" target="_blank">GitHub</a> 机器人本体位于 <a href="https://t.me/SCP_079_MANAGE_BOT" class="079" target="_blank">SCP-079-MANAGE</a> ，并由群组 SCP-079-MANAGE 中的成员对其所有操作进行管理。其加入了 SCP-079-TEST ，用于测试在线状态及版本。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：对用户、消息进行解禁或解明、收录、重置，处理申诉，处理使用申请，处理机器人退群请求，命令机器人退出某群组，添加或删除频道黑、白名单，添加或删除内容黑名单、检查用户名单收录状态。具体操作详见附录中的使用说明。
 
 ---
 
@@ -30,15 +30,17 @@ SCP-079-MANAGE 中的成员：
 - `按钮：移除白名单`：将该频道从白名单中移除
 - `按钮：解禁用户`：解禁该用户
 - `按钮：移除追踪`：移除该用户的追踪状态
-- `/action proceed`：对应按钮 “处理”，以此命令回复某条带按钮的相应有效消息，解禁某用户或解明某消息
-- `/action delete`：对应按钮 “删除”，以此命令回复某条带按钮的相应有效消息，删除原始证据消息
-- `/action cancel`：对应按钮 “取消”，以此命令回复某条带按钮的相应有效消息，取消解禁或解明请求
-- `/action [action] [reason]`：对应某个按钮，以此命令回复某条带按钮的相应有效消息，执行相应操作，并附加某种原因，例如 `/action delete 涉及隐私`
+- `/action proceed [reason]`：对应按钮 “处理”，以此命令回复某条带按钮的相应有效消息，解禁某用户或解明某消息
+- `/action delete [reason]`：对应按钮 “删除”，以此命令回复某条带按钮的相应有效消息，删除原始证据消息
+- `/action cancel [reason]`：对应按钮 “取消”，以此命令回复某条带按钮的相应有效消息，取消解禁或解明请求
 - `/add_bad [id] [reason]`：将某频道 ID 加入黑名单中；以此命令回复某条带对象 ID的相应有效消息，执行相应操作，此时可省略 `[id]`
 - `/add_except [id] [reason]`：将某频道 ID 加入白名单中；以此命令回复某条带对象 ID的相应有效消息，执行相应操作，此时可省略 `[id]`
 - `/remove_bad [id] [reason]`：将某频道 ID 从白名单中移除，或解禁某用户；以此命令回复某条带对象 ID的相应有效消息，执行相应操作，此时可省略 `[id]`
 - `/remove_except [id] [reason]`：将某频道 ID 从白名单中移除；以此命令回复某条带对象 ID的相应有效消息，执行相应操作，此时可省略 `[id]`
 - `/remove_watch [id] [reason]`：将某用户 ID 的追踪状态移除；以此命令回复某条带对象 ID的相应有效消息，执行相应操作，此时可省略 `[id]`
+- `/leave approve [reason]`：对应按钮 “批准”，以此命令回复某条带按钮的相应有效消息，批准某机器人退出某群组
+- `/leave cancel`：对应按钮 “取消”，以此命令回复某条带按钮的相应有效消息，取消某机器人退出某群组的请求
+- `/leave [id] [rason]`：命令所有机器人退出某 ID 的群组
 
 SCP-079-TEST 中的成员：
 
@@ -140,7 +142,7 @@ password = [DATA EXPUNGED]
 11. 驻守 SCP-079-LOGGING 频道，作为管理员，拥有编辑消息、删除权限。若出现解除错误的操作，则根据该消息的等级：若为封禁，解禁某用户并编辑附加消息添加 “已解封” 标签；若为删除，编辑附加消息添加 “已解明” 标签，表示已发现此错误。若出现添加内容黑名单的操作，则根据管理员的命令将内容指派给某个机器人作为短期内容白名单，编辑附加消息添加 “已收录” 标签。若出现因隐私信息、危害信息而进行的删除存档操作，编辑附加信息添加 “已删除”，并提供原因
 12. 加入 SCP-079-ERROR 频道，作为管理员，转发误判消息到该频道中，并附加必要消息及执行者 ID
 
-MANAGE 能够向 ANALYZE、APPEAL、APPLY、BACKUP、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH 发送数据
+MANAGE 能够向 ANALYZE、APPEAL、APPLY、BACKUP、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、TIP、USER、WATCH 发送数据
 
 情形 1：向 APPEAL 回复申诉请求处理结果。同意用户的解封诉求，并向其他 Bot（ANALYZE、APPEAL、APPLY、CAPTCHA、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）发送移除黑名单指令
 
@@ -272,18 +274,18 @@ exchange_text = format_data(
 )
 ```
 
-情形 8：向其他 Bot（CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER、WARN）批准退出或命令推出某群组。因某种原因
+情形 8：向其他 Bot（CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、TIP、USER、WARN）批准退出或命令推出某群组。因某种原因
 
 ```python
 exchange_text = format_data(
     sender="MANAGE",
     receviers=[
-        "LANG",
         "NOFLOOD"
     ],
     action="leave",
     action_type="approve",
     data={
+        "admin_id": 12345678,
         "group_id": -10012345678,
         "reason": "some reason"
     }
@@ -394,7 +396,7 @@ exchange_text = format_data(
     action_type="bad",
     data={
         "id": 123,
-        "type": "tmp"
+        "type": "temp"
     }
 )
 ```
@@ -428,7 +430,7 @@ exchange_text = format_data(
     action_type="except",
     data={
         "id": 123,
-        "type": "tmp"
+        "type": "temp"
     }
 )
 ```

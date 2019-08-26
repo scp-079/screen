@@ -219,19 +219,24 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                 Leave:
                     approve:
                         {
+                            "admin_id": 12345678,
                             "group_id": -10012345678,
                             "reason": "reason here"
                         }
 
                     info:
-                        -10012345678
+                        {
+                            "group_id": -10012345678,
+                            "group_name": "Group Name",
+                            "group_link": "link to group"
+                        }
 
                     request:
                         {
                             "group_id": -10012345678,
                             "group_name": "Group Name",
                             "group_link": "link to group",
-                            "reason": "user / permissions"
+                            "reason": "权限缺失 / 缺失 USER"
                         }
 
                 Remove:
