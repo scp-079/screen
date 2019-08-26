@@ -20,6 +20,8 @@ What will I see
 Auto delete NSFW media messages
 - [SCP-079-PM](/pm/): 
 Everyone can have their own private chat bot
+- [SCP-079-RECHECK](/recheck/): 
+Recheck NSFW media messages
 - [SCP-079-REGEX](/regex/): 
 Manage the regex patterns
 - [SCP-079-USER](/user/): 

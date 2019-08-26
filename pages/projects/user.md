@@ -142,7 +142,7 @@ password = [DATA EXPUNGED]
 4. 向其他机器人提供消息链接预览
 5. 配合 CLEAN 实现群员自助删除所发全部消息的功能
 
-USER 能够向 BACKUP、CLEAN、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK 发送数据
+USER 能够向  ANALYZE、BACKUP、CLEAN、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK、WATCH 发送数据
 
 情形 1：向 BACKUP 传送数据备份文件。每日 UTC 时间 20:00 。`exchange_text` 文本作为该文件的 `caption`
 
@@ -332,7 +332,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 11：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）移除黑名单用户
+情形 11：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK、WATCH）移除黑名单用户
 
 ```python
 exchange_text = format_data(
@@ -347,7 +347,6 @@ exchange_text = format_data(
         "NOPORN",
         "NOSPAM",
         "RECHECK",
-        "USER",
         "WATCH"
     ],
     action="remove",
@@ -363,7 +362,7 @@ exchange_text = format_data(
 
 ```python
 exchange_text = format_data(
-    sender="EMERGENCY",
+    sender="USER",
     receviers=[
         "EMERGENCY"
     ],

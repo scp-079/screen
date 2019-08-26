@@ -8,9 +8,11 @@ title: SCP-079-WARN
 
 **项目等级：**Euclid
 
-**特殊收容措施：**SCP-079-WARN 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-WARN 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。务必要注意，其只能通过 SCP-079-USER 邀请入群，并由其赋予管理权限，如果有任何未授权的恶意使用，将可能给其他机器人的工作带来影响。其应该作为频道 SCP-079-EXCHANGE 的管理员，并加入 SCP-079-TEST 群组。
+**特殊收容措施：**SCP-079-WARN 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-WARN 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。务必要注意，其只能通过 SCP-079-USER 邀请入群，并由其赋予管理权限，如果有任何未授权的恶意使用，将可能给其他机器人的工作带来影响。其应该作为频道 SCP-079-CRITICAL 、频道 SCP-079-EXCHANGE 、频道 SCP-079-HIDE 的管理员，并加入 SCP-079-TEST 群组。
 
-**描述：**SCP-079-WARN 是一个用于群组成员管理的机器人，其项目位于 <a href="https://gitlab.com/scp-079/scp-079-warn" target="_blank">Gitlab</a> 。机器人本体位于 <a href="https://t.me/SCP_079_WARN_BOT" class="079" target="_blank">SCP-079-WARN</a> ，仅供经过授权的群组使用，并由群组 SCP-079-MANAGE 中的成员对其进群、退群操作进行管理。其加入了 SCP-079-TEST ，用于测试基本功能的使用。该项目由 ███ 主要负责，基于原有 SCP-079-USER 机器人修改。通过该项目建立的机器人有类似的功能：根据管理员命令警告、封禁某用户，接受普通用户的举报，提供普通用户 mention 管理员的便捷方法，提供自动对可疑行为进行举报的功能（需要群组同时使用 SCP-079-NOSPAM），提供群员向管理手动举报的功能。机器人将每月定时清除用户数据（受警告次数，被群组封禁的情况）。对于用户举报、或自动举报的回报消息，请及时处理，不要删除，除非您手动对举报双方执行 `/forgive` 命令，否则举报人由于其举报状态未被解除，其将无法再次使用举报功能；而被举报用户由于有未被处理的举报，故也不再接受新的举报。具体操作详见附录中的使用说明。
+**描述：**SCP-079-WARN 是一个用于群组成员管理的机器人，其项目位于 GitLab ，镜像同步并准备（尚未）开源于 <a href="https://github.com/scp-079/scp-079-warn" target="_blank">GitHub</a> 。机器人本体位于 <a href="https://t.me/SCP_079_WARN_BOT" class="079" target="_blank">SCP-079-WARN</a> ，仅供经过授权的群组使用，并由群组 SCP-079-MANAGE 中的成员对其进群、退群操作进行管理。其加入了 SCP-079-TEST ，用于测试基本功能的使用。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：根据管理员命令警告、封禁某用户，接受普通用户的举报，提供普通用户 mention 管理员的便捷方法，提供自动对可疑行为进行举报的功能（需要群组同时使用 SCP-079-NOSPAM），提供群员向管理手动举报的功能。机器人将每月定时清除用户数据（受警告次数，被群组封禁的情况）。对于用户举报、或自动举报的回报消息，请及时处理，不要删除，除非您手动对举报双方执行 `/forgive` 命令，否则举报人由于其举报状态未被解除，一小时内其将无法再次使用举报功能；而被举报用户由于有未被处理的举报，故一小时内也不再接受其新的举报。具体操作详见附录中的使用说明。
+
+---
 
 **附录：**使用说明
 
@@ -53,6 +55,8 @@ SCP-079-TEST 中的成员：
 
 - `/version`：检查机器人版本
 
+---
+
 **附录：**自建机器人的方法
 
 可先查看<a href="/how/">自建说明书</a>
@@ -60,8 +64,10 @@ SCP-079-TEST 中的成员：
 克隆项目：
 
 ```bash
-git clone https://gitlab.com/scp-079/scp-079-warn.git ~/bots/scp-079/warn
+git clone https://github.com/scp-079/scp-079-warn.git ~/bots/scp-079/warn
 ```
+
+---
 
 **文件#config.ini：**
 
@@ -107,6 +113,8 @@ noporn_id = [DATA EXPUNGED]
 ; SCP-079-NOPORN 的 ID
 nospam_id = [DATA EXPUNGED]
 ; SCP-079-NOSPAM 的 ID
+recheck_id = [DATA EXPUNGED]
+; SCP-079-RECHECK 的 ID
 tip_id = [DATA EXPUNGED]
 ; SCP-079-TIP 的 ID
 user_id = [DATA EXPUNGED]
@@ -115,6 +123,8 @@ warn_id = [DATA EXPUNGED]
 ; SCP-079-WARN 的 ID
 
 [channels]
+critical_channel_id = [DATA EXPUNGED]
+; 此处填写紧急频道 SCP-079-CRITICAL 的 ID
 debug_channel_id = [DATA EXPUNGED]
 ; 此处填写调试频道 SCP-079-DEBUG 的 ID
 exchange_channel_id = [DATA EXPUNGED]
@@ -136,8 +146,6 @@ project_name = [DATA EXPUNGED]
 ; 此处填写项目名称
 reset_day = [DATA EXPUNGED]
 ; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
-user_name = [DATA EXPUNGED]
-; 此处填写 SCP-079-USER 的项目名称
 
 [encrypt]
 password = [DATA EXPUNGED]
@@ -146,11 +154,13 @@ password = [DATA EXPUNGED]
 
 ---
 
+**附录：**开发备忘
+
 1. 记录用户警告和封禁状况
 2. 通过计算用户受警告或封禁的群组数量，向其他机器人更新用户分数
 3. 项目等级为：**Euclid**
 
-WARN 能够向 ANALYZE、BACKUP、CAPTCHA、LANG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER 发送数据
+WARN 能够向 ANALYZE、BACKUP、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER 发送数据
 
 情形 1：向 BACKUP 传送数据备份文件。每日 UTC 时间 20:00 。`exchange_text` 文本作为该文件的 `caption`
 
@@ -180,7 +190,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 3：向 CONFIG 询问。由于群管理在群组中发送 `/config lang` 命令，故 LANG 令 CONFIG 在 SCP-079-CONFIG 频道中开启一个更新设置的会话
+情形 3：向 CONFIG 询问。由于群管理在群组中发送 `/config warn` 命令，故 WARN 令 CONFIG 在 SCP-079-CONFIG 频道中开启一个更新设置的会话
 
 ```python
 exchange_text = format_data(
@@ -235,7 +245,7 @@ exchange_text = format_data(
         "group_id": -10012345678,
         "group_name": "SCP-079-CHAT",
         "group_link": "https://t.me/SCP_079_CHAT",
-        "reason"： "user"
+        "reason"： "缺失 USER"
     }
 )
 ```
@@ -254,12 +264,12 @@ exchange_text = format_data(
         "group_id": -10012345678,
         "group_name": "SCP-079-CHAT",
         "group_link": "https://t.me/SCP_079_CHAT",
-        "reason"： "permissions"
+        "reason"： "权限缺失"
     }
 )
 ```
 
-情形 6：向其他 Bot（ANALYZE、CLEAN、CAPTCHA、LANG、MANAGE、NOFLOOD、NOSPAM、RECHECK）更新用户分数
+情形 6：向其他 Bot（ANALYZE、CLEAN、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK）更新用户分数
 
 ```python
 exchange_text = format_data(
@@ -269,8 +279,10 @@ exchange_text = format_data(
         "CLEAN",
         "CAPTCHA",
         "LANG",
+        "LONG",
         "MANAGE",
         "NOFLOOD",
+        "NOPORN",
         "NOSPAM",
         "RECHECK"
     ],
@@ -287,7 +299,7 @@ exchange_text = format_data(
 
 ```python
 exchange_text = format_data(
-    sender="EMERGENCY",
+    sender="WARN",
     receviers=[
         "EMERGENCY"
     ],

@@ -22,6 +22,8 @@ What will I see
 Auto delete NSFW media messages
 - <a href="https://github.com/scp-079/scp-079-pm" target="_blank">SCP-079-PM</a>: 
 Everyone can have their own private chat bot
+- <a href="https://github.com/scp-079/scp-079-recheck" target="_blank">SCP-079-RECHECK</a>: 
+Recheck NSFW media messages
 - <a href="https://github.com/scp-079/scp-079-regex" target="_blank">SCP-079-REGEX</a>: 
 Manage the regex patterns
 - <a href="https://github.com/scp-079/scp-079-user" target="_blank">SCP-079-USER</a>: 
