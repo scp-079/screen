@@ -8,7 +8,7 @@ title: SCP-079-NOPORN
 
 **项目等级：**Euclid
 
-**特殊收容措施：**SCP-079-NOPORN 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-NOPORN 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。务必要注意，其只能通过 SCP-079-USER 邀请入群，并由其赋予管理权限，如果有任何未授权的恶意使用，将可能给其他机器人的工作带来影响。其应该作为频道 SCP-079-EXCHANGE 的管理员，并加入 SCP-079-TEST 群组。
+**特殊收容措施：**SCP-079-NOPORN 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-NOPORN 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。务必要注意，其只能通过 SCP-079-USER 邀请入群，并由其赋予管理权限，如果有任何未授权的恶意使用，将可能给其他机器人的工作带来影响。其应该作为频道 SCP-079-CRITICAL 、频道 SCP-079-EXCHANGE 、频道 SCP-079-HIDE 的管理员，并加入 SCP-079-TEST 群组。
 
 **描述：**SCP-079-NOPORN 是一个用于自动删除 NSFW 媒体消息的机器人，其项目位于 GitLab ，镜像同步并准备（尚未）开源于 <a href="https://github.com/scp-079/scp-079-noporn" target="_blank">GitHub</a> 。机器人本体位于 <a href="https://t.me/SCP_079_NOPORN_BOT" class="079" target="_blank">SCP-079-NOPORN</a> ，仅供经过授权的群组使用，并由群组 SCP-079-MANAGE 中的成员对其进群、退群操作进行管理。其加入了 SCP-079-TEST ，用于测试分析结果。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：删除群组中的 NSFW 消息，对于在多个群组中以 NSFW 内容 spam 的用户进行封禁，根据管理员的设置，过滤转发自受 Telegram 官方限制频道的消息。具体操作详见附录中的使用说明。
 
@@ -42,12 +42,6 @@ SCP-079-TEST 中的成员：
 
 ```bash
 git clone https://gitlab.com/scp-079/scp-079-noporn.git ~/bots/scp-079/noporn
-```
-
-依赖安装：
-
-```bash
-sudo apt update && sudo apt install caffe-cpu -y
 ```
 
 ---
@@ -96,7 +90,7 @@ noporn_id = [DATA EXPUNGED]
 nospam_id = [DATA EXPUNGED]
 ; SCP-079-NOSPAM 的 ID
 recheck_id = [DATA EXPUNGED]
-; SCP-079-RECHECL 的 ID
+; SCP-079-RECHECK 的 ID
 tip_id = [DATA EXPUNGED]
 ; SCP-079-TIP 的 ID
 user_id = [DATA EXPUNGED]
@@ -268,7 +262,21 @@ exchange_text = format_data(
 )
 ```
 
-情形 7：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOSPAM、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费
+情形 7：向 REGEX 更新规则使用计数文件，每日 UTC 时间 23:30 。`exchange_text` 文本作为该文件的 `caption`
+
+```python
+exchange_text = format_data(
+    sender="NOPORN",
+    receviers=[
+        "REGEX"
+    ],
+    action="update",
+    action_type="download",
+    data="wb_words"
+)
+```
+
+情形 8：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOSPAM、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费
 
 ```python
 exchange_text = format_data(
@@ -280,7 +288,6 @@ exchange_text = format_data(
         "LANG",
         "LONG",
         "NOFLOOD",
-        "NOPORN",
         "NOSPAM",
         "RECHECK",
         "USER"
@@ -294,7 +301,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 8：向其他 Bot（ANALYZE、CLEAN、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOSPAM、RECHECK）更新用户分数
+情形 9：向其他 Bot（ANALYZE、CLEAN、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOSPAM、RECHECK）更新用户分数
 
 ```python
 exchange_text = format_data(
@@ -319,7 +326,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 9：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOSPAM、RECHECK、WATCH）更新用户追踪状态，以 watch ban 为例
+情形 10：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOSPAM、RECHECK、WATCH）更新用户追踪状态，以 watch ban 为例
 
 ```python
 exchange_text = format_data(
@@ -345,7 +352,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 10：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOSPAM、RECHECK、USER、WATCH）添加黑名单用户
+情形 11：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOSPAM、RECHECK、USER、WATCH）添加黑名单用户
 
 ```python
 exchange_text = format_data(
@@ -371,7 +378,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 11：向 USER 发送协助请求，调用 delete all 功能，删除某用户全部消息，范围：所有群组（评分过高或受追踪时的触发）
+情形 12：向 USER 发送协助请求，调用 delete all 功能，删除某用户全部消息，范围：所有群组（评分过高或受追踪时的触发）
 
 ```python
 exchange_text = format_data(
@@ -389,7 +396,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 12：向 USER 发送协助请求，调用 global ban 功能，用于查找某用户与机器人的所有共同群组，删除其全部消息，并对其进行限制
+情形 13：向 USER 发送协助请求，调用 global ban 功能，用于查找某用户与机器人的所有共同群组，删除其全部消息，并对其进行限制
 
 ```python
 exchange_text = format_data(
