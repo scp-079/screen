@@ -8,9 +8,9 @@ title: SCP-079-REGEX
 
 **项目等级：**Safe
 
-**特殊收容措施：**SCP-079-REGEX 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-REGEX 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出，另外还需在系统中安装 `opencc` ，如在 Ubuntu 下，执行 `sudo apt update && sudo apt install opencc` 。其应该作为频道 SCP-079-EXCHANGE 、频道 SCP-079-HIDE 的管理员，并加入 SCP-079-TEST 群组。
+**特殊收容措施：**SCP-079-REGEX 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-REGEX 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。其应该作为频道 SCP-079-CRITICAL 、频道 SCP-079-EXCHANGE 、频道 SCP-079-HIDE 的管理员，并加入 SCP-079-REGEX 、 SCP-079-TEST 群组。
 
-**描述：**SCP-079-REGEX 是一个用于管理正则表达式的机器人，其项目位于 <a href="https://gitlab.com/scp-079/scp-079-regex" target="_blank">Gitlab</a> 。机器人本体位于 <a href="https://t.me/SCP_079_REGEX_BOT" class="079" target="_blank">SCP-079-REGEX</a> ，仅供 SCP-079 内部使用，并由同名群组 SCP-079-REGEX 的成员管理，所操作的正则模式提供给其他机器人使用。其加入了 SCP-079-TEST ，用于测试文字所匹配的正则情况。该项目由 ███ 主要负责，基于原有 █████████ 机器人修改。通过该项目建立的机器人有类似的功能：管理不同种类的正则表达式、检查可能的重复、检索模式，并与项目数据交换频道进行交互。具体操作详见附录中的使用说明。
+**描述：**SCP-079-REGEX 是一个用于管理正则表达式的机器人，其项目位于 GitLab ，镜像同步并准备（尚未）开源于 <a href="https://github.com/scp-079/scp-079-regex" target="_blank">GitHub</a> 。机器人本体位于 <a href="https://t.me/SCP_079_REGEX_BOT" class="079" target="_blank">SCP-079-REGEX</a> ，仅供 SCP-079 内部使用，并由同名群组 SCP-079-REGEX 的成员管理，所操作的正则模式将提供给其他机器人使用。其加入了 SCP-079-TEST ，用于测试文字所匹配的正则情况。该项目由 ███ 主要负责，基于 █████████ 机器人修改。通过该项目建立的机器人有类似的功能：管理不同种类的正则表达式、检查可能的重复、检索正则、显示正则命中频率，并与项目数据交换频道进行交互。具体操作详见附录中的使用说明。
 
 **附录：**使用说明
 
@@ -39,6 +39,7 @@ SCP-079-REGEX 中的成员：
 - `bad`：敏感检测
 - `ban`：自动封禁
 - `bio`：简介封禁
+- `con`：联系方式，contact
 - `del`：自动删除，delete
 - `eme`：应急模式，emergency
 - `iml`：IM 链接，IM link
@@ -95,10 +96,7 @@ SCP-079-TEST 中的成员：
 使用了 Python 中的 <a href="https://docs.python.org/3/library/re.html" target="_blank">re</a> 模块
 
 ```python
-regex = ["regex1", "regex2"]
-pattern = "|".join(regex)
-compiled["type"] = re.compile(pattern, re.I | re.M | re.S)
-compiled.search("text")
+re.search(pattern, text, re.I | re.M | re.S)
 ```
 
 机器人收到的词组已经是转义后的结果，例如用户发送了 `\b`，机器人收到的为 `\\b`
@@ -110,13 +108,7 @@ compiled.search("text")
 克隆项目：
 
 ```bash
-git clone https://gitlab.com/scp-079/scp-079-regex.git ~/bots/scp-079/regex
-```
-
-依赖安装：
-
-```bash
-sudo apt update && sudo apt install opencc
+git clone https://github.com/scp-079/scp-079-regex.git ~/bots/scp-079/regex
 ```
 
 **文件#config.ini：**
@@ -151,6 +143,8 @@ prefix = /!
 ; 命令前的可用字符，如在群组中使用非常规命令前缀，需要机器人有获取普通消息的权限
 
 [channels]
+critical_channel_id = [DATA EXPUNGED]
+; 此处填写紧急频道 SCP-079-CRITICAL 的 ID
 exchange_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID
 ; 关于数据交换频道的详情，请查看 https://scp-079.org/exchange/
@@ -162,14 +156,8 @@ test_group_id = [DATA EXPUNGED]
 ; 此处填写测试群组 SCP-079-TEST 的 ID
 
 [custom]
-per_page = 15
+per_page = 10
 ; 每页显示的词组数量
-reload_path = [DATA EXPUNGED]
-; 如果 upate 的类型设置为本地加载 (reload)，则在此输入 compiled 文件的路径
-update_type = reload
-; 其他机器人更新数据的方式
-; reload 代表本地加载
-; download 代表从交换频道中下载
 
 [encrypt]
 key = [DATA EXPUNGED]

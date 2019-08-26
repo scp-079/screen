@@ -10,7 +10,7 @@ title: SCP-079-RECHECK
 
 **特殊收容措施：**SCP-079-RECHECK 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-RECHECK 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。务必要注意，其只能通过 SCP-079-USER 邀请入群，并由其赋予管理权限，如果有任何未授权的恶意使用，将可能给其他机器人的工作带来影响。其应该作为频道 SCP-079-CRITICAL 、频道 SCP-079-EXCHANGE 、频道 SCP-079-HIDE 的管理员，并加入 SCP-079-TEST 群组。
 
-**描述：**SCP-079-RECHECK 是一个用于以不同方式检查 NSFW 媒体消息并将其自动删除的机器人，其可视为 SCP-079-NOPORN 的衍生版本，其项目位于 GitLab 。机器人本体位于 <a href="https://t.me/SCP_079_RECHECK_BOT" class="079" target="_blank">SCP-079-RECHECK</a> ，仅供经过授权的群组使用，并由群组 SCP-079-MANAGE 中的成员对其进群、退群操作进行管理。其加入了 SCP-079-TEST ，用于测试分析结果。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：以双方案评价媒体消息的媒体复查功能，删除群组中的 NSFW 消息，对于在多个群组中以 NSFW 内容 spam 的用户进行封禁。具体操作详见附录中的使用说明。
+**描述：**SCP-079-RECHECK 是一个用于以不同方式检查 NSFW 媒体消息并将其自动删除的机器人，其可视为 SCP-079-NOPORN 的衍生版本，其项目位于 GitLab ，镜像同步并准备（尚未）开源于 <a href="https://github.com/scp-079/scp-079-recheck" target="_blank">GitHub</a> 。机器人本体位于 <a href="https://t.me/SCP_079_RECHECK_BOT" class="079" target="_blank">SCP-079-RECHECK</a> ，仅供经过授权的群组使用，并由群组 SCP-079-MANAGE 中的成员对其进群、退群操作进行管理。其加入了 SCP-079-TEST ，用于测试分析结果。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：以双方案评价媒体消息的媒体复查功能，删除群组中的 NSFW 消息，对于在多个群组中以 NSFW 内容 spam 的用户进行封禁。具体操作详见附录中的使用说明。
 
 ---
 
