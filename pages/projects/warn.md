@@ -144,5 +144,158 @@ password = [DATA EXPUNGED]
 ; 加密文件所用的密码
 ```
 
+---
+
+1. 记录用户警告和封禁状况
+2. 通过计算用户受警告或封禁的群组数量，向其他机器人更新用户分数
+3. 项目等级为：**Euclid**
+
+WARN 能够向 ANALYZE、BACKUP、CAPTCHA、LANG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER 发送数据
+
+情形 1：向 BACKUP 传送数据备份文件。每日 UTC 时间 20:00 。`exchange_text` 文本作为该文件的 `caption`
+
+```python
+exchange_text = format_data(
+    sender="WARN",
+    receviers=[
+        "BACKUP"
+    ],
+    action="backup",
+    action_type="pickle",
+    data="admin_ids"
+)
+```
+
+情形 2：向 BACKUP 汇报在线状态。每个小时的第 30 分钟
+
+```python
+exchange_text = format_data(
+    sender="WARN",
+    receviers=[
+        "BACKUP"
+    ],
+    action="backup",
+    action_type="status",
+    data="awake"
+)
+```
+
+情形 3：向 CONFIG 询问。由于群管理在群组中发送 `/config lang` 命令，故 LANG 令 CONFIG 在 SCP-079-CONFIG 频道中开启一个更新设置的会话
+
+```python
+exchange_text = format_data(
+    sender="WARN",
+    receviers=[
+        "CONFIG"
+    ],
+    action="config",
+    action_type="ask",
+    data={
+        "project_name": "SCP-079-WARN",
+        "project_link": "https://scp-079.org/warn/",
+        "group_id": -10012345678,
+        "group_name": "SCP-079-CHAT",
+        "group_link": "https://t.me/SCP_079_CHAT",
+        "user_id": 12345678,
+        "config": {
+            "default": False,
+            "lock": 1512345678,
+            "limit": 3,
+            "mention": True,
+            "report": {
+                "auto": True,
+                "manual": True
+            }
+        },
+        "default": {
+            "default": True,
+            "lock": 0,
+            "limit": 3,
+            "mention": False,
+            "report": {
+                "auto": False,
+                "manual": False
+            }
+        }
+    }
+)
+```
+
+情形 4：向 MANAGE 请求。由于没有在管理员列表中找到 SCP-079-USER ，或其权限缺失而请求离开某个群组
+
+```python
+exchange_text = format_data(
+    sender="WARN",
+    receviers=[
+        "MANAGE"
+    ],
+    action="leave",
+    action_type="request",
+    data={
+        "group_id": -10012345678,
+        "group_name": "SCP-079-CHAT",
+        "group_link": "https://t.me/SCP_079_CHAT",
+        "reason"： "user"
+    }
+)
+```
+
+情形 5：向 MANAGE 请求。由于管理权限缺失而请求离开某个群组
+
+```python
+exchange_text = format_data(
+    sender="WARN",
+    receviers=[
+        "MANAGE"
+    ],
+    action="leave",
+    action_type="request",
+    data={
+        "group_id": -10012345678,
+        "group_name": "SCP-079-CHAT",
+        "group_link": "https://t.me/SCP_079_CHAT",
+        "reason"： "permissions"
+    }
+)
+```
+
+情形 6：向其他 Bot（ANALYZE、CLEAN、CAPTCHA、LANG、MANAGE、NOFLOOD、NOSPAM、RECHECK）更新用户分数
+
+```python
+exchange_text = format_data(
+    sender="WARN",
+    receviers=[
+        "ANALYZE",
+        "CLEAN",
+        "CAPTCHA",
+        "LANG",
+        "MANAGE",
+        "NOFLOOD",
+        "NOSPAM",
+        "RECHECK"
+    ],
+    action="update",
+    action_type="score",
+    data={
+        "id": 12345678,
+        "score": 1.0
+    }
+)
+```
+
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="EMERGENCY",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
+)
+```
+
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>
 <audio id="dooropen079" src="/audio/door/dooropen079.ogg"/>

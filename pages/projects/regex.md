@@ -12,6 +12,8 @@ title: SCP-079-REGEX
 
 **描述：**SCP-079-REGEX 是一个用于管理正则表达式的机器人，其项目位于 GitLab ，镜像同步并准备（尚未）开源于 <a href="https://github.com/scp-079/scp-079-regex" target="_blank">GitHub</a> 。机器人本体位于 <a href="https://t.me/SCP_079_REGEX_BOT" class="079" target="_blank">SCP-079-REGEX</a> ，仅供 SCP-079 内部使用，并由同名群组 SCP-079-REGEX 的成员管理，所操作的正则模式将提供给其他机器人使用。其加入了 SCP-079-TEST ，用于测试文字所匹配的正则情况。该项目由 ███ 主要负责，基于 █████████ 机器人修改。通过该项目建立的机器人有类似的功能：管理不同种类的正则表达式、检查可能的重复、检索正则、显示正则命中频率，并与项目数据交换频道进行交互。具体操作详见附录中的使用说明。
 
+---
+
 **附录：**使用说明
 
 SCP-079-REGEX 中的成员：
@@ -101,6 +103,8 @@ re.search(pattern, text, re.I | re.M | re.S)
 
 机器人收到的词组已经是转义后的结果，例如用户发送了 `\b`，机器人收到的为 `\\b`
 
+---
+
 **附录：**自建机器人的方法
 
 可先查看<a href="/how/">自建说明书</a>
@@ -110,6 +114,8 @@ re.search(pattern, text, re.I | re.M | re.S)
 ```bash
 git clone https://github.com/scp-079/scp-079-regex.git ~/bots/scp-079/regex
 ```
+
+---
 
 **文件#config.ini：**
 
@@ -164,6 +170,72 @@ key = [DATA EXPUNGED]
 ; 加密字符串所用的密码
 password = [DATA EXPUNGED]
 ; 加密文件所用的密码
+```
+
+---
+
+**附录：**开发备忘
+
+1. 在 SCP-079-EXCHANGE 频道中等待来自其他机器人的计数更新
+2. 向其他机器人推送更新，不同类别不同推送接收者
+
+REGEX 能够向 BACKUP、CLEAN、LONG、NOFLOOD、NOPORN、NOSPAM、WATCH 发送数据
+
+情形 1：向 BACKUP 传送数据备份文件。每日 UTC 时间 20:00 。`exchange_text` 文本作为该文件的 `caption`
+
+```python
+exchange_text = format_data(
+    sender="REGEX",
+    receviers=[
+        "BACKUP"
+    ],
+    action="backup",
+    action_type="pickle",
+    data="ad_words"
+)
+```
+
+情形 2：向 BACKUP 汇报在线状态。每个小时的第 30 分钟：
+
+```python
+exchange_text = format_data(
+    sender="REGEX",
+    receviers=[
+        "BACKUP"
+    ],
+    action="backup",
+    action_type="status",
+    data="awake"
+)
+```
+
+情形 3：向其他 Bot（CLEAN、LONG、NOFLOOD、NOPORN、NOSPAM、WATCH）推送正则更新文件。`exchange_text` 文本作为该文件的 `caption`
+
+```python
+exchange_text = format_data(
+    sender="REGEX",
+    receviers=[
+        "CLEAN",
+        "WATCH"
+    ],
+    action="update",
+    action_type="download",
+    data="aff_words"
+)
+```
+
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="REGEX",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
+)
 ```
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>

@@ -12,6 +12,8 @@ title: SCP-079-PM
 
 **描述：**SCP-079-PM 是一个用于转发私聊消息的机器人，其项目位于 GitLab ，镜像同步并开源于 <a href="https://github.com/scp-079/scp-079-pm" target="_blank">GitHub</a> 。该项目由 ███ 主要负责。机器人本体位于 <a href="https://t.me/SCP_079_PM_BOT" class="079" target="_blank">SCP-079-PM</a> ，仅供演示、与项目管理员 @SCP_079 私聊使用。其加入了 SCP-079-TEST ，用于测试运行状态。通过该项目建立的机器人有类似的功能：如果客人向运行中的机器人发送任意消息，此消息将会被转发至机器人主人与该机器人的私聊对话中，并附加客人的来源信息，当主人回复某条包含客人 ID 的来源汇报消息后，机器人将把主人回复的消息转发给客人，以此实现通过 Bot 的主客私聊功能。除此之外，还具有一些聊天所需的必要功能，例如回复某条特定消息、同步消息编辑状态，撤回消息。详见附录中的使用说明。
 
+---
+
 **附录：**使用说明
 
 机器人所有者：
@@ -49,6 +51,8 @@ SCP-079-TEST 中的成员：
 
 - `/version`：检查机器人版本
 
+---
+
 **附录：**自建机器人的方法
 
 可先查看<a href="/how/">自建说明书</a>
@@ -58,6 +62,8 @@ SCP-079-TEST 中的成员：
 ```bash
 git clone https://github.com/scp-079/scp-079-pm.git ~/bots/scp-079/pm
 ```
+
+---
 
 **文件#config.ini：**
 
@@ -108,6 +114,47 @@ host_name = [DATA EXPUNGED]
 ; 此处填写自定义昵称
 reset_day = [DATA EXPUNGED]
 ; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
+```
+
+---
+
+**附录：**开发备忘
+
+[此机器人](/pm/)用于作为可自搭建的私聊机器人的演示版本
+
+1. 联系此演示机器人，将与 @SCP_079 展开对话
+2. 此机器人代码可用于自行创建私聊机器人
+3. 每月定时清空数据
+4. 可选择对接 SCP-079 项目数据交换频道
+
+PM 能够向 BACKUP 发送数据
+
+情形 1：向 BACKUP 汇报在线状态。每个小时的第 30 分钟：
+
+```python
+exchange_text = format_data(
+    sender="PM",
+    receviers=[
+        "BACKUP"
+    ],
+    action="backup",
+    action_type="status",
+    data="awake"
+)
+```
+
+特殊情形：向所有 bot 发送数据交换频道转移指令
+
+```python
+exchange_text = format_data(
+    sender="PM",
+    receviers=[
+        "EMERGENCY"
+    ],
+    action="backup",
+    action_type="hide",
+    data=True
+)
 ```
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>

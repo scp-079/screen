@@ -140,6 +140,8 @@ password = [DATA EXPUNGED]
 1. 触发 NSFW 检测者将被删除媒体消息，直到用户主动不再发送媒体消息一定时间后，该限制自动解除
 2. 根据某用户触发 NSFW 的群组数量，进行 recheck 评分
 3. 如用户评分过高时触发 NSFW，或受到追踪删除时触发，将进行追踪封禁类收录，并分享给其他机器人
+4. 含有追踪封禁类词组的用户，如触发 NSFW 消息，则进行封禁
+5. 将正则计数同步给 REGEX
 
 NOPORN 能够向 ANALYZE、BACKUP、CAPTCHA、CLEAN、CONFIG、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、USER、WATCH 发送数据
 
@@ -252,7 +254,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 7：向 REGEX 更新规则使用计数文件，每日 UTC 时间 23:30 。`exchange_text` 文本作为该文件的 `caption`
+情形 7：向 REGEX 更新规则使用计数文件，每日 UTC 时间 21:00 。`exchange_text` 文本作为该文件的 `caption`
 
 ```python
 exchange_text = format_data(
