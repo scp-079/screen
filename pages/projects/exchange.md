@@ -236,7 +236,7 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                             "group_id": -10012345678,
                             "group_name": "Group Name",
                             "group_link": "link to group",
-                            "reason": "权限缺失 / 缺失 USER"
+                            "reason": "permissions / user"
                         }
 
                 Remove:
