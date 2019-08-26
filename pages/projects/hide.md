@@ -82,6 +82,7 @@ test_group_id = [DATA EXPUNGED]
 
 1. 在 SCP-079-EXCHANGE 频道中等待来自其他机器人的消息，特定消息转发至 HIDE 频道
 2. 在 SCP-079-HIDE 频道中等待来自其他机器人的消息，特定消息转发至 EXCHANGE 频道
+3. 在 SCP-079-HIDE 频道中与 WATCH 交换版本信息以供 TEST 群组查询使用
 
 HIDE 能够向 BACKUP、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER、WATCH 发送数据
 
