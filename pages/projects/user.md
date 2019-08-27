@@ -219,7 +219,7 @@ exchange_text = format_data(
         "group_id": -10012345678,
         "group_name": "SCP-079-CHAT",
         "group_link": "https://t.me/SCP_079_CHAT",
-        "reason"： "permissions"
+        "reason": "permissions"
     }
 )
 ```
