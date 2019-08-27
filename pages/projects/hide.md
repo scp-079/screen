@@ -74,6 +74,10 @@ hide_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
 test_group_id = [DATA EXPUNGED]
 ; 此处填写测试群组 SCP-079-TEST 的 ID
+
+[custom]
+hiders = [DATA EXPUNGED]
+; 此处填写隐藏者项目编号列表，以空格分隔
 ```
 
 ---
