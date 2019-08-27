@@ -16,14 +16,15 @@ By alphabetical order:
 - <a href="https://gitlab.com/xiao_x" target="_blank">Xiao</a> 
 <a href="/xiao/" class="key" target="_blank">C1BE CBF6 E0BD 06AF 7802 2F93 FED1 BA4A 7D9E 2E29</a>
 - <a href="https://t.me/SilentProphet" target="_blank">Prophet</a> 
-<a href="https://t.me/AboutSilentProphet" class="key" target="_blank">@AboutSilentProphet</a> 
+<a href="https://t.me/AboutSilentProphet" class="key" target="_blank">About Silent Prophet</a> 
 
 <style>
 .key, .no {
-color: rgba(255,255,255,0.7);
-font-weight: normal;
+    color: rgba(255,255,255,0.7);
+    font-weight: normal;
 }
 </style>
+
 <audio id="no_button" src="/audio/button/no.ogg"/>
 <audio id="no_click" src="/audio/button/no_click.ogg"/>
 <audio id="dooropen3" src="/audio/door/dooropen3.ogg"/>
