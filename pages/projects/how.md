@@ -64,6 +64,7 @@ vim ~/.bash_aliases
 添加如下内容：
 
 ```bash
+alias scp-079-regex-config="vim ~/bots/scp-079/regex/config.ini"
 alias scp-079-regex-log="less ~/bots/scp-079/regex/log"
 alias scp-079-regex-restart="systemctl --user kill -s SIGKILL scp-079-regex"
 alias scp-079-regex-status="systemctl --user status scp-079-regex"
