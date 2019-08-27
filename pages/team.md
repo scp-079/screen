@@ -11,14 +11,12 @@ project is welcome.
 
 By alphabetical order:
 
-- <a href="https://gitlab.com/kofiyoung" target="_blank">Kofi Young</a> 
-<a href="/kofi/" class="key" target="_blank">656B E84D 44D5 80BF AB49 BAAD 17A4 21A3 2EDF F064</a>
-- <a href="https://t.me/verifyunknow" target="_blank">unknow</a> 
-<a href="/unknow/" class="key" target="_blank">E91F 9BF7 6B1C 3FDA E03A F6E6 97F1 F251 65CD DFA5</a>
-- <a href="https://gitlab.com/uze4h6il" target="_blank">UZE4H6IL</a> 
+- <a class="no" target="_blank">UZE4H6IL</a> 
 <a href="/uze4h6il/" class="key" target="_blank">AD6D 5622 8F5F B87F 2A24 60CC ACC0 64F9 3E44 E061</a>
 - <a href="https://gitlab.com/xiao_x" target="_blank">Xiao</a> 
-<a href="/xiao/" class="key" target="_blank">C1BE CBF6 E0BD 06AF 7802 2F93 FED1 BA4A 7D9E 2E29</a> 
+<a href="/xiao/" class="key" target="_blank">C1BE CBF6 E0BD 06AF 7802 2F93 FED1 BA4A 7D9E 2E29</a>
+- <a href="https://t.me/SilentProphet" target="_blank">Prophet</a> 
+<a href="https://t.me/AboutSilentProphet" class="key" target="_blank">@AboutSilentProphet</a> 
 
 <style>
 .key, .no {
