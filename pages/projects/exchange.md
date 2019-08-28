@@ -974,30 +974,30 @@ exchange_text = format_data(
         "default": {
             "default": True,
             "lock": 0,
-            "con": True, # 联系人
-            "via": False, # 通过 Bot 发送的消息
-            "ani": False, # GIF 动图
-            "bmd": False, # 以 / 为前缀的机器人命令
-            "vid": False, # 视频
-            "vdn": True, # 圆视频
-            "sti": False, # 贴纸
-            "ast": False, # 动态贴纸
-            "aud": False, # 音频
-            "voi": True, # 语音
-            "gam": False, # 游戏
-            "ser": True, # 服务类消息，对于加群消息将保留最后一条
-            "ttd": False, # 定时删除贴纸，动态贴纸，和 GIF 动图（三小时后）
-            "sde": False, # 群员可否自助删除自己所发所有消息
-            "loc": True, # 定位地址
-            "doc": False, # 文件
-            "exe": False, # EXE、APK、BAT、CMD、COM 文件
-            "tcl": False, # 每日定时清除位于群组和黑名单中的 Deleted Account
-            "aff": False, # 传统 AFF 链接、支付宝淘宝红包、大陆 APP 的各类活动推广分享
-            "sho": False, # 短链接
-            "tgl": False, # TG 链接
-            "tgp": False, # TG 代理
-            "iml": False, # 即时通讯软件的邀请链接或联系方式
-            "qrc": False # 二维码
+            "con": True,    # 联系人
+            "via": False,    # 通过 Bot 发送的消息
+            "ani": False,    # GIF 动图
+            "bmd": False,    # 以 / 为前缀的机器人命令
+            "vid": False,    # 视频
+            "vdn": True,    # 圆视频
+            "sti": False,    # 贴纸
+            "ast": False,    # 动态贴纸
+            "aud": False,    # 音频
+            "voi": True,    # 语音
+            "gam": False,    # 游戏
+            "ser": True,    # 服务类消息，对于加群消息将保留最后一条
+            "ttd": False,    # 定时删除贴纸，动态贴纸，和 GIF 动图（三小时后）
+            "sde": False,    # 群员可否自助删除自己所发所有消息
+            "loc": True,    # 定位地址
+            "doc": False,    # 文件
+            "exe": False,    # EXE、APK、BAT、CMD、COM 文件
+            "tcl": False,    # 每日定时清除位于群组和黑名单中的 Deleted Account
+            "aff": False,    # 传统 AFF 链接、支付宝淘宝红包、大陆 APP 的各类活动推广分享
+            "sho": False,    # 短链接
+            "tgl": False,    # TG 链接
+            "tgp": False,    # TG 代理
+            "iml": False,    # 即时通讯软件的邀请链接或联系方式
+            "qrc": False    # 二维码
         }
     }
 )
