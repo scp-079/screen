@@ -14,6 +14,8 @@ Filter specific types of messages
 Manage the settings of each bot
 - <a href="https://github.com/scp-079/scp-079-hide" target="_blank">SCP-079-HIDE</a>: 
 Hide the real sender
+- <a href="https://github.com/scp-079/scp-079-long" target="_blank">SCP-079-LONG</a>: 
+Control super long messages
 - <a href="https://github.com/scp-079/scp-079-manage" target="_blank">SCP-079-MANAGE</a>: 
 One ring to rule them all
 - <a href="https://github.com/scp-079/scp-079-mirror" target="_blank">SCP-079-MIRROR</a>: 

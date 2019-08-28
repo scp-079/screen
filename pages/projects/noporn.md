@@ -83,6 +83,8 @@ captcha_id = [DATA EXPUNGED]
 ; SCP-079-CAPTCHA 的 ID
 lang_id = [DATA EXPUNGED]
 ; SCP-079-LANG 的 ID
+long_id = [DATA EXPUNGED]
+; SCP-079-LONG 的 ID
 noflood_id = [DATA EXPUNGED]
 ; SCP-079-NOFLOOD 的 ID
 noporn_id = [DATA EXPUNGED]
@@ -143,7 +145,7 @@ password = [DATA EXPUNGED]
 1. 触发 NSFW 检测者将被删除媒体消息，直到用户主动不再发送媒体消息一定时间后，该限制自动解除
 2. 根据某用户触发 NSFW 的群组数量，进行 noporn 评分
 3. 如用户评分过高时触发 NSFW，或受到追踪删除时触发，将进行追踪封禁类收录，并分享给其他机器人
-4. 含有追踪封禁类词组的用户，如触发 NSFW 消息，则进行封禁
+4. 昵称中含有追踪封禁类词组的用户，如触发 NSFW 消息，则进行封禁
 5. 将正则计数同步给 REGEX
 
 NOPORN 能够向 ANALYZE、BACKUP、CAPTCHA、CLEAN、CONFIG、LANG、LONG、MANAGE、NOFLOOD、NOSPAM、RECHECK、USER、WATCH 发送数据
@@ -196,13 +198,12 @@ exchange_text = format_data(
         "config": {
             "default": False,
             "lock": 1512345678,
-            "channel": True,
-            "recheck": True
+            "channel": True
         },
         "default": {
             "default": True,
             "lock": 0,
-            "channel": True # 过滤 porn-ios 频道转发过来的消息
+            "channel": True    # 过滤 porn-ios 频道转发过来的消息
         }
     }
 )
