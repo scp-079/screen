@@ -4,7 +4,7 @@ title: Projects
 
 ## Projects
 
-Currently, all open source subprojects are hosted on GitLab, mirrored on <a href="https://github.com/scp-079" target="_blank">GitHub</a>. All projects will remain closed until we officially open the public service.
+Currently, all open source subprojects are hosted on GitLab, mirrored on <a href="https://github.com/scp-079" target="_blank">GitHub</a>. Most of the projects will remain closed until we officially open the public service.
 
 Released projects:
 

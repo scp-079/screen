@@ -18,7 +18,7 @@ title: SCP-079-NOPORN
 
 群组中的管理员：
 
-- `/config noporn`：通过 [SCP-079-CONFIG](/config/) 调整机器人设置，机器人将回报前往设置的链接，5 分钟内设置将被锁定，无法查看和更改设置
+- `/config noporn`：通过 [SCP-079-CONFIG](/config/) 调整机器人设置，机器人将回报前往设置的链接，5 分钟内设置将被锁定，无法再次更改
 
 除使用 `/config noporn` 外，管理员也可以通过 `/config_noporn` 命令在群组中手动调整设置：
 
