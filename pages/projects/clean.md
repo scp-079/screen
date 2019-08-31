@@ -57,7 +57,7 @@ title: SCP-079-CLEAN
 - `qrc`：二维码
 - `sde`：群员可否自助删除自己所发所有消息
 - `tcl`：每日定时清除位于群组和黑名单中的 Deleted Account
-- `ttd`：定时删除贴纸和动图（二至三小时后）
+- `ttd`：定时删除贴纸和动图（三小时后）
 
 群组中的普通成员：
 
@@ -166,6 +166,8 @@ reset_day = [DATA EXPUNGED]
 ; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
 time_ban = [DATA EXPUNGED]
 ; 建议追踪封禁状态维持的时间，单位为秒
+time_sticker = [DATA EXPUNGED]
+; 定时删除贴纸、动图所需的延迟时间，单位为秒
 
 [encrypt]
 key = [DATA EXPUNGED]
