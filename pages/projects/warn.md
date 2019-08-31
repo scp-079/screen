@@ -107,6 +107,8 @@ captcha_id = [DATA EXPUNGED]
 ; SCP-079-CAPTCHA 的 ID
 lang_id = [DATA EXPUNGED]
 ; SCP-079-LANG 的 ID
+long_id = [DATA EXPUNGED]
+; SCP-079-LONG 的 ID
 noflood_id = [DATA EXPUNGED]
 ; SCP-079-NOFLOOD 的 ID
 noporn_id = [DATA EXPUNGED]

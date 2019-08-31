@@ -31,7 +31,7 @@ sudo apt install build-essential git python3-dev vim virtualenv -y
 ```bash
 mkdir -p ~/bots
 cd ~/bots
-virtualenv -p python3 scp-079 # 如需使用 NOPORN，请根据其 README.md 的命令操作
+virtualenv -p python3 scp-079    # 如需使用 NOPORN，请根据其 README.md 的命令操作
 ```
 
 ## 环境配置
@@ -202,22 +202,22 @@ systemctl --user enable scp-079-restart.timer
 systemctl --user start scp-079-restart.timer
 ```
 
-## 启用机器人
+配置机器人：
 
 ```bash
-scp-079-regex-update
-```
-
-查看机器人服务状态：
-
-```bash
-scp-079-regex-status
+scp-079-regex-config
 ```
 
 查看机器人日志：
 
 ```bash
 scp-079-regex-log
+```
+
+强制重启机器人：
+
+```bash
+scp-079-regex-restart
 ```
 
 重启机器人：
@@ -232,10 +232,16 @@ scp-079-regex-start
 scp-079-regex-stop
 ```
 
-强制重启机器人：
+查看机器人服务状态：
 
 ```bash
-scp-079-regex-restart
+scp-079-regex-status
+```
+
+## 更新机器人
+
+```bash
+scp-079-regex-update
 ```
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>

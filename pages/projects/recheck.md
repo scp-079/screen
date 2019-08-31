@@ -18,7 +18,7 @@ title: SCP-079-RECHECK
 
 SCP-079-TEST 中的成员：
 
-- `转发图片、视频等消息`：显示分析结果
+- `发送图片、视频等消息`：显示分析结果
 - `/version`：检查机器人版本
 
 ---
@@ -231,7 +231,56 @@ exchange_text = format_data(
 )
 ```
 
-情形 6：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费
+情形 6：向 REGEX 更新规则使用计数文件，每日 UTC 时间 21:00 。`exchange_text` 文本作为该文件的 `caption`
+
+```python
+exchange_text = format_data(
+    sender="RECHECK",
+    receviers=[
+        "REGEX"
+    ],
+    action="update",
+    action_type="download",
+    data="wb_words"
+)
+```
+
+情形 7：向 USER 发送协助请求，调用 delete all 功能，删除某用户全部消息，范围：所有群组（评分过高或受追踪时的触发）
+
+```python
+exchange_text = format_data(
+    sender="RECHECK",
+    receviers=[
+        "USER"
+    ],
+    action="help",
+    action_type="delete",
+    data={
+        "group_id": -10012345678,
+        "user_id": 12345678,
+        "type": "global"
+    }
+)
+```
+
+情形 8：向 USER 发送协助请求，调用 global ban 功能，用于查找某用户与机器人的所有共同群组，删除其全部消息，并对其进行限制
+
+```python
+exchange_text = format_data(
+    sender="RECHECK",
+    receviers=[
+        "USER"
+    ],
+    action="help",
+    action_type="ban",
+    data={
+        "group_id": -10012345678,
+        "user_id": 12345678
+    }
+)
+```
+
+情形 9：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费
 
 ```python
 exchange_text = format_data(
@@ -256,21 +305,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 7：向 REGEX 更新规则使用计数文件，每日 UTC 时间 21:00 。`exchange_text` 文本作为该文件的 `caption`
-
-```python
-exchange_text = format_data(
-    sender="RECHECK",
-    receviers=[
-        "REGEX"
-    ],
-    action="update",
-    action_type="download",
-    data="wb_words"
-)
-```
-
-情形 8：向其他 Bot（ANALYZE、CLEAN、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOSPAM、NOPORN）更新用户分数
+情形 10：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、LANG、LONG、MANAGE、NOFLOOD、NOSPAM、NOPORN）更新用户分数
 
 ```python
 exchange_text = format_data(
@@ -295,7 +330,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 9：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、WATCH）更新用户追踪状态，以 watch ban 为例
+情形 11：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、WATCH）更新用户追踪状态，以 watch ban 为例
 
 ```python
 exchange_text = format_data(
@@ -303,6 +338,7 @@ exchange_text = format_data(
     receviers=[
         "ANALYZE",
         "CAPTCHA",
+        "CLEAN",
         "LANG",
         "LONG",
         "MANAGE",
@@ -321,7 +357,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 10：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、USER、WATCH）添加黑名单用户
+情形 12：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、USER、WATCH）添加黑名单用户
 
 ```python
 exchange_text = format_data(
@@ -329,6 +365,7 @@ exchange_text = format_data(
     receviers=[
         "ANALYZE",
         "CAPTCHA",
+        "CLEAN",
         "LANG",
         "LONG",
         "MANAGE",
@@ -343,41 +380,6 @@ exchange_text = format_data(
     data={
         "id": 12345678,
         "type": "user"
-    }
-)
-```
-
-情形 11：向 USER 发送协助请求，调用 delete all 功能，删除某用户全部消息，范围：所有群组（评分过高或受追踪时的触发）
-
-```python
-exchange_text = format_data(
-    sender="RECHECK",
-    receviers=[
-        "USER"
-    ],
-    action="help",
-    action_type="delete",
-    data={
-        "group_id": -10012345678,
-        "user_id": 12345678,
-        "type": "global"
-    }
-)
-```
-
-情形 12：向 USER 发送协助请求，调用 global ban 功能，用于查找某用户与机器人的所有共同群组，删除其全部消息，并对其进行限制
-
-```python
-exchange_text = format_data(
-    sender="RECHECK",
-    receviers=[
-        "USER"
-    ],
-    action="help",
-    action_type="ban",
-    data={
-        "group_id": -10012345678,
-        "user_id": 12345678
     }
 )
 ```
