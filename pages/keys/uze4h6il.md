@@ -11,7 +11,7 @@ title: UZE4H6IL
     }
 </style>
 
-<p>-----BEGIN PGP PUBLIC KEY BLOCK-----<br>
+<p>\-\-\-\-\-BEGIN PGP PUBLIC KEY BLOCK\-\-\-\-\-<br>
 <br>
 mQINBFyaA/MBEACoUql+iFRmc3PS9w5HrfiHu6+UGi6Q2qGup8L9jyRdSn0RFZEs<br>
 Z5Cade+5IWdXbSRzN8ykCY7RirYC6tsUy6JiMZUWoYT+vSlInlfMkHFripPQ3C6/<br>
@@ -98,5 +98,5 @@ cdSwG1q9sZLsvfmKY2aaS7RZYIuWOjgS3i8V17jQTsE8YgaaYjgthjgBUooC4Dg/<br>
 GsirTRp68BhEMUoEaQn3MjUQNNTVjDqw6Ey/pkLi9aO/VbpMCknP9ZWYDxz8Az8I<br>
 DceiPoCkJawG3BJRogeowuAfRT0NyghIGvJpxrKnp3VNqAKylBlIhlQ=<br>
 =kq3/<br>
------END PGP PUBLIC KEY BLOCK-----<br>
+\-\-\-\-\-END PGP PUBLIC KEY BLOCK\-\-\-\-\-<br>
 </p>

@@ -1,7 +1,7 @@
-_cache
-dist
-dist-newstyle
-public
-.stack-work
+_cache/
+dist/
+dist-newstyle/
+public/
+.stack-work/
 .ghc.environment.*
 
