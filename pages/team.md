@@ -13,9 +13,9 @@ By alphabetical order:
 
 - <a href="https://t.me/SilentProphet" target="_blank">Prophet</a> 
 <a href="https://t.me/AboutSilentProphet" class="key" target="_blank">About Silent Prophet</a> 
-- <a class="no" target="_blank" style="color: #ddd; font-weight: 700;">UZE4H6IL</a>
+- <a href="https://t.me/SCP_079_PM_BOT" target="_blank">UZE4H6IL</a>
 <a href="/uze4h6il/" class="key" target="_blank">AD6D 5622 8F5F B87F 2A24 60CC ACC0 64F9 3E44 E061</a>
-- <a href="https://gitlab.com/xiao_x" target="_blank">Xiao</a> 
+- <a class="no" target="_blank" style="color: #ddd; font-weight: 700;">Xiao</a> 
 <a href="/xiao/" class="key" target="_blank">C1BE CBF6 E0BD 06AF 7802 2F93 FED1 BA4A 7D9E 2E29</a>
 
 <style>
