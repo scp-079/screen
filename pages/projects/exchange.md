@@ -1889,7 +1889,7 @@ exchange_text = format_data(
 3. 根据规则，判断是否应该建议删除某用户发送的消息
 4. 此机器人涉及的方面广泛，涵盖了部分其他机器人的功能，由于需要对消息预览进行独立的检查，此机器人应该作为 userbot ，并应保持匿名性
 
-WATCH 能够向 ANALYZE、APPLY、BACKUP、CAPTCHA、LANG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK 发送数据
+WATCH 能够向 ANALYZE、APPLY、BACKUP、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK 发送数据
 
 情形 1：向 BACKUP 传送数据备份文件。每日 UTC 时间 20:00 。`exchange_text` 文本作为该文件的 `caption`
 
