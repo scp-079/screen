@@ -11,10 +11,9 @@ the steps defined in [`.gitlab-ci.yml`](.gitlab-ci.yml).
 
 We call this Hakyll theme `Screen`. 
 
-This is a theme intended to use to [SCP-079](https://scp-079.org) website 
-and converted from a Jekyll theme [darcli](https://github.com/gildasio/darcli) 
-to Hakyll. We made some changes to make it more suitable for our site 
-and responsive.
+This is a theme intended to use to [SCP-079](https://scp-079.org) website. 
+The theme is converted from a Jekyll theme [darcli](https://github.com/gildasio/darcli). 
+We made some changes to make it responsive and more suitable for our site.
 
 There is a post [demo](https://scp-079.org/posts/2019-03-29-post-test/).
 
@@ -28,6 +27,8 @@ additional steps to modify some source code files.
 - `templates/open_graph.html`
 - `templates/header.html`
 - `site.hs`
+
+Also, you should delete some `.md` files in `pages/` and `posts/`.
 
 ## Building locally
 
