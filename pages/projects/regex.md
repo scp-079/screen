@@ -77,11 +77,11 @@ SCP-079-REGEX 中的成员：
 
 按钮对应的命令，以此命令回复带按钮的消息以获得相同操作效果：
 
-- `/ask new`：对应 “另增新词”
-- `/ask replace`：对应 “全部替换”
-- `/ask cancel`：对应 “取消”
-- `/page previous`：对应 “上一页”
-- `/page next`：对应 “下一页”
+- `/ask new`：对应按钮 “另增新词”
+- `/ask replace`：对应按钮 “全部替换”
+- `/ask cancel`：对应按钮 “取消”
+- `/page previous`：对应按钮 “上一页”
+- `/page next`：对应按钮 “下一页”
 
 其他命令：
 

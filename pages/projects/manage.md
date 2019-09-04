@@ -41,8 +41,8 @@ SCP-079-MANAGE 中的成员：
 - `/leave cancel`：对应按钮 “取消”，以此命令回复某条带按钮的相应有效消息，取消某机器人退出某群组的请求
 - `/leave [id] [reason]`：命令所有机器人退出某 ID 的群组
 - `/remove_bad [id] [reason]`：将某频道 ID 从白名单中移除，或解禁某用户；以此命令回复某条带对象 ID的相应有效消息，执行相应操作，此时可省略 `[id]`
-- `/remove_except [id] [reason]`：将某频道 ID 从白名单中移除；以此命令回复某条带对象 ID的相应有效消息，执行相应操作，此时可省略 `[id]`
-- `/remove_watch [id] [reason]`：将某用户 ID 的追踪状态移除；以此命令回复某条带对象 ID的相应有效消息，执行相应操作，此时可省略 `[id]`
+- `/remove_except [id] [reason]`：将某频道 ID 从白名单中移除；以此命令回复某条带对象 ID 的相应有效消息，执行相应操作，此时可省略 `[id]`
+- `/remove_watch [id] [reason]`：将某用户 ID 的追踪状态移除；以此命令回复某条带对象 ID 的相应有效消息，执行相应操作，此时可省略 `[id]`
 - `/status [all | nospam | watch]`：要求 NOSPAM 或 WATCH 或两者同时汇报当前收录状态统计信息
 
 
