@@ -49,7 +49,7 @@ title: SCP-079-CLEAN
 - `ser`：服务类消息，对于加群消息将保留最后一条（默认过滤）
 - `sti`：贴纸
 - `aff`：传统 AFF 链接、支付宝淘宝红包、大陆 APP 的各类活动推广分享
-- `exe`：可执行文件，例如 APK、BAT、CMD、COM、EXE、VBS 文件
+- `exe`：可执行文件，例如 APK、BAT、CMD、COM、EXE、PIF、SCR、VBS 文件
 - `iml`：即时通讯软件的邀请链接或联系方式
 - `sho`：短链接
 - `tgl`：TG 链接，包括带 Telegram 域名的链接和 `@mention`，只过滤非当前群组 `username` 的 `@mention` 、不在群组中（或 `restricted`）的用户 `@mention`
@@ -276,7 +276,7 @@ exchange_text = format_data(
             "ser": True,    # 服务类消息，对于加群消息将保留最后一条
             "sti": False,    # 贴纸
             "aff": False,    # 传统 AFF 链接、支付宝淘宝红包、大陆 APP 的各类活动推广分享
-            "exe": False,    # APK、BAT、CMD、COM、EXE、VBS 文件
+            "exe": False,    # APK、BAT、CMD、COM、EXE、PIF、SCR、VBS 文件
             "iml": False,    # 即时通讯软件的邀请链接或联系方式
             "sho": False,    # 短链接
             "tgl": False,    # TG 链接
