@@ -80,11 +80,11 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                     request - Send a leave request to MANAGE
 
                 When action is update:
-                    admin - Update the admin lists in groups
                     count - Update the frequency of use of regex rules
                     declare - Declare a message
                     download - Download the data, then update
                     preview - Update a message's preview
+                    refresh- Refresh the admin lists in groups
                     score - Update user's score
                 
                 When action is version:
@@ -259,10 +259,7 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                             "type": "all"
                         }
 
-                Update
-                    admin:
-                        "demand"
-                
+                Update                
                     count:
                         "filename"
                     
@@ -280,6 +277,9 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                         "user_id": 12345678,
                         "message_id": 123
                     }
+
+                    refresh:
+                        12345678
 
                     score:
                         {
