@@ -3,8 +3,8 @@ image: haskell:latest
 before_script:
   - rm -rf /root/.cabal || true
   - tar -xzf cabal.tar.gz -C / || true
-  - cabal update
-  - cabal build
+  - cabal new-update
+  - cabal new-build
 
 after_script:
   - tar -czf cabal.tar.gz /root/.cabal || true
