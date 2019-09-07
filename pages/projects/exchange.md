@@ -80,6 +80,7 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                     request - Send a leave request to MANAGE
 
                 When action is update:
+                    admin - Update the admin lists in groups
                     count - Update the frequency of use of regex rules
                     declare - Declare a message
                     download - Download the data, then update
@@ -259,6 +260,9 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                         }
 
                 Update
+                    admin:
+                        "demand"
+                
                     count:
                         "filename"
                     

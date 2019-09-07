@@ -6,7 +6,7 @@ title: Projects
 
 Currently, all open source subprojects are hosted on GitLab, mirrored on <a href="https://github.com/scp-079" target="_blank">GitHub</a>. Most of the projects will remain closed until we officially open the public service.
 
-Released projects:
+By alphabetical order:
 
 - <a href="https://github.com/scp-079/scp-079-clean" target="_blank">SCP-079-CLEAN</a>: 
 Filter specific types of messages

@@ -230,6 +230,25 @@ exchange_text = format_data(
 )
 ```
 
+情形 4：向其他 Bot（CLEAN、LONG、NOFLOOD、NOPORN、NOSPAM、WATCH）要求更新正则使用计数
+
+```python
+exchange_text = format_data(
+    sender="REGEX",
+    receviers=[
+        "CLEAN",
+        "LONG",
+        "NOFLOOD",
+        "NOPORN",
+        "NOSPAM",
+        "WATCH"
+    ],
+    action="update",
+    action_type="count",
+    data="ask"
+)
+```
+
 特殊情形：向所有 bot 发送数据交换频道转移指令
 
 ```python
