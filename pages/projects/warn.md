@@ -101,10 +101,12 @@ prefix = /!
 ; 命令前的可用字符，如在群组中使用非常规命令前缀，需要机器人有获取普通消息的权限
 
 [bots]
-clean_id = [DATA EXPUNGED]
-; SCP-079-CLEAN 的 ID
+avatar_id = [DATA EXPUNGED]
+; SCP-079-AVATAR 的 ID
 captcha_id = [DATA EXPUNGED]
 ; SCP-079-CAPTCHA 的 ID
+clean_id = [DATA EXPUNGED]
+; SCP-079-CLEAN 的 ID
 lang_id = [DATA EXPUNGED]
 ; SCP-079-LANG 的 ID
 long_id = [DATA EXPUNGED]
@@ -271,7 +273,21 @@ exchange_text = format_data(
 )
 ```
 
-情形 6：向其他 Bot（ANALYZE、CLEAN、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK）更新用户分数
+情形 6：向 NOSPAM 推送启用自动举报的群组列表文件。每日 UTC 时间 21:30 。`exchange_text` 文本作为该文件的 `caption`
+
+```python
+exchange_text = format_data(
+    sender="WARN",
+    receviers=[
+        "NOSPAM"
+    ],
+    action="help",
+    action_type="list",
+    data="update"
+)
+```
+
+情形 7：向其他 Bot（ANALYZE、CLEAN、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK）更新用户分数
 
 ```python
 exchange_text = format_data(

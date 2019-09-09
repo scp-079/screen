@@ -225,8 +225,8 @@ exchange_text = format_data(
         "CLEAN",
         "WATCH"
     ],
-    action="update",
-    action_type="download",
+    action="regex",
+    action_type="update",
     data="aff_words"
 )
 ```
@@ -244,7 +244,7 @@ exchange_text = format_data(
         "NOSPAM",
         "WATCH"
     ],
-    action="update",
+    action="regex",
     action_type="count",
     data="ask"
 )

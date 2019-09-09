@@ -22,6 +22,8 @@ One ring to rule them all
 What will I see
 - <a href="https://github.com/scp-079/scp-079-noporn" target="_blank">SCP-079-NOPORN</a>: 
 Auto delete NSFW media messages
+- <a href="https://github.com/scp-079/scp-079-nospam" target="_blank">SCP-079-NOSPAM</a>: 
+Block spam in groups
 - <a href="https://github.com/scp-079/scp-079-pm" target="_blank">SCP-079-PM</a>: 
 Everyone can have their own private chat bot
 - <a href="https://github.com/scp-079/scp-079-recheck" target="_blank">SCP-079-RECHECK</a>: 
@@ -32,6 +34,8 @@ Manage the regex patterns
 Invite and help other bots
 - <a href="https://github.com/scp-079/scp-079-warn" target="_blank">SCP-079-WARN</a>: 
 Warn or ban someone by admin commands
+- <a href="https://github.com/scp-079/scp-079-watch" target="_blank">SCP-079-WATCH</a>: 
+Observe and track suspicious spam behaviors
 - <a href="https://github.com/scp-079/screen" target="_blank">Screen</a>: 
 A dark theme for Hakyll
 

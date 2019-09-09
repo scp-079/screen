@@ -10,7 +10,7 @@ title: SCP-079-HIDE
 
 **特殊收容措施：**SCP-079-HIDE 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-HIDE 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。其应该作为频道 SCP-079-CRITICAL 、频道 SCP-079-EXCHANGE 、频道 SCP-079-HIDE 的管理员，并加入 SCP-079-TEST 群组。
 
-**描述：**SCP-079-HIDE 是一个用于隐藏频道消息真实发布者的机器人，用于保护关键机器人的真实身份，使其不被 spammer 知晓，其项目位于 GitLab ，镜像同步并开源于 <a href="https://github.com/scp-079/scp-079-hide" target="_blank">GitHub</a> 。机器人本体位于 <a href="https://t.me/SCP_079_HIDE_BOT" class="079" target="_blank">SCP-079-HIDE</a> ，并不接受任何直接管理。其加入了 SCP-079-TEST 群组，用于其自身运行状态。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：根据其他机器人的请求，在 SCP-079-EXCHANGE 频道中转发相应信息。具体操作详见附录中的使用说明。
+**描述：**SCP-079-HIDE 是一个用于隐藏频道消息真实发布者的机器人，用于保护关键机器人的真实身份，使其不被 spammer 知晓，其项目位于 GitLab ，镜像同步并开源于 <a href="https://github.com/scp-079/scp-079-hide" target="_blank">GitHub</a> 。机器人本体位于 <a href="https://t.me/SCP_079_HIDE_BOT" class="079" target="_blank">SCP-079-HIDE</a> ，并不接受任何直接管理。其加入了 SCP-079-TEST 群组，用于其自身运行状态，并协助显示隐藏者的运行状态。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：根据其他机器人的请求，在 SCP-079-EXCHANGE 频道中转发相应信息。具体操作详见附录中的使用说明。
 
 ---
 

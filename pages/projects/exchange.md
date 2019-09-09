@@ -53,7 +53,6 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                     reply - Send a appeal reply
 
                 When action is backup:
-                    emergency - Let bots enable emergency mode in groups
                     hide - Use HIDE channel to exchange data
                     pickle - Pickle file
                     status - Bot(s) status
@@ -66,6 +65,7 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                 When action is help:
                     ban - Let USER ban a user globally
                     delete - Let USER delete a user's all messages in some group
+                    list - Update auto report groups list
                     report - Let WARN alert admins
 
                 When action is join:
@@ -79,10 +79,17 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                     info - Send auto left group info to MANAGE
                     request - Send a leave request to MANAGE
 
-                When action is update:
+                When action is regex:
                     count - Update the frequency of use of regex rules
+                    update - Let bot update regex rules
+
+                When action is status:
+                    ask - MANAGE ask other bots report status
+                    reply - Reply the status
+
+                When action is update:
+                    avatar - Send the new joined user's avatar
                     declare - Declare a message
-                    download - Download the data, then update
                     preview - Update a message's preview
                     refresh- Refresh the admin lists in groups
                     score - Update user's score
@@ -180,7 +187,10 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                             "user_id": 12345678
                         }
 
-                    report:
+                    list:
+                        "report"
+
+                    report:                    
                         {
                             "group_id": -10012345678,
                             "user_id": 12345678,
@@ -240,6 +250,13 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                             "reason": "permissions / user"
                         }
 
+                Regex:
+                    count:
+                        "ask" / "filename"
+                    
+                    update:
+                        "filename"
+
                 Remove:
                     bad:
                         {
@@ -259,18 +276,19 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                             "type": "all"
                         }
 
-                Update                
-                    count:
-                        "filename"
-                    
+                Update
+                    avatar:
+                        {
+                            "group_id": -10012345678,
+                            "user_id": 12345678,
+                            "message_id: 123
+                        }
+
                     declare:
                         {
                             "group_id": -10012345678,
                             "message_id": 123
                         }
-                    
-                    download:
-                        "filename"
 
                     preview: {
                         "group_id": -10012345678,
@@ -333,11 +351,7 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
 
 [SCP-079-NOFLOOD](#scp-079-noflood)
 
-[SCP-079-NOSPAM](#scp-079-nospam)
-
 [SCP-079-TIP](#scp-079-tip)
-
-[SCP-079-WATCH](#scp-079-watch)
 
 ---
 
@@ -1465,294 +1479,6 @@ exchange_text = format_data(
 
 ---
 
-## [SCP-079-NOSPAM](#目录)
-
-此机器人用于自动删除广告消息，或限制广告用户
-
-1. 本身具有默认规则（内容与行为）
-2. 群组可自行开启基于机器学习的实验特性
-3. 根据 WATCH 的建议、各机器人的综合评分调整限制用户的处理方式
-
-NOSPAM 能够向 ANALYZE、BACKUP、CAPTCHA、CLEAN、CONFIG、LANG、MANAGE、NOFLOOD、NOPORN、RECHECK、USER、WARN、WATCH 发送数据
-
-情形 1：向 BACKUP 传送数据备份文件。每日 UTC 时间 20:00 。`exchange_text` 文本作为该文件的 `caption`
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "BACKUP"
-    ],
-    action="backup",
-    action_type="pickle",
-    data="admin_ids"
-)
-```
-
-情形 2：向 BACKUP 汇报在线状态。每个小时的第 30 分钟
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "BACKUP"
-    ],
-    action="backup",
-    action_type="status",
-    data="awake"
-)
-```
-
-情形 3：向 CONFIG 询问。由于群管理在群组中发送 `/config nospam` 命令，故 NOSPAM 令 CONFIG 在 SCP-079-CONFIG 频道中开启一个更新设置的会话
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "CONFIG"
-    ],
-    action="config",
-    action_type="ask",
-    data={
-        "project_name": "SCP-079-NOSPAM",
-        "project_link": "https://scp-079.org/nospam/",
-        "group_id": -10012345678,
-        "group_name": "SCP-079-CHAT",
-        "group_link": "https://t.me/SCP_079_CHAT",
-        "user_id": 12345678,
-        "config": {
-            "default": False,
-            "lock": 1512345678,
-            "auto": True
-        },
-        "default": {
-            "default": True,
-            "lock": 0,
-            "auto": False
-        }
-    }
-)
-```
-
-情形 4：向 MANAGE 请求。由于没有在管理员列表中找到 SCP-079-USER ，或其权限缺失而请求离开某个群组
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "MANAGE"
-    ],
-    action="leave",
-    action_type="request",
-    data={
-        "group_id": -10012345678,
-        "group_name": "SCP-079-CHAT",
-        "group_link": "https://t.me/SCP_079_CHAT",
-        "reason"： "user"
-    }
-)
-```
-
-情形 5：向 MANAGE 请求。由于管理权限缺失而请求离开某个群组
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "MANAGE"
-    ],
-    action="leave",
-    action_type="request",
-    data={
-        "group_id": -10012345678,
-        "group_name": "SCP-079-CHAT",
-        "group_link": "https://t.me/SCP_079_CHAT",
-        "reason"： "permissions"
-    }
-)
-```
-
-情形 6：向 MANAGE 通知。该机器人已因不在某群组中（确定的非网络原因的 Exception）而自行清空该群组资料
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "MANAGE"
-    ],
-    action="leave",
-    action_type="info",
-    data=-10012345678
-)
-```
-
-情形 7：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、LANG、NOFLOOD、NOPORN、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "ANALYZE",
-        "CAPTCHA",
-        "CLEAN",
-        "LANG",
-        "NOFLOOD",
-        "NOPORN",
-        "RECHECK",
-        "USER"
-    ],
-    action="update",
-    action_type="declare",
-    data={
-        "group_id": -10012345678,
-        "message_id": 123
-    }
-)
-```
-
-情形 8：向其他 Bot（ANALYZE、CLEAN、CAPTCHA、LANG、MANAGE、NOFLOOD、NOPORN、RECHECK）更新用户分数
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "ANALYZE",
-        "CLEAN",
-        "CAPTCHA",
-        "LANG",
-        "MANAGE",
-        "NOFLOOD",
-        "NOPORN",
-        "RECHECK"
-    ],
-    action="update",
-    action_type="score",
-    data={
-        "id": 12345678,
-        "score": 0.4
-    }
-)
-```
-
-情形 9：向其他 Bot（ANALYZE、CAPTCHA、LANG、MANAGE、NOFLOOD、NOPORN、RECHECK、WATCH）更新用户追踪状态，以 watch ban 为例
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "ANALYZE",
-        "CAPTCHA",
-        "LANG",
-        "MANAGE",
-        "NOFLOOD",
-        "NOPORN",
-        "RECHECK",
-        "WATCH"
-    ],
-    action="add",
-    action_type="watch",
-    data={
-        "id": 12345678,
-        "type": "ban",
-        "until"="gAAAAABc1SZjduLGl1872VS6dD3osVJaOSQqdlSHy3SpDXeV4yu2FLbEung8neVMonokt5yI8qaLic8bi44X-y073-pGX6LtxKNQilSvci_gk5xHj4HNPFE=" # 将追踪截止的时间戳转为加密字符串
-    }
-)
-```
-
-情形 10：向其他 Bot（ANALYZE、APPEAL、CAPTCHA、LANG、MANAGE、NOFLOOD、NOPORN、RECHECK、USER、WATCH）添加黑名单用户，频道同理
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "ANALYZE",
-        "APPEAL",
-        "CAPTCHA",
-        "LANG",
-        "MANAGE",
-        "NOFLOOD",
-        "NOPORN",
-        "RECHECK",
-        "USER",
-        "WATCH"
-    ],
-    action="add",
-    action_type="bad",
-    data={
-        "id": 12345678,
-        "type": "user"
-    }
-)
-```
-
-情形 11：向 USER 发送协助请求，调用 delete all 功能，删除某用户全部消息
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "USER"
-    ],
-    action="help",
-    action_type="delete",
-    data={
-        "group_id": -10012345678,
-        "user_id": 12345678
-    }
-)
-```
-
-情形 12：向 USER 发送协助请求，调用 global ban 功能，用于查找某用户与机器人的所有共同群组，删除其全部消息，并对其进行限制
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "USER"
-    ],
-    action="help",
-    action_type="ban",
-    data={
-        "group_id": -10012345678,
-        "user_id": 12345678
-    }
-)
-```
-
-情形 13：向 WARN 发送自动警告。WARN 会根据群组设置决定是否相应
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "WARN"
-    ],
-    action="help",
-    action_type="report",
-    data={
-        "group_id": -10012345678,
-        "user_id": 12345678,
-        "message_id": 123
-    }
-)
-```
-
-特殊情形：向所有 bot 发送数据交换频道转移指令
-
-```python
-exchange_text = format_data(
-    sender="EMERGENCY",
-    receviers=[
-        "EMERGENCY"
-    ],
-    action="backup",
-    action_type="hide",
-    data=True
-)
-```
-
----
-
 ## [SCP-079-TIP](#目录)
 
 此机器人用于发送群组的各种自定义提示
@@ -1883,82 +1609,5 @@ exchange_text = format_data(
 ```
 
 ---
-
-## [SCP-079-WATCH](#目录)
-
-此机器人用于进行敏感追踪
-
-1. 对新入群用户的行为进行一定考量，举一个简单理想化的例子：如某用户有加群行为，并在一个时间段内在多个群组中发送疑似广告内容，则此机器人应给出某种处理建议，其他机器人根据其建议酌情对用户再次发生的可疑行为选择处理方式
-2. 根据规则，判断是否应该建议封禁某用户
-3. 根据规则，判断是否应该建议删除某用户发送的消息
-4. 此机器人涉及的方面广泛，涵盖了部分其他机器人的功能，由于需要对消息预览进行独立的检查，此机器人应该作为 userbot ，并应保持匿名性
-
-WATCH 能够向 ANALYZE、APPLY、BACKUP、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK 发送数据
-
-情形 1：向 BACKUP 传送数据备份文件。每日 UTC 时间 20:00 。`exchange_text` 文本作为该文件的 `caption`
-
-```python
-exchange_text = format_data(
-    sender="WATCH",
-    receviers=[
-        "BACKUP"
-    ],
-    action="backup",
-    action_type="pickle",
-    data="admin_ids"
-)
-```
-
-情形 2：向 BACKUP 汇报在线状态。每个小时的第 30 分钟
-
-```python
-exchange_text = format_data(
-    sender="WATCH",
-    receviers=[
-        "BACKUP"
-    ],
-    action="backup",
-    action_type="status",
-    data="awake"
-)
-```
-
-情形 3：向其他 Bot（ANALYZE、CAPTCHA、LANG、MANAGE、NOPORN、NOSPAM、RECHECK）更新用户追踪状态，以 watch ban 为例
-
-```python
-exchange_text = format_data(
-    sender="WATCH",
-    receviers=[
-        "ANALYZE",
-        "CAPTCHA",
-        "LANG",
-        "MANAGE",
-        "NOPORN",
-        "NOSPAM",
-        "RECHECK"
-    ],
-    action="add",
-    action_type="watch",
-    data={
-        "id": 12345678,
-        "type": "ban",
-        "until"="gAAAAABc1SZjduLGl1872VS6dD3osVJaOSQqdlSHy3SpDXeV4yu2FLbEung8neVMonokt5yI8qaLic8bi44X-y073-pGX6LtxKNQilSvci_gk5xHj4HNPFE=" # 将追踪截止的时间戳转为加密字符串
-    }
-)
-```
-
-特殊情形：向所有 bot 发送数据交换频道转移指令
-
-```python
-exchange_text = format_data(
-    sender="EMERGENCY",
-    receviers=[
-        "EMERGENCY"
-    ],
-    action="backup",
-    action_type="hide",
-    data=True
-)
-```
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>

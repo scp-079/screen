@@ -66,10 +66,12 @@ prefix = /!
 ; 命令前的可用字符，如在群组中使用非常规命令前缀，需要机器人有获取普通消息的权限
 
 [bots]
-clean_id = [DATA EXPUNGED]
-; SCP-079-CLEAN 的 ID
+avatar_id = [DATA EXPUNGED]
+; SCP-079-AVATAR 的 ID
 captcha_id = [DATA EXPUNGED]
 ; SCP-079-CAPTCHA 的 ID
+clean_id = [DATA EXPUNGED]
+; SCP-079-CLEAN 的 ID
 lang_id = [DATA EXPUNGED]
 ; SCP-079-LANG 的 ID
 long_id = [DATA EXPUNGED]

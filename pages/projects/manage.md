@@ -34,17 +34,17 @@ SCP-079-MANAGE 中的成员：
 - `/action proceed [reason]`：对应按钮 “处理”，以此命令回复某条带按钮的相应有效消息，解禁某用户或解明某消息
 - `/action delete [reason]`：对应按钮 “删除”，以此命令回复某条带按钮的相应有效消息，删除原始证据消息
 - `/action cancel [reason]`：对应按钮 “取消”，以此命令回复某条带按钮的相应有效消息，取消解禁或解明请求
-- `/add_bad [id] [reason]`：将某频道 ID 加入黑名单中；以此命令回复某条带对象 ID的相应有效消息，执行相应操作，此时可省略 `[id]`
-- `/add_except [id] [reason]`：将某频道 ID 加入白名单中；以此命令回复某条带对象 ID的相应有效消息，执行相应操作，此时可省略 `[id]`
+- `/add_bad [id] [reason]`：将某频道 ID 加入黑名单中；以此命令回复某条带对象 ID的相应有效消息，执行相应操作，此时可省略 `[id]`；如需强制执行操作，在命令后添加 `force`
+- `/add_except [id] [reason]`：将某频道 ID 加入白名单中；以此命令回复某条带对象 ID的相应有效消息，执行相应操作，此时可省略 `[id]`；如需强制执行操作，在命令后添加 `force`
 - `/check [id | username]`：查询用户或频道在项目中的收录状态
 - `/leave approve [reason]`：对应按钮 “批准”，以此命令回复某条带按钮的相应有效消息，批准某机器人退出某群组
 - `/leave cancel`：对应按钮 “取消”，以此命令回复某条带按钮的相应有效消息，取消某机器人退出某群组的请求
 - `/leave [id] [reason]`：命令所有机器人退出某 ID 的群组
 - `/refresh [all | project]`：命令某个机器人刷新群管理列表
-- `/remove_bad [id] [reason]`：将某频道 ID 从白名单中移除，或解禁某用户；以此命令回复某条带对象 ID的相应有效消息，执行相应操作，此时可省略 `[id]`
-- `/remove_except [id] [reason]`：将某频道 ID 从白名单中移除；以此命令回复某条带对象 ID 的相应有效消息，执行相应操作，此时可省略 `[id]`
-- `/remove_watch [id] [reason]`：将某用户 ID 的追踪状态移除；以此命令回复某条带对象 ID 的相应有效消息，执行相应操作，此时可省略 `[id]`
-- `/status [all | nospam | watch]`：要求 NOSPAM 或 WATCH 或两者同时汇报当前收录状态统计信息
+- `/remove_bad [id] [reason]`：将某频道 ID 从白名单中移除，或解禁某用户；以此命令回复某条带对象 ID的相应有效消息，执行相应操作，此时可省略 `[id]`；如需强制执行操作，在命令后添加 `force`
+- `/remove_except [id] [reason]`：将某频道 ID 从白名单中移除；以此命令回复某条带对象 ID 的相应有效消息，执行相应操作，此时可省略 `[id]`；如需强制执行操作，在命令后添加 `force`
+- `/remove_watch [id] [reason]`：将某用户 ID 的追踪状态移除；以此命令回复某条带对象 ID 的相应有效消息，执行相应操作，此时可省略 `[id]`；如需强制执行操作，在命令后添加 `force`
+- `/status [project]`：要求其他机器人汇报当前状态统计信息，其中，`[project]` 可为 nospam 、 user 、 watch，若 `[project]` 为 `all`，则要求全部机器人汇报
 
 
 SCP-079-TEST 中的成员：

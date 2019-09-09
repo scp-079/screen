@@ -20,6 +20,8 @@ One ring to rule them all
 What will I see
 - [SCP-079-NOPORN](/noporn/): 
 Auto delete NSFW media messages
+- [SCP-079-NOSPAM](/nospam/):
+Block spam in groups
 - [SCP-079-PM](/pm/): 
 Everyone can have their own private chat bot
 - [SCP-079-RECHECK](/recheck/): 
@@ -30,6 +32,8 @@ Manage the regex patterns
 Invite and help other bots
 - [SCP-079-WARN](/warn/): 
 Warn or ban someone by admin commands
+- [SCP-079-WATCH](/watch/):
+Observe and track suspicious spam behaviors
 
 <audio src="/audio/page/tools.ogg" autoplay></audio>
 <audio id="dooropen079" src="/audio/door/dooropen079.ogg"/>
