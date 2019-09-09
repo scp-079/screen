@@ -10,7 +10,7 @@ title: SCP-079-NOSPAM
 
 **特殊收容措施：**SCP-079-NOSPAM 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-NOSPAM 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。务必要注意，其只能通过 SCP-079-USER 邀请入群，并由其赋予管理权限，如果有任何未授权的恶意使用，将可能给其他机器人的工作带来影响。其应该作为频道 SCP-079-CRITICAL 、频道 SCP-079-EXCHANGE 、频道 SCP-079-HIDE 的管理员，并加入 SCP-079-TEST 群组。
 
-**描述：**SCP-079-NOSPAM 是一个用于防止广告的机器人，其项目位于 GitLab ，镜像同步并准备（尚未）开源于 <a href="https://github.com/scp-079/scp-079-nospam" target="_blank">GitHub</a> 。机器人本体位于 <a href="https://t.me/SCP_079_NOSPAM_BOT" class="079" target="_blank">SCP-079-NOSPAM</a> ，仅供经过授权的群组使用，并由群组 SCP-079-MANAGE 中的成员对其进群、退群操作进行管理。其加入了 SCP-079-TEST ，用于测试基本功能的使用。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：根据全局规则阻止广告，根据群组设置阻止群组中加入机器人，根据用户发送的侮辱性、带有人身攻击的消息进行微量计分，并根据 WARN 的群内设置对这类消息执行自动举报给 WARN 的操作。
+**描述：**SCP-079-NOSPAM 是一个用于防止广告的机器人，其项目位于 GitLab ，镜像同步并准备（尚未）开源于 <a href="https://github.com/scp-079/scp-079-nospam" target="_blank">GitHub</a> 。机器人本体位于 <a href="https://t.me/SCP_079_NOSPAM_BOT" class="079" target="_blank">SCP-079-NOSPAM</a> ，仅供经过授权的群组使用，并由群组 SCP-079-MANAGE 中的成员对其进群、退群操作进行管理。其加入了 SCP-079-TEST ，用于测试基本功能的使用。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：根据全局规则阻止广告；根据群组设置阻止群组中加入机器人；根据由 WARN 转发到 LOGGING 频道的，并由 MANAGE 指定收录的消息内容，执行自动删除并评分的操作；根据用户发送的侮辱性、带有人身攻击的消息进行微量评分，并根据 WARN 的群内设置对这类消息执行自动举报给 WARN 的操作。
 
 ---
 
@@ -152,7 +152,24 @@ password = [DATA EXPUNGED]
 
 NOSPAM 能够向 ANALYZE、AVATAR、BACKUP、CAPTCHA、CLEAN、CONFIG、LANG、LONG、MANAGE、NOFLOOD、NOPORN、RECHECK、USER、WARN、WATCH 发送数据
 
-情形 1：向 BACKUP 传送数据备份文件。每日 UTC 时间 20:00 。`exchange_text` 文本作为该文件的 `caption`
+情形 1：向 AVATAR 添加用户头像白名单，移除同理
+
+```python
+exchange_text = format_data(
+    sender="NOSPAM",
+    receviers=[
+        "AVATAR"
+    ],
+    action="add",
+    action_type="except",
+    data={
+        "the_id": 12345678,
+        "the_type": "long"
+    }
+)
+```
+
+情形 2：向 BACKUP 传送数据备份文件。每日 UTC 时间 20:00 。`exchange_text` 文本作为该文件的 `caption`
 
 ```python
 exchange_text = format_data(
@@ -166,7 +183,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 2：向 BACKUP 汇报在线状态。每个小时的第 30 分钟
+情形 3：向 BACKUP 汇报在线状态。每个小时的第 30 分钟
 
 ```python
 exchange_text = format_data(
@@ -180,7 +197,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 3：向 CONFIG 询问。由于群管理在群组中发送 `/config nospam` 命令，故 NOSPAM 令 CONFIG 在 SCP-079-CONFIG 频道中开启一个更新设置的会话
+情形 4：向 CONFIG 询问。由于群管理在群组中发送 `/config nospam` 命令，故 NOSPAM 令 CONFIG 在 SCP-079-CONFIG 频道中开启一个更新设置的会话
 
 ```python
 exchange_text = format_data(
@@ -213,7 +230,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 4：向 MANAGE 请求。由于没有在管理员列表中找到 SCP-079-USER ，或其权限缺失而请求离开某个群组
+情形 5：向 MANAGE 请求。由于没有在管理员列表中找到 SCP-079-USER ，或其权限缺失而请求离开某个群组
 
 ```python
 exchange_text = format_data(
@@ -232,7 +249,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 5：向 MANAGE 请求。由于管理权限缺失而请求离开某个群组
+情形 6：向 MANAGE 请求。由于管理权限缺失而请求离开某个群组
 
 ```python
 exchange_text = format_data(
@@ -251,7 +268,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 6：向 MANAGE 通知。该机器人已因不在某群组中（确定的非网络原因的 Exception）而自行清空该群组资料
+情形 7：向 MANAGE 通知。该机器人已因不在某群组中（确定的非网络原因的 Exception）而自行清空该群组资料
 
 ```python
 exchange_text = format_data(
@@ -265,7 +282,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 7：向 MANAGE 汇报统计数据文件。`exchange_text` 文本作为该文件的 `caption`
+情形 8：向 MANAGE 汇报统计数据文件。`exchange_text` 文本作为该文件的 `caption`
 
 ```python
 exchange_text = format_data(
@@ -282,7 +299,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 8：向 REGEX 更新规则使用计数文件，每日 UTC 时间 21:00 。`exchange_text` 文本作为该文件的 `caption`
+情形 9：向 REGEX 更新规则使用计数文件，每日 UTC 时间 21:00 。`exchange_text` 文本作为该文件的 `caption`
 
 ```python
 exchange_text = format_data(
@@ -296,7 +313,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 9：向 USER 发送协助请求，调用 delete all 功能，删除某用户全部消息
+情形 10：向 USER 发送协助请求，调用 delete all 功能，删除某用户全部消息
 
 ```python
 exchange_text = format_data(
@@ -313,7 +330,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 10：向 USER 发送协助请求，调用 global ban 功能，用于查找某用户与机器人的所有共同群组，删除其全部消息，并对其进行限制
+情形 11：向 USER 发送协助请求，调用 global ban 功能，用于查找某用户与机器人的所有共同群组，删除其全部消息，并对其进行限制
 
 ```python
 exchange_text = format_data(
@@ -330,7 +347,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 11：向 WARN 发送自动警告。WARN 会根据群组设置决定是否相应
+情形 12：向 WARN 发送自动警告。WARN 会根据群组设置决定是否相应
 
 ```python
 exchange_text = format_data(
@@ -348,7 +365,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 12：向其他 Bot（ANALYZE、AVATAR、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费
+情形 13：向其他 Bot（ANALYZE、AVATAR、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费
 
 ```python
 exchange_text = format_data(
@@ -374,7 +391,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 13：向其他 Bot（ANALYZE、CLEAN、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、RECHECK）更新用户分数
+情形 14：向其他 Bot（ANALYZE、CLEAN、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、RECHECK）更新用户分数
 
 ```python
 exchange_text = format_data(
@@ -399,7 +416,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 14：向其他 Bot（ANALYZE、APPEAL、AVATAR、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、RECHECK、USER、WATCH）添加黑名单用户，频道同理
+情形 15：向其他 Bot（ANALYZE、APPEAL、AVATAR、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、RECHECK、USER、WATCH）添加黑名单用户，频道同理
 
 ```python
 exchange_text = format_data(
