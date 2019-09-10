@@ -323,7 +323,28 @@ exchange_text = format_data(
 )
 ```
 
-情形 10：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）移除受追踪用户
+情形 10：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK）清空用户评分
+
+```python
+exchange_text = format_data(
+    sender="MANAGE",
+    receviers=[
+        "ANALYZE",
+        "CAPTCHA",
+        "LANG",
+        "LONG",
+        "NOFLOOD",
+        "NOPORN",
+        "NOSPAM",
+        "RECHECK"
+    ],
+    action="remove",
+    action_type="score",
+    data=12345678
+)
+```
+
+情形 11：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）移除受追踪用户
 
 ```python
 exchange_text = format_data(
@@ -349,7 +370,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 11：向其他 Bot（CAPTCHA、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）添加黑名单频道，从该频道转发的消息将被自动删除，预计使用频率极低，移除同理
+情形 12：向其他 Bot（CAPTCHA、LANG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）添加黑名单频道，从该频道转发的消息将被自动删除，预计使用频率极低，移除同理
 
 ```python
 exchange_text = format_data(
@@ -373,7 +394,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 12：向 NOSPAM 添加内容短暂黑名单，移除同理
+情形 13：向 NOSPAM 添加内容短暂黑名单，移除同理
 
 ```python
 exchange_text = format_data(
@@ -389,7 +410,7 @@ exchange_text = format_data(
     }
 )
 
-情形 13：向 NOSPAM 添加内容短暂黑名单，移除同理
+情形 14：向 NOSPAM 添加内容短暂黑名单，移除同理
 
 ```python
 exchange_text = format_data(
@@ -406,7 +427,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 14：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK）添加内容长期白名单，移除同理
+情形 15：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK）添加内容长期白名单，移除同理
 
 ```python
 exchange_text = format_data(
@@ -423,7 +444,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 15：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK）添加内容短暂白名单，移除同理
+情形 16：向其他 Bot（CLEAN、LANG、NOPORN、NOSPAM、RECHECK）添加内容短暂白名单，移除同理
 
 ```python
 exchange_text = format_data(
@@ -440,7 +461,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 16：向其他 Bot（CAPTCHA、CLEAN、LANG、LONG、NOPORN、NOSPAM、RECHECK、USER、WARN）要求更新群管理列表
+情形 17：向其他 Bot（CAPTCHA、CLEAN、LANG、LONG、NOPORN、NOSPAM、RECHECK、USER、WARN）要求更新群管理列表
 
 ```python
 exchange_text = format_data(

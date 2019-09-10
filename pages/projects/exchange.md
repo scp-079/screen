@@ -42,11 +42,10 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
 
         action_type (str):
             Type of action. It can be any of the followings:
-                When action is add or remove:
-                    bad - Spam channel or user
-                    except - Exception channel or user
-                    watch - Suspicious user.
-                            Recommended to ban user or delete user's messages when meets certain conditions
+                When action is add:
+                    bad - Add bad or except channel
+                    except - Exception channel or content
+                    watch - Suspicious user. Recommended to ban user or delete user's messages when meets certain conditions
 
                 When action is appeal:
                     request - Send a appeal request
@@ -83,6 +82,12 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                     count - Update the frequency of use of regex rules
                     update - Let bot update regex rules
 
+                When action is add or remove:
+                    bad - Spam channel or user
+                    except - Exception channel or content
+                    score - Clear user's score
+                    watch - Remove user's watch status
+
                 When action is status:
                     ask - MANAGE ask other bots report status
                     reply - Reply the status
@@ -100,17 +105,17 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
 
         data (Union[dict, int, list, str]):
             Additional data required for operation.
-                Add / Remove:
+                Add:
                     bad:
                         {
-                            "id":  -10012345678 / 123 / 12345678,
-                            "type": "channel / content / user"
+                            "id":  -10012345678 / 123,
+                            "type": "channel / content"
                         }
 
                     except:
                         {
-                            "id":  "file id or hash",
-                            "type": "long / tmp"
+                            "id":  123,
+                            "type": "long / temp"
                         }
 
                     watch:
@@ -260,20 +265,24 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                 Remove:
                     bad:
                         {
-                            "id":  12345678,
-                            "type": "user"
+                            "id":  -10012345678 / 123 / 12345678,
+                            "type": "channel / content / user"
                         }
-                    
+
                     except:
                         {
-                            "id":  12345678 / "file id",
-                            "type": "user / sticker"
+                            "id":  123,
+                            "type": "long / temp"
                         }
+
+                    score:
+                        12345678
 
                     watch:
                         {
                             "id": 12345678,
-                            "type": "all"
+                            "type": "all / ban / delete",
+                            "until": "encrypted string"
                         }
 
                 Update
