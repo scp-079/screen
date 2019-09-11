@@ -12,6 +12,8 @@ Filter specific types of messages
 Manage the settings of each bot
 - [SCP-079-HIDE](/hide/): 
 Hide the real sender
+- [SCP-079-LANG](/lang/): 
+Ban or delete by detecting the language
 - [SCP-079-LONG](/long/): 
 Control super long messages
 - [SCP-079-MANAGE](/manage/): 
