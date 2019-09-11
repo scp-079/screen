@@ -183,6 +183,14 @@ test_group_id = [DATA EXPUNGED]
 [custom]
 default_group_link = [DATA EXPUNGED]
 ; 此处填写调试信息中默认的群组链接
+lang_all = [DATA EXPUNGED]
+; 此处填写可用语言代号，以空格分隔
+lang_name = [DATA EXPUNGED]
+; 此处填写默认封禁的名称语言代号，以空格分隔
+lang_protect = [DATA EXPUNGED]
+; 此处填写受保护的语言代号，以空格分隔
+lang_text = [DATA EXPUNGED]
+; 此处填写默认删除的文字语言代号，以空格分隔
 project_link = [DATA EXPUNGED]
 ; 此处填写项目网址
 project_name = [DATA EXPUNGED]
