@@ -41,7 +41,7 @@ SCP-079-TEST 中的成员：
 克隆项目：
 
 ```bash
-git clone https://gitlab.com/scp-079/scp-079-noporn.git ~/bots/scp-079/noporn
+git clone https://github.com/scp-079/scp-079-noporn.git ~/bots/scp-079/noporn
 ```
 
 ---

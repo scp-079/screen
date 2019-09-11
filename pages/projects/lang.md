@@ -104,7 +104,7 @@ SCP-079-TEST 中的成员：
 克隆项目：
 
 ```bash
-git clone https://gitlab.com/scp-079/scp-079-lang.git ~/bots/scp-079/lang
+git clone https://github.com/scp-079/scp-079-lang.git ~/bots/scp-079/lang
 ```
 
 ---
@@ -207,7 +207,6 @@ password = [DATA EXPUNGED]
 2. 群组自行重新定义用户昵称不允许的语言，不允许的语言出现将限制该用户
 3. 根据某用户触及默认敏感语言的群组数量，进行 lang 评分
 4. 群组自行重新定义用户发言不允许的语言，不允许的语言将被自动删除。如用户评分过高时触及默认删除的语言，或受到追踪删除时触发，将进行追踪封禁类收录，并分享给其他机器人
-5. 支持检测的语言参见： https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
 LANG 能够向 ANALYZE、AVATAR、BACKUP、CAPTCHA、CLEAN、CONFIG、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH 发送数据
 
