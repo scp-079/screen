@@ -88,7 +88,7 @@ title: SCP-079-LANG
 - ur
 - vi
 
-以上代号所对应的语言，可见： [List of ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+以上代号所对应的语言，可见： <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_blank">List of ISO 639-1 codes</a>
 
 SCP-079-TEST 中的成员：
 
