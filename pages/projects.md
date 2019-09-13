@@ -22,6 +22,8 @@ Control super long messages
 One ring to rule them all
 - <a href="https://github.com/scp-079/scp-079-mirror" target="_blank">SCP-079-MIRROR</a>: 
 What will I see
+- <a href="https://github.com/scp-079/scp-079-noflood" target="_blank">SCP-079-NOFLOOD</a>: 
+Message-flooding prevention
 - <a href="https://github.com/scp-079/scp-079-noporn" target="_blank">SCP-079-NOPORN</a>: 
 Auto delete NSFW media messages
 - <a href="https://github.com/scp-079/scp-079-nospam" target="_blank">SCP-079-NOSPAM</a>: 
