@@ -6,6 +6,8 @@ title: Tools
 
 By alphabetical order:
 
+- [SCP-079-AVATAR](/avatar/):
+Get new joined member's profile photo
 - [SCP-079-CLEAN](/clean/): 
 Filter specific types of messages
 - [SCP-079-CONFIG](/config/): 

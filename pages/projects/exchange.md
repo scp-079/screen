@@ -114,7 +114,7 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
 
                     except:
                         {
-                            "id":  123,
+                            "id":  123 / 12345678,
                             "type": "long / temp"
                         }
 
@@ -271,7 +271,7 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
 
                     except:
                         {
-                            "id":  123,
+                            "id":  123 / 12345678,
                             "type": "long / temp"
                         }
 

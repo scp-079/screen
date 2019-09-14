@@ -8,6 +8,8 @@ Currently, all open source subprojects are hosted on GitLab, mirrored on <a href
 
 By alphabetical order:
 
+- <a href="https://github.com/scp-079/scp-079-avatar" target="_blank">SCP-079-AVATAR</a>: 
+Get new joined member's profile photo
 - <a href="https://github.com/scp-079/scp-079-clean" target="_blank">SCP-079-CLEAN</a>: 
 Filter specific types of messages
 - <a href="https://github.com/scp-079/scp-079-config" target="_blank">SCP-079-CONFIG</a>: 

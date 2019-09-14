@@ -158,7 +158,25 @@ exchange_text = format_data(
 )
 ```
 
-情形 3：向 MANAGE 汇报统计数据文件。`exchange_text` 文本作为该文件的 `caption`
+情形 3：向 HIDE 回复版本号
+
+```python
+exchange_text = format_data(
+    sender="WATCH",
+    receviers=[
+        "HIDE"
+    ],
+    action="version",
+    action_type="reply",
+    data={
+        "admin_id": 12345678,
+        "message_id": 123,
+        "version": 0.0.1
+    }
+)
+```
+
+情形 4：向 MANAGE 汇报统计数据文件。`exchange_text` 文本作为该文件的 `caption`
 
 ```python
 exchange_text = format_data(
@@ -175,7 +193,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 4：向 REGEX 更新规则使用计数文件，每日 UTC 时间 21:00 。`exchange_text` 文本作为该文件的 `caption`
+情形 5：向 REGEX 更新规则使用计数文件，每日 UTC 时间 21:00 。`exchange_text` 文本作为该文件的 `caption`
 
 ```python
 exchange_text = format_data(
@@ -189,7 +207,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 5：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK）更新用户追踪状态，以 watch ban 为例
+情形 6：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK）更新用户追踪状态，以 watch ban 为例
 
 ```python
 exchange_text = format_data(
