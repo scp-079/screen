@@ -24,6 +24,8 @@ title: SCP-079-USER
 
 - `/config_user show`：显示当前设置
 - `/config_user default`：恢复为默认设置
+- `/config_user delete off`：关闭协助删除功能
+- `/config_user delete on`：开启协助删除功能（默认设置） 
 - `/config_user subscribe off`：关闭黑名单订阅
 - `/config_user subscribe on`：打开黑名单订阅（默认设置） 
 
@@ -194,14 +196,14 @@ exchange_text = format_data(
         "config": {
             "default": False,
             "lock": 1512345678,
-            "subscribe": True,
-            "dafm": True
+            "delete": False,
+            "subscribe": True
         },
         "default": {
             "default": True,
             "lock": 0,
-            "subscribe": True, # 订阅黑名单列表
-            "dafm": False # 开启群员自助删除所有消息功能
+            "delete": True,    # 协助删除
+            "subscribe": True    # 订阅黑名单列表
         }
     }
 )

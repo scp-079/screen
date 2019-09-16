@@ -38,12 +38,14 @@ title: SCP-079-WARN
 
 - `/config_warn show`：显示当前设置
 - `/config_warn default`：恢复为默认设置
+- `/config_user delete off`：关闭协助删除功能
+- `/config_user delete on`：开启协助删除功能（默认设置） 
 - `/config_warn limit 5`：设置警告上限，上限应介于 2 和 5 之间，默认为 3
-- `/config_warn mention off`：关闭呼叫管理功能（默认设置） 
-- `/config_warn mention on`：打开呼叫管理功能
-- `/config_warn report off`：关闭所有举报功能（默认设置）
+- `/config_warn mention off`：关闭呼叫管理功能
+- `/config_warn mention on`：打开呼叫管理功能（默认设置） 
+- `/config_warn report off`：关闭所有举报功能
 - `/config_warn report auto`：仅启用自动举报功能，仅当 SCP-079-NOSPAM 在该群组中时真正有效
-- `/config_warn report manual`：仅启用手动举报功能
+- `/config_warn report manual`：仅启用手动举报功能（默认设置）
 - `/config_warn report both`：同时启动自动和手动举报功能
 
 群组中的普通成员：
@@ -214,6 +216,7 @@ exchange_text = format_data(
         "config": {
             "default": False,
             "lock": 1512345678,
+            "delete": True,
             "limit": 3,
             "mention": True,
             "report": {
@@ -224,11 +227,12 @@ exchange_text = format_data(
         "default": {
             "default": True,
             "lock": 0,
-            "limit": 3,
-            "mention": False,
+            "delete": True,    # 封禁用户时同时删除其所发所有消息
+            "limit": 3,    # 警告次数上限，达到上线则封禁
+            "mention": True,    # 呼叫管理员
             "report": {
-                "auto": False,
-                "manual": False
+                "auto": False,    # 由 NOSPAM 自动举报
+                "manual": True    # 手动举报
             }
         }
     }

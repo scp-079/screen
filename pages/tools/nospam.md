@@ -24,10 +24,12 @@ title: SCP-079-NOSPAM
 
 - `/config_nospam show`：显示当前设置
 - `/config_nospam default`：恢复为默认设置
-- `/config_nospam auto off`：关闭机器学习过滤功能
+- `/config_nospam auto off`：关闭机器学习过滤功能（默认设置） 
 - `/config_nospam auto on`：开启机器学习过滤功能（暂时无效）
 - `/config_nospam bot off`：允许 Bot 进群
-- `/config_nospam bot on`：阻止 Bot 进群
+- `/config_nospam bot on`：阻止 Bot 进群（默认设置） 
+- `/config_nospam report off`：自动封禁用户（默认设置） 
+- `/config_nospam report on`：不封禁用户，仅向管理员自动举报
 
 SCP-079-TEST 中的成员：
 
@@ -218,13 +220,15 @@ exchange_text = format_data(
             "default": False,
             "lock": 1512345678,
             "auto": True,
-            "bot": True
+            "bot": True,
+            "report": False
         },
         "default": {
             "default": True,
             "lock": 0,
             "auto": False,
-            "bot": True
+            "bot": True,
+            "report": False
         }
     }
 )

@@ -97,8 +97,10 @@ prefix = /!
 ; 命令前的可用字符，如在群组中使用非常规命令前缀，需要机器人有获取普通消息的权限
 
 [channels]
-critical_channel_id = [DATA EXPUNGED]
+critical_channel_id = 0
 ; 此处填写紧急频道 SCP-079-CRITICAL 的 ID
+debug_channel_id = 0
+; 此处填写调试频道 SCP-079-DEBUG 的 ID
 exchange_channel_id = 0
 ; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID（可选）
 ; 关于数据交换频道的详情，请查看 https://scp-079.org/exchange/
@@ -112,6 +114,10 @@ host_id = [DATA EXPUNGED]
 ; 此处填写自己帐号的 ID
 host_name = [DATA EXPUNGED]
 ; 此处填写自定义昵称
+project_link = [DATA EXPUNGED]
+; 此处填写项目网址
+project_name = [DATA EXPUNGED]
+; 此处填写项目名称
 reset_day = [DATA EXPUNGED]
 ; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
 ```
