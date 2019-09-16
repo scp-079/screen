@@ -69,17 +69,25 @@ github_id = [DATA EXPUNGED]
 ; 此处填写 @GithubBot 的 ID
 
 [channels]
-critical_channel_id = [DATA EXPUNGED]
+critical_channel_id = 0
 ; 此处填写紧急频道 SCP-079-CRITICAL 的 ID
-exchange_channel_id = [DATA EXPUNGED]
+debug_channel_id = 0
+; 此处填写调试频道 SCP-079-DEBUG 的 ID
+exchange_channel_id = 0
 ; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID
 ; 关于数据交换频道的详情，请查看 https://scp-079.org/exchange/
 github_channel_id = [DATA EXPUNGED]
 ; 此处填写 GitHub 仓库更新频道 SCP-079-GITHUB 的 ID
-hide_channel_id = [DATA EXPUNGED]
+hide_channel_id = 0
 ; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
-test_group_id = [DATA EXPUNGED]
+test_group_id = 0
 ; 此处填写测试群组 SCP-079-TEST 的 ID
+
+[custom]
+project_link = [DATA EXPUNGED]
+; 此处填写项目网址
+project_name = [DATA EXPUNGED]
+; 此处填写项目名称
 ```
 
 ---

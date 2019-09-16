@@ -26,6 +26,10 @@ main li {
     font-size: 15px;
 }
 
+main li a {
+    font-size: 18px;
+}
+
 .sourceCode{
     font-family: vt323
 }

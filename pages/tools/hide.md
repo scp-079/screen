@@ -67,6 +67,8 @@ prefix = /!
 [channels]
 critical_channel_id = [DATA EXPUNGED]
 ; 此处填写紧急频道 SCP-079-CRITICAL 的 ID
+debug_channel_id = [DATA EXPUNGED]
+; 此处填写调试频道 SCP-079-DEBUG 的 ID
 exchange_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID
 ; 关于数据交换频道的详情，请查看 https://scp-079.org/exchange/
@@ -78,6 +80,10 @@ test_group_id = [DATA EXPUNGED]
 [custom]
 hiders = [DATA EXPUNGED]
 ; 此处填写隐藏者项目编号列表，以空格分隔
+project_link = [DATA EXPUNGED]
+; 此处填写项目网址
+project_name = [DATA EXPUNGED]
+; 此处填写项目名称
 ```
 
 ---
