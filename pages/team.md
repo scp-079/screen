@@ -9,7 +9,6 @@ members to remain anonymous, and those who intend to join the project
 team should pay attention to that. Anyone who wants to contribute to the 
 project is welcome.
 
-
 In alphabetical order:
 
 - <a class="no" target="_blank" style="color: #ddd; font-weight: 700;">Action Filament</a> 
