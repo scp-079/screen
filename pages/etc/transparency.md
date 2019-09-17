@@ -4,11 +4,11 @@ title: Transparency
 
 # Transparency
 
-Shows groups or individuals who interact with projects (other than [project administrators and developers]((/team/))) to increase transparency.
+Shows groups or individuals who interact with the Project (other than [project administrators and developers]((/team/))) to increase transparency.
 
-The information included in `Joined` indicates the private channel name of the project.
+The information included in `Joined` field indicates the private channel name of the project.
 
-## List of supervisors and witnesses
+## List of witnesses
 
 In alphabetical order:
 
