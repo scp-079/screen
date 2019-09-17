@@ -24,9 +24,9 @@ title: SCP-079-USER
 
 - `/config_user show`：显示当前设置
 - `/config_user default`：恢复为默认设置
-- `/config_user delete off`：关闭协助删除功能
+- `/config_user delete off`：关闭协助删除功能，关闭后，将不再响应其他 bot 的协助删除用户全部消息的请求（不推荐，这可能给其他机器人的功能带来影响）
 - `/config_user delete on`：开启协助删除功能（默认设置） 
-- `/config_user subscribe off`：关闭黑名单订阅
+- `/config_user subscribe off`：关闭黑名单订阅，关闭后，任何来自黑名单用户、黑名单频道的消息将不会受到任何机器人的检查（不推荐，这可能极大削弱其他机器人防广告的效力）
 - `/config_user subscribe on`：打开黑名单订阅（默认设置） 
 
 SCP-079-TEST 中的成员：
