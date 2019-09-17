@@ -4,7 +4,7 @@ title: Tools
 
 ## Tools
 
-By alphabetical order:
+In alphabetical order:
 
 - [SCP-079-AVATAR](/avatar/):
 Get new joined member's profile photo
