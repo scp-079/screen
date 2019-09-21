@@ -4,6 +4,6 @@ build-type: Simple
 
 executable site
   main-is: site.hs
-  build-depends: hakyll, filepath, pandoc
+  build-depends: base, hakyll, filepath, pandoc
   ghc-options: -threaded
   default-language: Haskell2010
