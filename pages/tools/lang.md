@@ -344,7 +344,6 @@ exchange_text = format_data(
                     "ur",
                     "ar",
                     "bn",
-                    "ru",
                     "bg"
                 ]
         }

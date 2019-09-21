@@ -33,6 +33,7 @@ title: SCP-079-NOSPAM
 
 SCP-079-TEST 中的成员：
 
+- `/content`：显示内容标识
 - `/version`：检查机器人版本
 
 ---

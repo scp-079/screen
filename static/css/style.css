@@ -243,6 +243,22 @@ footer {
     background-color: #0D0D0D;
 }
 
+.zh {
+    display: block;
+    margin: 1em auto;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    padding: 5px 30px 5px 30px;
+    font-size: 12px;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp";
+}
+
+.zh:hover {
+    background-color: gray;
+}
+
 /* Firefox */
 @-moz-document url-prefix() {
     pre {

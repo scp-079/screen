@@ -4,7 +4,7 @@ title: Transparency
 
 # Transparency
 
-Shows groups or individuals who interact with the Project (other than [project administrators and developers]((/team/))) to increase transparency.
+Shows groups or individuals who interact with the Project (other than [project administrators and developers](/team/)) to increase transparency.
 
 The information included in `Joined` field indicates the private channel name of the project.
 

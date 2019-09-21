@@ -2,51 +2,51 @@
 title: SCP-079-AVATAR
 ---
 
-<link rel="stylesheet" href="/css/chinese.css">
-
-**项目编号：**SCP-079-AVATAR
-
-**项目等级：**Keter
-
-**特殊收容措施：**SCP-079-AVATAR 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-AVATAR 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。务必要注意，其机器人的真实身份应对所有人保持隐秘（除维护该机器人的人员以外的所有人士，包括核心管理人员），否则将可能给其他机器人的工作带来影响。其应该作为频道 SCP-079-HIDE 的管理员。
-
-**描述：**SCP-079-AVATAR 是一个用于将新入群用户头像发至 NOSPAM 进行分析的机器人（user-bot），其项目位于 GitLab ，镜像同步并准备（尚未）开源于 <a href="https://github.com/scp-079/scp-079-avatar" target="_blank">GitHub</a> 。机器人的展示身份位于 <a href="https://t.me/SCP_079_AVATAR_BOT" class="079" target="_blank">SCP-079-AVATAR</a> ，真实身份为隐藏状态，且并不接受任何直接管理。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：发送新用户的头像数据至 NOSPAM，供其进行分析，避免 spammer 有意屏蔽 NOSPAM 使其无法获取头像。具体操作详见附录中的使用说明。
+<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/avatar-zh/';" class="zh">点此转至中文页面</button>
 
 ---
 
-**附录：**使用说明
+**Object Class: **Keter
 
-SCP-079-TEST 中的成员：
+**Special Containment Procedures: **The recommended operating environment for SCP-079-AVATAR is Linux with Python 3.6 or higher version. The required third-party libraries are listed in the `requirements.txt`. Bear in mind that the bot has to run incognito, which means no one else knows the true identity of the bot, except for the developers. Otherwise, the operation of the bot will be hindered inevitably. In addition, the bot should be one of the SCP-079-HIDE Channel Administrators.
 
-- `/version` ：间接检查机器人版本
+**Description: **SCP-079-AVATAR is a user-bot who is able to send the new group user's avatar to NOSPAM for further analysis. The project of the bot has been uploaded to GitLab and the code is synchronized to <a href="https://github.com/scp-079/scp-079-avatar" target="_blank">GitHub</a>. The bot is presented as <a href="https://t.me/SCP_079_AVATAR_BOT" class="079" target="_blank">SCP-079-AVATAR</a> but its true identity is disguised and no direct management is accepted. The project is taken charge of by ███. The bots based this project will have similar functions: sending the new user's avatar to NPSPAM for further analysis to prevent spammer from intentionally blocking NOSPAM. Detailed operations can be found in the instructions in the appendix.
 
 ---
 
-**附录：**自建机器人的方法
+**Appendix: **Operation instructions
 
-可先查看<a href="/how/">自建说明书</a>
+For the members in SCP-079-TEST:
 
-克隆项目：
+`/version`: Checking the bot version indirectly
+
+---
+
+**Appendix: **Steps to create a bot on your own
+
+Refer to the <a href="/how/">Manual</a> 
+
+Clone Project:
 
 ```bash
 git clone https://github.com/scp-079/scp-079-avatar.git ~/bots/scp-079/avatar
 ```
 
-SCP-079-AVATAR 应加入成员人数较多的群组，其加入的群组只可以为 SCP-079-NOSPAM 机器人所在的群组，但不可加入 SCP-079-NOSPAM 所在的全部群组
+SCP-079-AVATAR is supposed to join the group with lager amount of members and the group has to include SCP-079-NOSPAM bot. However, please do not join all the groups where SCP-079-NOSPAM is located.
 
 ---
 
-**文件#config.ini：**
+**File#config.ini: **
 
-修改配置文件：
+Edit configuration file:
 
-需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。 API ID 与 API Hash 在 <a href="https://my.telegram.org" target="_blank">官网</a> 获取
+Edit all the key values of `[DATA EXPUNGED]` in the `config.ini` file. API ID and API Hash can be found in the <a href="https://my.telegram.org" target="_blank">Official Website</a>.
 
 ```ini
 [pyrogram]
 api_id = [DATA EXPUNGED]
 api_hash = [DATA EXPUNGED]
-; 以上两条信息从官网申请获得
+; The information above is got by the application on the official website
 
 [plugins]
 root = plugins
@@ -55,41 +55,43 @@ include =
 
 [proxy]
 enabled = False
-; 可根据需要自行决定是否使用 SOCKS5 代理
+; Using SOCKS5 proxy is not necessary
 hostname = 127.0.0.1
 port = 1080
 
 [channels]
 hide_channel_id = [DATA EXPUNGED]
-; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
+; Input the ID of SCP-079-HIDE (data exchange backup channel)
 
 [custom]
 reset_day = [DATA EXPUNGED]
-; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
+; Input the date of resetting data, such as 1st mon，meaning the first Monday of every month
 time_new = [DATA EXPUNGED]
-; 此处填写判断用户为新用户的入群时长，单位为秒
+; Input the time length, within the time_new period, the user joined the group is identified as the new user
+zh_cn = [DATA EXPUNGED]
+; Input True or False, meaning whether the Simplified Chinese mode is enabled
 
 [encrypt]
 password = [DATA EXPUNGED]
-; 加密文件所用的密码
+; Input the password used to encrypt files
 ```
 
 ---
 
-**附录：**开发备忘
+**Appendix: **Development Memorandum
 
-1. 发送新用户头像前，检查记录，查看是否有必要重复发送同一用户的头像
-2. 必要时，应添加对头像复查的功能
+1. Before sending the new user's avatar, check the logs and decide whether to repeat sending the avatar from the same user.
+2. Add the avatar review function if necessary.
 
-AVATAR 能够向 BACKUP、HIDE、NOSPAM、REGEX 发送数据
+AVATAR is able to sending data to BACKUP, HIDE, NOSPAM, and REGEX.
 
-情形 1：向 BACKUP 传送数据备份文件。每日 UTC 时间 20:00 。`exchange_text` 文本作为该文件的 `caption`
+Situation 1: Send data backup files to BACKUP at UTC 20:00 everyday. `exchange_text` is the `caption` of the file
 
 ```python
 exchange_text = format_data(
     sender="AVATAR",
     receviers=[
-        "BACKUP"
+       "BACKUP"
     ],
     action="backup",
     action_type="pickle",
@@ -97,13 +99,13 @@ exchange_text = format_data(
 )
 ```
 
-情形 2：向 BACKUP 汇报在线状态。每个小时的第 30 分钟：
+Situation 2: Report online status to BACKUP in 30th minute every hour
 
 ```python
 exchange_text = format_data(
     sender="AVATAR",
     receviers=[
-        "BACKUP"
+       "BACKUP"
     ],
     action="backup",
     action_type="status",
@@ -111,31 +113,31 @@ exchange_text = format_data(
 )
 ```
 
-情形 3：向 HIDE 回复版本号
+Situation 3: Reply the version information to HIDE
 
 ```python
 exchange_text = format_data(
     sender="AVATAR",
     receviers=[
-        "HIDE"
+       "HIDE"
     ],
     action="version",
     action_type="reply",
     data={
-        "admin_id": 12345678,
-        "message_id": 123,
-        "version": 0.0.1
+       "admin_id": 12345678,
+       "message_id": 123,
+       "version": 0.0.1
     }
 )
 ```
 
-情形 4：向 REGEX 更新规则使用计数文件，每日 UTC 时间 21:00 。`exchange_text` 文本作为该文件的 `caption`
+Situation 4: Update the counting file for regulation usage at UTC 21:00 everyday. `exchange_text` is the `caption` of the file
 
 ```python
 exchange_text = format_data(
     sender="AVATAR",
     receviers=[
-        "REGEX"
+       "REGEX"
     ],
     action="regex",
     action_type="count",
@@ -143,13 +145,13 @@ exchange_text = format_data(
 )
 ```
 
-特殊情形：向所有 bot 发送数据交换频道转移指令
+Special Case: Send transfer order of data exchange channel to all bots
 
 ```python
 exchange_text = format_data(
     sender="HIDE",
     receviers=[
-        "EMERGENCY"
+       "EMERGENCY"
     ],
     action="backup",
     action_type="hide",
