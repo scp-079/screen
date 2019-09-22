@@ -17,7 +17,7 @@ Follow our announcement channel to get updates:
 Learn more:
 
 - [Design Principles](/principles/)
-- [Project Classes](/classes/)
+- [Object Classes](/classes/)
 - [Data Exchange Method](/exchange/)
 - [Transparency](/transparency/)
 
