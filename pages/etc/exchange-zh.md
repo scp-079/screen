@@ -2,6 +2,10 @@
 title: SCP-079-EXCHANGE
 ---
 
+<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/exchange/';" class="en">Click Here to English Page</button>
+
+---
+
 <link rel="stylesheet" href="/css/chinese.css">
 
 **项目编号：**SCP-079-EXCHANGE

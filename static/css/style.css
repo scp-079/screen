@@ -83,6 +83,19 @@ blockquote {
     padding-left: 10px;
 }
 
+button {
+    margin: 1em auto;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    padding:5px 30px 5px 30px;
+}
+
+button:hover {
+    background-color: gray;
+}
+
 /* Header */
 
 header, nav {
@@ -213,21 +226,17 @@ footer {
 
 #totop {
     display: none;
-    margin: 1em auto;
-    outline: none;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    padding:5px 30px 5px 30px;
     font-size: 15px;
     font-family: "VT323", monospace;
 }
 
-#totop:hover {
-    background-color: gray;
-}
-
 /* Etc */
+
+.en {
+    display: block;
+    font-size: 15px;
+    font-family: "VT323", monospace;
+}
 
 .highlighter-rouge {
     color: rgba(255,255,255,0.4);
@@ -245,18 +254,8 @@ footer {
 
 .zh {
     display: block;
-    margin: 1em auto;
-    outline: none;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    padding: 5px 30px 5px 30px;
     font-size: 12px;
     font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp";
-}
-
-.zh:hover {
-    background-color: gray;
 }
 
 /* Firefox */
