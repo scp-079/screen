@@ -99,7 +99,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 2：向 BACKUP 汇报在线状态。每个小时的第 30 分钟：
+情形 2：向 BACKUP 汇报在线状态。每个小时的第 30 分钟
 
 ```python
 exchange_text = format_data(

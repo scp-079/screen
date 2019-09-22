@@ -6,15 +6,17 @@ title: SCP-079-AVATAR
 
 ---
 
-**Object Class: **Keter
+**Item #:** SCP-079-AVATAR
 
-**Special Containment Procedures: **SCP-079-AVATAR is recommended to operate in a Linux environment. The program is available for Python 3.6 and above. The required third-party modules are listed in the `requirements.txt`. It is important to note that the bot has to run incognito, which means that the true identity of the bot should be kept secret from everyone, except for the maintainer, otherwise it will likely affect the operation of other bots. The bot should be the administrator of the channel SCP-079-HIDE.
+**Object Class:** Keter
 
-**Description: **SCP-079-AVATAR is a user-bot for sending new joined users' avatar to NOSPAM for further analysis. The project is located in GitLab, mirrored and open sourced on <a href="https://github.com/scp-079/scp-079-avatar" target="_blank">GitHub</a>. The bot is presented as <a href="https://t.me/SCP_079_AVATAR_BOT" class="079" target="_blank">SCP-079-AVATAR</a>, but its real identity is hidden and does not accept any direct management. The project is taken charge of by ███. The bots based on this project have similar functions: sending new joined users' avatar to NPSPAM for further analysis, avoiding the spammers intentionally blocking NOSPAM from getting their avatar. For more details, please refer to the instructions in the appendix.
+**Special Containment Procedures:** SCP-079-AVATAR is recommended to operate in a Linux environment. The program is available for Python 3.6 and above. The required third-party modules are listed in the `requirements.txt`. It is important to note that the bot has to run incognito, which means that the true identity of the bot should be kept secret from everyone, except for the maintainer, otherwise it will likely affect the operation of other bots. The bot should be the administrator of the channel SCP-079-HIDE.
+
+**Description:** SCP-079-AVATAR is a user-bot for sending new joined users' avatar to NOSPAM for further analysis. The project is located in GitLab, mirrored and open sourced on <a href="https://github.com/scp-079/scp-079-avatar" target="_blank">GitHub</a>. The bot is presented as <a href="https://t.me/SCP_079_AVATAR_BOT" class="079" target="_blank">SCP-079-AVATAR</a>, but its real identity is hidden and does not accept any direct management. The project is taken charge of by ███. The bots based on this project have similar functions: sending new joined users' avatar to NPSPAM for further analysis, avoiding the spammers intentionally blocking NOSPAM from getting their avatar. For more details, please refer to the instructions in the appendix.
 
 ---
 
-**Appendix: **Operation instructions
+**Appendix:** Operation instructions
 
 For members in SCP-079-TEST:
 
@@ -22,7 +24,7 @@ For members in SCP-079-TEST:
 
 ---
 
-**Appendix: **Steps to create a bot on your own
+**Appendix:** Steps to create a bot on your own
 
 See the <a href="/how/">Self-built Manual</a> 
 
@@ -36,7 +38,7 @@ SCP-079-AVATAR shall be added to groups with a large number of members. The grou
 
 ---
 
-**Document #config.ini: **
+**Document #config.ini:**
 
 Modify the configuration file:
 
@@ -78,14 +80,14 @@ password = [DATA EXPUNGED]
 
 ---
 
-**Appendix: **Development Notes
+**Appendix:** Development Notes
 
 1. Before sending the new joined user's avatar, check the record to see if it is necessary to repeatedly send the avatar of the same user.
 2. If necessary, add the function of rechecking.
 
 AVATAR is allowed to send data to BACKUP, HIDE, NOSPAM, and REGEX.
 
-Scenario 1: Send backup files to BACKUP. Daily UTC time 20:00. `exchange_text` is the `caption` of the file:
+Scenario 1: Send backup files to BACKUP. Daily UTC time 20:00. `exchange_text` is the `caption` of the file
 
 ```python
 exchange_text = format_data(
@@ -99,7 +101,7 @@ exchange_text = format_data(
 )
 ```
 
-Scenario 2: Report online status to BACKUP. 30th minute of every hour:
+Scenario 2: Report online status to BACKUP. 30th minute of every hour
 
 ```python
 exchange_text = format_data(
@@ -131,7 +133,7 @@ exchange_text = format_data(
 )
 ```
 
-Scenario 4: Update the counting file for regulation usage. Daily UTC time 21:00. `exchange_text` is the `caption` of the file:
+Scenario 4: Update the counting file for regulation usage. Daily UTC time 21:00. `exchange_text` is the `caption` of the file
 
 ```python
 exchange_text = format_data(
