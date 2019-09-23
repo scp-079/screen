@@ -66,7 +66,7 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                 When action is clear:
                     bad - Clear bad channels, contents, or users
                     except - Clear exceptions for channels or contents
-                    score - Clear users' score
+                    user - Clear users' new joined status, score, or all data
                     watch - Clear suspicious user lists
 
                 When action is config:
@@ -182,6 +182,31 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                     
                     hide:
                         bool
+
+                Clear:
+                    bad:
+                        {
+                            "admin_id": 12345678,
+                            "type": "channels / contents / users"
+                        }
+                    
+                    except:
+                        {
+                            "admin_id": 12345678,
+                            "type": "channels / long / temp"
+                        }
+                  
+                    user:
+                        {
+                            "admin_id": 12345678,
+                            "type": "all / new / score"
+                        }
+                    
+                    watch:
+                        {
+                            "admin_id": 12345678,
+                            "type": "all / ban / delete"
+                        }
 
                 Config:
                     ask:
