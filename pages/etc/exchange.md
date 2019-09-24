@@ -12,7 +12,7 @@ title: SCP-079-EXCHANGE
 
 **Special Containment Procedures:** SCP-079-EXCHANGE should be set up as a private channel, turn on message signing (to ensure that the bots' unauthorized operations are also traceable), and give each bot the only permission: Post Messages.
 
-**Description:** SCP-079-EXCHANGE is a channel for data exchanging between bots. The meaning of the data sent by each robot can be seen in the section `Appendix: Development Notes` on the separate pages of each project. For the format of the `exchange_text`, please refer to the document `channel.py`.
+**Description:** SCP-079-EXCHANGE is a channel for data exchanging between bots. The meaning of the data sent by each robot can be seen in the section `Appendix: Development Notes` on the [separate pages of each project](/tools/). For the format of the `exchange_text`, please refer to the document `channel.py`.
 
 ---
 

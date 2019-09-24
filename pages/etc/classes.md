@@ -2,17 +2,19 @@
 title: Classes
 ---
 
-<link rel="stylesheet" href="/css/chinese.css">
+<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/classes-zh/';" class="zh">点此转至中文页面</button>
 
-# 项目等级说明
+---
 
-本页面介绍标示的项目等级所代表的意义。
+# Object Classes
+
+All projects and channels are assigned an Object Class. An Object Class is a part of the standard Project template and serves as a rough indicator for the extent to which these objects can be dangerous. In universe, Object Classes are for the purposes of identifying actual needs, development priority, security risks, and other considerations. A Project's Object Class is determined by a number of factors, but the most important factors are the threats to privacy and freedom of expression.
 
 ## Safe
 
-使用此项目的源代码创建的机器人实体，受到外来恶意影响而导致对他人产生侵害的可能性较小，源代码也不能够直接被应用在不当用途上。但服务托管者应注意，其仍可能会收到服务内部管理员的蓄意破坏。本项目会根据用户的功能请求，适当对功能做出调整和添加。
+Bot entities created using the source code of these projects are less likely to harm others due to external malicious influences, and the source code cannot be directly applied to improper use. However, the service custodian should be aware that it may still receive vandalism from the internal administrators of the service. These projects will adjust and add functions according to users' feature requests.
 
-开发中的 Safe 级项目：
+Safe projects:
 
 - [SCP-079-ANALYZE](/analyze/)
 - [SCP-079-APPEAL](/appeal/)
@@ -28,9 +30,9 @@ title: Classes
 
 ## Euclid
 
-在实际使用该项目源代码创建的实体机器人时，任何未经授权、或使用不当的行为，都会造成针对各机器人的全局的某种影响，故服务托管者应严格控制机器人所加入的群组，禁止恶意群组获得使用权限。本项目可以酌情根据来自用户的请求进行功能调整和添加。
+In the actual use of the bot entities created by the source code of these projects, any unauthorized or improper use will have a global impact on all bots, so the service custodian should strictly control the group to which the bots are joined. Malicious groups are prohibited from gaining access. These projects may adjust and add functions as appropriate based on requests from users.
 
-开发中的 Euclid 级项目：
+Euclid projects:
 
 - [SCP-079-CAPTCHA](/captcha/)
 - [SCP-079-CLEAN](/clean/)
@@ -45,18 +47,18 @@ title: Classes
 
 ## Keter
 
-公开的源代码可能会被他人恶意使用，用于实现某种不当目的。本项目不对任何项目外部人士恶意使用源代码进行其他活动的行为承担责任，也不接受来自任何用户的功能请求。
+The source code may be maliciously used by others for some improper purpose. These projects are not responsible for the malicious use of the source code for other activities by any outsider of the Project, nor does it accept functional requests from any users.
 
-开发中的 Keter 级项目：
+Keter projects：
 
 - [SCP-079-AVATAR](/avatar/)
 - [SCP-079-WATCH](/watch/)
 
 ## Thaumiel
 
-此等级项目由于某种原因为闭源项目，或与程序完全无关，其用于预防恶意事件发生或在项目遭受打击时使用。此类项目无法披露更多细节，它们的功能或细节只能为核心参与者所了解，对外只能公开相关代号。
+These project are closed source projects for some reason, or completely unrelated to the program. They are used to prevent malicious incidents or to be used when the project is attacked. Such projects cannot disclose more details, and their functions or details can only be understood by core participants, and only relevant project names can be disclosed to the public.
 
-目前已有的 Thaumiel 级项目：
+Thaumiel projects：
 
 - <a class="no" target="_blank">SCP-079-EMPTY</a>
 - <a class="no" target="_blank">SCP-079-ME</a>

@@ -2,11 +2,15 @@
 title: Transparency
 ---
 
+<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/transparency-zh/';" class="zh">点此转至中文页面</button>
+
+---
+
 # Transparency
 
 Shows groups or individuals who interact with the Project (other than [project administrators and developers](/team/)) to increase transparency.
 
-The information included in `Joined` field indicates the private channel name of the project.
+The information included in `Joined` field indicates the private channels' names.
 
 ## List of witnesses
 
