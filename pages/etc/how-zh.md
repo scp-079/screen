@@ -1,18 +1,20 @@
 ---
-title: Self Hosting Instractions
+title: Self Hosting Manual
 ---
 
-<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/how-zh/';" class="zh">点此转至中文页面</button>
+<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/how/';" class="en">Click Here to English Page</button>
 
 ---
 
-# Self Hosting Instractions
+<link rel="stylesheet" href="/css/chinese.css">
 
-This article takes SCP-079-PM as an example to show how to build your own SCP-079 series robot. The environment used in the article is Debian 10, Python 3.7.3, and the user name of the system is `scp`.
+# 自建说明书
 
-See also: [The Reason Why You Should Host Your Own Bots](/suggestion/)
+这篇文章以建立 SCP-079-PM 为例，用于介绍如何自建 SCP-079 系列机器人。文章所用环境为 Debian 10 ，Python 3.7.3 ，系统的用户名为 `scp` 。
 
-## Upgrade the System
+另见：[为什么你应该自行建立机器人](/suggestion-zh/)
+
+## 更新系统
 
 ```bash
 sudo apt update
@@ -20,61 +22,61 @@ sudo apt full-upgrade -y
 sudo apt autoremove -y
 ```
 
-## Install Dependencies
+## 安装依赖
 
 ```bash
 sudo apt install build-essential git python3-dev vim virtualenv -y
 ```
 
-## Other Dependencies
+## 其他依赖
 
-Some projects require installation of additional packages. Be sure to check the `Requirements` section of the documentation `README.md` in the project source code.
+有些项目需要额外安装其他软件包，请务必查阅项目源代码中的说明文件 `README.md` 的 `Requirements` 一节。
 
-## Create Virtual Environment
+## 创建虚拟环境
 
-Note: To use NOPORN, follow the commands given by its `README.md`.
+注意：如需使用 NOPORN，请根据其 `README.md` 所给出的命令操作。
 
 ```bash
 cd ~
 virtualenv -p python3 scp-079
 ```
 
-## Install modules
+## 环境配置
 
-Install the required packages via pip, also see the `Requirements` section of the documentation `README.md` in the project source code.
+通过 pip 安装所需要的包，也请查看项目源代码中的说明文件 `README.md` 的 `Requirements` 一节。
 
-## Clone
+## 克隆某个项目
 
-For example, use `SCP-079-PM` and clone according to the [Separate Instructions] (/pm/) of the project:
+例如，使用 `SCP-079-PM` ，根据项目中的[单独使用说明](/pm-zh/)克隆：
 
 ```bash
 git clone https://github.com/scp-079/scp-079-pm.git ~/scp-079/pm
 ```
 
-## Modify Configuration File
+## 更改配置文件
 
-Modify the project's `config.ini` file as needed:
+根据需要修改项目的 `config.ini` 文件：
 
 ```bash
 cp ~/scp-079/pm/config.ini.example ~/scp-079/pm/config.ini
 vim ~/scp-079/pm/config.ini
 ```
 
-The meaning of the parameters in the `config.ini` file can be viewed in the [Separate Instructions] (/pm/).
+`config.ini` 文件中参数代表的含义，可在[单独使用说明](/pm-zh/)中查看。
 
-## Set the systemd Service
+## 设置 systemd 服务
 
 ```bash
 mkdir -p ~/.config/systemd/user
 ```
 
-Create a new file:
+新建文件：
 
 ```bash
 vim ~/.config/systemd/user/pm.service
 ```
 
-Add the following:
+添加如下内容：
 
 ```bash
 [Unit]
@@ -90,20 +92,20 @@ Restart=on-abort
 WantedBy=default.target
 ```
 
-Enable and start the service:
+启用项目：
 
 ```bash
 systemctl --user enable pm
 systemctl --user start pm
 ```
 
-## Set a Scheduled Restart
+## 设置定时重启
 
 ```bash
 vim ~/.config/systemd/user/restart.service
 ```
 
-Add the following:
+添加如下内容：
 
 ```bash
 [Unit]
@@ -114,13 +116,13 @@ Type=oneshot
 ExecStart=/bin/bash /home/scp/scp-079/.schedule.sh
 ```
 
-Create a new file:
+继续新建文件：
 
 ```bash
 vim ~/.config/systemd/user/restart.timer
 ```
 
-Add the following:
+添加如下内容：
 
 ```bash
 [Unit]
@@ -133,13 +135,13 @@ OnCalendar=*-*-* 00:00:00
 WantedBy=timers.target
 ```
 
-Write a restart script:
+编写重启脚本：
 
 ```bash
 vim ~/scp-079/.schedule.sh
 ```
 
-Add the following:
+添加如下内容：
 
 ```bash
 #!/bin/bash
@@ -147,26 +149,26 @@ Add the following:
 systemctl --user restart pm
 ```
 
-Give execute permission:
+给予执行权限：
 
 ```bash
 chmod +x ~/scp-079/.schedule.sh
 ```
 
-Enable and start the service:
+启用服务：
 
 ```bash
 systemctl --user enable restart.timer
 systemctl --user start restart.timer
 ```
 
-## Set Convenient Commands
+## 设置便捷命令
 
 ```bash
 vim ~/.bash_aliases
 ```
 
-Add the following:
+添加如下内容：
 
 ```bash
 alias scp="deactivate"
@@ -181,13 +183,13 @@ alias stop="~/scp-079/.stop.sh"
 alias update="~/scp-079/.update.sh"
 ```
 
-Let it take effect:
+令其生效：
 
 ```bash
 source ~/.bash_aliases
 ```
 
-## Write a Script Corresponding to the Convenient Command
+## 编写便捷命令对应的脚本
 
 ### config
 
@@ -195,7 +197,7 @@ source ~/.bash_aliases
 vim ~/bots/scp-079/.config.sh
 ```
 
-Add the following:
+添加如下内容：
 
 ```bash
 #!/bin/bash
@@ -211,7 +213,7 @@ cd ~/scp-079/$bot
 vim config.ini
 ```
 
-Give execute permission:
+给予执行权限：
 
 ```bash
 chmod +x ~/scp-079/.config.sh
@@ -223,7 +225,7 @@ chmod +x ~/scp-079/.config.sh
 vim ~/bots/scp-079/.log.sh
 ```
 
-Add the following:
+添加如下内容：
 
 ```bash
 #!/bin/bash
@@ -239,7 +241,7 @@ cd ~/scp-079/$bot
 less log
 ```
 
-Give execute permission:
+给予执行权限：
 
 ```bash
 chmod +x ~/scp-079/.log.sh
@@ -251,7 +253,7 @@ chmod +x ~/scp-079/.log.sh
 vim ~/bots/scp-079/.restart.sh
 ```
 
-Add the following:
+添加如下内容：
 
 ```bash
 #!/bin/bash
@@ -265,7 +267,7 @@ fi
 systemctl --user kill -s SIGKILL $bot
 ```
 
-Give execute permission:
+给予执行权限：
 
 ```bash
 chmod +x ~/scp-079/.restart.sh
@@ -277,7 +279,7 @@ chmod +x ~/scp-079/.restart.sh
 vim ~/bots/scp-079/.start.sh
 ```
 
-Add the following:
+添加如下内容：
 
 ```bash
 #!/bin/bash
@@ -291,7 +293,7 @@ fi
 systemctl --user restart $bot
 ```
 
-Give execute permission:
+给予执行权限：
 
 ```bash
 chmod +x ~/scp-079/.start.sh
@@ -303,7 +305,7 @@ chmod +x ~/scp-079/.start.sh
 vim ~/bots/scp-079/.status.sh
 ```
 
-Add the following:
+添加如下内容：
 
 ```bash
 #!/bin/bash
@@ -317,7 +319,7 @@ fi
 systemctl --user status $bot
 ```
 
-Give execute permission:
+给予执行权限：
 
 ```bash
 chmod +x ~/scp-079/.status.sh
@@ -329,7 +331,7 @@ chmod +x ~/scp-079/.status.sh
 vim ~/bots/scp-079/.stop.sh
 ```
 
-Add the following:
+添加如下内容：
 
 ```bash
 #!/bin/bash
@@ -343,7 +345,7 @@ fi
 systemctl --user stop $bot
 ```
 
-Give execute permission:
+给予执行权限：
 
 ```bash
 chmod +x ~/scp-079/.stop.sh
@@ -355,7 +357,7 @@ chmod +x ~/scp-079/.stop.sh
 vim ~/bots/scp-079/.update.sh
 ```
 
-Add the following:
+添加如下内容：
 
 ```bash
 #!/bin/bash
@@ -379,51 +381,51 @@ systemctl --user restart $bot
 echo -e "\n\033[0;32mBot $bot Updated!\033[0m\n"
 ```
 
-Give execute permission:
+给予执行权限：
 
 ```bash
 chmod +x ~/scp-079/.update.sh
 ```
 
-## Convenient Command Usage
+## 便捷命令使用方法
 
-Configure the bot:
+配置机器人：
 
 ```bash
 config pm
 ```
 
-View the bot log:
+查看机器人日志：
 
 ```bash
 log pm
 ```
 
-Force the bot to restart:
+强制重启机器人：
 
 ```bash
 restart pm
 ```
 
-Restart the bot:
+重启机器人：
 
 ```bash
 start pm
 ```
 
-Stop the bot:
+停止机器人：
 
 ```bash
 stop pm
 ```
 
-View the bot service status:
+查看机器人服务状态：
 
 ```bash
 status pm
 ```
 
-Update the bot:
+## 更新机器人
 
 ```bash
 update pm
