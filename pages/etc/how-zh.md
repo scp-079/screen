@@ -12,7 +12,7 @@ title: Self Hosting Manual
 
 这篇文章以建立 SCP-079-PM 为例，用于介绍如何自建 SCP-079 系列机器人。文章所用环境为 Debian 10 ，Python 3.7.3 ，系统的用户名为 `scp` 。
 
-另见：[为什么你应该自行建立机器人](/suggestion-zh/)
+另见：[为什么你应该自行建立机器人](/suggestions-zh/)
 
 ## 更新系统
 

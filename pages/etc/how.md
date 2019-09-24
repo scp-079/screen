@@ -10,7 +10,7 @@ title: Self Hosting Instractions
 
 This article takes SCP-079-PM as an example to show how to build your own SCP-079 series robot. The environment used in the article is Debian 10, Python 3.7.3, and the user name of the system is `scp`.
 
-See also: [The Reason Why You Should Host Your Own Bots](/suggestion/)
+See also: [The Reason Why You Should Host Your Own Bots](/suggestions/)
 
 ## Upgrade the System
 
