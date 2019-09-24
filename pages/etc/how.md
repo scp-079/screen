@@ -8,7 +8,7 @@ title: Self Hosting Manual
 
 这篇文章以建立 SCP-079-PM 为例，用于介绍如何自建 SCP-079 系列机器人。文章所用环境为 Debian 10 ，Python 3.7.3 ，系统的用户名为 `scp` 。
 
-另见：[为什么你应该自行建立机器人](/reasons/)
+另见：[为什么你应该自行建立机器人](/reasons-zh/)
 
 ## 更新系统
 
@@ -43,7 +43,7 @@ virtualenv -p python3 scp-079
 
 ## 克隆某个项目
 
-例如，使用 `SCP-079-PM` ，根据项目中的[单独使用说明](/pm/)克隆：
+例如，使用 `SCP-079-PM` ，根据项目中的[单独使用说明](/pm-zh/)克隆：
 
 ```bash
 git clone https://github.com/scp-079/scp-079-pm.git ~/scp-079/pm
@@ -58,7 +58,7 @@ cp ~/scp-079/pm/config.ini.example ~/scp-079/pm/config.ini
 vim ~/scp-079/pm/config.ini
 ```
 
-`config.ini` 文件中参数代表的含义，可在[单独使用说明](/pm/)中查看。
+`config.ini` 文件中参数代表的含义，可在[单独使用说明](/pm-zh/)中查看。
 
 ## 设置 systemd 服务
 

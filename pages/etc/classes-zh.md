@@ -18,17 +18,17 @@ title: Classes
 
 开发中的 Safe 级项目：
 
-- [SCP-079-ANALYZE](/analyze/)
-- [SCP-079-APPEAL](/appeal/)
-- [SCP-079-APPLY](/apply/)
-- [SCP-079-BACKUP](/backup/)
-- [SCP-079-CONFIG](/config/)
-- [SCP-079-HIDE](/hide/)
-- [SCP-079-MANAGE](/manage/)
-- [SCP-079-MIRROR](/mirror/)
-- [SCP-079-PM](/pm/)
-- [SCP-079-REGEX](/regex/)
-- [SCP-079-TIP](/tip/)
+- [SCP-079-ANALYZE](/analyze-zh/)
+- [SCP-079-APPEAL](/appeal-zh/)
+- [SCP-079-APPLY](/apply-zh/)
+- [SCP-079-BACKUP](/backup-zh/)
+- [SCP-079-CONFIG](/config-zh/)
+- [SCP-079-HIDE](/hide-zh/)
+- [SCP-079-MANAGE](/manage-zh/)
+- [SCP-079-MIRROR](/mirror-zh/)
+- [SCP-079-PM](/pm-zh/)
+- [SCP-079-REGEX](/regex-zh/)
+- [SCP-079-TIP](/tip-zh/)
 
 ## Euclid
 
@@ -36,16 +36,16 @@ title: Classes
 
 开发中的 Euclid 级项目：
 
-- [SCP-079-CAPTCHA](/captcha/)
-- [SCP-079-CLEAN](/clean/)
-- [SCP-079-LANG](/lang/)
-- [SCP-079-LONG](/long/)
-- [SCP-079-NOFLOOD](/noflood/)
-- [SCP-079-NOPORN](/noporn/)
-- [SCP-079-NOSPAM](/nospam/)
-- [SCP-079-RECHECK](/recheck/)
-- [SCP-079-USER](/user/)
-- [SCP-079-WARN](/warn/)
+- [SCP-079-CAPTCHA](/captcha-zh/)
+- [SCP-079-CLEAN](/clean-zh/)
+- [SCP-079-LANG](/lang-zh/)
+- [SCP-079-LONG](/long-zh/)
+- [SCP-079-NOFLOOD](/noflood-zh/)
+- [SCP-079-NOPORN](/noporn-zh/)
+- [SCP-079-NOSPAM](/nospam-zh/)
+- [SCP-079-RECHECK](/recheck-zh/)
+- [SCP-079-USER](/user-zh/)
+- [SCP-079-WARN](/warn-zh/)
 
 ## Keter
 
@@ -53,8 +53,8 @@ title: Classes
 
 开发中的 Keter 级项目：
 
-- [SCP-079-AVATAR](/avatar/)
-- [SCP-079-WATCH](/watch/)
+- [SCP-079-AVATAR](/avatar-zh/)
+- [SCP-079-WATCH](/watch-zh/)
 
 ## Thaumiel
 
