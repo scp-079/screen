@@ -30,7 +30,7 @@ Safe projects:
 
 ## Euclid
 
-In the actual use of the bot entities created by the source code of these projects, any unauthorized or improper use will have a global impact on all bots, so the service custodian should strictly control the group to which the bots are joined. Malicious groups are prohibited from gaining access. These projects may adjust and add functions as appropriate based on requests from users.
+In the actual use of the bot entities created by the source code of these projects, any unauthorized or improper use will have a global impact on all bots, so the service custodian should strictly control the groups to which the bots are joined. Malicious groups are prohibited from gaining access. These projects may adjust and add functions as appropriate based on requests from users.
 
 Euclid projects:
 
@@ -47,7 +47,7 @@ Euclid projects:
 
 ## Keter
 
-The source code may be maliciously used by others for some improper purpose. These projects are not responsible for the malicious use of the source code for other activities by any outsider of the Project, nor does it accept functional requests from any users.
+The source code may be maliciously used by others for some improper purpose. These projects are not responsible for the malicious use of the source code for other activities by any outsiders of the Project, nor does it accept functional requests from any users.
 
 Keter projects：
 
@@ -56,7 +56,7 @@ Keter projects：
 
 ## Thaumiel
 
-These project are closed source projects for some reason, or completely unrelated to the program. They are used to prevent malicious incidents or to be used when the project is attacked. Such projects cannot disclose more details, and their functions or details can only be understood by core participants, and only relevant project names can be disclosed to the public.
+These projects are closed source projects for some reason, or completely unrelated to the program. They are used to prevent malicious incidents or to be used when the project is attacked. Such projects cannot disclose more details, and their functions or details can only be known by core participants, and only relevant project names can be disclosed to the public.
 
 Thaumiel projects：
 
