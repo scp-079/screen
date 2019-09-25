@@ -1,11 +1,11 @@
-image: haskell:latest
+image: haskell:8.6.3
 
 before_script:
   - rm -rf /root/.cabal || true
   - tar -xzf cabal.tar.gz -C / || true
   - cabal --version
-  - cabal update
-  - cabal build
+  - cabal new-update
+  - cabal new-build
 
 after_script:
   - tar -czf cabal.tar.gz /root/.cabal || true
@@ -19,7 +19,7 @@ cache:
 pages:
   stage: deploy
   script:
-    - cabal exec site build
+    - cabal new-exec site build
   artifacts:
     paths:
       - public
