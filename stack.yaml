@@ -1,4 +1,4 @@
-resolver: lts-13.29
+resolver: lts-14.7
 
 packages:
   - '.'
@@ -6,9 +6,3 @@ packages:
 extra-deps:
 - 'hakyll-4.13.0.1'
 - 'lrucache-1.2.0.1'
-- 'pandoc-2.7.3'
-- 'cmark-gfm-0.2.0'
-- 'hslua-module-system-0.2.1'
-- 'ipynb-0.1'
-- 'skylighting-0.8.2'
-- 'skylighting-core-0.8.2'
