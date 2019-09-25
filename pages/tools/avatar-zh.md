@@ -68,7 +68,7 @@ hide_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
 
 [custom]
-back = [DATA EXPUNGED]
+backup = [DATA EXPUNGED]
 ; 此处填写 True 或 False，代表程序是否为备份副本
 reset_day = [DATA EXPUNGED]
 ; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一

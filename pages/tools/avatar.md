@@ -66,7 +66,7 @@ hide_channel_id = [DATA EXPUNGED]
 ; Fill in the ID of the data exchange backup channel SCP-079-HIDE
 
 [custom]
-back = [DATA EXPUNGED]
+backup = [DATA EXPUNGED]
 ; Fill in True or False here to indicate whether the program is a backup copy
 reset_day = [DATA EXPUNGED]
 ; Fill in the date of resetting data, for example 1st mon, representing the first Monday of every month
