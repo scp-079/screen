@@ -6,4 +6,5 @@ packages:
 - '.'
 extra-deps:
 - hakyll-4.13.0.1
+- lrucache-1.2.0.1
 resolver: lts-13.14
