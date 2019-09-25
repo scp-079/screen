@@ -1,5 +1,5 @@
 ---
-title: Self Hosting Manual
+title: Self Hosting Instructions
 ---
 
 <button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/how/';" class="en">Click Here to English Page</button>

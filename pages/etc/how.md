@@ -1,12 +1,12 @@
 ---
-title: Self Hosting Instractions
+title: Self Hosting Instructions
 ---
 
 <button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/how-zh/';" class="zh">点此转至中文页面</button>
 
 ---
 
-# Self Hosting Instractions
+# Self Hosting Instructions
 
 This article takes SCP-079-PM as an example to show how to build your own SCP-079 series robot. The environment used in the article is Debian 10, Python 3.7.3, and the user name of the system is `scp`.
 

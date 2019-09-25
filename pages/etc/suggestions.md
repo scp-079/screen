@@ -12,9 +12,9 @@ title: Suggestions
 
 ## Group bots
 
-A bot with `Ban users` permission can: Kick off all members of the group when you are not paying attention.
+A bot with the `Ban users` permission can: Kick off all members of the group when you are not paying attention.
 
-A bot with `Delete messages` permission can: delete all messages in the group when you are not paying attention.
+A bot with the `Delete messages` permission can: delete all messages in the group when you are not paying attention.
 
 For security reasons, you should not use any group management bots that are not yours, or even you should not use the public demo services hosted by us. With third-party bots, in addition to possible damage to group members and messages, internal rules or models that the bot cannot be completely transparent to public can be suspected of misconduct. You should be aware that even if the bot's owner open the source code, it does not mean that the public service it is hosting is running this code, which means that its bot is entirely likely to have additional behaviors.
 
