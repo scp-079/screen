@@ -425,7 +425,7 @@ stop pm
 status pm
 ```
 
-## 更新机器人
+更新机器人
 
 ```bash
 update pm

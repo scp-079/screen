@@ -10,7 +10,7 @@ title: Suggestions
 
 ## Use Public Services with Care
 
-## Group bots
+### Group bots
 
 A bot with the `Ban users` permission can: Kick off all members of the group when you are not paying attention.
 

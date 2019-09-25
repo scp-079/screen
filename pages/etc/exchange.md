@@ -185,7 +185,7 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                     bad:
                         {
                             "admin_id": 12345678,
-                            "type": "channels / contents / users"
+                            "type": "channels / contacts / contents / users"
                         }
                     
                     except:
@@ -193,7 +193,7 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                             "admin_id": 12345678,
                             "type": "channels / long / temp"
                         }
-                  
+                    
                     user:
                         {
                             "admin_id": 12345678,

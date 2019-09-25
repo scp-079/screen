@@ -28,7 +28,7 @@ SCP-079-TEST 中的成员：
 
 **附录：**自建机器人的方法
 
-可先查看<a href="/how/">自建说明书</a>
+可先查看<a href="/how-zh/">自建说明书</a>
 
 克隆项目：
 
@@ -68,6 +68,8 @@ hide_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
 
 [custom]
+back = [DATA EXPUNGED]
+; 此处填写 True 或 False，代表程序是否为备份副本
 reset_day = [DATA EXPUNGED]
 ; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
 time_new = [DATA EXPUNGED]
@@ -103,7 +105,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 2：向 BACKUP 汇报在线状态。每个小时的第 30 分钟
+情形 2：向 BACKUP 汇报上线状态。每次程序启动时
 
 ```python
 exchange_text = format_data(
@@ -113,11 +115,31 @@ exchange_text = format_data(
     ],
     action="backup",
     action_type="status",
-    data="awake"
+    data={
+        "type": "online",
+        "backup": false
+    }
 )
 ```
 
-情形 3：向 HIDE 回复版本号
+情形 3：向 BACKUP 汇报在线状态。每个小时的第 30 分钟
+
+```python
+exchange_text = format_data(
+    sender="AVATAR",
+    receviers=[
+        "BACKUP"
+    ],
+    action="backup",
+    action_type="status",
+    data={
+        "type": "awake",
+        "backup": false
+    }
+)
+```
+
+情形 4：向 HIDE 回复版本号
 
 ```python
 exchange_text = format_data(
@@ -135,7 +157,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 4：向 REGEX 更新规则使用情况的计数文件，每日 UTC 时间 21:00 。`exchange_text` 文本作为该文件的 `caption`
+情形 5：向 REGEX 更新规则使用情况的计数文件，每日 UTC 时间 21:00 。`exchange_text` 文本作为该文件的 `caption`
 
 ```python
 exchange_text = format_data(

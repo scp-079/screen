@@ -66,6 +66,8 @@ hide_channel_id = [DATA EXPUNGED]
 ; Fill in the ID of the data exchange backup channel SCP-079-HIDE
 
 [custom]
+back = [DATA EXPUNGED]
+; Fill in True or False here to indicate whether the program is a backup copy
 reset_day = [DATA EXPUNGED]
 ; Fill in the date of resetting data, for example 1st mon, representing the first Monday of every month
 time_new = [DATA EXPUNGED]
@@ -101,21 +103,41 @@ exchange_text = format_data(
 )
 ```
 
-Scenario 2: Report online status to BACKUP. 30th minute of every hour
+Scenario 2: Report the online status to BACKUP. Every time the program starts
 
 ```python
 exchange_text = format_data(
     sender="AVATAR",
     receviers=[
-       "BACKUP"
+        "BACKUP"
     ],
     action="backup",
     action_type="status",
-    data="awake"
+    data={
+        "type": "online",
+        "backup": false
+    }
 )
 ```
 
-Scenario 3: Reply to HIDE with version number
+Scenario 3: Report online status to BACKUP. 30th minute of every hour
+
+```python
+exchange_text = format_data(
+    sender="AVATAR",
+    receviers=[
+        "BACKUP"
+    ],
+    action="backup",
+    action_type="status",
+    data={
+        "type": "awake",
+        "backup": false
+    }
+)
+```
+
+Scenario 4: Reply to HIDE with version number
 
 ```python
 exchange_text = format_data(
@@ -133,7 +155,7 @@ exchange_text = format_data(
 )
 ```
 
-Scenario 4: Update the counting file for regulation usage. Daily UTC time 21:00. `exchange_text` is the `caption` of the file
+Scenario 5: Update the counting file for regulation usage. Daily UTC time 21:00. `exchange_text` is the `caption` of the file
 
 ```python
 exchange_text = format_data(
