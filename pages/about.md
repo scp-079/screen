@@ -18,10 +18,10 @@ Learn more:
 
 - [Design Principles](/principles/)
 - [Object Classes](/classes/)
-- [Data Exchange Method](/exchange/)
 - [Transparency](/transparency/)
 - [Suggestions](/suggestions/)
 - [Self Hosting Instructions](/how/)
+- [Data Exchange Method](/exchange/)
 
 All bots are hosted on ████████. 
 IP address is <a href="http://www.scp-wiki.net/scp-614" target="_blank">57.32.███.███</a>.

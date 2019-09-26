@@ -194,7 +194,7 @@ source ~/.bash_aliases
 ### config
 
 ```bash
-vim ~/bots/scp-079/.config.sh
+vim ~/scp-079/.config.sh
 ```
 
 添加如下内容：
@@ -202,7 +202,7 @@ vim ~/bots/scp-079/.config.sh
 ```bash
 #!/bin/bash
 
-if [ $# -eq 1 ];then
+if [ $# -eq 1 ]; then
 	bot=$1
 else
 	read -p "Choose a bot: " bot
@@ -222,7 +222,7 @@ chmod +x ~/scp-079/.config.sh
 ### log
 
 ```bash
-vim ~/bots/scp-079/.log.sh
+vim ~/scp-079/.log.sh
 ```
 
 添加如下内容：
@@ -230,7 +230,7 @@ vim ~/bots/scp-079/.log.sh
 ```bash
 #!/bin/bash
 
-if [ $# -eq 1 ];then
+if [ $# -eq 1 ]; then
 	bot=$1
 else
 	read -p "Choose a bot: " bot
@@ -250,7 +250,7 @@ chmod +x ~/scp-079/.log.sh
 ### restart
 
 ```bash
-vim ~/bots/scp-079/.restart.sh
+vim ~/scp-079/.restart.sh
 ```
 
 添加如下内容：
@@ -258,7 +258,7 @@ vim ~/bots/scp-079/.restart.sh
 ```bash
 #!/bin/bash
 
-if [ $# -eq 1 ];then
+if [ $# -eq 1 ]; then
 	bot=$1
 else
 	read -p "Choose a bot: " bot
@@ -276,7 +276,7 @@ chmod +x ~/scp-079/.restart.sh
 ### start
 
 ```bash
-vim ~/bots/scp-079/.start.sh
+vim ~/scp-079/.start.sh
 ```
 
 添加如下内容：
@@ -284,7 +284,7 @@ vim ~/bots/scp-079/.start.sh
 ```bash
 #!/bin/bash
 
-if [ $# -eq 1 ];then
+if [ $# -eq 1 ]; then
 	bot=$1
 else
 	read -p "Choose a bot: " bot
@@ -302,7 +302,7 @@ chmod +x ~/scp-079/.start.sh
 ### status
 
 ```bash
-vim ~/bots/scp-079/.status.sh
+vim ~/scp-079/.status.sh
 ```
 
 添加如下内容：
@@ -310,7 +310,7 @@ vim ~/bots/scp-079/.status.sh
 ```bash
 #!/bin/bash
 
-if [ $# -eq 1 ];then
+if [ $# -eq 1 ]; then
 	bot=$1
 else
 	read -p "Choose a bot: " bot
@@ -328,7 +328,7 @@ chmod +x ~/scp-079/.status.sh
 ### stop
 
 ```bash
-vim ~/bots/scp-079/.stop.sh
+vim ~/scp-079/.stop.sh
 ```
 
 添加如下内容：
@@ -336,7 +336,7 @@ vim ~/bots/scp-079/.stop.sh
 ```bash
 #!/bin/bash
 
-if [ $# -eq 1 ];then
+if [ $# -eq 1 ]; then
 	bot=$1
 else
 	read -p "Choose a bot: " bot
@@ -354,7 +354,7 @@ chmod +x ~/scp-079/.stop.sh
 ### update
 
 ```bash
-vim ~/bots/scp-079/.update.sh
+vim ~/scp-079/.update.sh
 ```
 
 添加如下内容：
@@ -364,7 +364,7 @@ vim ~/bots/scp-079/.update.sh
 
 echo -e "\n\033[0;32mUpdating the bot...\033[0m\n"
 
-if [ $# -eq 1 ];then
+if [ $# -eq 1 ]; then
 	bot=$1
 else
 	read -p "Choose a bot: " bot
