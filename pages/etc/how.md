@@ -8,7 +8,7 @@ title: Self Hosting Instructions
 
 # Self Hosting Instructions
 
-This article takes SCP-079-PM as an example to show how to build your own SCP-079 series robot. The environment used in the article is Debian 10, Python 3.7.3, and the user name of the system is `scp`.
+This article takes SCP-079-PM as an example to show how to build your own SCP-079 series bots. The environment used in the article is Debian 10, Python 3.7.3, and the user name of the system is `scp`.
 
 See also: [The Reason Why You Should Host Your Own Bots](/suggestions/)
 
@@ -45,7 +45,7 @@ Install the required packages via pip, also see the `Requirements` section of th
 
 ## Clone
 
-For example, use `SCP-079-PM` and clone according to the [Separate Instructions] (/pm/) of the project:
+For example, use `SCP-079-PM` and clone according to the [Separate Instructions](/pm/) of the project:
 
 ```bash
 git clone https://github.com/scp-079/scp-079-pm.git ~/scp-079/pm
@@ -60,7 +60,7 @@ cp ~/scp-079/pm/config.ini.example ~/scp-079/pm/config.ini
 vim ~/scp-079/pm/config.ini
 ```
 
-The meaning of the parameters in the `config.ini` file can be viewed in the [Separate Instructions] (/pm/).
+The meaning of the parameters in the `config.ini` file can be viewed in the [Separate Instructions](/pm/).
 
 ## Set the systemd Service
 
