@@ -376,7 +376,7 @@ pip install -r requirements.txt
 deactivate
 systemctl --user restart $bot
 
-echo -e "\n\033[0;32mBot $bot Updated!\033[0m\n"
+echo -e "\n\033[0;32mBot ${bot^^} Updated!\033[0m\n"
 ```
 
 Give execute permission:
