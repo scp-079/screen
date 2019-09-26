@@ -33,7 +33,7 @@ SCP-079-TEST 中的成员：
 克隆项目：
 
 ```bash
-git clone https://github.com/scp-079/scp-079-avatar.git ~/bots/scp-079/avatar
+git clone https://github.com/scp-079/scp-079-avatar.git ~/scp-079/avatar
 ```
 
 SCP-079-AVATAR 应加入成员人数较多的群组，其加入的群组只可以为 SCP-079-NOSPAM 机器人所在的群组，但不可加入 SCP-079-NOSPAM 所在的全部群组

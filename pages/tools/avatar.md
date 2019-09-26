@@ -31,7 +31,7 @@ See the <a href="/how/">Self-built Manual</a>
 Clone Project:
 
 ```bash
-git clone https://github.com/scp-079/scp-079-avatar.git ~/bots/scp-079/avatar
+git clone https://github.com/scp-079/scp-079-avatar.git ~/scp-079/avatar
 ```
 
 SCP-079-AVATAR shall be added to groups with a large number of members. The groups it added to may only be the groups that include SCP-079-NOSPAM bot, but not all the groups where SCP-079-NOSPAM is located.
