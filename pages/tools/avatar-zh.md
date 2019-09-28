@@ -14,7 +14,7 @@ title: SCP-079-AVATAR
 
 **特殊收容措施：**SCP-079-AVATAR 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-AVATAR 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。务必要注意，其机器人的真实身份应对所有人保持隐秘（除维护该机器人的人员以外的所有人士），否则将可能给其他机器人的工作带来影响。该机器人应该作为频道 SCP-079-HIDE 的管理员。
 
-**描述：**SCP-079-AVATAR 是一个用于将新入群用户头像发至 NOSPAM 进行分析的机器人（user-bot），其项目位于 GitLab ，镜像同步并准备（尚未）开源于 <a href="https://github.com/scp-079/scp-079-avatar" target="_blank">GitHub</a> 。机器人的展示身份位于 <a href="https://t.me/SCP_079_AVATAR_BOT" class="079" target="_blank">SCP-079-AVATAR</a> ，真实身份为隐藏状态，且并不接受任何直接管理。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：发送新用户的头像数据至 NOSPAM，供其进行分析，避免 spammer 有意屏蔽 NOSPAM 使其无法获取头像。具体操作详见附录中的使用说明。
+**描述：**SCP-079-AVATAR 是一个用于将新入群用户头像发至 NOSPAM 进行分析的机器人（user-bot），其项目位于 GitLab ，镜像同步并开源于 <a href="https://github.com/scp-079/scp-079-avatar" target="_blank">GitHub</a> 。机器人的展示身份位于 <a href="https://t.me/SCP_079_AVATAR_BOT" class="079" target="_blank">SCP-079-AVATAR</a> ，真实身份为隐藏状态，且并不接受任何直接管理。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：发送新用户的头像数据至 NOSPAM，供其进行分析，避免 spammer 有意屏蔽 NOSPAM 使其无法获取头像。具体操作详见附录中的使用说明。
 
 ---
 
@@ -70,7 +70,7 @@ hide_channel_id = [DATA EXPUNGED]
 [custom]
 backup = [DATA EXPUNGED]
 ; 此处填写 True 或 False，代表程序是否为备份副本
-reset_day = [DATA EXPUNGED]
+date_reset = [DATA EXPUNGED]
 ; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
 time_new = [DATA EXPUNGED]
 ; 此处填写整数 n，用户入群后的 n 秒内均认为该用户为新用户

@@ -39,8 +39,8 @@ title: SCP-079-WARN
 
 - `/config_warn show`：显示当前设置
 - `/config_warn default`：恢复为默认设置
-- `/config_user delete off`：关闭协助删除功能
-- `/config_user delete on`：开启协助删除功能（默认设置） 
+- `/config_warn delete off`：关闭协助删除功能
+- `/config_warn delete on`：开启协助删除功能（默认设置） 
 - `/config_warn limit 5`：设置警告上限，上限应介于 2 和 5 之间，默认为 3
 - `/config_warn mention off`：关闭呼叫管理功能
 - `/config_warn mention on`：打开呼叫管理功能（默认设置） 

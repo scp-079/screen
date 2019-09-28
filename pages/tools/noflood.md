@@ -24,6 +24,8 @@ title: SCP-079-NOFLOOD
 
 - `/config_noflood show`：显示当前设置
 - `/config_noflood default`：恢复为默认设置
+- `/config_noflood delete off`：关闭协助删除功能（默认设置） 
+- `/config_noflood delete on`：开启协助删除功能
 - `/config_noflood limit [number]`：设置消息条数上限，取值范围为 2 到 20 的整数，默认为 5
 - `/config_noflood time [number]`：设置检测消息的时间段，取值范围为 5 到 60 的 5 的整倍数，默认为 10
 
@@ -198,11 +200,13 @@ exchange_text = format_data(
         "config": {
             "default": False,
             "lock": 1512345678,
+            "delete": True,
             "limit": 10,
             "time": 60
         },
         "default": {
             "default": True,
+            "delete": False,
             "lock": 0,
             "limit": 5,
             "time": 10

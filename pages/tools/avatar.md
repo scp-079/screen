@@ -26,7 +26,7 @@ For members in SCP-079-TEST:
 
 **Appendix:** Steps to create a bot on your own
 
-See the <a href="/how/">Self-built Manual</a> 
+See the <a href="/how/">Self Hosting Instructions</a> 
 
 Clone Project:
 
@@ -68,7 +68,7 @@ hide_channel_id = [DATA EXPUNGED]
 [custom]
 backup = [DATA EXPUNGED]
 ; Fill in True or False here to indicate whether the program is a backup copy
-reset_day = [DATA EXPUNGED]
+date_reset = [DATA EXPUNGED]
 ; Fill in the date of resetting data, for example 1st mon, representing the first Monday of every month
 time_new = [DATA EXPUNGED]
 ; Fill in a integer N here, and the user is considered to be a new user within N seconds after the user joined the group

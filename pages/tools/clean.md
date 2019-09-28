@@ -10,7 +10,7 @@ title: SCP-079-CLEAN
 
 **特殊收容措施：**SCP-079-CLEAN 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-CLEAN 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。务必要注意，其只能通过 SCP-079-USER 邀请入群，并由其赋予管理权限，如果有任何未授权的恶意使用，将可能给其他机器人的工作带来影响。其应该作为频道 SCP-079-CRITICAL 、频道 SCP-079-EXCHANGE 、频道 SCP-079-HIDE 的管理员，并加入 SCP-079-TEST 群组。
 
-**描述：**SCP-079-CLEAN 是一个用于过滤特定类型消息的机器人，其项目位于 GitLab ，镜像同步并准备（尚未）开源于 <a href="https://github.com/scp-079/scp-079-clean" target="_blank">GitHub</a> 。机器人本体位于 <a href="https://t.me/SCP_079_CLEAN_BOT" class="079" target="_blank">SCP-079-CLEAN</a> ，仅供经过授权的群组使用，并由群组 SCP-079-MANAGE 中的成员对其进群、退群操作进行管理。其加入了 SCP-079-TEST ，用于测试基本功能的使用。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：根据管理员设置，删除某类型的消息，并对部分类型消息进行评分记录，定时删除贴纸，定时清理无效成员，群员自助删除自身所发全部消息。具体操作详见附录中的使用说明。
+**描述：**SCP-079-CLEAN 是一个用于过滤特定类型消息的机器人，其项目位于 GitLab ，镜像同步并开源于 <a href="https://github.com/scp-079/scp-079-clean" target="_blank">GitHub</a> 。机器人本体位于 <a href="https://t.me/SCP_079_CLEAN_BOT" class="079" target="_blank">SCP-079-CLEAN</a> ，仅供经过授权的群组使用，并由群组 SCP-079-MANAGE 中的成员对其进群、退群操作进行管理。其加入了 SCP-079-TEST ，用于测试基本功能的使用。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：根据管理员设置，删除某类型的消息，并对部分类型消息进行评分记录，定时删除贴纸，定时清理无效成员，群员自助删除自身所发全部消息。具体操作详见附录中的使用说明。
 
 ---
 
@@ -27,6 +27,8 @@ title: SCP-079-CLEAN
 
 - `/config_clean show`：显示当前设置
 - `/config_clean default`：恢复为默认设置
+- `/config_clean delete off`：关闭协助删除功能
+- `/config_clean delete on`：开启协助删除功能（默认设置） 
 
 忽略或过滤某种消息、关闭或开启某种功能：
 
@@ -53,7 +55,7 @@ title: SCP-079-CLEAN
 - `exe`：可执行文件，例如 APK、BAT、CMD、COM、EXE、PIF、SCR、VBS 文件
 - `iml`：即时通讯软件的邀请链接或联系方式
 - `sho`：短链接
-- `tgl`：TG 链接，包括带 Telegram 域名的链接和 `@mention`，只过滤非当前群组 `username` 的 `@mention` 、不在群组中（或 `restricted`）的用户 `@mention`
+- `tgl`：TG 链接，包括带 Telegram 域名的链接和 `@mention`，只过滤非当前群组 `username` 的 `@mention` 、不在群组中的用户 `@mention`
 - `tgp`：TG 代理
 - `qrc`：二维码
 - `sde`：群员可否自助删除自己所发所有消息
@@ -73,12 +75,12 @@ SCP-079-TEST 中的成员：
 
 **附录：**自建机器人的方法
 
-可先查看<a href="/how/">自建说明书</a>
+可先查看<a href="/how-zh/">自建说明书</a>
 
 克隆项目：
 
 ```bash
-git clone https://github.com/scp-079/scp-079-clean.git ~/bots/scp-079/clean
+git clone https://github.com/scp-079/scp-079-clean.git ~/scp-079/clean
 ```
 
 ---
@@ -157,20 +159,22 @@ test_group_id = [DATA EXPUNGED]
 [custom]
 default_group_link = [DATA EXPUNGED]
 ; 此处填写调试信息中默认的群组链接
+date_reset = [DATA EXPUNGED]
+; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
 image_size = [DATA EXPUNGED]
 ; 分析图片文档的最大大小，超过此大小则不通过下载原文件进行二维码，单位为 B
 project_link = [DATA EXPUNGED]
 ; 此处填写项目网址
 project_name = [DATA EXPUNGED]
 ; 此处填写项目名称
-punish_time = [DATA EXPUNGED]
-; 惩罚用户的时间，期间用户发送的所有消息将被删除，并且，在此期间内若其发送消息将重新计时
-reset_day = [DATA EXPUNGED]
-; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
 time_ban = [DATA EXPUNGED]
 ; 建议追踪封禁状态维持的时间，单位为秒
+time_punish = [DATA EXPUNGED]
+; 惩罚用户的时间，期间用户发送的所有消息将被删除，并且，在此期间内若其发送消息将重新计时
 time_sticker = [DATA EXPUNGED]
 ; 定时删除贴纸、动图所需的延迟时间，单位为秒
+zh_cn = [DATA EXPUNGED]
+; 此处填写 True 或 False，代表程序是否启用简体中文模式
 
 [encrypt]
 key = [DATA EXPUNGED]
@@ -202,7 +206,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 2：向 BACKUP 汇报在线状态。每个小时的第 30 分钟
+情形 2：向 BACKUP 汇报上线状态。每次程序启动时
 
 ```python
 exchange_text = format_data(
@@ -212,11 +216,31 @@ exchange_text = format_data(
     ],
     action="backup",
     action_type="status",
-    data="awake"
+    data={
+        "type": "online",
+        "backup": false
+    }
 )
 ```
 
-情形 3：向 CONFIG 询问。由于群管理在群组中发送 `/config clean` 命令，故 CLEAN 令 CONFIG 在 SCP-079-CONFIG 频道中开启一个更新设置的会话
+情形 3：向 BACKUP 汇报在线状态。每个小时的第 30 分钟
+
+```python
+exchange_text = format_data(
+    sender="CLEAN",
+    receviers=[
+        "BACKUP"
+    ],
+    action="backup",
+    action_type="status",
+    data={
+        "type": "awake",
+        "backup": false
+    }
+)
+```
+
+情形 4：向 CONFIG 询问。由于群管理在群组中发送 `/config clean` 命令，故 CLEAN 令 CONFIG 在 SCP-079-CONFIG 频道中开启一个更新设置的会话
 
 ```python
 exchange_text = format_data(
@@ -236,6 +260,7 @@ exchange_text = format_data(
         "config": {
             "default": False,
             "lock": 1512345678,
+            "delete": True,
             "con": True,
             "loc": True,
             "vdn": True,
@@ -244,26 +269,27 @@ exchange_text = format_data(
             "aud": False,
             "bmd": True,
             "doc": False,
-            "gam": False,
+            "gam": True,
             "gif": False,
             "via": False,
             "vid": False,
             "ser": True,
             "sti": False,
-            "aff": False,
-            "exe": False,
-            "iml": False,
-            "sho": False,
-            "tgl": False,
-            "tgp": False,
-            "qrc": False,
+            "aff": True,
+            "exe": True,
+            "iml": True,
+            "sho": True,
+            "tgl": True,
+            "tgp": True,
+            "qrc": True,
             "sde": False,
-            "tcl": False,
+            "tcl": True,
             "ttd": False
         },
         "default": {
             "default": True,
             "lock": 0,
+            "delete": True,    # 封禁用户时请求 USER 协助删除的功能
             "con": True,    # 联系人
             "loc": True,    # 定位地址
             "vdn": True,    # 圆视频
@@ -293,7 +319,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 4：向 MANAGE 请求。由于没有在管理员列表中找到 SCP-079-USER ，或其权限缺失而请求离开某个群组
+情形 5：向 MANAGE 请求。由于没有在管理员列表中找到 SCP-079-USER ，或其权限缺失而请求离开某个群组
 
 ```python
 exchange_text = format_data(
@@ -312,7 +338,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 5：向 MANAGE 请求。由于管理权限缺失而请求离开某个群组
+情形 6：向 MANAGE 请求。由于管理权限缺失而请求离开某个群组
 
 ```python
 exchange_text = format_data(
@@ -331,7 +357,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 6：向 MANAGE 通知。该机器人已因不在某群组中（确定的非网络原因的 Exception）而自行清空该群组资料
+情形 7：向 MANAGE 通知。该机器人已因不在某群组中（确定的非网络原因的 Exception）而自行清空该群组资料
 
 ```python
 exchange_text = format_data(
@@ -345,7 +371,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 7：向 REGEX 更新规则使用计数文件，每日 UTC 时间 21:00 。`exchange_text` 文本作为该文件的 `caption`
+情形 8：向 REGEX 更新规则使用计数文件，每日 UTC 时间 21:00 。`exchange_text` 文本作为该文件的 `caption`
 
 ```python
 exchange_text = format_data(
@@ -359,7 +385,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 8：向 USER 发送协助请求，调用 delete all 功能，用于实现单个群组的 /dafm 功能
+情形 9：向 USER 发送协助请求，调用 delete all 功能，用于实现单个群组的 /dafm 功能
 
 ```python
 exchange_text = format_data(
@@ -377,7 +403,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 9：向 USER 发送协助请求，调用 delete all 功能，删除某用户全部消息，范围：所有群组（评分过高或受追踪时的触发）
+情形 10：向 USER 发送协助请求，调用 delete all 功能，删除某用户全部消息，范围：所有群组（评分过高或受追踪时的触发）
 
 ```python
 exchange_text = format_data(
@@ -395,7 +421,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 10：向 USER 发送协助请求，调用 global ban 功能，用于查找某用户与机器人的所有共同群组，删除其全部消息，并对其进行限制
+情形 11：向 USER 发送协助请求，调用 global ban 功能，用于查找某用户与机器人的所有共同群组，删除其全部消息，并对其进行限制
 
 ```python
 exchange_text = format_data(
@@ -412,7 +438,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 11：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费
+情形 12：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费
 
 ```python
 exchange_text = format_data(
@@ -437,7 +463,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 12：向其他 Bot（ANALYZE、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK）更新用户分数
+情形 13：向其他 Bot（ANALYZE、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK）更新用户分数
 
 ```python
 exchange_text = format_data(
@@ -461,7 +487,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 13：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK、WATCH）更新用户追踪状态，以 watch ban 为例
+情形 14：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK、WATCH）更新用户追踪状态，以 watch ban 为例
 
 ```python
 exchange_text = format_data(
@@ -488,7 +514,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 14：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）添加黑名单用户
+情形 15：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）添加黑名单用户
 
 ```python
 exchange_text = format_data(

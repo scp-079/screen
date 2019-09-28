@@ -199,7 +199,7 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                     user:
                         {
                             "admin_id": 12345678,
-                            "type": "all / new / score"
+                            "type": "all / new"
                         }
                     
                     watch:
@@ -238,7 +238,8 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                     ban:
                         {
                             "group_id": -10012345678,
-                            "user_id": 12345678
+                            "user_id": 12345678,
+                            "delete": False / True,
                         }
                     
                     delete:
