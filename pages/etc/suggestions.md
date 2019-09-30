@@ -16,7 +16,11 @@ A bot with the `Ban users` permission can: Kick off all members of the group whe
 
 A bot with the `Delete messages` permission can: delete all messages in the group when you are not paying attention.
 
+A bot with administrator permissions can: Collect most of the messages in the group. However, anonymous User-Bots may also exist in your group, and they exist in the form of normal human user accounts, which can quietly collect all the data without administrator permissions.
+
 For security reasons, you should not use any group management bots that are not yours, or even you should not use the public demo services hosted by us. With third-party bots, in addition to possible damage to group members and messages, internal rules or models that the bot cannot be completely transparent to public can be suspected of misconduct. You should be aware that even if the bot's owner open the source code, it does not mean that the public service it is hosting is running this code, which means that its bot is entirely likely to have additional behaviors.
+
+If your group is very private, you should not share the group link to any promotion platform or unreliable people. If even the spammer is free to enter your group to send ads, your group is no longer private.
 
 ### Private Chat Bot
 

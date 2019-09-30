@@ -61,6 +61,32 @@ enabled = False
 hostname = 127.0.0.1
 port = 1080
 
+[bots]
+avatar_id = [DATA EXPUNGED]
+; Fill in the ID of SCP-079-AVATAR
+captcha_id = [DATA EXPUNGED]
+; Fill in the ID of SCP-079-CAPTCHA
+clean_id = [DATA EXPUNGED]
+; Fill in the ID of SCP-079-CLEAN
+lang_id = [DATA EXPUNGED]
+; Fill in the ID of SCP-079-LANG
+long_id = [DATA EXPUNGED]
+; Fill in the ID of SCP-079-LONG
+noflood_id = [DATA EXPUNGED]
+; Fill in the ID of SCP-079-NOFLOOD
+noporn_id = [DATA EXPUNGED]
+; Fill in the ID of SCP-079-NOPORN
+nospam_id = [DATA EXPUNGED]
+; Fill in the ID of SCP-079-NOSPAM
+recheck_id = [DATA EXPUNGED]
+; Fill in the ID of SCP-079-RECHECK
+tip_id = [DATA EXPUNGED]
+; Fill in the ID of SCP-079-TIP
+user_id = [DATA EXPUNGED]
+; Fill in the ID of SCP-079-USER
+warn_id = [DATA EXPUNGED]
+; Fill in the ID of SCP-079-WARN
+
 [channels]
 hide_channel_id = [DATA EXPUNGED]
 ; Fill in the ID of the data exchange backup channel SCP-079-HIDE
