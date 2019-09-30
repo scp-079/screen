@@ -169,19 +169,5 @@ exchange_text = format_data(
 )
 ```
 
-Special Case: Send data exchange channel transfer order to all bots
-
-```python
-exchange_text = format_data(
-    sender="HIDE",
-    receviers=[
-       "EMERGENCY"
-    ],
-    action="backup",
-    action_type="hide",
-    data=True
-)
-```
-
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>
 <audio id="dooropen079" src="/audio/door/dooropen079.ogg"/>

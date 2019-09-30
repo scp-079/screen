@@ -2,84 +2,86 @@
 title: SCP-079-CLEAN
 ---
 
-<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/clean-zh/';" class="zh">点此转至中文页面</button>
+<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/clean/';" class="en">Click Here to English Page</button>
 
 ---
 
-**Item #:** SCP-079-CLEAN
+<link rel="stylesheet" href="/css/chinese.css">
 
-**Object Class:** Euclid
+**项目编号：**SCP-079-CLEAN
 
-**Special Containment Procedures:** SCP-079-CLEAN is recommended to operate in a Linux environment. The program is available for Python 3.6 and above. The required third-party modules are listed in the `requirements.txt`. It is important to note that it can only be invited to the group through SCP-079-USER and is given administrative privileges by SCP-079-USER. If there is any unauthorized malicious use, it may affect the operation of other bots. It should be the administrator of the channel SCP-079-CRITICAL, channel SCP-079-EXCHANGE, channel SCP-079-HIDE, and join the SCP-079-TEST group.
+**项目等级：**Euclid
 
-**Description:** SCP-079-CLEAN is a bot for filtering messages of specific types. The project is located in GitLab, mirrored and open source on <a href="https://github.com/scp-079/scp-079-clean" target="_blank">GitHub</a>. The bot is located in <a href="https://t.me/SCP_079_CLEAN_BOT" class="079" target="_blank">SCP-079-CLEAN</a>. It is intended for use by authorized groups only and is managed by members of the group SCP-079-MANAGE for joining and leaving operations. It joined SCP-079-TEST to test the use of basic functions. The project is taken charge of by ███. The bots based on this project have similar functions: according to the administrator settings, delete certain types of messages, score records for some types of messages, delete stickers periodically, regularly clean up invalid members, and the group members automatically delete all messages sent by themselves. For details, please refer to the instructions in the appendix.
+**特殊收容措施：**SCP-079-CLEAN 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-CLEAN 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。务必要注意，其只能通过 SCP-079-USER 邀请入群，并由其赋予管理权限，如果有任何未授权的恶意使用，将可能给其他机器人的工作带来影响。其应该作为频道 SCP-079-CRITICAL 、频道 SCP-079-EXCHANGE 、频道 SCP-079-HIDE 的管理员，并加入 SCP-079-TEST 群组。
 
----
-
-**Appendix:** Operation instructions
-
-Administrators in the group:
-
-- `/config clean`: By adjusting the bot settings via SCP-079-CONFIG, the bot will send the link to the settings, and the settings will be locked within 5 minutes and cannot be changed again.
-- `/clean`: Delete stickers and GIFs in the group within three hours
-- `/dafm yes` or `/dafm y`: The user commands the bot to delete all messages sent by the user himself
-- `/purge`: Reply to a message, delete all messages from the beginning of the message to the end of the current message. Note that you can only delete up to 1000 messages based on the message ID using this command. If the value is greater than this value, no response will be made
-
-In addition to using `/config clean`, administrators can also manually adjust settings in groups using the `/config_clean` command:
-
-- `/config_clean show`: Show current settings
-- `/config_clean default`: Revert to default settings
-- `/config_clean delete off`: Turn off the help delete function
-- `/config_clean delete on`: Turn on the help delete function (default setting)
-
-Ignore or filter some type of message, turn a function off or on:
-
-- `/config_clean [type] off`: Ignore messages of a certain type, or turn off a function
-- `/config_clean [type] on`: Delete messages for a certain type, or turn on a function
-
-Where `[type]` should be one of the following categories:
-
-- `con`: Contact (default filter)
-- `loc`: Location address (default filter)
-- `vdn`: Round video (default filter)
-- `voi`: Voice (default filter)
-- `ast`: Animated sticker
-- `aud`: Audio
-- `bmd`: Bot commands prefixed with / without arguments (default filter)
-- `doc`: Document
-- `gam`: Game
-- `gif`: GIF
-- `via`: Via bot
-- `vid`: Video
-- `ser`: Service message, the last one joined group message will be kept (default filter)
-- `sti`: Sticker
-- `aff`: AFF link
-- `exe`: Executable file such as APK, BAT, CMD, COM, EXE, PIF, SCR, VBS file
-- `iml`: Invitation link or contact information for instant messaging software
-- `sho`: Short links
-- `tgl`: TG links, including links with Telegram domain names and `@mention`, filtering only `@mention` of non-current group's `username`, and `@mention` of users that not in current group
-- `tgp`: TG proxy
-- `qrc`: QR code
-- `sde`: Decide whether the group members can self-delete all the messages they sent
-- `tcl`: Remove Deleted Accounts in groups and blacklists daily
-- `ttd`: Regularly delete stickers and animations (three hours later)
-
-Ordinary members in the group:
-
-- `/dafm yes` or `/dafm y`: Delete all messages sent in the group if the group settings allow it
-
-Members of SCP-079-TEST:
-
-- `Send a message`: If there is a result match, display the result
-- `/version`: Check the bot's version
+**描述：**SCP-079-CLEAN 是一个用于过滤特定类型消息的机器人，其项目位于 GitLab ，镜像同步并开源于 <a href="https://github.com/scp-079/scp-079-clean" target="_blank">GitHub</a> 。机器人本体位于 <a href="https://t.me/SCP_079_CLEAN_BOT" class="079" target="_blank">SCP-079-CLEAN</a> ，仅供经过授权的群组使用，并由群组 SCP-079-MANAGE 中的成员对其进群、退群操作进行管理。其加入了 SCP-079-TEST ，用于测试基本功能的使用。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：根据管理员设置，删除某类型的消息，并对部分类型消息进行评分记录，定时删除贴纸，定时清理无效成员，群员自助删除自身所发全部消息。具体操作详见附录中的使用说明。
 
 ---
 
-**Appendix:** Steps to create a bot on your own
+**附录：**使用说明
 
-See the <a href="/how/">Self Hosting Instructions</a> 
+群组中的管理员：
 
-Clone Project:
+- `/config clean`：通过 [SCP-079-CONFIG](/config/) 调整机器人设置，机器人将回报前往设置的链接，5 分钟内设置将被锁定，无法再次更改
+- `/clean`：删除三小时内群组内的贴纸和 GIF 动图
+- `/dafm yes` 或 `/dafm y`：命令机器人删除自己发送的所有消息
+- `/purge`：回复某条消息，删除自该条消息开始，到当前消息结束的所有消息。注意，使用该命令只能最多删除基于消息 ID 的最近 1000 条消息，大于此数值将不会做出应答
+
+除使用 `/config clean` 外，管理员也可以通过 `/config_clean` 命令在群组中手动调整设置：
+
+- `/config_clean show`：显示当前设置
+- `/config_clean default`：恢复为默认设置
+- `/config_clean delete off`：关闭协助删除功能
+- `/config_clean delete on`：开启协助删除功能（默认设置） 
+
+忽略或过滤某种消息、关闭或开启某种功能：
+
+- `/config_clean [type] off`：忽略某类别消息、关闭某个功能
+- `/config_clean [type] on`：删除某类别消息、开启某个功能
+
+其中，`[type]` 应为以下类别之一：
+
+- `con`：联系人（默认过滤）
+- `loc`：定位地址（默认过滤）
+- `vdn`：圆视频（默认过滤）
+- `voi`：语音（默认过滤）
+- `ast`：动态贴纸
+- `aud`：音频
+- `bmd`：以 / 为前缀，且不带有参数的机器人命令（默认过滤）
+- `doc`：文件
+- `gam`：游戏
+- `gif`：GIF 动图
+- `via`：通过 Bot 发送的消息
+- `vid`：视频
+- `ser`：服务类消息，对于加群消息将保留最后一条（默认过滤）
+- `sti`：贴纸
+- `aff`：传统 AFF 链接、支付宝淘宝红包、大陆 APP 的各类活动推广分享
+- `exe`：可执行文件，例如 APK、BAT、CMD、COM、EXE、PIF、SCR、VBS 文件
+- `iml`：即时通讯软件的邀请链接或联系方式
+- `sho`：短链接
+- `tgl`：TG 链接，包括带 Telegram 域名的链接和 `@mention`，只过滤非当前群组 `username` 的 `@mention` 、不在群组中的用户 `@mention`
+- `tgp`：TG 代理
+- `qrc`：二维码
+- `sde`：群员可否自助删除自己所发所有消息
+- `tcl`：每日定时清除位于群组和黑名单中的 Deleted Account
+- `ttd`：定时删除贴纸和动图（三小时后）
+
+群组中的普通成员：
+
+- `/dafm yes` 或 `/dafm y`：如果群组设置允许，删除自己在该群所发的全部消息
+
+SCP-079-TEST 中的成员：
+
+- `发送消息`：如有匹配，显示判断内容
+- `/version`：检查机器人版本
+
+---
+
+**附录：**自建机器人的方法
+
+可先查看<a href="/how-zh/">自建说明书</a>
+
+克隆项目：
 
 ```bash
 git clone https://github.com/scp-079/scp-079-clean.git ~/scp-079/clean
@@ -87,17 +89,17 @@ git clone https://github.com/scp-079/scp-079-clean.git ~/scp-079/clean
 
 ---
 
-**Document #config.ini:**
+**文件#config.ini：**
 
-Modify the configuration file:
+修改配置文件：
 
-You need to modify all the key values ​​in the `config.ini` file with the content `[DATA EXPUNGED]`. API ID and API Hash are available on the <a href="https://my.telegram.org" target="_blank">Official Website</a>.
+需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。 API ID 与 API Hash 在 <a href="https://my.telegram.org" target="_blank">官网</a> 获取
 
 ```ini
 [pyrogram]
 api_id = [DATA EXPUNGED]
 api_hash = [DATA EXPUNGED]
-; The information above is obtained from the official website
+; 以上两条信息从官网申请获得
 
 [plugins]
 root = plugins
@@ -107,60 +109,60 @@ include =
 
 [proxy]
 enabled = False
-; You can decide whether to use a SOCKS5 proxy
+; 可根据需要自行决定是否使用 SOCKS5 代理
 hostname = 127.0.0.1
 port = 1080
 
 [basic]
 bot_token = [DATA EXPUNGED]
-; Fill in the token obtained from @BotFather here
+; 此处填写在 @BotFather 处获得的 token
 prefix = /!
-; Fill in the available characters before the command, if use a non-conventional command prefix in the group, the bot needs permission to get ordinary messages
+; 命令前的可用字符，如在群组中使用非常规命令前缀，需要机器人有获取普通消息的权限
 
 [bots]
 avatar_id = [DATA EXPUNGED]
-; Fill in the ID of SCP-079-AVATAR
+; SCP-079-AVATAR 的 ID
 captcha_id = [DATA EXPUNGED]
-; Fill in the ID of SCP-079-CAPTCHA
+; SCP-079-CAPTCHA 的 ID
 clean_id = [DATA EXPUNGED]
-; Fill in the ID of SCP-079-CLEAN
+; SCP-079-CLEAN 的 ID
 lang_id = [DATA EXPUNGED]
-; Fill in the ID of SCP-079-LANG
+; SCP-079-LANG 的 ID
 long_id = [DATA EXPUNGED]
-; Fill in the ID of SCP-079-LONG
+; SCP-079-LONG 的 ID
 noflood_id = [DATA EXPUNGED]
-; Fill in the ID of SCP-079-NOFLOOD
+; SCP-079-NOFLOOD 的 ID
 noporn_id = [DATA EXPUNGED]
-; Fill in the ID of SCP-079-NOPORN
+; SCP-079-NOPORN 的 ID
 nospam_id = [DATA EXPUNGED]
-; Fill in the ID of SCP-079-NOSPAM
+; SCP-079-NOSPAM 的 ID
 recheck_id = [DATA EXPUNGED]
-; Fill in the ID of SCP-079-RECHECK
+; SCP-079-RECHECK 的 ID
 tip_id = [DATA EXPUNGED]
-; Fill in the ID of SCP-079-TIP
+; SCP-079-TIP 的 ID
 user_id = [DATA EXPUNGED]
-; Fill in the ID of SCP-079-USER
+; SCP-079-USER 的 ID
 warn_id = [DATA EXPUNGED]
-; Fill in the ID of SCP-079-WARN
+; SCP-079-WARN 的 ID
 
 [channels]
 critical_channel_id = [DATA EXPUNGED]
-; Fill in the ID of the emergency channel SCP-079-CRITICAL
+; 此处填写紧急频道 SCP-079-CRITICAL 的 ID
 debug_channel_id = [DATA EXPUNGED]
-; Fill in the ID of the debug channel SCP-079-DEBUG
+; 此处填写调试频道 SCP-079-DEBUG 的 ID
 exchange_channel_id = [DATA EXPUNGED]
-; Fill in the ID of the data exchange channel SCP-079-EXCHANGE
-; For more information on the Data Exchange Channel, please see https://scp-079.org/exchange/
+; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID
+; 关于数据交换频道的详情，请查看 https://scp-079.org/exchange/
 hide_channel_id = [DATA EXPUNGED]
-; Fill in the ID of the data exchange backup channel SCP-079-HIDE
+; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
 logging_channel_id = [DATA EXPUNGED]
-; Fill in the ID of the evidence channel SCP-079-LOGGING
+; 此处填写证据存放频道 SCP-079-LOGGING 的 ID
 test_group_id = [DATA EXPUNGED]
-; Fill in the ID of the test group SCP-079-TEST
+; 此处填写测试群组 SCP-079-TEST 的 ID
 
 [custom]
 default_group_link = [DATA EXPUNGED]
-; Fill in the default group link in the debug information
+; 此处填写调试信息中默认的群组链接
 date_reset = [DATA EXPUNGED]
 ; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
 image_size = [DATA EXPUNGED]
@@ -176,18 +178,18 @@ time_punish = [DATA EXPUNGED]
 time_sticker = [DATA EXPUNGED]
 ; 定时删除贴纸、动图所需的延迟时间，单位为秒
 zh_cn = [DATA EXPUNGED]
-; Fill in True or False here to indicate whether the program enables Simplified Chinese mode
+; 此处填写 True 或 False，代表程序是否启用简体中文模式
 
 [encrypt]
 key = [DATA EXPUNGED]
-; Fill in the password used to encrypt strings
+; 加密字符串所用的密码
 password = [DATA EXPUNGED]
-; Fill in the password used to encrypt files
+; 加密文件所用的密码
 ```
 
 ---
 
-**Appendix:** Development Notes
+**附录：**开发备忘
 
 1. 根据群组自定义设置自动删除某类别消息，在群组开启 AFF、EXE、SHO、TGL、TGP、QRC 消息过滤时，将具有封禁功能
 2. 针对 AFF、EXE、IML、SHO、TGL、TGP、QRC 类型的消息进行较低分数的记录
@@ -544,7 +546,7 @@ exchange_text = format_data(
 )
 ```
 
-Special Case: Send data exchange channel transfer order to all bots
+特殊情形：向所有 bot 发送数据交换频道转移指令
 
 ```python
 exchange_text = format_data(

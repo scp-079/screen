@@ -63,6 +63,32 @@ enabled = False
 hostname = 127.0.0.1
 port = 1080
 
+[bots]
+avatar_id = [DATA EXPUNGED]
+; SCP-079-AVATAR 的 ID
+captcha_id = [DATA EXPUNGED]
+; SCP-079-CAPTCHA 的 ID
+clean_id = [DATA EXPUNGED]
+; SCP-079-CLEAN 的 ID
+lang_id = [DATA EXPUNGED]
+; SCP-079-LANG 的 ID
+long_id = [DATA EXPUNGED]
+; SCP-079-LONG 的 ID
+noflood_id = [DATA EXPUNGED]
+; SCP-079-NOFLOOD 的 ID
+noporn_id = [DATA EXPUNGED]
+; SCP-079-NOPORN 的 ID
+nospam_id = [DATA EXPUNGED]
+; SCP-079-NOSPAM 的 ID
+recheck_id = [DATA EXPUNGED]
+; SCP-079-RECHECK 的 ID
+tip_id = [DATA EXPUNGED]
+; SCP-079-TIP 的 ID
+user_id = [DATA EXPUNGED]
+; SCP-079-USER 的 ID
+warn_id = [DATA EXPUNGED]
+; SCP-079-WARN 的 ID
+
 [channels]
 hide_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
@@ -168,20 +194,6 @@ exchange_text = format_data(
     action="regex",
     action_type="count",
     data="nm_words"
-)
-```
-
-特殊情形：向所有 bot 发送数据交换频道转移指令
-
-```python
-exchange_text = format_data(
-    sender="HIDE",
-    receviers=[
-        "EMERGENCY"
-    ],
-    action="backup",
-    action_type="hide",
-    data=True
 )
 ```
 
