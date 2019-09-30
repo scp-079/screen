@@ -159,22 +159,24 @@ test_group_id = [DATA EXPUNGED]
 ; Fill in the ID of the test group SCP-079-TEST
 
 [custom]
+backup = [DATA EXPUNGED]
+; Fill in True or False here to indicate whether the program is a backup copy
 default_group_link = [DATA EXPUNGED]
 ; Fill in the default group link in the debug information
 date_reset = [DATA EXPUNGED]
-; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
+; Fill in the date of resetting data, for example 1st mon, representing the first Monday of every month
 image_size = [DATA EXPUNGED]
-; 分析图片文档的最大大小，超过此大小则不通过下载原文件进行二维码，单位为 B
+; Fill in the maximum size of the analysis image document. If the size is exceeded, the QR code will not be downloaded by the original file. The unit is B
 project_link = [DATA EXPUNGED]
-; 此处填写项目网址
+; Fill in the project URL
 project_name = [DATA EXPUNGED]
-; 此处填写项目名称
+; Fill in the project name
 time_ban = [DATA EXPUNGED]
-; 建议追踪封禁状态维持的时间，单位为秒
+; Fill in the recommended time to track the watch ban user, in seconds
 time_punish = [DATA EXPUNGED]
-; 惩罚用户的时间，期间用户发送的所有消息将被删除，并且，在此期间内若其发送消息将重新计时
+; Fill in the time to punish the user, all messages sent by the user will be deleted, and if it sends a message, it will be re-timed during this period
 time_sticker = [DATA EXPUNGED]
-; 定时删除贴纸、动图所需的延迟时间，单位为秒
+; Fill in the delay time required to delete the sticker and the animation regularly, in seconds
 zh_cn = [DATA EXPUNGED]
 ; Fill in True or False here to indicate whether the program enables Simplified Chinese mode
 
@@ -189,12 +191,12 @@ password = [DATA EXPUNGED]
 
 **Appendix:** Development Notes
 
-1. 根据群组自定义设置自动删除某类别消息，在群组开启 AFF、EXE、SHO、TGL、TGP、QRC 消息过滤时，将具有封禁功能
-2. 针对 AFF、EXE、IML、SHO、TGL、TGP、QRC 类型的消息进行较低分数的记录
+1. Automatically delete some types of messages according to the group customization setting. When the group opens AFF, EXE, SHO, TGL, TGP, QRC message filtering, it will have the ban function.
+2. Record scores for AFF, EXE, IML, SHO, TGL, TGP, QRC type messages
 
-CLEAN 能够向 ANALYZE、BACKUP、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER 发送数据
+CLEAN is allowed to send data to ANALYZE, BACKUP, CAPTCHA, LANG, LONG, MANAGE, NOFLOOD, NOPORN, NOSPAM, RECHECK, USER.
 
-情形 1：向 BACKUP 传送数据备份文件。每日 UTC 时间 20:00 。`exchange_text` 文本作为该文件的 `caption`
+Scenario 1: Send backup files to BACKUP. Daily UTC time 20:00. `exchange_text` is the `caption` of the file
 
 ```python
 exchange_text = format_data(
@@ -208,7 +210,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 2：向 BACKUP 汇报上线状态。每次程序启动时
+Scenario 2: Report the online status to BACKUP. Every time the program starts
 
 ```python
 exchange_text = format_data(
@@ -225,7 +227,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 3：向 BACKUP 汇报在线状态。每个小时的第 30 分钟
+Scenario 3: Report online status to BACKUP. 30th minute of every hour
 
 ```python
 exchange_text = format_data(
@@ -242,7 +244,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 4：向 CONFIG 询问。由于群管理在群组中发送 `/config clean` 命令，故 CLEAN 令 CONFIG 在 SCP-079-CONFIG 频道中开启一个更新设置的会话
+Scenario 4: Ask CONFIG. Since the group administrator sends the `/config clean` command in the group, CLEAN asks CONFIG to open an config session in the SCP-079-CONFIG channel
 
 ```python
 exchange_text = format_data(
@@ -291,37 +293,37 @@ exchange_text = format_data(
         "default": {
             "default": True,
             "lock": 0,
-            "delete": True,    # 封禁用户时请求 USER 协助删除的功能
-            "con": True,    # 联系人
-            "loc": True,    # 定位地址
-            "vdn": True,    # 圆视频
-            "voi": True,    # 语音
-            "ast": False,    # 动态贴纸
-            "aud": False,    # 音频
-            "bmd": False,    # 以 / 为前缀的机器人命令
-            "doc": False,    # 文件
-            "gam": False,    # 游戏
-            "gif": False,    # GIF 动图
-            "via": False,    # 通过 Bot 发送的消息
-            "vid": False,    # 视频
-            "ser": True,    # 服务类消息，对于加群消息将保留最后一条
-            "sti": False,    # 贴纸
-            "aff": False,    # 传统 AFF 链接、支付宝淘宝红包、大陆 APP 的各类活动推广分享
-            "exe": False,    # APK、BAT、CMD、COM、EXE、PIF、SCR、VBS 文件
-            "iml": False,    # 即时通讯软件的邀请链接或联系方式
-            "sho": False,    # 短链接
-            "tgl": False,    # TG 链接
-            "tgp": False,    # TG 代理
-            "qrc": False,    # 二维码
-            "sde": False,    # 群员可否自助删除自己所发所有消息
-            "tcl": False,    # 每日定时清除位于群组和黑名单中的 Deleted Account
-            "ttd": False    # 定时删除贴纸，动态贴纸，和 GIF 动图（三小时后）
+            "delete": True,    # Request USER to assist with deletion when blocking users
+            "con": True,    # Contact
+            "loc": True,    # Location
+            "vdn": True,    # Round Video
+            "voi": True,    # Voice
+            "ast": False,    # Animated Sticker
+            "aud": False,    # Audio
+            "bmd": True,    # Bot commands prefixed with / without arguments
+            "doc": False,    # Document
+            "gam": False,    # Game
+            "gif": False,    # GIF
+            "via": False,    # Via bot
+            "vid": False,    # Video
+            "ser": True,    # Service message, the last one joined group message will be kept
+            "sti": False,    # Sticker
+            "aff": False,    # AFF link
+            "exe": False,    # Executable file
+            "iml": False,    # Invitation link or contact information for instant messaging software
+            "sho": False,    # Short link
+            "tgl": False,    # TG link
+            "tgp": False,    # TG proxy
+            "qrc": False,    # QR Code
+            "sde": False,    # Decide whether the group members can self-delete all the messages they sent
+            "tcl": False,    # Remove Deleted Accounts in groups and blacklists daily
+            "ttd": False    # Regularly delete stickers and animations
         }
     }
 )
 ```
 
-情形 5：向 MANAGE 请求。由于没有在管理员列表中找到 SCP-079-USER ，或其权限缺失而请求离开某个群组
+Scenario 5: Request to MANAGE. Request to leave a group because SCP-079-USER was not found in the administrator list, or its permissions are missing
 
 ```python
 exchange_text = format_data(
@@ -340,7 +342,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 6：向 MANAGE 请求。由于管理权限缺失而请求离开某个群组
+Scenario 6: Request to MANAGE. Request to leave a group due to lack of administrative permissions
 
 ```python
 exchange_text = format_data(
@@ -359,7 +361,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 7：向 MANAGE 通知。该机器人已因不在某群组中（确定的非网络原因的 Exception）而自行清空该群组资料
+Scenario 7: Notify MANAGE. The bot has emptied the group data itself because it is not in a group (determined Exception for non-network reasons)
 
 ```python
 exchange_text = format_data(
@@ -373,7 +375,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 8：向 REGEX 更新规则使用计数文件，每日 UTC 时间 21:00 。`exchange_text` 文本作为该文件的 `caption`
+Scenario 8: Update the counting file for regulation usage. Daily UTC time 21:00. `exchange_text` is the `caption` of the file
 
 ```python
 exchange_text = format_data(
@@ -387,7 +389,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 9：向 USER 发送协助请求，调用 delete all 功能，用于实现单个群组的 /dafm 功能
+Scenario 9: Send a request for assistance to USER, call the delete all function to implement the /dafm function for a single group
 
 ```python
 exchange_text = format_data(
@@ -405,7 +407,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 10：向 USER 发送协助请求，调用 delete all 功能，删除某用户全部消息，范围：所有群组（评分过高或受追踪时的触发）
+Scenario 10: Send a request for assistance to USER, call the delete all function, delete all messages from a user, range: all groups (triggered when the score is too high or user is tracked)
 
 ```python
 exchange_text = format_data(
@@ -423,7 +425,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 11：向 USER 发送协助请求，调用 global ban 功能，用于查找某用户与机器人的所有共同群组，删除其全部消息，并对其进行限制
+Scenario 11: Send a request for assistance to USER, call the global ban function to find all common groups of a user, delete all messages, and ban the user
 
 ```python
 exchange_text = format_data(
@@ -441,7 +443,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 12：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费
+Scenario 12: Declare that a message has been deleted to other bots (ANALYZE, CAPTCHA, LANG, LONG, NOFLOOD, NOPORN, NOSPAM, RECHELO, USER), to a certain extent avoid waste of resources for repeated processing of the same message
 
 ```python
 exchange_text = format_data(
@@ -466,7 +468,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 13：向其他 Bot（ANALYZE、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK）更新用户分数
+Scenario 13: Update user scores to other bots (ANALYZE, LANG, LONG, MANAGE, NOFLOOD, NOPORN, NOSPAM, RECHECK)
 
 ```python
 exchange_text = format_data(
@@ -490,7 +492,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 14：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK、WATCH）更新用户追踪状态，以 watch ban 为例
+Scenario 14: Update user tracking status to other bots (ANALYZE, CAPTCHA, LANG, LONG, MANAGE, NOFLOOD, NOPORN, NOSPAM, RECHECK, WATCH), taking watch ban as an example
 
 ```python
 exchange_text = format_data(
@@ -512,12 +514,12 @@ exchange_text = format_data(
     data={
         "id": 12345678,
         "type": "ban",
-        "until"="gAAAAABc1SZjduLGl1872VS6dD3osVJaOSQqdlSHy3SpDXeV4yu2FLbEung8neVMonokt5yI8qaLic8bi44X-y073-pGX6LtxKNQilSvci_gk5xHj4HNPFE="    # 将追踪截止的时间戳转为加密字符串
+        "until"="gAAAAABc1SZjduLGl1872VS6dD3osVJaOSQqdlSHy3SpDXeV4yu2FLbEung8neVMonokt5yI8qaLic8bi44X-y073-pGX6LtxKNQilSvci_gk5xHj4HNPFE="    # Convert the tracking timestamp to an encrypted string
     }
 )
 ```
 
-情形 15：向其他 Bot（ANALYZE、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH）添加黑名单用户
+Scenario 15: Adding blacklisted users to other bots (ANALYZE, CAPTCHA, LANG, LONG, MANAGE, NOFLOOD, NOPORN, NOSPAM, RECHECK, USER, WATCH)
 
 ```python
 exchange_text = format_data(

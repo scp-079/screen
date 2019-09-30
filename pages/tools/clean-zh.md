@@ -161,6 +161,8 @@ test_group_id = [DATA EXPUNGED]
 ; 此处填写测试群组 SCP-079-TEST 的 ID
 
 [custom]
+backup = [DATA EXPUNGED]
+; 此处填写 True 或 False，代表程序是否为备份副本
 default_group_link = [DATA EXPUNGED]
 ; 此处填写调试信息中默认的群组链接
 date_reset = [DATA EXPUNGED]
