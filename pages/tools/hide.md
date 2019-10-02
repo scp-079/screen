@@ -24,12 +24,12 @@ SCP-079-TEST 中的成员：
 
 **附录：**自建机器人的方法
 
-可先查看<a href="/how/">自建说明书</a>
+可先查看<a href="/how-zh/">自建说明书</a>
 
 克隆项目：
 
 ```bash
-git clone https://github.com/scp-079/scp-079-hide.git ~/bots/scp-079/hide
+git clone https://github.com/scp-079/scp-079-hide.git ~/scp-079/hide
 ```
 
 ---
@@ -78,12 +78,16 @@ test_group_id = [DATA EXPUNGED]
 ; 此处填写测试群组 SCP-079-TEST 的 ID
 
 [custom]
+backup = [DATA EXPUNGED]
+; 此处填写 True 或 False，代表程序是否为备份副本
 hiders = [DATA EXPUNGED]
 ; 此处填写隐藏者项目编号列表，以空格分隔
 project_link = [DATA EXPUNGED]
 ; 此处填写项目网址
 project_name = [DATA EXPUNGED]
 ; 此处填写项目名称
+zh_cn = [DATA EXPUNGED]
+; 此处填写 True 或 False，代表程序是否启用简体中文模式
 ```
 
 ---
@@ -94,7 +98,7 @@ project_name = [DATA EXPUNGED]
 2. 在 SCP-079-HIDE 频道中等待来自其他机器人的消息，特定消息转发至 EXCHANGE 频道
 3. 在 SCP-079-HIDE 频道中与隐藏者交换版本信息以供 TEST 群组查询使用
 
-HIDE 能够向 BACKUP、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER、WATCH 发送数据
+HIDE 能够向 BACKUP、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、USER、WATCH 发送数据
 
 情形 1：向 BACKUP 汇报在线状态。每个小时的第 30 分钟：
 

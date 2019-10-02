@@ -73,6 +73,7 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                     ask - Let CONFIG provide a config session in CONFIG Channel
                     commit - Update group's settings
                     reply - CONFIG reply the session's link to the bot
+                    show - Let other bot show a group's config
 
                 When action is help:
                     ban - Let USER ban a user globally
@@ -167,7 +168,13 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                             "type": "up / down",
                             "bots": List[str]
                         }
-                    
+
+                    rollback:
+                        {
+                            "admin_id": 12345678,
+                            "type": "admin_ids"
+                        }
+
                     status:
                         {
                             "type": "awake / online",
@@ -175,10 +182,16 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                         }
                     
                     start:
-                        List[str]
+                        {
+                            "admin_id": 12345678,
+                            "bots": List[str]
+                        }
                     
                     stop:
-                        List[str]
+                        {
+                            "admin_id": 12345678,
+                            "bots": List[str]
+                        }
                     
                     hide:
                         bool
@@ -232,6 +245,12 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                             "group_id": -10012345678,
                             "user_id": 12345678,
                             "config_link": "link to config"
+                        }
+                    
+                    show:
+                        {
+                            "admin_id": 12345678,
+                            "group_id": -10012345678
                         }
 
                 Help:

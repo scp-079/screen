@@ -32,7 +32,9 @@ title: SCP-079-CLEAN
 - `/config_clean show`：显示当前设置
 - `/config_clean default`：恢复为默认设置
 - `/config_clean delete off`：关闭协助删除功能
-- `/config_clean delete on`：开启协助删除功能（默认设置） 
+- `/config_clean delete on`：开启协助删除功能（默认设置）
+- `/config_clean friend off`：关闭放行友情群组链接的功能
+- `/config_clean friend on`：开启放行友情群组链接的功能（默认设置）
 
 忽略或过滤某种消息、关闭或开启某种功能：
 
@@ -169,9 +171,9 @@ date_reset = [DATA EXPUNGED]
 ; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
 image_size = [DATA EXPUNGED]
 ; 分析图片文档的最大大小，超过此大小则不通过下载原文件进行二维码，单位为 B
-project_link = [DATA EXPUNGED]
+project_link = https://scp-079.org/clean/
 ; 此处填写项目网址
-project_name = [DATA EXPUNGED]
+project_name = SCP-079-CLEAN
 ; 此处填写项目名称
 time_ban = [DATA EXPUNGED]
 ; 建议追踪封禁状态维持的时间，单位为秒
@@ -267,6 +269,7 @@ exchange_text = format_data(
             "default": False,
             "lock": 1512345678,
             "delete": True,
+            "friend": True,
             "con": True,
             "loc": True,
             "vdn": True,
@@ -296,6 +299,7 @@ exchange_text = format_data(
             "default": True,
             "lock": 0,
             "delete": True,    # 封禁用户时请求 USER 协助删除的功能
+            "friend": True,    # 放行友情链接的功能
             "con": True,    # 联系人
             "loc": True,    # 定位地址
             "vdn": True,    # 圆视频

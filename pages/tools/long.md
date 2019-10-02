@@ -24,6 +24,8 @@ title: SCP-079-LONG
 
 - `/config_long show`：显示当前设置
 - `/config_long default`：恢复为默认设置
+- `/config_long delete off`：关闭协助删除功能
+- `/config_long delete on`：开启协助删除功能（默认设置） 
 - `/config_long limit 5000`：设置消息字节长度上限，上限应为 1000 的整数倍，并介于 2000 和 10000 之间，默认为 9000
 
 群组中的普通成员：

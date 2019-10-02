@@ -31,6 +31,8 @@ In addition to using `/config clean`, administrators can also manually adjust se
 - `/config_clean default`: Revert to default settings
 - `/config_clean delete off`: Turn off the help delete function
 - `/config_clean delete on`: Turn on the help delete function (default setting)
+- `/config_clean friend off`: Turn off the friend link bypass function
+- `/config_clean friend on`: Turn on the friend link bypass function (default setting)
 
 Ignore or filter some type of message, turn a function off or on:
 
@@ -167,9 +169,9 @@ date_reset = [DATA EXPUNGED]
 ; Fill in the date of resetting data, for example 1st mon, representing the first Monday of every month
 image_size = [DATA EXPUNGED]
 ; Fill in the maximum size of the analysis image document. If the size is exceeded, the QR code will not be downloaded by the original file. The unit is B
-project_link = [DATA EXPUNGED]
+project_link = https://scp-079.org/clean/
 ; Fill in the project URL
-project_name = [DATA EXPUNGED]
+project_name = SCP-079-CLEAN
 ; Fill in the project name
 time_ban = [DATA EXPUNGED]
 ; Fill in the recommended time to track the watch ban user, in seconds
@@ -265,6 +267,7 @@ exchange_text = format_data(
             "default": False,
             "lock": 1512345678,
             "delete": True,
+            "friend": True,
             "con": True,
             "loc": True,
             "vdn": True,
@@ -294,6 +297,7 @@ exchange_text = format_data(
             "default": True,
             "lock": 0,
             "delete": True,    # Request USER to assist with deletion when blocking users
+            "friend": True,    # Bypass the TG links of SCP-079 joined groups
             "con": True,    # Contact
             "loc": True,    # Location
             "vdn": True,    # Round Video

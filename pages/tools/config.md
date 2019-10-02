@@ -30,12 +30,12 @@ SCP-079-TEST 中的成员：
 
 **附录：**自建机器人的方法
 
-可先查看<a href="/how/">自建说明书</a>
+可先查看<a href="/how-zh/">自建说明书</a>
 
 克隆项目：
 
 ```bash
-git clone https://github.com/scp-079/scp-079-config.git ~/bots/scp-079/config
+git clone https://github.com/scp-079/scp-079-config.git ~/scp-079/config
 ```
 
 ---
@@ -87,10 +87,20 @@ test_group_id = [DATA EXPUNGED]
 ; 此处填写测试群组 SCP-079-TEST 的 ID
 
 [custom]
-project_link = [DATA EXPUNGED]
+backup = [DATA EXPUNGED]
+; 此处填写 True 或 False，代表程序是否为备份副本
+date_reset = [DATA EXPUNGED]
+; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
+project_link = https://scp-079.org/config/
 ; 此处填写项目网址
-project_name = [DATA EXPUNGED]
+project_name = SCP-079-CONFIG
 ; 此处填写项目名称
+zh_cn = [DATA EXPUNGED]
+; 此处填写 True 或 False，代表程序是否启用简体中文模式
+
+[encrypt]
+password = [DATA EXPUNGED]
+; 加密文件所用的密码
 ```
 
 ---
@@ -101,9 +111,40 @@ project_name = [DATA EXPUNGED]
 2. 收到请求，在 CONFIG 频道中发送设置会话，有效时间 5 分钟
 3. 用户提交新的设置后，把数据传送回给请求的机器人
 
-CONFIG 能够向 BACKUP、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER、WARN 发送数据。对所有这些接收者的数据，其操作仅可为 `config` ，操作类型可为 `commit` 、`reply`
+CONFIG 能够向 BACKUP、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、TIP、USER、WARN 发送数据。对所有这些接收者的数据，其操作仅可为 `config` ，操作类型可为 `commit` 、`reply`
 
-情形 1：向 BACKUP 汇报在线状态。每个小时的第 30 分钟：
+情形 1：向 BACKUP 传送数据备份文件。每日 UTC 时间 20:00 。`exchange_text` 文本作为该文件的 `caption`
+
+```python
+exchange_text = format_data(
+    sender="CONFIG",
+    receviers=[
+        "BACKUP"
+    ],
+    action="backup",
+    action_type="pickle",
+    data="configs"
+)
+```
+
+情形 2：向 BACKUP 汇报上线状态。每次程序启动时
+
+```python
+exchange_text = format_data(
+    sender="CONFIG",
+    receviers=[
+        "BACKUP"
+    ],
+    action="backup",
+    action_type="status",
+    data={
+        "type": "online",
+        "backup": false
+    }
+)
+```
+
+情形 3：向 BACKUP 汇报在线状态。每个小时的第 30 分钟：
 
 ```python
 exchange_text = format_data(
@@ -117,7 +158,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 2：向其他 Bot（CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER）回复设置请求的对话链接。这里以 WARN 为例：
+情形 4：向其他 Bot（CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、TIP、USER）回复设置请求的对话链接。这里以 WARN 为例：
 
 ```python
 exchange_text = format_data(
@@ -135,7 +176,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 3：向其他 Bot（CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER）提交新的设置。这里以 WARN 为例：
+情形 5：向其他 Bot（CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、TIP、USER）提交新的设置。这里以 WARN 为例：
 
 ```python
 exchange_text = format_data(
@@ -150,6 +191,7 @@ exchange_text = format_data(
         "config": {
             "default": False,
             "lock": 1512345678,
+            "delete": True,
             "limit": 4,
             "mention": True,
             "report": {
