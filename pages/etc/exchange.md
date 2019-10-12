@@ -55,11 +55,15 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                     reply - Send a appeal reply
 
                 When action is backup:
+                    auto - BACKUP send info about auto starting or stopping bots
+                    data - Backup files
                     hide - Use HIDE channel to exchange data
+                    info - Info about the up or down bots
                     now - Let bots send backup files to exchange channel immediately
-                    pickle - Pickle file
                     rollback - Rollback the data from the exchange channel's backup file
                     status - Info bot status
+                    start - Start backup bots
+                    stop - Stop backup bots
 
                 When action is clear:
                     bad - Clear bad channels, contents, or users
@@ -78,9 +82,11 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                     delete - Let USER delete a user's all messages in the group
                     list - Update auto report groups list to NOSPAM
                     report - Let WARN send an auto report message
+                    send - Let HIDE send a message to a chat
 
                 When action is join:
                     approve - Let USER invite bots to a group
+                    reject - Reject the request
                     request - Send a join request to MANAGE
                     status - Update USER permission status to MANAGE
                     update - Let USER update the permission status
@@ -161,11 +167,17 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                     data:
                         "filename"
                     
+                    hide:
+                        bool
+                    
                     info:
                         {
                             "type": "up / down",
                             "bots": List[str]
                         }
+                    
+                    now:
+                        None
                     
                     rollback:
                         {
@@ -190,9 +202,6 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                             "admin_id": 12345678,
                             "bots": List[str]
                         }
-                    
-                    hide:
-                        bool
 
                 Clear:
                     bad:
@@ -248,6 +257,7 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                     show:
                         {
                             "admin_id": 12345678,
+                            "message_id": 123,
                             "group_id": -10012345678
                         }
 
@@ -275,6 +285,9 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                             "user_id": 12345678,
                             "message_id": 123
                         }
+
+                    send:
+                        -10012345678
 
                 Join:
                     approve:
@@ -362,6 +375,19 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                             "id": 12345678,
                             "type": "all / ban / delete",
                             "until": "encrypted string"
+                        }
+
+                Status
+                    ask:
+                        {
+                            "admin_id": 12345678,
+                            "message_id": 123
+                        }
+                    
+                    reply:
+                        {
+                            "admin_id": 12345678,
+                            "message_id": 123
                         }
 
                 Update

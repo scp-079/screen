@@ -25,7 +25,7 @@ sudo apt autoremove -y
 ## 安装依赖
 
 ```bash
-sudo apt install build-essential git python3-dev vim virtualenv -y
+sudo apt install build-essential git python3-dev python3-venv vim -y
 ```
 
 ## 其他依赖
@@ -37,8 +37,8 @@ sudo apt install build-essential git python3-dev vim virtualenv -y
 注意：如需使用 NOPORN，请根据其 `README.md` 所给出的命令操作。
 
 ```bash
-cd ~
-virtualenv -p python3 scp-079
+mkdir ~/scp-079
+python3 -m venv ~/scp-079/venv
 ```
 
 ## 环境配置
@@ -85,7 +85,7 @@ After=default.target
 
 [Service]
 WorkingDirectory=/home/scp/scp-079/pm
-ExecStart=/home/scp/scp-079/bin/python main.py
+ExecStart=/home/scp/scp-079/venv/bin/python main.py
 Restart=on-abort
 
 [Install]
@@ -113,7 +113,7 @@ Description=SCP-079 Schedule Restart Service
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash /home/scp/scp-079/.schedule.sh
+ExecStart=/bin/bash /home/scp/scp-079/scripts/schedule.sh
 ```
 
 继续新建文件：
@@ -138,7 +138,8 @@ WantedBy=timers.target
 编写重启脚本：
 
 ```bash
-vim ~/scp-079/.schedule.sh
+mkdir ~/scp-079/scripts
+vim ~/scp-079/scripts/schedule.sh
 ```
 
 添加如下内容：
@@ -146,13 +147,17 @@ vim ~/scp-079/.schedule.sh
 ```bash
 #!/bin/bash
 
-systemctl --user restart pm
+for bot in $(ls ~/scp-079); do
+  if [ "$bot" != "scripts" ] && [ "$bot" != "venv" ]; then
+    systemctl --user restart $bot
+  fi
+done 
 ```
 
 给予执行权限：
 
 ```bash
-chmod +x ~/scp-079/.schedule.sh
+chmod +x ~/scp-079/scripts/schedule.sh
 ```
 
 启用服务：
@@ -172,15 +177,15 @@ vim ~/.bash_aliases
 
 ```bash
 alias scp="deactivate"
-alias scp-079="source ~/scp-079/bin/activate"
+alias scp-079="source ~/scp-079/venv/bin/activate"
 
-alias config="~/scp-079/.config.sh"
-alias log="~/scp-079/.log.sh"
-alias restart="~/scp-079/.restart.sh"
-alias status="~/scp-079/.status.sh"
-alias start="~/scp-079/.start.sh"
-alias stop="~/scp-079/.stop.sh"
-alias update="~/scp-079/.update.sh"
+alias config="~/scp-079/scripts/config.sh"
+alias log="~/scp-079/scripts/log.sh"
+alias restart="~/scp-079/scripts/restart.sh"
+alias status="~/scp-079/scripts/status.sh"
+alias start="~/scp-079/scripts/start.sh"
+alias stop="~/scp-079/scripts/stop.sh"
+alias update="~/scp-079/scripts/update.sh"
 ```
 
 令其生效：
@@ -194,7 +199,7 @@ source ~/.bash_aliases
 ### config
 
 ```bash
-vim ~/scp-079/.config.sh
+vim ~/scp-079/scripts/config.sh
 ```
 
 添加如下内容：
@@ -213,16 +218,10 @@ cd ~/scp-079/$bot
 vim config.ini
 ```
 
-给予执行权限：
-
-```bash
-chmod +x ~/scp-079/.config.sh
-```
-
 ### log
 
 ```bash
-vim ~/scp-079/.log.sh
+vim ~/scp-079/scripts/log.sh
 ```
 
 添加如下内容：
@@ -241,16 +240,10 @@ cd ~/scp-079/$bot
 less log
 ```
 
-给予执行权限：
-
-```bash
-chmod +x ~/scp-079/.log.sh
-```
-
 ### restart
 
 ```bash
-vim ~/scp-079/.restart.sh
+vim ~/scp-079/scripts/restart.sh
 ```
 
 添加如下内容：
@@ -267,16 +260,10 @@ fi
 systemctl --user kill -s SIGKILL $bot
 ```
 
-给予执行权限：
-
-```bash
-chmod +x ~/scp-079/.restart.sh
-```
-
 ### start
 
 ```bash
-vim ~/scp-079/.start.sh
+vim ~/scp-079/scripts/start.sh
 ```
 
 添加如下内容：
@@ -293,16 +280,10 @@ fi
 systemctl --user restart $bot
 ```
 
-给予执行权限：
-
-```bash
-chmod +x ~/scp-079/.start.sh
-```
-
 ### status
 
 ```bash
-vim ~/scp-079/.status.sh
+vim ~/scp-079/scripts/status.sh
 ```
 
 添加如下内容：
@@ -319,16 +300,10 @@ fi
 systemctl --user status $bot
 ```
 
-给予执行权限：
-
-```bash
-chmod +x ~/scp-079/.status.sh
-```
-
 ### stop
 
 ```bash
-vim ~/scp-079/.stop.sh
+vim ~/scp-079/scripts/stop.sh
 ```
 
 添加如下内容：
@@ -345,16 +320,10 @@ fi
 systemctl --user stop $bot
 ```
 
-给予执行权限：
-
-```bash
-chmod +x ~/scp-079/.stop.sh
-```
-
 ### update
 
 ```bash
-vim ~/scp-079/.update.sh
+vim ~/scp-079/scripts/update.sh
 ```
 
 添加如下内容：
@@ -373,18 +342,27 @@ fi
 cd ~/scp-079/$bot
 
 git pull
-source ../bin/activate
-pip install -r requirements.txt
-deactivate
+
+if [ "$bot" = "recheck" ]; then
+	eval "$(conda shell.bash hook)"
+  conda activate scp-079
+	pip install -r requirements.txt
+	conda deactivate
+else
+	source ~/scp-079/venv/bin/activate
+	pip install -r requirements.txt
+	deactivate
+fi
+
 systemctl --user restart $bot
 
 echo -e "\n\033[0;32mBot ${bot^^} Updated!\033[0m\n"
 ```
 
-给予执行权限：
+### 给予执行权限
 
 ```bash
-chmod +x ~/scp-079/.update.sh
+chmod +x ~/scp-079/scripts/*.sh
 ```
 
 ## 便捷命令使用方法

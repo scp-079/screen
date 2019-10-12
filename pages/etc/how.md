@@ -23,7 +23,7 @@ sudo apt autoremove -y
 ## Install Dependencies
 
 ```bash
-sudo apt install build-essential git python3-dev vim virtualenv -y
+sudo apt install build-essential git python3-dev python3-venv vim -y
 ```
 
 ## Other Dependencies
@@ -35,8 +35,8 @@ Some projects require installation of additional packages. Be sure to check the 
 Note: To use NOPORN, follow the commands given by its `README.md`.
 
 ```bash
-cd ~
-virtualenv -p python3 scp-079
+mkdir ~/scp-079
+python3 -m venv ~/scp-079/venv
 ```
 
 ## Install modules
@@ -83,7 +83,7 @@ After=default.target
 
 [Service]
 WorkingDirectory=/home/scp/scp-079/pm
-ExecStart=/home/scp/scp-079/bin/python main.py
+ExecStart=/home/scp/scp-079/venv/bin/python main.py
 Restart=on-abort
 
 [Install]
@@ -111,7 +111,7 @@ Description=SCP-079 Schedule Restart Service
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash /home/scp/scp-079/.schedule.sh
+ExecStart=/bin/bash /home/scp/scp-079/scripts/schedule.sh
 ```
 
 Create a new file:
@@ -136,7 +136,8 @@ WantedBy=timers.target
 Write a restart script:
 
 ```bash
-vim ~/scp-079/.schedule.sh
+mkdir ~/scp-079/scripts
+vim ~/scp-079/scripts/schedule.sh
 ```
 
 Add the following:
@@ -144,13 +145,17 @@ Add the following:
 ```bash
 #!/bin/bash
 
-systemctl --user restart pm
+for bot in $(ls ~/scp-079); do
+  if [ "$bot" != "scripts" ] && [ "$bot" != "venv" ]; then
+    systemctl --user restart $bot
+  fi
+done 
 ```
 
 Give execute permission:
 
 ```bash
-chmod +x ~/scp-079/.schedule.sh
+chmod +x ~/scp-079/scripts/schedule.sh
 ```
 
 Enable and start the service:
@@ -170,15 +175,15 @@ Add the following:
 
 ```bash
 alias scp="deactivate"
-alias scp-079="source ~/scp-079/bin/activate"
+alias scp-079="source ~/scp-079/venv/bin/activate"
 
-alias config="~/scp-079/.config.sh"
-alias log="~/scp-079/.log.sh"
-alias restart="~/scp-079/.restart.sh"
-alias status="~/scp-079/.status.sh"
-alias start="~/scp-079/.start.sh"
-alias stop="~/scp-079/.stop.sh"
-alias update="~/scp-079/.update.sh"
+alias config="~/scp-079/scripts/config.sh"
+alias log="~/scp-079/scripts/log.sh"
+alias restart="~/scp-079/scripts/restart.sh"
+alias status="~/scp-079/scripts/status.sh"
+alias start="~/scp-079/scripts/start.sh"
+alias stop="~/scp-079/scripts/stop.sh"
+alias update="~/scp-079/scripts/update.sh"
 ```
 
 Let it take effect:
@@ -192,7 +197,7 @@ source ~/.bash_aliases
 ### config
 
 ```bash
-vim ~/scp-079/.config.sh
+vim ~/scp-079/scripts/config.sh
 ```
 
 Add the following:
@@ -211,16 +216,10 @@ cd ~/scp-079/$bot
 vim config.ini
 ```
 
-Give execute permission:
-
-```bash
-chmod +x ~/scp-079/.config.sh
-```
-
 ### log
 
 ```bash
-vim ~/scp-079/.log.sh
+vim ~/scp-079/scripts/log.sh
 ```
 
 Add the following:
@@ -239,16 +238,10 @@ cd ~/scp-079/$bot
 less log
 ```
 
-Give execute permission:
-
-```bash
-chmod +x ~/scp-079/.log.sh
-```
-
 ### restart
 
 ```bash
-vim ~/scp-079/.restart.sh
+vim ~/scp-079/scripts/restart.sh
 ```
 
 Add the following:
@@ -265,16 +258,10 @@ fi
 systemctl --user kill -s SIGKILL $bot
 ```
 
-Give execute permission:
-
-```bash
-chmod +x ~/scp-079/.restart.sh
-```
-
 ### start
 
 ```bash
-vim ~/scp-079/.start.sh
+vim ~/scp-079/scripts/start.sh
 ```
 
 Add the following:
@@ -291,16 +278,10 @@ fi
 systemctl --user restart $bot
 ```
 
-Give execute permission:
-
-```bash
-chmod +x ~/scp-079/.start.sh
-```
-
 ### status
 
 ```bash
-vim ~/scp-079/.status.sh
+vim ~/scp-079/scripts/status.sh
 ```
 
 Add the following:
@@ -317,16 +298,10 @@ fi
 systemctl --user status $bot
 ```
 
-Give execute permission:
-
-```bash
-chmod +x ~/scp-079/.status.sh
-```
-
 ### stop
 
 ```bash
-vim ~/scp-079/.stop.sh
+vim ~/scp-079/scripts/stop.sh
 ```
 
 Add the following:
@@ -343,16 +318,10 @@ fi
 systemctl --user stop $bot
 ```
 
-Give execute permission:
-
-```bash
-chmod +x ~/scp-079/.stop.sh
-```
-
 ### update
 
 ```bash
-vim ~/scp-079/.update.sh
+vim ~/scp-079/scripts/update.sh
 ```
 
 Add the following:
@@ -371,18 +340,27 @@ fi
 cd ~/scp-079/$bot
 
 git pull
-source ../bin/activate
-pip install -r requirements.txt
-deactivate
+
+if [ "$bot" = "recheck" ]; then
+	eval "$(conda shell.bash hook)"
+  conda activate scp-079
+	pip install -r requirements.txt
+	conda deactivate
+else
+	source ~/scp-079/venv/bin/activate
+	pip install -r requirements.txt
+	deactivate
+fi
+
 systemctl --user restart $bot
 
 echo -e "\n\033[0;32mBot ${bot^^} Updated!\033[0m\n"
 ```
 
-Give execute permission:
+### Give Execute Permission
 
 ```bash
-chmod +x ~/scp-079/.update.sh
+chmod +x ~/scp-079/scripts/*.sh
 ```
 
 ## Convenient Command Usage

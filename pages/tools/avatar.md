@@ -88,6 +88,8 @@ warn_id = [DATA EXPUNGED]
 ; Fill in the ID of SCP-079-WARN
 
 [channels]
+debug_channel_id = [DATA EXPUNGED]
+; Fill in the ID of the debug channel SCP-079-DEBUG
 hide_channel_id = [DATA EXPUNGED]
 ; Fill in the ID of the data exchange backup channel SCP-079-HIDE
 
@@ -96,6 +98,10 @@ backup = [DATA EXPUNGED]
 ; Fill in True or False here to indicate whether the program is a backup copy
 date_reset = [DATA EXPUNGED]
 ; Fill in the date of resetting data, for example 1st mon, representing the first Monday of every month
+project_link = https://scp-079.org/avatar/
+; Fill in the project URL
+project_name = SCP-079-AVATAR
+; Fill in the project name
 time_new = [DATA EXPUNGED]
 ; Fill in a integer N here, and the user is considered to be a new user within N seconds after the user joined the group
 zh_cn = [DATA EXPUNGED]

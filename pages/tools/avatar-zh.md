@@ -90,6 +90,8 @@ warn_id = [DATA EXPUNGED]
 ; SCP-079-WARN 的 ID
 
 [channels]
+debug_channel_id = [DATA EXPUNGED]
+; 此处填写调试频道 SCP-079-DEBUG 的 ID
 hide_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
 
@@ -98,6 +100,10 @@ backup = [DATA EXPUNGED]
 ; 此处填写 True 或 False，代表程序是否为备份副本
 date_reset = [DATA EXPUNGED]
 ; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
+project_link = https://scp-079.org/avatar/
+; 此处填写项目网址
+project_name = SCP-079-AVATAR
+; 此处填写项目名称
 time_new = [DATA EXPUNGED]
 ; 此处填写整数 n，用户入群后的 n 秒内均认为该用户为新用户
 zh_cn = [DATA EXPUNGED]
