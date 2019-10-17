@@ -44,5 +44,9 @@ Warn or ban someone by admin commands
 Observe and track suspicious spam behaviors
 - <a href="https://github.com/scp-079/screen" target="_blank">Screen</a>: 
 A dark theme for Hakyll
+- <a href="https://github.com/scp-079/scripts" target="_blank">Scripts</a>: 
+Some scripts
+- <a href="https://github.com/scp-079/units" target="_blank">Units</a>: 
+Some systemd units
 
 <audio src="/audio/page/projects.ogg" autoplay></audio>
