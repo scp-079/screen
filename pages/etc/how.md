@@ -53,9 +53,7 @@ git clone https://github.com/scp-079/units.git ~/.config/systemd/user
 ## Set the scripts
 
 ```bash
-mkdir -p ~/scp-079/scripts
 git clone https://github.com/scp-079/scripts.git ~/scp-079/scripts
-chmod +x ~/scp-079/scripts/*.sh
 ```
 
 ## Set Convenient Commands
@@ -70,13 +68,13 @@ Add the following:
 alias scp="deactivate"
 alias scp-079="source ~/scp-079/venv/bin/activate"
 
-alias config="~/scp-079/scripts/config.sh"
-alias log="~/scp-079/scripts/log.sh"
-alias restart="~/scp-079/scripts/restart.sh"
-alias status="~/scp-079/scripts/status.sh"
-alias start="~/scp-079/scripts/start.sh"
-alias stop="~/scp-079/scripts/stop.sh"
-alias update="~/scp-079/scripts/update.sh"
+alias config="bash ~/scp-079/scripts/config.sh"
+alias log="bash ~/scp-079/scripts/log.sh"
+alias restart="bash ~/scp-079/scripts/restart.sh"
+alias status="bash ~/scp-079/scripts/status.sh"
+alias start="bash ~/scp-079/scripts/start.sh"
+alias stop="bash ~/scp-079/scripts/stop.sh"
+alias update="bash ~/scp-079/scripts/update.sh"
 ```
 
 Let it take effect:
