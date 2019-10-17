@@ -54,9 +54,11 @@ git clone https://github.com/scp-079/units.git ~/.config/systemd/user
 
 ## 配置脚本
 
+```bash
 mkdir -p ~/scp-079/scripts
 git clone https://github.com/scp-079/scripts.git ~/scp-079/scripts
 chmod +x ~/scp-079/scripts/*.sh
+```
 
 ## 设置便捷命令
 
