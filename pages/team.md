@@ -13,8 +13,6 @@ In alphabetical order:
 
 - <a class="no" target="_blank" style="color: #ddd; font-weight: 700;">Action Filament</a> 
 <a href="/action/" class="key" target="_blank">C9E1 46A8 B142 6D1C 8A8C 5B56 1F18 6244 E534 392E</a>
-- <a href="https://t.me/aob58" target="_blank">Aob</a> 
-<a class="no" target="_blank">\[DATA EXPUNGED\]</a>
 - <a href="https://t.me/SCP_079_PM_BOT" target="_blank">UZE4H6IL</a>
 <a href="/uze4h6il/" class="key" target="_blank">AD6D 5622 8F5F B87F 2A24 60CC ACC0 64F9 3E44 E061</a>
 - <a class="no" target="_blank" style="color: #ddd; font-weight: 700;">Xiao</a> 

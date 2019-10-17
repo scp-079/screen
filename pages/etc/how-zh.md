@@ -34,7 +34,7 @@ sudo apt install build-essential git python3-dev python3-venv vim -y
 
 ## 创建虚拟环境
 
-注意：如需使用 NOPORN，请根据其 `README.md` 所给出的命令操作。
+注意：如需使用 NOPORN 或 RECHECK ，请单独根据其 `README.md` 所给出的命令操作。
 
 ```bash
 mkdir ~/scp-079
@@ -45,127 +45,18 @@ python3 -m venv ~/scp-079/venv
 
 通过 pip 安装所需要的包，也请查看项目源代码中的说明文件 `README.md` 的 `Requirements` 一节。
 
-## 克隆某个项目
-
-例如，使用 `SCP-079-PM` ，根据项目中的[单独使用说明](/pm-zh/)克隆：
-
-```bash
-git clone https://github.com/scp-079/scp-079-pm.git ~/scp-079/pm
-```
-
-## 更改配置文件
-
-根据需要修改项目的 `config.ini` 文件：
-
-```bash
-cp ~/scp-079/pm/config.ini.example ~/scp-079/pm/config.ini
-vim ~/scp-079/pm/config.ini
-```
-
-`config.ini` 文件中参数代表的含义，可在[单独使用说明](/pm-zh/)中查看。
-
 ## 设置 systemd 服务
 
 ```bash
-mkdir -p ~/.config/systemd/user
+mkdir -p ~/.config/systemd
+git clone https://github.com/scp-079/units.git ~/.config/systemd/user
 ```
 
-新建文件：
+## 配置脚本
 
-```bash
-vim ~/.config/systemd/user/pm.service
-```
-
-添加如下内容：
-
-```bash
-[Unit]
-Description=SCP-079-PM Telegram Bot Service
-After=default.target
-
-[Service]
-WorkingDirectory=/home/scp/scp-079/pm
-ExecStart=/home/scp/scp-079/venv/bin/python main.py
-Restart=on-abort
-
-[Install]
-WantedBy=default.target
-```
-
-启用项目：
-
-```bash
-systemctl --user enable pm
-systemctl --user start pm
-```
-
-## 设置定时重启
-
-```bash
-vim ~/.config/systemd/user/restart.service
-```
-
-添加如下内容：
-
-```bash
-[Unit]
-Description=SCP-079 Schedule Restart Service
-
-[Service]
-Type=oneshot
-ExecStart=/bin/bash /home/scp/scp-079/scripts/schedule.sh
-```
-
-继续新建文件：
-
-```bash
-vim ~/.config/systemd/user/restart.timer
-```
-
-添加如下内容：
-
-```bash
-[Unit]
-Description=SCP-079 Reboot
-
-[Timer]
-OnCalendar=*-*-* 00:00:00
-
-[Install]
-WantedBy=timers.target
-```
-
-编写重启脚本：
-
-```bash
-mkdir ~/scp-079/scripts
-vim ~/scp-079/scripts/schedule.sh
-```
-
-添加如下内容：
-
-```bash
-#!/bin/bash
-
-for bot in $(ls ~/scp-079); do
-  if [ "$bot" != "scripts" ] && [ "$bot" != "venv" ]; then
-    systemctl --user restart $bot
-  fi
-done 
-```
-
-给予执行权限：
-
-```bash
-chmod +x ~/scp-079/scripts/schedule.sh
-```
-
-启用服务：
-
-```bash
-systemctl --user enable restart.timer
-systemctl --user start restart.timer
-```
+mkdir -p ~/scp-079/scripts
+git clone https://github.com/scp-079/scripts.git ~/scp-079/scripts
+chmod +x ~/scp-079/scripts/*.sh
 
 ## 设置便捷命令
 
@@ -194,175 +85,30 @@ alias update="~/scp-079/scripts/update.sh"
 source ~/.bash_aliases
 ```
 
-## 编写便捷命令对应的脚本
+## 克隆某个项目
 
-### config
+例如，使用 `SCP-079-PM` ，根据项目中的[单独使用说明](/pm-zh/)克隆：
 
 ```bash
-vim ~/scp-079/scripts/config.sh
+git clone https://github.com/scp-079/scp-079-pm.git ~/scp-079/pm
 ```
 
-添加如下内容：
+## 更改配置文件
+
+根据需要修改项目的 `config.ini` 文件：
 
 ```bash
-#!/bin/bash
-
-if [ $# -eq 1 ]; then
-	bot=$1
-else
-	read -p "Choose a bot: " bot
-fi
-
-cd ~/scp-079/$bot
-
-vim config.ini
+cp ~/scp-079/pm/config.ini.example ~/scp-079/pm/config.ini
+vim ~/scp-079/pm/config.ini
 ```
 
-### log
+`config.ini` 文件中参数代表的含义，可在[单独使用说明](/pm-zh/)中查看。
+
+## 启用机器人服务
 
 ```bash
-vim ~/scp-079/scripts/log.sh
-```
-
-添加如下内容：
-
-```bash
-#!/bin/bash
-
-if [ $# -eq 1 ]; then
-	bot=$1
-else
-	read -p "Choose a bot: " bot
-fi
-
-cd ~/scp-079/$bot
-
-less log
-```
-
-### restart
-
-```bash
-vim ~/scp-079/scripts/restart.sh
-```
-
-添加如下内容：
-
-```bash
-#!/bin/bash
-
-if [ $# -eq 1 ]; then
-	bot=$1
-else
-	read -p "Choose a bot: " bot
-fi
-
-systemctl --user kill -s SIGKILL $bot
-```
-
-### start
-
-```bash
-vim ~/scp-079/scripts/start.sh
-```
-
-添加如下内容：
-
-```bash
-#!/bin/bash
-
-if [ $# -eq 1 ]; then
-	bot=$1
-else
-	read -p "Choose a bot: " bot
-fi
-
-systemctl --user restart $bot
-```
-
-### status
-
-```bash
-vim ~/scp-079/scripts/status.sh
-```
-
-添加如下内容：
-
-```bash
-#!/bin/bash
-
-if [ $# -eq 1 ]; then
-	bot=$1
-else
-	read -p "Choose a bot: " bot
-fi
-
-systemctl --user status $bot
-```
-
-### stop
-
-```bash
-vim ~/scp-079/scripts/stop.sh
-```
-
-添加如下内容：
-
-```bash
-#!/bin/bash
-
-if [ $# -eq 1 ]; then
-	bot=$1
-else
-	read -p "Choose a bot: " bot
-fi
-
-systemctl --user stop $bot
-```
-
-### update
-
-```bash
-vim ~/scp-079/scripts/update.sh
-```
-
-添加如下内容：
-
-```bash
-#!/bin/bash
-
-echo -e "\n\033[0;32mUpdating the bot...\033[0m\n"
-
-if [ $# -eq 1 ]; then
-	bot=$1
-else
-	read -p "Choose a bot: " bot
-fi
-
-cd ~/scp-079/$bot
-
-git pull
-
-if [ "$bot" = "recheck" ]; then
-	eval "$(conda shell.bash hook)"
-  conda activate scp-079
-	pip install -r requirements.txt
-	conda deactivate
-else
-	source ~/scp-079/venv/bin/activate
-	pip install -r requirements.txt
-	deactivate
-fi
-
-systemctl --user restart $bot
-
-echo -e "\n\033[0;32mBot ${bot^^} Updated!\033[0m\n"
-```
-
-### 给予执行权限
-
-```bash
-chmod +x ~/scp-079/scripts/*.sh
+bash ~/scp-079/scripts/enable.sh
+start pm
 ```
 
 ## 便捷命令使用方法
@@ -403,7 +149,7 @@ stop pm
 status pm
 ```
 
-更新机器人
+更新机器人：
 
 ```bash
 update pm
