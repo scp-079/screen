@@ -355,8 +355,8 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                 Remove:
                     bad:
                         {
-                            "id":  -10012345678 / 123 / 12345678,
-                            "type": "channel / content / user"
+                            "id":  -10012345678 / "contact" / 123 / 12345678,
+                            "type": "channel / contact / content / user"
                         }
 
                     except:
