@@ -140,7 +140,8 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                         {
                             "id": 12345678,
                             "type": "ban / delete",
-                            "until": "encrypted string"
+                            "until": "encrypted string",
+                            "message_id": 123
                         }
 
                 Appeal:
@@ -325,6 +326,7 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                         {
                             "admin_id": 12345678,
                             "group_id": -10012345678,
+                            "force": False / True,
                             "reason": "reason here"
                         }
 
