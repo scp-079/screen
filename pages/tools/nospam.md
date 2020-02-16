@@ -120,22 +120,56 @@ logging_channel_id = [DATA EXPUNGED]
 ; 此处填写证据存放频道 SCP-079-LOGGING 的 ID
 test_group_id = [DATA EXPUNGED]
 ; 此处填写测试群组 SCP-079-TEST 的 ID
+watch_channel_id = [DATA EXPUNGED]
+; 此处填写敏感追踪证据频道 SCP-079-WATCH 的 ID
 
 [custom]
+aio = [DATA EXPUNGED]
+; 此处填写 True 或 False，代表程序是否与其他程序共用同一机器人帐号
+backup = [DATA EXPUNGED]
+; 此处填写 True 或 False，代表程序是否为备份副本
+date_reset = [DATA EXPUNGED]
+; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
 default_group_link = [DATA EXPUNGED]
 ; 此处填写调试信息中默认的群组链接
 image_size = [DATA EXPUNGED]
-; 分析图片文档的最大大小，超过此大小则不通过下载原文件进行二维码，单位为 B
-project_link = [DATA EXPUNGED]
+; 此处填写整数，代表分析图片文档的最大大小，超过此大小则不通过下载原文件进行二维码，单位为 B
+invalid = [DATA EXPUNGED]
+; 此处填写不被机器人认为是 Telegram 链接的 username ，用空格分隔，无 @ 前缀
+limit_track = [DATA EXPUNGED]
+; 此处填写整数，代表用户短时间内加入多少群组才被认为是需要特殊对待的用户
+project_link = https://scp-079.org/nospam/
 ; 此处填写项目网址
-project_name = [DATA EXPUNGED]
+project_name = SCP-079-NOSPAM
 ; 此处填写项目名称
-punish_time = [DATA EXPUNGED]
-; 惩罚用户的时间，期间用户发送的所有消息将被删除，并且，在此期间内若其发送消息将重新计时
-reset_day = [DATA EXPUNGED]
-; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
+time_captcha = [DATA EXPUNGED]
+; 此处填写整数，代表操作降级情况下，消息被发送和降级操作之间的时间差，超过此时长机器人将立即删除用户的全部消息，而不是令 CAPTCHA 发起新验证请求，单位为秒
+time_long = [DATA EXPUNGED]
+; 此处填写整数，代表判断用户为老用户的入群时长，单位为秒
 time_new = [DATA EXPUNGED]
-; 此处填写判断用户为新用户的入群时长，单位为秒
+; 此处填写整数，代表判断用户为新用户的入群时长，用于进行昵称复查时使用，单位为秒
+time_punish = [DATA EXPUNGED]
+; 此处填写整数，代表惩罚用户的时间，期间用户发送的所有消息将被删除，并且，在此期间内若其发送消息将重新计时，单位为秒
+time_short = [DATA EXPUNGED]
+; 此处填写整数，代表判断用户为刚刚入群的入群时长，用户在群组开启新用户限制时使用，单位为秒
+time_track = [DATA EXPUNGED]
+; 此处填写整数，代表用户在多短时间内加入多个群组才被认为是需要特殊对待的用户
+zh_cn = [DATA EXPUNGED]
+; 此处填写 True 或 False，代表程序是否启用简体中文模式
+
+[emoji]
+emoji_ad_single = [DATA EXPUNGED]
+; 此处填写整数，代表多少个同样的 emoji 在消息中出现则被认为是 ad_ 类词组
+emoji_ad_total = [DATA EXPUNGED]
+; 此处填写整数，代表一共多少个 emoji 在消息中出现则被认为是 ad_ 类词组
+emoji_many = [DATA EXPUNGED]
+; 此处填写整数，代表多少个 emoji 在消息中出现则被认为该消息含有多个 emoji
+emoji_protect = [DATA EXPUNGED]
+; 此处填写字符串，其中包含的 emoji 将受到保护，不计入各类判断中，字符串中间无空格，请以 \UXXXXXXXX 的形式代表一个 emoji
+emoji_wb_single = [DATA EXPUNGED]
+; 此处填写整数，代表多少个同样的 emoji 在消息中出现则被认为是 wb 类词组
+emoji_wb_total = [DATA EXPUNGED]
+; 此处填写整数，代表一共多少个 emoji 在消息中出现则被认为是 wb 类词组
 
 [encrypt]
 key = [DATA EXPUNGED]
@@ -145,323 +179,6 @@ password = [DATA EXPUNGED]
 ```
 
 ---
-
-**附录：**开发备忘
-
-1. 本身具有默认规则（内容与行为）
-2. 群组可自行开启基于机器学习的实验特性
-3. 根据 WATCH 的建议、各机器人的综合评分调整限制用户的处理方式
-4. 用户评分 3.0 及以上时执行一次全局删除操作
-
-NOSPAM 能够向 ANALYZE、AVATAR、BACKUP、CAPTCHA、CLEAN、CONFIG、LANG、LONG、MANAGE、NOFLOOD、NOPORN、RECHECK、USER、WARN、WATCH 发送数据
-
-情形 1：向 AVATAR 添加用户头像白名单，移除同理
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "AVATAR"
-    ],
-    action="add",
-    action_type="except",
-    data={
-        "the_id": 12345678,
-        "the_type": "long"
-    }
-)
-```
-
-情形 2：向 BACKUP 传送数据备份文件。每日 UTC 时间 20:00 。`exchange_text` 文本作为该文件的 `caption`
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "BACKUP"
-    ],
-    action="backup",
-    action_type="pickle",
-    data="admin_ids"
-)
-```
-
-情形 3：向 BACKUP 汇报在线状态。每个小时的第 30 分钟
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "BACKUP"
-    ],
-    action="backup",
-    action_type="status",
-    data="awake"
-)
-```
-
-情形 4：向 CONFIG 询问。由于群管理在群组中发送 `/config nospam` 命令，故 NOSPAM 令 CONFIG 在 SCP-079-CONFIG 频道中开启一个更新设置的会话
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "CONFIG"
-    ],
-    action="config",
-    action_type="ask",
-    data={
-        "project_name": "SCP-079-NOSPAM",
-        "project_link": "https://scp-079.org/nospam/",
-        "group_id": -10012345678,
-        "group_name": "SCP-079-CHAT",
-        "group_link": "https://t.me/SCP_079_CHAT",
-        "user_id": 12345678,
-        "config": {
-            "default": False,
-            "lock": 1512345678,
-            "auto": True,
-            "bot": True,
-            "report": False
-        },
-        "default": {
-            "default": True,
-            "lock": 0,
-            "auto": False,
-            "bot": True,
-            "report": False
-        }
-    }
-)
-```
-
-情形 5：向 MANAGE 请求。由于没有在管理员列表中找到 SCP-079-USER ，或其权限缺失而请求离开某个群组
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "MANAGE"
-    ],
-    action="leave",
-    action_type="request",
-    data={
-        "group_id": -10012345678,
-        "group_name": "SCP-079-CHAT",
-        "group_link": "https://t.me/SCP_079_CHAT",
-        "reason"： "user"
-    }
-)
-```
-
-情形 6：向 MANAGE 请求。由于管理权限缺失而请求离开某个群组
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "MANAGE"
-    ],
-    action="leave",
-    action_type="request",
-    data={
-        "group_id": -10012345678,
-        "group_name": "SCP-079-CHAT",
-        "group_link": "https://t.me/SCP_079_CHAT",
-        "reason"： "permissions"
-    }
-)
-```
-
-情形 7：向 MANAGE 通知。该机器人已因不在某群组中（确定的非网络原因的 Exception）而自行清空该群组资料
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "MANAGE"
-    ],
-    action="leave",
-    action_type="info",
-    data=-10012345678
-)
-```
-
-情形 8：向 MANAGE 汇报统计数据文件。`exchange_text` 文本作为该文件的 `caption`
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "MANAGE"
-    ],
-    action="status",
-    action_type="reply",
-    data={
-        "admin_id": 12345678,
-        "message_id": 123
-    }
-)
-```
-
-情形 9：向 REGEX 更新规则使用计数文件，每日 UTC 时间 21:00 。`exchange_text` 文本作为该文件的 `caption`
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "REGEX"
-    ],
-    action="regex",
-    action_type="count",
-    data="wb_words"
-)
-```
-
-情形 10：向 USER 发送协助请求，调用 delete all 功能，删除某用户全部消息
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "USER"
-    ],
-    action="help",
-    action_type="delete",
-    data={
-        "group_id": -10012345678,
-        "user_id": 12345678
-    }
-)
-```
-
-情形 11：向 USER 发送协助请求，调用 global ban 功能，用于查找某用户与机器人的所有共同群组，删除其全部消息，并对其进行限制
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "USER"
-    ],
-    action="help",
-    action_type="ban",
-    data={
-        "group_id": -10012345678,
-        "user_id": 12345678
-    }
-)
-```
-
-情形 12：向 WARN 发送自动警告。WARN 会根据群组设置决定是否相应
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "WARN"
-    ],
-    action="help",
-    action_type="report",
-    data={
-        "group_id": -10012345678,
-        "user_id": 12345678,
-        "message_id": 123
-    }
-)
-```
-
-情形 13：向其他 Bot（ANALYZE、AVATAR、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "ANALYZE",
-        "AVATAR",
-        "CAPTCHA",
-        "CLEAN",
-        "LANG",
-        "LONG",
-        "NOFLOOD",
-        "NOPORN",
-        "RECHECK",
-        "USER"
-    ],
-    action="update",
-    action_type="declare",
-    data={
-        "group_id": -10012345678,
-        "message_id": 123
-    }
-)
-```
-
-情形 14：向其他 Bot（ANALYZE、CLEAN、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、RECHECK）更新用户分数
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "ANALYZE",
-        "CLEAN",
-        "CAPTCHA",
-        "LANG",
-        "LONG",
-        "MANAGE",
-        "NOFLOOD",
-        "NOPORN",
-        "RECHECK"
-    ],
-    action="update",
-    action_type="score",
-    data={
-        "id": 12345678,
-        "score": 0.4
-    }
-)
-```
-
-情形 15：向其他 Bot（ANALYZE、APPEAL、AVATAR、CAPTCHA、LANG、LONG、MANAGE、NOFLOOD、NOPORN、RECHECK、USER、WATCH）添加黑名单用户，频道同理
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "ANALYZE",
-        "APPEAL",
-        "AVATAR",
-        "CAPTCHA",
-        "LANG",
-        "LONG",
-        "MANAGE",
-        "NOFLOOD",
-        "NOPORN",
-        "RECHECK",
-        "USER",
-        "WATCH"
-    ],
-    action="add",
-    action_type="bad",
-    data={
-        "id": 12345678,
-        "type": "user"
-    }
-)
-```
-
-特殊情形：向所有 bot 发送数据交换频道转移指令
-
-```python
-exchange_text = format_data(
-    sender="NOSPAM",
-    receviers=[
-        "EMERGENCY"
-    ],
-    action="backup",
-    action_type="hide",
-    data=True
-)
-```
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>
 <audio id="dooropen079" src="/audio/door/dooropen079.ogg"/>

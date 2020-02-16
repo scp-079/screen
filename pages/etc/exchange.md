@@ -79,6 +79,7 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
 
                 When action is help:
                     ban - Let USER ban a user globally
+                    captcha - Let CAPTCHA make a verification request
                     delete - Let USER delete a user's all messages in the group
                     list - Update auto report groups list to NOSPAM
                     report - Let WARN send an auto report message
@@ -270,7 +271,14 @@ def format_data(sender: str, receivers: List[str], action: str, action_type: str
                             "type": "ban / restrict",
                             "delete": False / True,
                         }
-                    
+
+                    captcha:
+                        {
+                            "group_id": -10012345678,
+                            "user_id": 12345678,
+                            "message_id": 123
+                        }
+
                     delete:
                         {
                             "group_id": -10012345678,
