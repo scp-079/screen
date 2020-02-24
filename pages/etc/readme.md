@@ -76,7 +76,7 @@ title: README
 1. 点击查看 [机器人目录](#机器人目录)，了解各个机器人的功能，决定自己的群组需要哪些机器人。
 2. 点击加入讨论群 [@SCP_079_CHAT](https://t.me/SCP_079_CHAT)。
 <br>在加入的讨论群里，说明自己的群组需要什么功能的机器人，并发送自己的群组链接（请确保您的群组为 supergroup）。
-<br>管理员审核通过后会令 [@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT) 加入您的群组。
+<br>管理员审核通过后会令 [\@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT) 加入您的群组。
 <br>或者，申请者也可以选择自行添加 [@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT)，
 <br>[点击查看如何自行拉入 USER](https://telegra.ph/SCP-079-USER-JOIN-12-04)。
 3. 当 [@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT) 加入了自己的群组后，群主需要提升其为管理员并*赋予其下图中所示的这五项权限*（[为什么？](https://telegra.ph/SCP-079-USER-12-04#%E9%97%AE%E4%B8%8E%E7%AD%94)）
