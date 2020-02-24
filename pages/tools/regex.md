@@ -20,8 +20,8 @@ SCP-079-REGEX 中的成员：
 
 基本样式：`/operation type pattern`
 
-- 例子一：`/list nm`
-- 例子二：`/add bio 出售银行卡`
+- 例一：`/list nm`
+- 例二：`/add bio 出售银行卡`
 
 对于样式：`/operation type pattern`
 
@@ -31,28 +31,29 @@ SCP-079-REGEX 中的成员：
 - `list`、`ls`：列出所有规则
 - `remove`、`rm`：删除一个规则，在回复某条由同一管理员发送的有效 `add` 命令时，后面可以不跟参数
 - `same` ： 用于回复某条由同一个管理员发送的有效 `add` 或 `remove` 命令，后面跟一种或几种 `type` ，代表这些 `type` 需要与被回复的命令一样，对某个模式执行相同的操作
-- `search`、`s`、`find`：通过关键字查询规则，除所列出的 `type` 外，还可以查询 `all` 类型，如未指定有效的 `type` ，则默认为 `all`
+- `search`、`s`、`find`：通过关键字查询规则，除所列出的 `type` 外，还可以查询 `all` 类型（`type`为`all`时可省略）
+- `who`：用于查询添加该规则的管理员
+
 
 `type` 应为以下任意一个：
 
 - `ad`：广告用语
-- `aff`：推广链接
 - `ava`：头像分析，avatar
 - `bad`：敏感检测
 - `ban`：自动封禁
 - `bio`：简介封禁
 - `con`：联系方式，contact
 - `del`：自动删除，delete
-- `eme`：应急模式，emergency
 - `iml`：IM 链接，IM link
 - `nm`：昵称封禁，name
 - `rm`：RM 类笑话
+- `pho`：电话号码
 - `sho`：短链接，short
 - `spc`：特殊中文字符，special chinese character
 - `spe`：特殊英文字符，special english character
 - `sti`：贴纸删除，sticker
 - `tgl`：TG 链接，telegram link
-- `tgp`：TG 代理，telegram proxy（MTProxy）
+- `tgp`：TG 代理，telegram proxy
 - `wb`：追踪封禁，watch ban
 - `wd`：追踪删除，watch delete
 - `test`：测试用例
@@ -89,17 +90,20 @@ SCP-079-REGEX 中的成员：
 - `/ls`：后面不跟类别，显示已有的所有类别及代号
 - `/push [word_type]`：手动推送某类规则，若 `[word_type]` 为 `all`，则推送全部规则
 - `/reset [word_type]`：清除某类规则计数数据，若 `[word_type]` 为 `all`，则清除全部规则计数
-- `/t2s`：回复某条消息，显示繁体转简体的结果
-- `/s 关键词`：忽略类别，则默认搜索所有类别含关键词的规则
 
 关于列表中规则下方数字的解释：
 
-- `0.0 / 0 / 0`：分别为自添加以来每日的触发平均条数、前一日的触发条数（若当日手动要求更新计数，则此数值相应增加，次日此数值相应减少）、总触发条数
+- `0.0 / 0 / 0 / 0 `：分别为自添加以来每日的触发平均条数、前一日的触发条数（若当日手动要求更新计数，则此数值相应增加，次日此数值相应减少）、总触发条数、连续未触发该正则表达式的天数。
 
 SCP-079-TEST 中的成员：
 
 - 直接发送测试消息
 - `/version`：检查机器人版本
+- `/t2t`：回复某条消息，显示繁体转简体、特殊字符转为普通字符的结果
+- `/findall`：
+- `/group`：
+- `/groupdict`：
+- `/groups`：
 
 附加说明：
 
