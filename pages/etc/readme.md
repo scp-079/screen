@@ -80,10 +80,10 @@ title: README
 <br>或者，申请者也可以选择自行添加 [@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT)，
 <br>[点击查看如何自行拉入 USER](https://telegra.ph/SCP-079-USER-JOIN-12-04)。
 3. 当 [@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT) 加入了自己的群组后，群主需要提升其为管理员并*赋予其下图中所示的这五项权限*（[为什么？](https://telegra.ph/SCP-079-USER-12-04#%E9%97%AE%E4%B8%8E%E7%AD%94)）
-<br>![](images/user-settings.jpg)
-1. 权限赋予齐全后，请在讨论群内告知项目管理员，之后 [@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT) 会为您拉入您所申请的机器人。至此，申请流程已成功，群组可正常使用各机器人。
-2. 建议申请者在群组置顶，或群组简介里说明机器人申诉方式 —— [@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT)，防止有群员被本项目 demo 服务误封而无处申诉，请至少确保群组管理员们知晓此申诉方式。
-3. 关注频道以获取本项目的重要公告 [@SCP_079_INFO](https://t.me/SCP_079_INFO)。
+<br>![](/images/user-settings.jpg)
+4. 权限赋予齐全后，请在讨论群内告知项目管理员，之后 [@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT) 会为您拉入您所申请的机器人。至此，申请流程已成功，群组可正常使用各机器人。
+5. 建议申请者在群组置顶，或群组简介里说明机器人申诉方式 —— [@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT)，防止有群员被本项目 demo 服务误封而无处申诉，请至少确保群组管理员们知晓此申诉方式。
+6. 关注频道以获取本项目的重要公告 [@SCP_079_INFO](https://t.me/SCP_079_INFO)。
 
 ## 透明度
 
