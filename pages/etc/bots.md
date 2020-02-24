@@ -1,3 +1,9 @@
+---
+title: Bots
+---
+
+<link rel="stylesheet" href="/css/chinese.css">
+
 # Bots
 
 ## **SCP-079-USER**
