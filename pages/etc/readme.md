@@ -1,10 +1,13 @@
-#---
+---
 title: README
 ---
+
+<link rel="stylesheet" href="/css/chinese.css">
 
 # SCP-079-README
 
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
+
 ## 简介
 
 本项目提供免费并开源的群组管理机器人，可提供的服务有：
@@ -133,8 +136,8 @@ title: README
 
 对于选择自行搭建 SCP-079 实例的用户，我们通常情况下可予以提供帮助，但需要先明确陈述搭建 SCP-079 实例的动机、缘由、未来安排等细节。
 
-
 ---
+
 [![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
 
 本项目相关文档采用 [知识共享署名-相同方式共享 4.0 国际许可协议][cc-by-sa] 进行许可。
