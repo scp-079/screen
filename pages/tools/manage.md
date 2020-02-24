@@ -45,7 +45,7 @@ SCP-079-MANAGE 中的成员：
 - `/remove_bad [id] [reason]`：将某频道 ID 从白名单中移除，或解禁某用户；以此命令回复某条带对象 ID的相应有效消息，执行相应操作，此时可省略 `[id]`；如需强制执行操作，在命令后添加 `force`
 - `/remove_except [id] [reason]`：将某频道 ID 从白名单中移除；以此命令回复某条带对象 ID 的相应有效消息，执行相应操作，此时可省略 `[id]`；如需强制执行操作，在命令后添加 `force`
 - `/remove_watch [id] [reason]`：将某用户 ID 的追踪状态移除；以此命令回复某条带对象 ID 的相应有效消息，执行相应操作，此时可省略 `[id]`；如需强制执行操作，在命令后添加 `force`
-- `/status [project]`：要求其他机器人汇报当前状态统计信息，其中，`[project]` 可为 nospam 、 user 、 watch，若 `[project]` 为 `all`，则要求全部机器人汇报
+- `/status [project]`：要求其他机器人汇报当前状态统计信息，其中，`[project]` 可为 nospam 、 user 、 watch 、regex，若 `[project]` 为 `all`，则要求全部机器人汇报
 
 
 SCP-079-TEST 中的成员：
