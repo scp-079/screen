@@ -30,7 +30,7 @@ title: README
 
 注意，群组管理性质的机器人均不会响应任何私聊，所有设置指令均在群组中进行。
 
-有任何疑问请至讨论群 [@SCP_079_CHAT](https://t.me/SCP_079_CHAT) 提出。
+有任何疑问请至讨论群 [\@SCP_079_CHAT](https://t.me/SCP_079_CHAT) 提出。
 
 **\*加粗**为必选项
 
@@ -74,33 +74,33 @@ title: README
 欢迎群组使用本项目机器人，为保证我们的公开服务质量，我们秉承 [双向选择原则](https://scp-079.org/principles-zh/) ，采取申请制，您需要主动申请使用机器人，并且您的使用申请需要通过审核，是否通过审核由 SCP-079 项目管理员共同判断决定。
 
 1. 点击查看 [机器人目录](#机器人目录)，了解各个机器人的功能，决定自己的群组需要哪些机器人。
-2. 点击加入讨论群 [@SCP_079_CHAT](https://t.me/SCP_079_CHAT)。
+2. 点击加入讨论群 [\@SCP_079_CHAT](https://t.me/SCP_079_CHAT)。
 <br>在加入的讨论群里，说明自己的群组需要什么功能的机器人，并发送自己的群组链接（请确保您的群组为 supergroup）。
 <br>管理员审核通过后会令 [\@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT) 加入您的群组。
-<br>或者，申请者也可以选择自行添加 [@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT)，
+<br>或者，申请者也可以选择自行添加 [\@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT)，
 <br>[点击查看如何自行拉入 USER](https://telegra.ph/SCP-079-USER-JOIN-12-04)。
-3. 当 [@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT) 加入了自己的群组后，群主需要提升其为管理员并*赋予其下图中所示的这五项权限*（[为什么？](https://telegra.ph/SCP-079-USER-12-04#%E9%97%AE%E4%B8%8E%E7%AD%94)）
+3. 当 [\@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT) 加入了自己的群组后，群主需要提升其为管理员并 *赋予如下图所示的这五项权限* （[为什么？](https://telegra.ph/SCP-079-USER-12-04#%E9%97%AE%E4%B8%8E%E7%AD%94)）
 <br>![](/images/user-settings.jpg)
-4. 权限赋予齐全后，请在讨论群内告知项目管理员，之后 [@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT) 会为您拉入您所申请的机器人。至此，申请流程已成功，群组可正常使用各机器人。
-5. 建议申请者在群组置顶，或群组简介里说明机器人申诉方式 —— [@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT)，防止有群员被本项目 demo 服务误封而无处申诉，请至少确保群组管理员们知晓此申诉方式。
-6. 关注频道以获取本项目的重要公告 [@SCP_079_INFO](https://t.me/SCP_079_INFO)。
+4. 权限赋予齐全后，请在讨论群内告知项目管理员，之后 [\@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT) 会为您拉入您所申请的机器人。至此，申请流程已成功，群组可正常使用各机器人。
+5. 建议申请者在群组置顶，或群组简介里说明机器人申诉方式 —— [\@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT)，防止有群员被本项目 demo 服务误封而无处申诉，请至少确保群组管理员们知晓此申诉方式。
+6. 建议关注 [\@SCP_079_INFO](https://t.me/SCP_079_INFO) 频道以获取本项目的重要公告 。
 
 ## 透明度
 
 | 类型     | 频道                                             |
 | -------- | ------------------------------------------------ |
-| 公告频道 | [@SCP_079_INFO](https://t.me/SCP_079_INFO)       |
-| 操作记录 | [@SCP_079_DEBUG](https://t.me/SCP_079_DEBUG)     |
-| 错误记录 | [@SCP_079_ERROR](https://t.me/SCP_079_ERROR)     |
-| 证据存放 | [@SCP_079_LOGGING](https://t.me/SCP_079_LOGGING) |
+| 公告频道 | [\@SCP_079_INFO](https://t.me/SCP_079_INFO)       |
+| 操作记录 | [\@SCP_079_DEBUG](https://t.me/SCP_079_DEBUG)     |
+| 错误记录 | [\@SCP_079_ERROR](https://t.me/SCP_079_ERROR)     |
+| 证据存放 | [\@SCP_079_LOGGING](https://t.me/SCP_079_LOGGING) |
 
 ## 隐私政策
 
 本项目尊重并保护所有使用服务用户及群组的隐私权。本项目将以高度的勤勉、审慎义务对待用户和群组信息。我们收集某些信息是为了获得维持机器人运行所需的基础数据。本项目不会保存，更不会向任何第三方提供、出售、出租、分享或交易您涉及隐私的数据。本项目收集的有关群组和用户的信息和资料将保存在本项目的服务器上，直接涉及具体用户的数据将自动地在每月全部清空。您在提升本项目机器人为管理员之时，即视为您已经同意本隐私权政策全部内容。本项目之代码完全遵循此政策，您可以随时审查我们的源代码：<https://github.com/scp-079/>。
 
-本项目组将于 [@SCP_079_LOGGING](https://t.me/SCP_079_LOGGING)、[@SCP_079_DEBUG](https://t.me/SCP_079_DEBUG)、[@SCP_079_CONFIG](https://t.me/SCP_079_CONFIG) 公开记录本项目组所有机器人的自动操作记录及触发机器人自动操作的消息(部分内容因涉及隐私而不记录) ，和群组管理员对本项目组机器人的操作、配置记录。
+本项目组将于 [\@SCP_079_LOGGING](https://t.me/SCP_079_LOGGING)、[\@SCP_079_DEBUG](https://t.me/SCP_079_DEBUG)、[\@SCP_079_CONFIG](https://t.me/SCP_079_CONFIG) 公开记录本项目组所有机器人的自动操作记录及触发机器人自动操作的消息(部分内容因涉及隐私而不记录) ，和群组管理员对本项目组机器人的操作、配置记录。
 
-本项目组将于 [@SCP_079_ERROR](https://t.me/SCP_079_ERROR) 记录本项目组机器人的错误的自动操作记录及触发错误的消息。上述频道中的记录如涉及您的隐私，您有权联系 [@SCP_079_TICKET](https://t.me/SCP_079_TICKET_BOT) 要求删除。
+本项目组将于 [\@SCP_079_ERROR](https://t.me/SCP_079_ERROR) 记录本项目组机器人的错误的自动操作记录及触发错误的消息。上述频道中的记录如涉及您的隐私，您有权联系 [\@SCP_079_TICKET](https://t.me/SCP_079_TICKET_BOT) 要求删除。
 
 ## 免责声明
 
@@ -120,7 +120,7 @@ title: README
 
 ## 联系我们
 
-如您需要对本项目组 demo 服务误判进行申诉，或需要私聊提供建议等，请联系：[@SCP_079_TICKET_BOT](https://t.me/SCP_079_TICKET_BOT)。
+如您需要对本项目组 demo 服务误判进行申诉，或需要私聊提供建议等，请联系：[\@SCP_079_TICKET_BOT](https://t.me/SCP_079_TICKET_BOT)。
 
 需要帮助？[点击查看申诉及建议方法](https://telegra.ph/SCP-079-TICKET-12-05)
 
@@ -128,7 +128,7 @@ title: README
 
 我们在征集义士，来作为项目组管理员，协助管理本项目组机器人。
 
-如您有意向参与，请联系：[@SCP_079_PM_BOT](https://t.me/SCP_079_PM_BOT)
+如您有意向参与，请联系：[\@SCP_079_PM_BOT](https://t.me/SCP_079_PM_BOT)
 
 ## 自建机器人
 
