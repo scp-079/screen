@@ -9,8 +9,6 @@ cache:
     - .stack/
     - .stack-work/
     - _cache/
-    - dist/
-    - dist-newstyle/
     - public/
 
 pages:
