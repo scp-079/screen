@@ -2,11 +2,10 @@
 title: Suggestions
 ---
 
+<link rel="stylesheet" href="/css/chinese.css">
 <button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/suggestions/';" class="en">Click Here to English Page</button>
 
 ---
-
-<link rel="stylesheet" href="/css/chinese.css">
 
 # 建议
 

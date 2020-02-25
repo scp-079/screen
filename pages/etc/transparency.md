@@ -16,7 +16,7 @@ The information included in `Joined` field indicates the private channels' names
 
 In alphabetical order:
 
-- <a href="https://t.me/mrwangzhe" target="_blank">MXtao_dada</a> 
+- [MXtao_dada](https://t.me/mrwangzhe) 
 <a class="no">- ID: 347437156 - Joined: WATCH</a>
 
 <style>
