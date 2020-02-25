@@ -62,9 +62,9 @@ title: Classes
 
 目前已有的 Thaumiel 级项目：
 
-- <a class="no" target="_blank">SCP-079-EMPTY</a>
-- <a class="no" target="_blank">SCP-079-ME</a>
-- <a class="no" target="_blank">SCP-079-WOLF</a>
+- <a class="no">SCP-079-EMPTY</a>
+- <a class="no">SCP-079-ME</a>
+- <a class="no">SCP-079-WOLF</a>
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>
 <audio id="no_button" src="/audio/button/no.ogg"/>

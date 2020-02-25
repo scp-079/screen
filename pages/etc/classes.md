@@ -60,9 +60,9 @@ These projects are closed source projects for some reason, or completely unrelat
 
 Thaumiel projects：
 
-- <a class="no" target="_blank">SCP-079-EMPTY</a>
-- <a class="no" target="_blank">SCP-079-ME</a>
-- <a class="no" target="_blank">SCP-079-WOLF</a>
+- <a class="no">SCP-079-EMPTY</a>
+- <a class="no">SCP-079-ME</a>
+- <a class="no">SCP-079-WOLF</a>
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>
 <audio id="no_button" src="/audio/button/no.ogg"/>
