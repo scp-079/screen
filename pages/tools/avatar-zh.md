@@ -2,15 +2,16 @@
 title: SCP-079-AVATAR
 ---
 
+<link rel="stylesheet" href="/css/chinese.css">
 <button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/avatar/';" class="en">Click Here to English Page</button>
 
 ---
 
-<link rel="stylesheet" href="/css/chinese.css">
-
 **项目编号：**SCP-079-AVATAR
 
 **项目等级：**Keter
+
+---
 
 **特殊收容措施：**SCP-079-AVATAR 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-AVATAR 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。务必要注意，其机器人的真实身份应对所有人保持隐秘（除维护该机器人的人员以外的所有人士），否则将可能给其他机器人的工作带来影响。该机器人应该作为频道 SCP-079-HIDE 的管理员。
 
