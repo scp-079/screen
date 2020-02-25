@@ -3,5 +3,6 @@ dist/
 dist-newstyle/
 public/
 .stack-work/
+stack.yml.lock
 .ghc.environment.*
 
