@@ -32,7 +32,8 @@ title: SCP-079-CAPTCHA
 - **SCP-079-EXCHANGE （必选）**
 - SCP-079-HIDE
 - SCP-079-CRITICAL
->SCP-079-CAPTCHA 在上述频道中应具有发送消息的权限
+
+> SCP-079-CAPTCHA 在上述频道中应具有发送消息的权限
 
 此机器人需要加入以下群组：
 
@@ -239,9 +240,6 @@ key = [DATA EXPUNGED]
 password = [DATA EXPUNGED]
 ; 加密文件所用的密码
 ```
-
----
-
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>
 <audio id="dooropen079" src="/audio/door/dooropen079.ogg"/>
