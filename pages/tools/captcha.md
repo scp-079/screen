@@ -62,7 +62,8 @@ title: SCP-079-CAPTCHA
 - 图片形式的汉字验证码（提供备选按钮，文字是与食品有关的名称）
 
 ---
-**附录 **使用说明
+
+**附录：**使用说明
 
 群组中的管理员：
 
@@ -206,7 +207,7 @@ time_captcha = [DATA EXPUNGED]
 time_invite = [DATA EXPUNGED]
 ; 此处填写整数，代表加入 CAPTCHA 专用验证群链接的刷新间隔时间，单位为秒
 time_new = [DATA EXPUNGED]
-; 此处填写整数，代表判断用户为新用户的入群时长，用于进行昵称复查时使用，单位为秒
+; 此处填写整数，代表判断用户为新用户的入群时长，单位为秒
 time_punish = [DATA EXPUNGED]
 ; 此处填写整数，代表惩罚用户的时间，期间用户在验证未通过群组将保持封禁状态，惩罚时间过后才会被解禁，单位为秒
 time_recheck = [DATA EXPUNGED]
@@ -240,8 +241,6 @@ key = [DATA EXPUNGED]
 password = [DATA EXPUNGED]
 ; 加密文件所用的密码
 ```
-
----
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>
 <audio id="dooropen079" src="/audio/door/dooropen079.ogg"/>
