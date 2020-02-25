@@ -60,8 +60,6 @@ Welcome to contribute to this
 * [Google discussion group](https://groups.google.com/forum/#!forum/hakyll)
 * [Hakyll on StackOverflow](https://stackoverflow.com/questions/tagged/hakyll)
 
----
-
 ## License
 
 This theme is under [GPLv3](LICENSE_GNU_GPLv3).
