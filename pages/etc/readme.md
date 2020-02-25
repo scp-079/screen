@@ -50,10 +50,8 @@ title: README
 
 - 本项目任意其他机器人都需要 SCP-079-USER 配合,SCP-079-USER 为必选项
 - 根据目前的观测结果表明，炸群期间有很多昵称中包含 中东语言 的成员加入
-作为运营建议，建议在引入 SCP-079-CAPTCHA 的同时引入 SCP-079-LANG 和 SCP-079-NOSPAM
-- 本项目任意其他机器人都需要 SCP-079-USER 配合，SCP-079-USER 为必选项
-- 根据目前的观测结果表明，炸群期间有很多昵称中包含中东语言的成员加入
 <br>作为运营建议，建议在引入 SCP-079-CAPTCHA 的同时引入 SCP-079-LANG 和 SCP-079-NOSPAM
+- 本项目任意其他机器人都需要 SCP-079-USER 配合，SCP-079-USER 为必选项
 - 详情请参阅：[Bots](/bots/)
 
 ---
