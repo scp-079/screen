@@ -60,7 +60,6 @@ li {
 
 img {
     display: block;
-    margin: 0 auto;
 }
 
 a {
@@ -175,17 +174,18 @@ main iframe {
 table {
     margin: 0 auto;
     font-size: 18px;
-    table-layout: fixed;
+    table-layout: auto;
     width: 100%;
 }
 
 td, th {
+    color: #ccc;
     border: 1px solid #ddd;
     padding: 10px 15px;
 }
 
 tr:nth-child(even) {
-    background-color: dimgray;
+    background-color: #001e00;
 }
 
 tr:hover {
