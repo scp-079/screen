@@ -39,11 +39,13 @@ sudo apt autoremove -y
 sudo apt install build-essential git python3-dev python3-venv vim -y
 ```
 
-## 其他依赖
+## 其他软件包
 
 有些项目需要额外安装其他软件包，请务必查阅各项目[单独页面](/tools/)中的描述。
 
 ## 创建虚拟环境
+
+机器人一般可共用同一个虚拟环境，通常情况下无需额外创建。
 
 注意：如需使用 NOPORN 或 RECHECK ，请单独根据其源代码中 `README.md` 或[单独页面](/tools/)中所给出的命令操作。
 
@@ -82,9 +84,7 @@ vim ~/.bash_aliases
 添加如下内容：
 
 ```bash
-alias scp="deactivate"
 alias scp-079="source ~/scp-079/venv/bin/activate"
-
 alias config="bash ~/scp-079/scripts/config.sh"
 alias log="bash ~/scp-079/scripts/log.sh"
 alias restart="bash ~/scp-079/scripts/restart.sh"
@@ -108,6 +108,14 @@ source ~/.bash_aliases
 
 ```bash
 git clone https://github.com/scp-079/scp-079-pm.git ~/scp-079/pm
+```
+
+# 使用 pip 安装依赖
+
+```bash
+scp-079    # 切换到虚拟环境
+pip install -r ~/scp-079/pm/requirements.txt
+deactivate    # 退出虚拟环境
 ```
 
 ## 更改配置文件
@@ -147,7 +155,7 @@ python main.py    # 临时启动程序
 此时，将提示登录帐号，按要求操作即可，注意手机号输入时中间无空格、符号，省略最前方的加号。如登录成功，则按 Ctrl + C 退出程序，接着，启动服务：
 
 ```bash
-scp    # 退出虚拟环境
+deactivate    # 退出虚拟环境
 bash ~/scp-079/scripts/enable.sh
 start user
 ```
