@@ -8,22 +8,20 @@ SCP-079, an open source project, is dedicated to providing solutions for
 blocking spammers in the Telegram groups.
 
 Using the name of this project as a tribute to one of the SCP Foundation 
-stories. See <a href="http://www.scp-wiki.net/scp-079" target="_blank">SCP-079</a> 
+stories. See [SCP-079](http://www.scp-wiki.net/scp-079) 
 for more details.
 
-Follow our announcement channel to get updates: 
-<a href="https://t.me/SCP_079_INFO" target="_blank">SCP-079-INFO</a>.
+Follow our announcement channel to get updates: [SCP-079-INFO](https://t.me/SCP_079_INFO).
 
 Learn more:
 
+- [README of Demo Instances](/readme/)
 - [Design Principles](/principles/)
 - [Object Classes](/classes/)
 - [Transparency](/transparency/)
 - [Suggestions](/suggestions/)
 - [Self Hosting Instructions](/how/)
-- [Data Exchange Method](/exchange/)
 
-All bots are hosted on ████████. 
-IP address is <a href="http://www.scp-wiki.net/scp-614" target="_blank">57.32.███.███</a>.
+All bots are hosted on ████████. IP address is [57.32.███.███](http://www.scp-wiki.net/scp-614).
 
 <audio src="/audio/page/about.ogg" autoplay></audio>

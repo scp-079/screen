@@ -9,11 +9,21 @@ title: Self Hosting Instructions
 
 # 自建说明书
 
-这篇文章以建立 SCP-079-PM 为例，用于介绍如何自建 SCP-079 系列机器人。文章所用环境为 Debian 10 ，Python 3.7.3 ，系统的用户名为 `scp` 。
+SCP-079 系列机器人的搭建涉及多个频道、群组、机器人帐号、用户帐号的创建，具体要求请参见各机器人[单独的介绍页面](/tools/)，这篇文章仅以建立 [SCP-079-PM](/pm-zh/) （私聊转发机器人）为例，用于介绍自建 SCP-079 系列机器人所需的通用步骤。
+
+此文示例所用的环境为：
+
+- Debian 10
+- Python 3.7.3
+- 系统的用户名为 `scp` （请注意用户名涉及到的路径问题，例如 systemd unit 文件中的路径）
 
 另见：[为什么你应该自行建立机器人](/suggestions-zh/)
 
+---
+
 ## 更新系统
+
+首先，请确保系统环境为最新，执行以下命令：
 
 ```bash
 sudo apt update
@@ -21,7 +31,9 @@ sudo apt full-upgrade -y
 sudo apt autoremove -y
 ```
 
-## 安装依赖
+## 安装搭建所需基本软件包
+
+安装 vim、git 等工具：
 
 ```bash
 sudo apt install build-essential git python3-dev python3-venv vim -y
@@ -29,22 +41,22 @@ sudo apt install build-essential git python3-dev python3-venv vim -y
 
 ## 其他依赖
 
-有些项目需要额外安装其他软件包，请务必查阅项目源代码中的说明文件 `README.md` 的 `Requirements` 一节。
+有些项目需要额外安装其他软件包，请务必查阅各项目[单独页面](/tools/)中的描述。
 
 ## 创建虚拟环境
 
-注意：如需使用 NOPORN 或 RECHECK ，请单独根据其 `README.md` 所给出的命令操作。
+注意：如需使用 NOPORN 或 RECHECK ，请单独根据其源代码中 `README.md` 或[单独页面](/tools/)中所给出的命令操作。
 
 ```bash
 mkdir ~/scp-079
 python3 -m venv ~/scp-079/venv
 ```
 
-## 环境配置
-
-通过 pip 安装所需要的包，也请查看项目源代码中的说明文件 `README.md` 的 `Requirements` 一节。
+---
 
 ## 设置 systemd 服务
+
+除有更新 units 的必要，下次搭建其他机器人无需重复克隆：
 
 ```bash
 mkdir -p ~/.config/systemd
@@ -53,11 +65,15 @@ git clone https://github.com/scp-079/units.git ~/.config/systemd/user
 
 ## 配置脚本
 
+除有更新 scripts 的必要，下次搭建其他机器人无需重复克隆：
+
 ```bash
 git clone https://github.com/scp-079/scripts.git ~/scp-079/scripts
 ```
 
 ## 设置便捷命令
+
+下次搭建其他机器人无需重复设置：
 
 ```bash
 vim ~/.bash_aliases
@@ -84,9 +100,11 @@ alias update="bash ~/scp-079/scripts/update.sh"
 source ~/.bash_aliases
 ```
 
+---
+
 ## 克隆某个项目
 
-例如，使用 `SCP-079-PM` ，根据项目中的[单独使用说明](/pm-zh/)克隆：
+例如，使用 `SCP-079-PM` ，根据项目中的[单独使用说明](/pm-zh/)提供的地址克隆：
 
 ```bash
 git clone https://github.com/scp-079/scp-079-pm.git ~/scp-079/pm
@@ -101,14 +119,40 @@ cp ~/scp-079/pm/config.ini.example ~/scp-079/pm/config.ini
 vim ~/scp-079/pm/config.ini
 ```
 
-`config.ini` 文件中参数代表的含义，可在[单独使用说明](/pm-zh/)中查看。
+`config.ini` 文件中参数代表的含义，也可在[单独使用说明](/pm-zh/)中 `文件：config.ini` 一节中查看。
+
+## 需采取的额外操作
+
+有些机器人可能需要一些额外的更改，例如对环境的更改、下载所需模型。请参照[各项目单独使用说明](/tools/)中 `附录：自建机器人的方法` 一节的说明。
+
+---
 
 ## 启用机器人服务
+
+对于常规普通机器人，比如本文的 SCP-079-PM，可直接启动服务：
 
 ```bash
 bash ~/scp-079/scripts/enable.sh
 start pm
 ```
+
+对于使用普通用户帐号的 User Bot，则需先进行登录操作（以 SCP-079-USER 为例）：
+
+```bash
+scp-079    # 切换到虚拟环境
+cd ~/scp-079/user
+python main.py    # 临时启动程序
+```
+
+此时，将提示登录帐号，按要求操作即可，注意手机号输入时中间无空格、符号，省略最前方的加号。如登录成功，则按 Ctrl + C 退出程序，接着，启动服务：
+
+```bash
+scp    # 退出虚拟环境
+bash ~/scp-079/scripts/enable.sh
+start user
+```
+
+---
 
 ## 便捷命令使用方法
 
@@ -124,12 +168,6 @@ config pm
 log pm
 ```
 
-强制重启机器人：
-
-```bash
-restart pm
-```
-
 重启机器人：
 
 ```bash
@@ -142,7 +180,13 @@ start pm
 stop pm
 ```
 
-查看机器人服务状态：
+强制重启机器人：
+
+```bash
+restart pm
+```
+
+查看机器人 systemd 服务状态：
 
 ```bash
 status pm
