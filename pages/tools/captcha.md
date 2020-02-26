@@ -91,6 +91,21 @@ SCP-079-TEST 中的成员：
 git clone https://github.com/scp-079/scp-079-captcha.git ~/scp-079/captcha
 ```
 
+启用看图辨物的功能：如需启用此功能，服务托管者须在 `~/scp-079/captcha/assets/` 下创建 `pics` 文件夹，并适当存放图片，其结构描述如下：
+
+- pics/
+    - 物体名称_1/
+        - 图片_1.jpg
+        - 图片_2.jpg
+        - ...
+    - 物体名称_2/
+        - 图片_1.jpg
+        - 图片_2.jpg
+        - ...
+    - ...
+
+注意物体名称文件夹的名字，不应超过 15 个字节长度（中文字符不超过 5 个）。
+
 ---
 
 **文件#config.ini：**
