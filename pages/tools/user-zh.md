@@ -9,7 +9,7 @@ title: SCP-079-USER
 
 # 此为暂时性文档，以供自建参考
 
-搭建过程中如遇问题，请至 <a href="https://t.me/SCP_079_CHAT" target="_blank">SCP-079-CHAT</a> 咨询
+搭建过程中如遇问题，请至 [SCP-079-CHAT](https://t.me/SCP_079_CHAT) 咨询
 
 ---
 
@@ -27,11 +27,13 @@ title: SCP-079-USER
 
 此机器人需要加入以下频道：
 
-- SCP-079-EXCHANGE （必选）（发送消息的权限）
-- SCP-079-DEBUG （必选）（发送消息的权限）
-- SCP-079-HIDE （发送消息的权限）
-- SCP-079-LOGGING （必选）（发送消息的权限）
-- SCP-079-CRITICAL （发送消息的权限）
+- **SCP-079-EXCHANGE （必选）**
+- **SCP-079-DEBUG （必选）**
+- **SCP-079-LOGGING （必选）**
+- SCP-079-HIDE
+- SCP-079-CRITICAL
+
+> SCP-079-USER 在上述频道中应具有发送消息的权限
 
 此机器人需要加入以下群组：
 
@@ -58,13 +60,13 @@ title: SCP-079-USER
 - `/config_user default`：恢复为默认设置
 - `/config_user delete off`：关闭协助删除功能，关闭后，将不再响应其他 bot 的协助删除用户全部消息的请求（不推荐，这可能给其他机器人的功能带来影响）
 - `/config_user delete on`：开启协助删除功能（默认设置） 
-- 待补充
+- `待补充`
 
 SCP-079-TEST 中的成员：
 
 - `/mention [id | username]`：通过 ID 或 username 查询用户
 - `/version`：检查机器人版本
-- 待补充
+- `待补充`
 
 ---
 
@@ -150,17 +152,19 @@ test_group_id = [DATA EXPUNGED]
 ; 此处填写测试群组 SCP-079-TEST 的 ID
 
 [custom]
-aio = [DATA EXPUNGED]
+aio = False
 ; 此处填写 True 或 False，代表程序是否与其他程序共用同一机器人帐号
-backup = [DATA EXPUNGED]
+backup = False
 ; 此处填写 True 或 False，代表程序是否为备份副本
+date_reset = 1st mon
+; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
 default_group_link = [DATA EXPUNGED]
 ; 此处填写 DEBUG 频道信息中默认的群组链接
 image_size = [DATA EXPUNGED]
 ; 此处填写整数，代表分享链接预览中的图片的最大大小，单位为 B
-project_link = [DATA EXPUNGED]
+project_link = https://scp-079.org/user/
 ; 此处填写项目网址
-project_name = [DATA EXPUNGED]
+project_name = SCP-079-USER
 ; 此处填写项目名称
 zh_cn = [DATA EXPUNGED]
 ; 此处填写 True 或 False，代表程序是否启用简体中文模式

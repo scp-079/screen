@@ -4,49 +4,51 @@ title: Projects
 
 ## Projects
 
-Currently, all open source subprojects are hosted on GitLab, mirrored on <a href="https://github.com/scp-079" target="_blank">GitHub</a>. Most of the projects will remain closed until we officially open the public service.
+Currently, all open source subprojects are hosted on GitLab, mirrored on [GitHub](https://github.com/scp-079). Most of the projects will remain closed until we officially open the public service.
 
 In alphabetical order:
 
-- <a href="https://github.com/scp-079/scp-079-avatar" target="_blank">SCP-079-AVATAR</a>: 
+- [SCP-079-AVATAR](https://github.com/scp-079/scp-079-avatar): 
 Get new joined member's profile photo
-- <a href="https://github.com/scp-079/scp-079-clean" target="_blank">SCP-079-CLEAN</a>: 
+- [SCP-079-CAPTCHA](https://github.com/scp-079/scp-079-captcha)
+Provide challenges for new joined members
+- [SCP-079-CLEAN](): 
 Filter specific types of messages
-- <a href="https://github.com/scp-079/scp-079-config" target="_blank">SCP-079-CONFIG</a>: 
+- [SCP-079-CONFIG](https://github.com/scp-079/scp-079-config): 
 Manage the settings of each bot
-- <a href="https://github.com/scp-079/scp-079-hide" target="_blank">SCP-079-HIDE</a>: 
+- [SCP-079-HIDE](https://github.com/scp-079/scp-079-hide): 
 Hide the real sender
-- <a href="https://github.com/scp-079/scp-079-lang" target="_blank">SCP-079-LANG</a>: 
+- [SCP-079-LANG](https://github.com/scp-079/scp-079-lang): 
 Ban or delete by detecting the language
-- <a href="https://github.com/scp-079/scp-079-long" target="_blank">SCP-079-LONG</a>: 
+- [SCP-079-LONG](https://github.com/scp-079/scp-079-long): 
 Control super long messages
-- <a href="https://github.com/scp-079/scp-079-manage" target="_blank">SCP-079-MANAGE</a>: 
+- [SCP-079-MANAGE](https://github.com/scp-079/scp-079-manage): 
 One ring to rule them all
-- <a href="https://github.com/scp-079/scp-079-mirror" target="_blank">SCP-079-MIRROR</a>: 
+- [SCP-079-MIRROR](https://github.com/scp-079/scp-079-mirror): 
 What will I see
-- <a href="https://github.com/scp-079/scp-079-noflood" target="_blank">SCP-079-NOFLOOD</a>: 
+- [SCP-079-NOFLOOD](https://github.com/scp-079/scp-079-noflood): 
 Message-flooding prevention
-- <a href="https://github.com/scp-079/scp-079-noporn" target="_blank">SCP-079-NOPORN</a>: 
+- [SCP-079-NOPORN](https://github.com/scp-079/scp-079-noporn): 
 Auto delete NSFW media messages
-- <a href="https://github.com/scp-079/scp-079-nospam" target="_blank">SCP-079-NOSPAM</a>: 
+- [SCP-079-NOSPAM](https://github.com/scp-079/scp-079-nospam): 
 Block spam in groups
-- <a href="https://github.com/scp-079/scp-079-pm" target="_blank">SCP-079-PM</a>: 
+- [SCP-079-PM](https://github.com/scp-079/scp-079-pm): 
 Everyone can have their own private chat bot
-- <a href="https://github.com/scp-079/scp-079-recheck" target="_blank">SCP-079-RECHECK</a>: 
+- [SCP-079-RECHECK](https://github.com/scp-079/scp-079-recheck): 
 Recheck NSFW media messages
-- <a href="https://github.com/scp-079/scp-079-regex" target="_blank">SCP-079-REGEX</a>: 
+- [SCP-079-REGEX](https://github.com/scp-079/scp-079-regex): 
 Manage the regex patterns
-- <a href="https://github.com/scp-079/scp-079-user" target="_blank">SCP-079-USER</a>: 
+- [SCP-079-USER](https://github.com/scp-079/scp-079-user): 
 Invite and help other bots
-- <a href="https://github.com/scp-079/scp-079-warn" target="_blank">SCP-079-WARN</a>: 
+- [SCP-079-WARN](https://github.com/scp-079/scp-079-warn): 
 Warn or ban someone by admin commands
-- <a href="https://github.com/scp-079/scp-079-watch" target="_blank">SCP-079-WATCH</a>: 
+- [SCP-079-WATCH](https://github.com/scp-079/scp-079-watch): 
 Observe and track suspicious spam behaviors
-- <a href="https://github.com/scp-079/screen" target="_blank">Screen</a>: 
+- [Screen](https://github.com/scp-079/screen): 
 A dark theme for Hakyll
-- <a href="https://github.com/scp-079/scripts" target="_blank">Scripts</a>: 
+- [Scripts](https://github.com/scp-079/scripts): 
 Some scripts
-- <a href="https://github.com/scp-079/units" target="_blank">Units</a>: 
+- [Units](https://github.com/scp-079/units): 
 Some systemd units
 
 <audio src="/audio/page/projects.ogg" autoplay></audio>

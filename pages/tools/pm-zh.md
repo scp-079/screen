@@ -3,22 +3,57 @@ title: SCP-079-PM
 ---
 
 <link rel="stylesheet" href="/css/chinese.css">
+<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/pm/';" class="en">Click Here to English Page</button>
+
+---
+
+# 此为暂时性文档，以供自建参考
+
+搭建过程中如遇问题，请至 [SCP-079-CHAT](https://t.me/SCP_079_CHAT) 咨询
+
+---
 
 **项目编号：**SCP-079-PM
 
 **项目等级：**Safe
 
-**特殊收容措施：**SCP-079-PM 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-PM 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。
+---
 
-**描述：**SCP-079-PM 是一个用于转发私聊消息的机器人，其项目位于 GitLab ，镜像同步并开源于 <a href="https://github.com/scp-079/scp-079-pm" target="_blank">GitHub</a> 。该项目由 ███ 主要负责。机器人本体位于 <a href="https://t.me/SCP_079_PM_BOT" class="079" target="_blank">SCP-079-PM</a> ，仅供演示、与项目管理员 UZE4H6IL 私聊使用。其加入了 SCP-079-TEST ，用于测试运行状态。通过该项目建立的机器人有类似的功能：如果客人向运行中的机器人发送任意消息，此消息将会被转发至机器人主人与该机器人的私聊对话中，并附加客人的来源信息，当主人回复某条包含客人 ID 的来源汇报消息后，机器人将把主人回复的消息转发给客人，以此实现通过 Bot 的主客私聊功能。除此之外，还具有一些聊天所需的必要功能，例如回复某条特定消息、同步消息编辑状态，撤回消息。详见附录中的使用说明。
+**特殊收容措施：**SCP-079-PM 建议在 Linux 环境下运行。
+
+本机器人所需依赖安装：
+
+- pip: `pip install -r requirements.txt`
+
+注意：`若此机器人为私人使用，一般不需要加入任何频道、群组`，若此机器人作为整体项目的工单机器人，那么其应加入——
+
+此机器人需要加入以下频道：
+
+- **SCP-079-DEBUG （必选）**
+- **SCP-079-EXCHANGE （必选）**
+- SCP-079-HIDE
+- SCP-079-CRITICAL
+
+> SCP-079-PM 在上述频道中应具有发送消息的权限
+
+此机器人需要加入以下群组：
+
+- **SCP-079-TICKET（必选）**
+- SCP-079-TEST
+
+---
+
+**描述：**SCP-079-PM 是一个用于转发私聊消息的机器人，其项目位于 GitLab ，镜像同步并开源于 [GitHub](https://github.com/scp-079/scp-079-pm) 。Demo 机器人本体位于 <a href="https://t.me/SCP_079_PM_BOT" class="079" target="_blank">SCP-079-PM</a> ，用途为：接受加入 Demo 实例项目管理员团队的申请。通过该项目建立的机器人有类似的功能：如果客人向运行中的机器人发送任意消息，此消息将会被转发至机器人主人与该机器人的私聊对话中，并附加客人的来源信息，当主人回复某条包含客人 ID 的来源汇报消息后，机器人将把主人回复的消息转发给客人，以此实现通过 Bot 的主客私聊功能。除此之外，还具有一些聊天所需的必要功能，例如回复某条特定消息、同步消息编辑状态，撤回消息。详见附录中的使用说明。
+
+- 此机器人的性质：常规机器人，需要获取 bot token
 
 ---
 
 **附录：**使用说明
 
-机器人所有者：
+机器人所有者 / SCP-079-TICKET 中的成员：
 
-`注意`：机器人只能删除在私聊对话中 48 小时内发送的消息
+注意：`受 Telegram 服务端的限制，机器人只能删除在私聊对话中 48 小时内发送的消息`
 
 - `基本`：回复某条汇报消息，即可回复对应的用户；回复某条来自用户的非汇报消息，则以 reply 该条消息的方式回复给该用户；编辑某条消息的文字部分，将同步给对应用户
 - `/start`：首次使用以此命令激活机器人
@@ -40,12 +75,13 @@ title: SCP-079-PM
 - `/recall all`：对应按钮 “全部对话消息”，以此命令回复某条带 ID 的汇报消息，将清空与某人对话的全部消息
 - `/recall host`：对应按钮 “由您发送的消息”，以此命令回复某条带 ID 的汇报消息，将清空与某人对话中，由您发送的全部消息
 - `/recall single`：对应按钮 “撤回”，以此命令回复某条带 ID 的汇报消息（状态为：已发送），将撤回相应的某条消息
+- `待补充`
 
 客人：
 
 - `基本`：直接向机器人发送消息，将转发给机器人所有者；编辑某条消息的文字部分，将同步给机器人所有者
 - `/start`：开始与机器人的对话
-- 发送过于频繁时，将需要等待 15 分钟才能继续发送消息
+- 发送过于频繁时，将需要等待一段时间后才能继续发送消息
 
 SCP-079-TEST 中的成员：
 
@@ -55,7 +91,7 @@ SCP-079-TEST 中的成员：
 
 **附录：**自建机器人的方法
 
-可先查看<a href="/how/">自建说明书</a>
+关于搭建机器人的通用说明，请先查看<a href="/how-zh/" target="_blank">自建说明书</a>
 
 克隆项目：
 
@@ -102,65 +138,38 @@ critical_channel_id = 0
 debug_channel_id = 0
 ; 此处填写调试频道 SCP-079-DEBUG 的 ID
 exchange_channel_id = 0
-; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID（可选）
+; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID
 ; 关于数据交换频道的详情，请查看 https://scp-079.org/exchange/
 hide_channel_id = 0
-; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID（可选）
+; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
 test_group_id = 0
-; 此处填写测试群组 SCP-079-TEST 的 ID（可选）
+; 此处填写测试群组 SCP-079-TEST 的 ID
 
 [custom]
-host_id = [DATA EXPUNGED]
-; 此处填写自己帐号的 ID
-host_name = [DATA EXPUNGED]
-; 此处填写自定义昵称
-project_link = [DATA EXPUNGED]
-; 此处填写项目网址
-project_name = [DATA EXPUNGED]
-; 此处填写项目名称
-reset_day = [DATA EXPUNGED]
+aio = False
+; 此处填写 True 或 False，代表程序是否与其他程序共用同一机器人帐号
+backup = False
+; 此处填写 True 或 False，代表程序是否为备份副本
+date_reset = 1st mon
 ; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
-```
-
----
-
-**附录：**开发备忘
-
-<a href="https://t.me/SCP_079_PM_BOT" class="079" target="_blank">示例机器人</a>用于作为可自搭建的私聊机器人的演示版本
-
-1. 联系此演示机器人，将与 UZE4H6IL 展开对话
-2. 此机器人代码可用于自行创建私聊机器人
-3. 每月定时清空数据
-4. 可选择对接 SCP-079 项目数据交换频道
-
-PM 能够向 BACKUP 发送数据
-
-情形 1：向 BACKUP 汇报在线状态。每个小时的第 30 分钟：
-
-```python
-exchange_text = format_data(
-    sender="PM",
-    receviers=[
-        "BACKUP"
-    ],
-    action="backup",
-    action_type="status",
-    data="awake"
-)
-```
-
-特殊情形：向所有 bot 发送数据交换频道转移指令
-
-```python
-exchange_text = format_data(
-    sender="PM",
-    receviers=[
-        "EMERGENCY"
-    ],
-    action="backup",
-    action_type="hide",
-    data=True
-)
+flood_ban = 5
+; 此处填写整数，代表客人刷屏后所受限制时间，限制时间内客人无法向主人发送消息，单位为分钟
+flood_limit = 5
+; 此处填写整数，代表一定时间内客户发送多少条消息则被判断为刷屏
+flood_time = 5
+; 此处填写整数，代表多少时间内客户发送一定条数消息则被判断为刷屏，单位为秒
+host_id = [DATA EXPUNGED]
+; 此处填写整数，如为私人使用，此处填写自己的帐号 ID，如为团队使用，此处填写团队内部群组的 ID
+host_name = [DATA EXPUNGED]
+; 此处填写主人或团队的称谓
+per_page = 10
+; 此处填写整数，代表每页显示的项目条数
+project_link = https://scp-079.org/pm/
+; 此处填写项目网址
+project_name = SCP-079-PM
+; 此处填写项目名称
+zh_cn = [DATA EXPUNGED]
+; 此处填写 True 或 False，代表程序是否启用简体中文模式
 ```
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>

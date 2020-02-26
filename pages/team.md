@@ -2,6 +2,13 @@
 title: Team
 ---
 
+<style>
+.key, .no {
+    color: rgba(255,255,255,0.7);
+    font-weight: normal;
+}
+</style>
+
 ## Team
 
 In order to avoid unnecessary troubles, it's essential for project's 
@@ -17,13 +24,6 @@ In alphabetical order:
 <a href="/uze4h6il/" class="key" target="_blank">AD6D 5622 8F5F B87F 2A24 60CC ACC0 64F9 3E44 E061</a>
 - <a class="no" target="_blank" style="color: #ddd; font-weight: 700;">Xiao</a> 
 <a href="/xiao/" class="key" target="_blank">C1BE CBF6 E0BD 06AF 7802 2F93 FED1 BA4A 7D9E 2E29</a>
-
-<style>
-.key, .no {
-    color: rgba(255,255,255,0.7);
-    font-weight: normal;
-}
-</style>
 
 <audio id="no_button" src="/audio/button/no.ogg"/>
 <audio id="no_click" src="/audio/button/no_click.ogg"/>

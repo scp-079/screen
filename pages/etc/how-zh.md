@@ -116,7 +116,7 @@ git clone https://github.com/scp-079/scp-079-pm.git ~/scp-079/pm
 
 ```bash
 cp ~/scp-079/pm/config.ini.example ~/scp-079/pm/config.ini
-vim ~/scp-079/pm/config.ini
+config pm
 ```
 
 `config.ini` 文件中参数代表的含义，也可在[单独使用说明](/pm-zh/)中 `文件：config.ini` 一节中查看。
