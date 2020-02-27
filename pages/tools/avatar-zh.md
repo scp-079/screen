@@ -13,9 +13,22 @@ title: SCP-079-AVATAR
 
 ---
 
-**特殊收容措施：**SCP-079-AVATAR 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-AVATAR 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。务必要注意，其机器人的真实身份应对所有人保持隐秘（除维护该机器人的人员以外的所有人士），否则将可能给其他机器人的工作带来影响。该机器人应该作为频道 SCP-079-HIDE 的管理员。
+**特殊收容措施：**SCP-079-AVATAR 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-AVATAR。务必要注意，其机器人的真实身份应对所有人保持隐秘（除维护该机器人的人员以外的所有人士），否则将可能给其他机器人的工作带来影响。
 
-**描述：**SCP-079-AVATAR 是一个用于将新入群用户头像发至 NOSPAM 进行分析的机器人（user-bot），其项目位于 GitLab ，镜像同步并开源于 <a href="https://github.com/scp-079/scp-079-avatar" target="_blank">GitHub</a> 。机器人的展示身份位于 <a href="https://t.me/SCP_079_AVATAR_BOT" class="079" target="_blank">SCP-079-AVATAR</a> ，真实身份为隐藏状态，且并不接受任何直接管理。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：发送新用户的头像数据至 NOSPAM，供其进行分析，避免 spammer 有意屏蔽 NOSPAM 使其无法获取头像。具体操作详见附录中的使用说明。
+本机器人所需依赖安装：
+
+- Debian 10: `sudo apt update && sudo apt install opencc -y`
+- pip: `pip install -r requirements.txt`
+
+此机器人需要加入以下频道：
+
+- **SCP-079-HIDE （必选）（应具有发送消息的权限）**
+
+---
+
+**描述：**SCP-079-AVATAR 是一个用于将新入群用户头像发至 NOSPAM 进行分析的机器人，其项目位于 GitLab，镜像同步并开源于 [GitHub](https://github.com/scp-079/scp-079-avatar)。机器人的展示身份位于 <a href="https://t.me/SCP_079_AVATAR_BOT" class="079" target="_blank">SCP-079-AVATAR</a>，真实身份为隐藏状态，且并不接受任何直接管理。通过该项目建立的机器人有类似的功能：发送新用户的头像数据至 NOSPAM，供其进行分析，避免 spammer 有意屏蔽 NOSPAM 使其无法获取头像。
+
+- 此机器人的性质：User Bot，需要使用一个通过手机号码注册的用户帐号
 
 ---
 
@@ -29,7 +42,7 @@ SCP-079-TEST 中的成员：
 
 **附录：**自建机器人的方法
 
-可先查看<a href="/how-zh/">自建说明书</a>
+关于搭建机器人的通用说明，请先查看<a href="/how-zh/" target="_blank">自建说明书</a>
 
 克隆项目：
 
@@ -45,7 +58,7 @@ SCP-079-AVATAR 应加入成员人数较多的群组，其加入的群组只可�
 
 修改配置文件：
 
-需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。 API ID 与 API Hash 在 <a href="https://my.telegram.org" target="_blank">官网</a> 获取
+需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。 API ID 与 API Hash 在[官网](https://my.telegram.org)获取
 
 ```ini
 [pyrogram]
@@ -97,111 +110,38 @@ hide_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
 
 [custom]
-backup = [DATA EXPUNGED]
+aio = False
+; 此处填写 True 或 False，代表程序是否与其他程序共用同一机器人帐号
+backup = False
 ; 此处填写 True 或 False，代表程序是否为备份副本
-date_reset = [DATA EXPUNGED]
+date_reset = 1st mon
 ; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
 project_link = https://scp-079.org/avatar/
 ; 此处填写项目网址
 project_name = SCP-079-AVATAR
 ; 此处填写项目名称
 time_new = [DATA EXPUNGED]
-; 此处填写整数 n，用户入群后的 n 秒内均认为该用户为新用户
+; 此处填写整数，代表判断用户为新用户的入群时长，用于进行头像复查，单位为秒
 zh_cn = [DATA EXPUNGED]
 ; 此处填写 True 或 False，代表程序是否启用简体中文模式
+
+[emoji]
+emoji_ad_single = [DATA EXPUNGED]
+; 此处填写整数，代表多少个同样的 emoji 在消息中出现则被认为是 ad_ 类词组
+emoji_ad_total = [DATA EXPUNGED]
+; 此处填写整数，代表一共多少个 emoji 在消息中出现则被认为是 ad_ 类词组
+emoji_many = [DATA EXPUNGED]
+; 此处填写整数，代表多少个 emoji 在消息中出现则被认为该消息含有多个 emoji
+emoji_protect = [DATA EXPUNGED]
+; 此处填写字符串，其中包含的 emoji 将受到保护，不计入各类判断中，字符串中间无空格，请以 \UXXXXXXXX 的形式代表一个 emoji
+emoji_wb_single = [DATA EXPUNGED]
+; 此处填写整数，代表多少个同样的 emoji 在消息中出现则被认为是 wb 类词组
+emoji_wb_total = [DATA EXPUNGED]
+; 此处填写整数，代表一共多少个 emoji 在消息中出现则被认为是 wb 类词组
 
 [encrypt]
 password = [DATA EXPUNGED]
 ; 加密文件所用的密码
-```
-
----
-
-**附录：**开发备忘
-
-1. 发送新用户头像前，检查记录，查看是否有必要重复发送同一用户的头像
-2. 必要时，应添加对头像复查的功能
-
-AVATAR 能够向 BACKUP、HIDE、NOSPAM、REGEX 发送数据
-
-情形 1：向 BACKUP 传送数据备份文件。每日 UTC 时间 20:00 。`exchange_text` 文本作为该文件的 `caption`
-
-```python
-exchange_text = format_data(
-    sender="AVATAR",
-    receviers=[
-        "BACKUP"
-    ],
-    action="backup",
-    action_type="pickle",
-    data="user_ids"
-)
-```
-
-情形 2：向 BACKUP 汇报上线状态。每次程序启动时
-
-```python
-exchange_text = format_data(
-    sender="AVATAR",
-    receviers=[
-        "BACKUP"
-    ],
-    action="backup",
-    action_type="status",
-    data={
-        "type": "online",
-        "backup": false
-    }
-)
-```
-
-情形 3：向 BACKUP 汇报在线状态。每个小时的第 30 分钟
-
-```python
-exchange_text = format_data(
-    sender="AVATAR",
-    receviers=[
-        "BACKUP"
-    ],
-    action="backup",
-    action_type="status",
-    data={
-        "type": "awake",
-        "backup": false
-    }
-)
-```
-
-情形 4：向 HIDE 回复版本号
-
-```python
-exchange_text = format_data(
-    sender="AVATAR",
-    receviers=[
-        "HIDE"
-    ],
-    action="version",
-    action_type="reply",
-    data={
-        "admin_id": 12345678,
-        "message_id": 123,
-        "version": 0.0.1
-    }
-)
-```
-
-情形 5：向 REGEX 更新规则使用情况的计数文件，每日 UTC 时间 21:00 。`exchange_text` 文本作为该文件的 `caption`
-
-```python
-exchange_text = format_data(
-    sender="AVATAR",
-    receviers=[
-        "REGEX"
-    ],
-    action="regex",
-    action_type="count",
-    data="nm_words"
-)
 ```
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>

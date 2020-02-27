@@ -6,6 +6,10 @@ title: SCP-079-AVATAR
 
 ---
 
+This English document is incomplete, please refer to [the Chinese document](/avatar-zh/).
+
+---
+
 **Item #:** SCP-079-AVATAR
 
 **Object Class:** Keter
