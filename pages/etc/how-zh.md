@@ -110,7 +110,7 @@ source ~/.bash_aliases
 git clone https://github.com/scp-079/scp-079-pm.git ~/scp-079/pm
 ```
 
-# 使用 pip 安装依赖
+## 使用 pip 安装依赖
 
 ```bash
 scp-079    # 切换到虚拟环境
