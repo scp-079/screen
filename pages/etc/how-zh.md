@@ -127,7 +127,7 @@ cp ~/scp-079/pm/config.ini.example ~/scp-079/pm/config.ini
 config pm
 ```
 
-需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改，`config.ini` 文件中参数代表的含义，可在各机器人的[单独使用说明](/pm-zh/)中 `文件#config.ini` 一节中查看。
+需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改，`config.ini` 文件中参数代表的含义，可在各机器人的[单独使用说明](/pm-zh/)中`文件#config.ini`一节查看。
 
 ## 需采取的额外操作
 
