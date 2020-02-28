@@ -143,7 +143,5 @@ password = [DATA EXPUNGED]
 ; A uniform password used by each bot to encrypt files. It is recommended to use a random string of 16 characters in length
 ```
 
----
-
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>
 <audio id="dooropen079" src="/audio/door/dooropen079.ogg"/>
