@@ -34,6 +34,8 @@ title: SCP-079-AVATAR
 
 **附录：**使用说明
 
+此机器人不接受任何群组的使用申请，群组也无法对此机器人进行设置，服务托管者自行决定此机器人加入哪些群组中。
+
 SCP-079-TEST 中的成员：
 
 - `/version` ：间接检查机器人版本
@@ -42,7 +44,7 @@ SCP-079-TEST 中的成员：
 
 **附录：**自建机器人的方法
 
-关于搭建机器人的通用说明，请先查看<a href="/how-zh/" target="_blank">自建说明书</a>
+关于搭建机器人的通用说明，请先查看[自建说明书](/how-zh/)
 
 克隆项目：
 
@@ -56,9 +58,7 @@ SCP-079-AVATAR 应加入成员人数较多的群组，其加入的群组只可�
 
 **文件#config.ini：**
 
-修改配置文件：
-
-需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。 API ID 与 API Hash 在[官网](https://my.telegram.org)获取
+修改配置文件：需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。 API ID 与 API Hash 在[官网](https://my.telegram.org)获取
 
 ```ini
 [pyrogram]
@@ -141,7 +141,7 @@ emoji_wb_total = [DATA EXPUNGED]
 
 [encrypt]
 password = [DATA EXPUNGED]
-; 加密文件所用的密码
+; 各机器人加密文件所用的统一密码，建议为长度 16 的随机字符串
 ```
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>

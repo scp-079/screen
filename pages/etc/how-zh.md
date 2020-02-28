@@ -129,6 +129,18 @@ config pm
 
 需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改，`config.ini` 文件中参数代表的含义，可在各机器人的[单独使用说明](/pm-zh/)中`文件#config.ini`一节查看。
 
+注意：部分机器人需要在 `[encrypt]` 中填写 `key` 值，整体项目统一使用相同的 `key`，其需要通过程序生成，获取方式如下：
+
+```bash
+python3
+```
+
+```python3
+from cryptography.fernet import Fernet
+key = Fernet.generate_key()
+print(key.decode())    # 接着复制打印出的 key，填写至 config.ini 文件中
+```
+
 ## 需采取的额外操作
 
 有些机器人可能需要一些额外的更改，例如对环境的更改、下载所需模型、添加自定义文件等。请参照[各项目单独使用说明](/tools/)中 `附录：自建机器人的方法` 一节的说明。
