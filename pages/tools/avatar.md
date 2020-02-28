@@ -31,7 +31,7 @@ This bot needs to join the following channels:
 
 ---
 
-**Appendix:** Operation instructions
+**Appendix:** Operation Instructions
 
 This bot does not accept any group application, and the group cannot config this bot. The service host decides which groups this bot joins.
 
@@ -41,7 +41,7 @@ For members in SCP-079-TEST:
 
 ---
 
-**Appendix:** Steps to create a bot on your own
+**Appendix:** Steps to Create a Bot On Your Own
 
 For general instructions on building a bot, please check the [Self Hosting Instructions](/how/) first.
 
