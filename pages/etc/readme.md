@@ -8,6 +8,8 @@ title: README
 
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
+The demonstration instance of this project is only for Chinese users, so this article will not provide an English version.
+
 ---
 
 ## 简介
