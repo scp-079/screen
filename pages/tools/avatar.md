@@ -31,6 +31,8 @@ This bot needs to join the following channels:
 
 ---
 
+<span id="manual"></span>
+
 **Appendix:** Operation Instructions
 
 This bot does not accept any group application, and the group cannot config this bot. The service host decides which groups this bot joins.
