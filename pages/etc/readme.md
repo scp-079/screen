@@ -8,7 +8,7 @@ title: README
 
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
-The demonstration instance of this project is only for Chinese users, so this article will not provide an English version.
+This article mainly introduces the related details of the demonstration bots hosted by this project, and how to apply to use them. The demonstration bots are only for Chinese users, so this article will not provide an English version. It is recommended that you [create your own bots](/how/) from source code.
 
 ---
 
