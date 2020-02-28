@@ -32,8 +32,7 @@ html {
 /* Scroll Bar */
 
 ::-webkit-scrollbar {
-    width: 0px; 
-    background: transparent;
+    background: black;
 }
 
 ::-webkit-scrollbar-thumb {
