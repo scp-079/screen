@@ -15,12 +15,12 @@ Follow our announcement channel to get updates: [SCP-079-INFO](https://t.me/SCP_
 
 Learn more:
 
-- [README of Demo Instances](/readme/)
 - [Design Principles](/principles/)
-- [Object Classes](/classes/)
-- [Transparency](/transparency/)
 - [Suggestions](/suggestions/)
 - [Self Hosting Instructions](/how/)
+- [README of Demo Instances](/readme/)
+- [Transparency](/transparency/)
+- [Object Classes](/classes/)
 
 All bots are hosted on ████████. IP address is [57.32.███.███](http://www.scp-wiki.net/scp-614).
 
