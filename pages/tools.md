@@ -8,7 +8,7 @@ In alphabetical order:
 
 - [SCP-079-AVATAR](/avatar/):
 Get new joined member's profile photo
-- [SCP-079-CAPTCHA](/captcha/)
+- [SCP-079-CAPTCHA](/captcha/):
 Provide challenges for new joined members
 - [SCP-079-CLEAN](/clean/): 
 Filter specific types of messages

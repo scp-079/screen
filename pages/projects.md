@@ -10,7 +10,7 @@ In alphabetical order:
 
 - [SCP-079-AVATAR](https://github.com/scp-079/scp-079-avatar): 
 Get new joined member's profile photo
-- [SCP-079-CAPTCHA](https://github.com/scp-079/scp-079-captcha)
+- [SCP-079-CAPTCHA](https://github.com/scp-079/scp-079-captcha):
 Provide challenges for new joined members
 - [SCP-079-CLEAN](): 
 Filter specific types of messages

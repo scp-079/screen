@@ -9,7 +9,59 @@ title: Self Hosting Instructions
 
 # 自建说明书
 
-SCP-079 系列机器人的搭建涉及多个频道、群组、机器人帐号、用户帐号的创建，具体要求请参见各机器人[单独的介绍页面](/tools/)，这篇文章仅以建立 [SCP-079-PM](/pm-zh/) （私聊转发机器人）为例，用于介绍自建 SCP-079 系列机器人所需的通用步骤。
+SCP-079 系列机器人的搭建涉及多个频道、群组、机器人帐号、用户帐号的创建。以下是对自建完整实例的所需要的频道、群组、帐号的说明，当然，用户可根据所需要的功能只自行搭建某一个或某几个机器人，此时则可对照各机器人[单独的介绍页面](/tools/)来创建和加入频道、群组等。
+
+本项目完整实例所需的公开频道有：
+
+- SCP-079-CAPTCHA
+- SCP-079-CONFIG
+- SCP-079-CRITICAL
+- SCP-079-DEBUG
+- SCP-079-ERROR
+- SCP-079-LOGGING
+
+本项目完整实例所需的私有频道有：
+
+- SCP-079-EXCHANGE
+- SCP-079-HIDE
+- SCP-079-M
+- SCP-079-WATCH
+
+本项目完整实例所需的私有群组有：
+
+- SCP-079-CAPTCHA
+- SCP-079-MANAGE
+- SCP-079-REGEX
+- SCP-079-TEST
+- SCP-079-TICKET
+
+本项目完整实例所需的常规 Bot 有：
+
+- SCP-079-CAPTCHA
+- SCP-079-CLEAN
+- SCP-079-CONFIG
+- SCP-079-HIDE
+- SCP-079-LANG
+- SCP-079-LONG
+- SCP-079-MANAGE
+- SCP-079-NOFLOOD
+- SCP-079-NOPORN
+- SCP-079-NOSPAM
+- SCP-079-PM
+- SCP-079-RECHECK
+- SCP-079-REGEX
+- SCP-079-TICKET
+- SCP-079-WARN
+
+本项目完整实例所需的 User Bot 有：
+
+- SCP-079-AVATAR
+- SCP-079-USER
+- SCP-079-WATCH
+
+> 其中，SCP-079-USER 是项目所有在群组中工作的机器人的核心，它们都要求 SCP-079-USER 在群组内协助工作
+
+对于各机器人的频道、群组加入情况的具体要求请参见相应机器人[单独的介绍页面](/tools/)。这篇文章仅以建立 [SCP-079-PM](/pm-zh/) （私聊转发机器人）为例，用于介绍自建 SCP-079 系列机器人所需的通用步骤。
 
 此文示例所用的环境为：
 
@@ -127,7 +179,7 @@ cp ~/scp-079/pm/config.ini.example ~/scp-079/pm/config.ini
 config pm
 ```
 
-需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改，`config.ini` 文件中参数代表的含义，可在各机器人的[单独使用说明](/pm-zh/)中`文件#config.ini`一节查看。
+需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改，`config.ini` 文件中参数代表的含义，可在各机器人的[单独使用说明](/pm-zh/)中 `文件#config.ini` 一节查看。
 
 注意：部分机器人需要在 `[encrypt]` 中填写 `key` 值，整体项目统一使用相同的 `key`，其需要通过程序生成，获取方式如下：
 
