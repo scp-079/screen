@@ -193,8 +193,8 @@ password = [DATA EXPUNGED]
 
 **Appendix:** Development Notes
 
-1. Automatically delete some types of messages according to the group customization setting. When the group opens AFF, EXE, SHO, TelegramL, TelegramP, QRC message filtering, it will have the ban function.
-2. Record scores for AFF, EXE, IML, SHO, TelegramL, TelegramP, QRC type messages
+1. Automatically delete some types of messages according to the group customization setting. When the group opens AFF, EXE, SHO, TGL, TGP, QRC message filtering, it will have the ban function.
+2. Record scores for AFF, EXE, IML, SHO, TGL, TGP, QRC type messages
 
 CLEAN is allowed to send data to ANALYZE, BACKUP, CAPTCHA, LANG, LONG, MANAGE, NOFLOOD, NOPORN, NOSPAM, RECHECK, USER.
 

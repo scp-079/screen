@@ -66,8 +66,9 @@ SCP-079-TEST 中的成员：
 
 - `/mention [id | username]`：通过 ID 或 username 查询用户
 - `/version`：检查机器人版本
+- `/mention`：待补充
+- `/print`：待补充
 - `待补充`
-
 ---
 
 **附录：**自建机器人的方法

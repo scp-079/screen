@@ -25,7 +25,7 @@ title: SCP-079-CLEAN
 - `/config clean`：通过 [SCP-079-CONFIG](/config/) 调整机器人设置，机器人将回报前往设置的链接，5 分钟内设置将被锁定，无法再次更改
 - `/clean`：删除三小时内群组内的贴纸和 GIF 动图
 - `/dafm yes` 或 `/dafm y`：命令机器人删除自己发送的所有消息
-- `/purge`：回复某条消息，删除自该条消息开始，到当前消息结束的所有消息。注意，使用该命令只能最多删除基于消息 ID 的最近 1000 条消息，大于此数值将不会做出应答
+- `/purge`：回复某条消息，删除自被回复消息开始，到当前消息结束的所有消息。注意，使用该命令只能最多删除基于消息 ID 的最近 1000 条消息，大于此数值将不会做出应答
 
 除使用 `/config clean` 外，管理员也可以通过 `/config_clean` 命令在群组中手动调整设置：
 
@@ -61,7 +61,7 @@ title: SCP-079-CLEAN
 - `exe`：可执行文件，例如 APK、BAT、CMD、COM、EXE、PIF、SCR、VBS 文件
 - `iml`：即时通讯软件的邀请链接或联系方式
 - `sho`：短链接
-- `tgl`：Telegram 链接，包括带 Telegram 域名的链接和 `@mention`，只过滤非当前群组 `username` 的 `@mention` 、不在群组中的用户 `@mention`
+- `tgl`：Telegram 链接，包括带 Telegram 域名的链接和 `@mention`，只过滤非当前群组 `username` 的 `@mention` 、非群组成员 `@mention`
 - `tgp`：代理链接
 - `qrc`：二维码
 - `sde`：群员可否自助删除自己所发所有消息
