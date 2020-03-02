@@ -170,6 +170,12 @@ main iframe {
     border: 1px dashed rgba(255,255,255,0.5);
 }
 
+/* Image */
+
+figcaption {
+    font-style: italic;
+}
+
 /* Table */
 
 table {
