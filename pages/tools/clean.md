@@ -59,8 +59,8 @@ Where `[type]` should be one of the following categories:
 - `exe`: Executable file such as APK, BAT, CMD, COM, EXE, PIF, SCR, VBS file
 - `iml`: Invitation link or contact information for instant messaging software
 - `sho`: Short links
-- `tgl`: TG links, including links with Telegram domain names and `@mention`, filtering only `@mention` of non-current group's `username`, and `@mention` of users that not in current group
-- `tgp`: TG proxy
+- `tgl`: Telegram links, including links with Telegram domain names and `@mention`, filtering only `@mention` of non-current group's `username`, and `@mention` of users that not in current group
+- `tgp`: proxy links
 - `qrc`: QR code
 - `sde`: Decide whether the group members can self-delete all the messages they sent
 - `tcl`: Remove Deleted Accounts in groups and blacklists daily
@@ -193,8 +193,8 @@ password = [DATA EXPUNGED]
 
 **Appendix:** Development Notes
 
-1. Automatically delete some types of messages according to the group customization setting. When the group opens AFF, EXE, SHO, TGL, TGP, QRC message filtering, it will have the ban function.
-2. Record scores for AFF, EXE, IML, SHO, TGL, TGP, QRC type messages
+1. Automatically delete some types of messages according to the group customization setting. When the group opens AFF, EXE, SHO, TelegramL, TelegramP, QRC message filtering, it will have the ban function.
+2. Record scores for AFF, EXE, IML, SHO, TelegramL, TelegramP, QRC type messages
 
 CLEAN is allowed to send data to ANALYZE, BACKUP, CAPTCHA, LANG, LONG, MANAGE, NOFLOOD, NOPORN, NOSPAM, RECHECK, USER.
 
@@ -297,7 +297,7 @@ exchange_text = format_data(
             "default": True,
             "lock": 0,
             "delete": True,    # Request USER to assist with deletion when blocking users
-            "friend": True,    # Bypass the TG links of SCP-079 joined groups
+            "friend": True,    # Bypass the Telegram links of SCP-079 joined groups
             "con": True,    # Contact
             "loc": True,    # Location
             "vdn": True,    # Round Video
@@ -316,8 +316,8 @@ exchange_text = format_data(
             "exe": False,    # Executable file
             "iml": False,    # Invitation link or contact information for instant messaging software
             "sho": False,    # Short link
-            "tgl": False,    # TG link
-            "tgp": False,    # TG proxy
+            "tgl": False,    # Telegram link
+            "tgp": False,    # Telegram proxy
             "qrc": False,    # QR Code
             "sde": False,    # Decide whether the group members can self-delete all the messages they sent
             "tcl": False,    # Remove Deleted Accounts in groups and blacklists daily

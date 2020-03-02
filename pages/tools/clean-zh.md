@@ -61,8 +61,8 @@ title: SCP-079-CLEAN
 - `exe`：可执行文件，例如 APK、BAT、CMD、COM、EXE、PIF、SCR、VBS 文件
 - `iml`：即时通讯软件的邀请链接或联系方式
 - `sho`：短链接
-- `tgl`：TG 链接，包括带 Telegram 域名的链接和 `@mention`，只过滤非当前群组 `username` 的 `@mention` 、不在群组中的用户 `@mention`
-- `tgp`：TG 代理
+- `tgl`：Telegram 链接，包括带 Telegram 域名的链接和 `@mention`，只过滤非当前群组 `username` 的 `@mention` 、不在群组中的用户 `@mention`
+- `tgp`：代理链接
 - `qrc`：二维码
 - `sde`：群员可否自助删除自己所发所有消息
 - `tcl`：每日定时清除位于群组和黑名单中的 Deleted Account

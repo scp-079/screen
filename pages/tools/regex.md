@@ -52,8 +52,8 @@ SCP-079-REGEX 中的成员：
 - `spc`：特殊中文字符，special chinese character
 - `spe`：特殊英文字符，special english character
 - `sti`：贴纸删除，sticker
-- `tgl`：TG 链接，telegram link
-- `tgp`：TG 代理，telegram proxy
+- `tgl`：Telegram 链接，Telegram link
+- `tgp`：Telegram 代理，proxy link
 - `wb`：追踪封禁，watch ban
 - `wd`：追踪删除，watch delete
 - `test`：测试用例
