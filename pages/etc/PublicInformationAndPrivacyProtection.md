@@ -25,11 +25,11 @@ title: Public information and privacy protection
 - 加群频率
 - 消息发送频率
 - 图片 OCR 检测
-- 图片 NSFW 检测
 - 图片 二维码 检测
 - 贴纸名称
 - 贴纸包标题
 - 消息链接预览
+- 图片 Not Safe For Wark 检测
 - 贴纸 Not Safe For Wark 检测
 - 待完善
 
