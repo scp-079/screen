@@ -59,8 +59,9 @@ title: README
 
 ## 公示信息和隐私保护
 关于我们如何进行信息公示，以及相关隐私政策，[请查阅此处](/PublicInformationAndPrivacyProtection/)。
-## 申请使用 SCP-079 Demo 服务
-如需申请使用 SCP-079 Demo 服务[请查阅此处](/ApplyForUse/)。
+
+## 申请使用
+申请条件和申请方法在[此处查看](/ApplyForUse/)。
 
 
 
@@ -77,10 +78,6 @@ title: README
 \* *申请使用本项目组 USER、CAPTCHA、TIP 以外的机器人必读*
 
 提升本项目组 USER、CAPTCHA、TIP 以外的机器人为群组管理员之时，则视为您已充分了解、理解本项目的执行标准。本项目组最新版本执行标准请[查阅此处](/rule/)。
-
-## 申请使用
-
-申请条件和申请方法在[此处查看](/ApplyForUse/)，点击前请先确保已阅读完毕以上内容。
 
 ## 联系我们
 
