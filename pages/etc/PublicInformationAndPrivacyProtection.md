@@ -13,7 +13,9 @@ title: Public information and privacy protection
 | 证据存放 | [LOGGING](https://t.me/SCP_079_LOGGING) |
 
 ## 信息来源
+
 在本项目 Demo 服务 正常运行时，本 Demo 服务可能使用用户的下列信息
+
 - 用户基本资料
   - 姓
   - 名
@@ -40,5 +42,3 @@ title: Public information and privacy protection
 本项目组将于 [\@SCP_079_LOGGING](https://t.me/SCP_079_LOGGING)、[\@SCP_079_DEBUG](https://t.me/SCP_079_DEBUG)、[\@SCP_079_CONFIG](https://t.me/SCP_079_CONFIG) 公开记录本项目组所有机器人的自动操作记录及触发机器人自动操作的消息（部分内容因涉及隐私而不记录），和群组管理员对本项目组机器人的操作、配置记录。
 
 本项目组将于 [\@SCP_079_ERROR](https://t.me/SCP_079_ERROR) 记录本项目组机器人的错误的自动操作记录及触发错误的消息。上述频道中的记录如涉及您的隐私，您有权联系 [\@SCP_079_TICKET_BOT](https://t.me/SCP_079_TICKET_BOT) 要求删除。
-
-
