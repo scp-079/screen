@@ -60,6 +60,9 @@ title: README
 
 ## 公示信息和隐私保护
 [请查阅此处](/PublicInformationAndPrivacyProtection/)。
+## 申请使用 SCP-079 Demo 服务
+[请查阅此处](/ApplyForUse/)。
+
 ## 免责声明
 
 本项目无法承诺识别出所有的 SPAM、NSFW 及其他符合本项目执行标准的消息，也无法承诺不产生任何错误的处理操作。使用本项目的服务所带来的损失或可能产生的任何责任由申请者自行承担。
