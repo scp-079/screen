@@ -41,7 +41,7 @@ One ring to rule them all
 - [SCP-079-WARN](/scp-079-warn/): 
 通过管理员的指令封禁或警告某人
 - [SCP-079-WATCH](/scp-079-watch/): 
-观察并追踪可以的 spam 行为
+观察并追踪可疑的 spam 行为
 
 <audio src="/audio/page/tools.ogg" autoplay></audio>
 <audio id="dooropen079" src="/audio/door/dooropen079.ogg"/>

@@ -43,11 +43,11 @@ One ring to rule them all
 - [SCP-079-WARN](https://github.com/scp-079/scp-079-warn): 
 通过管理员的指令封禁或警告某人
 - [SCP-079-WATCH](https://github.com/scp-079/scp-079-watch): 
-观察并追踪可以的 spam 行为
+观察并追踪可疑的 spam 行为
 - [Screen](https://github.com/scp-079/screen): 
 一个 `Hakyll` 的暗色主题
 - [Scripts](https://github.com/scp-079/scripts): 
-Some scripts
+一些脚本
 - [Units](https://github.com/scp-079/units): 
 Some systemd units
 
