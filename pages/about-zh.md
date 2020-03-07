@@ -5,6 +5,8 @@ title: About-zh
 <link rel="stylesheet" href="/css/chinese.css">
 <button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/about/';" class="en">Click Here to English Page</button>
 
+---
+
 ## About
 
 SCP-079， 一个开源项目， 致力于在 Telegram 群组中封锁 spammer 。
