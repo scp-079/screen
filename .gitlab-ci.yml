@@ -16,7 +16,7 @@ cache:
 pages:
   stage: deploy
   script:
-    - stack exec site build
+    - stack exec site build || stack exec site rebuild
   artifacts:
     paths:
       - public
