@@ -9,6 +9,8 @@ title: Team
 }
 </style>
 
+<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/team-zh/';" class="zh">点此转至中文页面</button>
+
 ## Team
 
 In order to avoid unnecessary troubles, it's essential for project's 

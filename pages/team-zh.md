@@ -9,6 +9,9 @@ title: Team-zh
 }
 </style>
 
+<link rel="stylesheet" href="/css/chinese.css">
+<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/team/';" class="en">Click Here to English Page</button>
+
 ## 团队
 
 为避免不必要的麻烦，有意加入项目团队的人应注意：项目组的成员保持匿名是重要的。欢迎每个想为这个想为这个项目做出贡献的人。

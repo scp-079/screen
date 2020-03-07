@@ -2,6 +2,9 @@
 title: Projects-zh
 ---
 
+<link rel="stylesheet" href="/css/chinese.css">
+<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/project/';" class="en">Click Here to English Page</button>
+
 ## Projects
 
 目前， 所有开源子项目托管在 `GitLab` ， 镜像地址为 [GitHub](https://github.com/scp-079)。 大多数项目将被保持闭源直到我们正式开放公共服务。
