@@ -269,7 +269,7 @@ more_text = Know More
 ; 此处填写按钮文字
 noise = [DATA EXPUNGED]
 ; 此处填写噪声值，推荐 0.3 - 0.5 之间
-project_link = https://scp-079.org/captcha/
+project_link = https://scp-079.org/captcha-zh/
 ; 此处填写项目网址
 project_name = SCP-079-CAPTCHA
 ; 此处填写项目名称

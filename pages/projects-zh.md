@@ -1,5 +1,5 @@
 ---
-title: Projects-zh
+title: Projects
 ---
 
 <link rel="stylesheet" href="/css/chinese.css">

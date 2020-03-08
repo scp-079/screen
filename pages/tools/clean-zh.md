@@ -171,7 +171,7 @@ date_reset = [DATA EXPUNGED]
 ; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
 image_size = [DATA EXPUNGED]
 ; 此处填写整数，代表分析图片文档的最大大小，超过此大小则不通过下载原文件进行二维码，单位为 B
-project_link = https://scp-079.org/clean/
+project_link = https://scp-079.org/clean-zh/
 ; 此处填写项目网址
 project_name = SCP-079-CLEAN
 ; 此处填写项目名称

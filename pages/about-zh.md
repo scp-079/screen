@@ -1,5 +1,5 @@
 ---
-title: About-zh
+title: About
 ---
 
 <link rel="stylesheet" href="/css/chinese.css">

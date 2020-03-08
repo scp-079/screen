@@ -63,7 +63,8 @@ title: README
 ## 申请使用
 申请条件和申请方法在[此处查看](/ApplyForUse/)。
 
-
+## 联系我们
+如需联系我们请查阅[联系方式](/contact-zh/)。
 
 ## 免责声明
 
@@ -78,14 +79,6 @@ title: README
 \* *申请使用本项目组 USER、CAPTCHA、TIP 以外的机器人必读*
 
 提升本项目组 USER、CAPTCHA、TIP 以外的机器人为群组管理员之时，则视为您已充分了解、理解本项目的执行标准。本项目组最新版本执行标准请[查阅此处](/rule/)。
-
-## 联系我们
-
-如您需要对本项目组 Demo 服务误判进行申诉，或需要私聊提供建议等，请联系：[\@SCP_079_TICKET_BOT](https://t.me/SCP_079_TICKET_BOT)。
-
-如您需要帮助请[点击查看申诉及建议方法](https://telegra.ph/SCP-079-TICKET-12-05)
-
-欢迎您加入 [\@SCP_079_CHAT](https://t.me/SCP_079_CHAT)，交流讨论本项目相关内容。
 
 ## 招募
 

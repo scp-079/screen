@@ -162,7 +162,7 @@ default_group_link = [DATA EXPUNGED]
 ; 此处填写 DEBUG 频道信息中默认的群组链接
 image_size = [DATA EXPUNGED]
 ; 此处填写整数，代表分享链接预览中的图片的最大大小，单位为 B
-project_link = https://scp-079.org/user/
+project_link = https://scp-079.org/user-zh/
 ; 此处填写项目网址
 project_name = SCP-079-USER
 ; 此处填写项目名称

@@ -163,7 +163,7 @@ host_name = [DATA EXPUNGED]
 ; 此处填写主人或团队的称谓
 per_page = 10
 ; 此处填写整数，代表每页显示的项目条数
-project_link = https://scp-079.org/pm/
+project_link = https://scp-079.org/pm-zh/
 ; 此处填写项目网址
 project_name = SCP-079-PM
 ; 此处填写项目名称

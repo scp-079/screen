@@ -118,7 +118,7 @@ backup = False
 ; 此处填写 True 或 False，代表程序是否为备份副本
 date_reset = 1st mon
 ; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
-project_link = https://scp-079.org/avatar/
+project_link = https://scp-079.org/avatar-zh/
 ; 此处填写项目网址
 project_name = SCP-079-AVATAR
 ; 此处填写项目名称
