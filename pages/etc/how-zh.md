@@ -3,7 +3,7 @@ title: Self Hosting Instructions
 ---
 
 <link rel="stylesheet" href="/css/chinese.css">
-<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/how/';" class="en">Click Here to English Page</button>
+<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/how-zh/';" class="en">Click Here to English Page</button>
 
 ---
 

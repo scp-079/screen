@@ -119,7 +119,7 @@ re.search(pattern, text, re.I | re.M | re.S)
 
 **附录：**自建机器人的方法
 
-可先查看<a href="/how/">自建说明书</a>
+可先查看<a href="/how-zh/">自建说明书</a>
 
 克隆项目：
 
