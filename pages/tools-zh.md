@@ -5,6 +5,8 @@ title: Tools-zh
 <link rel="stylesheet" href="/css/chinese.css">
 <button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/tools/';" class="en">Click Here to English Page</button>
 
+---
+
 ## 工具
 
 按照字母顺序：
