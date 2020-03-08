@@ -2,11 +2,10 @@
 title: Principles
 ---
 
+<link rel="stylesheet" href="/css/chinese.css">
 <button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/principles/';" class="en">Click Here to English Page</button>
 
 ---
-
-<link rel="stylesheet" href="/css/chinese.css">
 
 # 设计与管理原则
 

@@ -1,6 +1,9 @@
 ---
 title: Public information and privacy protection
 ---
+
+<link rel="stylesheet" href="/css/chinese.css">
+
 # 隐私保护
 
 ## 公示信息
