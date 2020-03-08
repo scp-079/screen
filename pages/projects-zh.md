@@ -3,7 +3,7 @@ title: Projects-zh
 ---
 
 <link rel="stylesheet" href="/css/chinese.css">
-<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/project/';" class="en">Click Here to English Page</button>
+<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/projects/';" class="en">Click Here to English Page</button>
 
 ## Projects
 

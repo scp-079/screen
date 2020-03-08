@@ -2,7 +2,7 @@
 title: Projects
 ---
 
-<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/project-zh/';" class="zh">点此转至中文页面</button>
+<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/projects-zh/';" class="zh">点此转至中文页面</button>
 
 ## Projects
 
