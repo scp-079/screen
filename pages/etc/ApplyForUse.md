@@ -40,4 +40,5 @@ title: Apply For Use
 <br><br><br>![](/images/user-permissions.png)<br><br>
 5. 权限赋予齐全后，请在讨论群内告知项目管理员，之后 [\@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT) 会为您拉入您所申请的机器人。至此，申请流程已成功，群组可正常使用各机器人
 6. 建议申请者在群组置顶，或群组简介里说明机器人申诉方式 —— [\@SCP_079_TICKET_BOT](https://t.me/SCP_079_TICKET_BOT)，防止有群员被本项目 Demo 服务误封而无处申诉，请至少确保群组管理员们知晓此申诉方式
-7. 建议关注 [\@SCP_079_INFO](https://t.me/SCP_079_INFO) 频道以获取本项目的重要公告
+7. 建议申请者在群规中引用本项目的 **执行标准**<https://scp-079.org/rule> 
+8. 建议申请者关注 [\@SCP_079_INFO](https://t.me/SCP_079_INFO) 频道以获取本项目的重要公告
