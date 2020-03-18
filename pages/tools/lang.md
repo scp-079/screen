@@ -234,7 +234,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 4：向 CONFIG 询问。由于群管理在群组中发送 `/config lang` 命令，故 LANG 令 CONFIG 在 SCP-079-CONFIG 频道中开启一个更新设置的会话
+情形 4：向 CONFIG 询问。由于群组管理员在群组中发送 `/config lang` 命令，故 LANG 令 CONFIG 在 SCP-079-CONFIG 频道中开启一个更新设置的会话
 
 ```python
 exchange_text = format_data(

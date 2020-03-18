@@ -41,7 +41,7 @@ SCP-079-MANAGE 中的成员：
 - `/leave approve [reason]`：对应按钮 “批准”，以此命令回复某条带按钮的相应有效消息，批准某机器人退出某群组
 - `/leave cancel`：对应按钮 “取消”，以此命令回复某条带按钮的相应有效消息，取消某机器人退出某群组的请求
 - `/leave [id] [reason]`：命令所有机器人退出某 ID 的群组
-- `/refresh [all | project]`：命令某个机器人刷新群管理列表
+- `/refresh [all | project]`：命令某个机器人刷新群组管理员列表
 - `/remove_bad [id] [reason]`：将某频道 ID 从白名单中移除，或解禁某用户；以此命令回复某条带对象 ID的相应有效消息，执行相应操作，此时可省略 `[id]`；如需强制执行操作，在命令后添加 `force`
 - `/remove_except [id] [reason]`：将某频道 ID 从白名单中移除；以此命令回复某条带对象 ID 的相应有效消息，执行相应操作，此时可省略 `[id]`；如需强制执行操作，在命令后添加 `force`
 - `/remove_watch [id] [reason]`：将某用户 ID 的追踪状态移除；以此命令回复某条带对象 ID 的相应有效消息，执行相应操作，此时可省略 `[id]`；如需强制执行操作，在命令后添加 `force`
@@ -463,7 +463,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 17：向其他 Bot（CAPTCHA、CLEAN、LANG、LONG、NOPORN、NOSPAM、RECHECK、USER、WARN）要求更新群管理列表
+情形 17：向其他 Bot（CAPTCHA、CLEAN、LANG、LONG、NOPORN、NOSPAM、RECHECK、USER、WARN）要求更新群组管理员列表
 
 ```python
 exchange_text = format_data(
