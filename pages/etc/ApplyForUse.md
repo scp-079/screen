@@ -12,7 +12,7 @@ title: Apply For Use
 [点击此处查看更多建议](/suggestions-zh/)
 
 ## 申请流程
-欢迎群组使用本项目托管的 Demo 机器人，为保证我们的公开服务质量，我们秉承[双向选择原则](/principles-zh/)，采取申请制，您需要主动申请使用机器人，并且您的使用申请需要通过项目管理员的审核，是否通过审核由 SCP-079 项目管理员共同判断决定。
+欢迎群组使用本项目托管的 Demo 机器人，为保证我们的公开服务质量，我们秉承[双向选择原则](/principles-zh/##双向选择原则)，采取申请制，您需要主动申请使用机器人，并且您的使用申请需要通过项目管理员的审核，是否通过审核由 SCP-079 项目管理员共同判断决定。
 
 ### 0.申请条件
 本项目拒绝受理申请的情况包括但不限于：
@@ -33,23 +33,23 @@ title: Apply For Use
 点击查看[机器人目录](/bots/)，了解各个机器人的功能，
 申请者可根据需求申请该列表中的机器人。
 
-注意：群组管理性质的机器人均不会响应任何私聊，所有设置指令均在群组中进行。
+注意：群组管理性质的机器人均不会响应任何私聊，所有设置指令均在群组中进行。（[原因](/principles-zh/##操作可查原则)）
 
-有任何疑问请至讨论群 [\@SCP_079_CHAT](https://t.me/SCP_079_CHAT) 提出。
+有任何疑问请至讨论群 [SCP_079_CHAT](https://t.me/SCP_079_CHAT) 提出。
 
 | 名称              | 介绍                                        |
 | ----------------- | ------------------------------------------- |
-| SCP-079-USER<sup>[1]<sup/>  | 集中控制如何对待黑名单用户         |
-| SCP-079-TIP       | 发送入群欢迎消息                            |
-| SCP-079-WARN      | 根据群组管理员的命令警告、封禁、或踢出用户      |
-| SCP-079-CLEAN     | 根据群组的设置过滤特定类型的消息            |
-| SCP-079-NOSPAM    | 自动封禁广告用户，自动删除广告消息          |
-|SCP-079-CAPTCHA<sup>[2]<sup/> | 提供对新入群用户的验证审核   |
-| SCP-079-LANG      | 可通过本 Bot 删除中东地区使用的语言消息     |
-| SCP-079-LONG      | 可通过本 Bot 删除超长消息                   |
-| SCP-079-NOFLOOD   | 可通过本 Bot 更加灵活的控制消息发送频率     |
-| SCP-079-NOPORN    | 可自动删除包含色情画面的媒体消息            |
-| SCP-079-RECHECK   | 对媒体进行严格的色情检查                    |
+| [SCP-079-USER](/USER/)<sup>[1]<sup/>  | 集中控制如何对待黑名单用户         |
+| [SCP-079-TIP](/TIP/)       | 发送入群欢迎消息                            |
+| [SCP-079-WARN](/WARN/)      | 根据群组管理员的命令警告、封禁、或踢出用户      |
+| [SCP-079-CLEAN](/CLEAN/)     | 根据群组的设置过滤特定类型的消息            |
+| [SCP-079-NOSPAM](/NOSPAM/)    | 自动封禁广告用户，自动删除广告消息          |
+|[SCP-079-CAPTCHA](/CAPTCHA/)<sup>[2]<sup/> | 提供对新入群用户的验证审核   |
+| [SCP-079-LANG](/LANG/)      | 可通过本 Bot 删除中东地区使用的语言消息     |
+| [SCP-079-LONG](/LONG/)      | 可通过本 Bot 删除超长消息                   |
+| [SCP-079-NOFLOOD](/NOFLOOD/)   | 可通过本 Bot 更加灵活的控制消息发送频率     |
+| [SCP-079-NOPORN](/NOPORN/)    | 可自动删除包含色情画面的媒体消息            |
+| [SCP-079-RECHECK](/RECHECK/)   | 对媒体进行严格的色情检查                    |
 
 1. 本项目任意其他机器人都需要 SCP-079-USER 配合，SCP-079-USER 为必选项
 2. 根据目前的观测结果表明，炸群期间有很多昵称中包含`中东语言`的成员加入。作为运营建议，建议在引入 SCP-079-CAPTCHA 的同时引入 SCP-079-LANG 和 SCP-079-NOSPAM
@@ -59,28 +59,28 @@ title: Apply For Use
 请申请者完整、仔细的阅读本 Demo 服务的下列文档：
 
 - [隐私政策](/PublicInformationAndPrivacyProtection/)
-- [免责声明](/readme/#免责声明)
-- [终止服务](/readme/#终止服务)
+- [免责声明](/readme/##免责声明)
+- [终止服务](/readme/##终止服务)
 - [执行标准](/rule/) 
 
 并确定接受其所描述的策略或标准。
 当申请者提升本项目机器人为管理员时，即视为您已经充分理解并同意上述文档全部内容。
 
 ### 3. 提出申请
-点击加入讨论群 [\@SCP_079_CHAT](https://t.me/SCP_079_CHAT)
+点击加入讨论群 [SCP_079_CHAT](https://t.me/SCP_079_CHAT)
 
 在加入的讨论群里，说明自己的群组需要什么功能的机器人，并发送自己的群组链接（请确保您的群组为 *supergroup*）
 
-管理员审核通过后会令 [\@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT) 加入您的群组
+管理员审核通过后会令 [SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT) 加入您的群组
 
-申请者也可以选择自行添加 [\@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT)
+申请者也可以选择自行添加 [SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT)
 
 [点击查看如何自行添加 USER](https://telegra.ph/SCP-079-USER-JOIN-12-04)
 
 ### 4. 赋予权限
-当 [\@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT) 加入了自己的群组后，群主需要提升其为管理员并 *赋予如下图所示的这五项权限* （[为什么？](https://telegra.ph/SCP-079-USER-12-04#%E9%97%AE%E4%B8%8E%E7%AD%94)）
+当 [SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT) 加入了自己的群组后，群主需要提升其为管理员并 *赋予如下图所示的这五项权限* （[为什么？](https://telegra.ph/SCP-079-USER-12-04#%E9%97%AE%E4%B8%8E%E7%AD%94)）
 <br><br><br>![](/images/user-permissions.png)<br><br>
-权限赋予齐全后，请在讨论群内告知项目管理员，之后 [\@SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT) 会为您添加您所申请的机器人。
+权限赋予齐全后，请在讨论群内告知项目管理员，之后 [SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT) 会为您添加您所申请的机器人。
 
 ### 5. 等待审核
 请耐心等待本项目管理员审核。
@@ -92,6 +92,6 @@ title: Apply For Use
 至此，申请流程已成功，群组可正常使用各机器人。
 
 ### 6. 一些建议
-- 建议申请者在群组置顶，或群组简介里说明机器人申诉方式 —— [\@SCP_079_TICKET_BOT](https://t.me/SCP_079_TICKET_BOT)，防止有群员被本项目 Demo 服务误封而无处申诉，请至少确保群组管理员们知晓此申诉方式
+- 建议申请者在群组置顶，或群组简介里说明机器人申诉方式 —— [SCP_079_TICKET_BOT](https://t.me/SCP_079_TICKET_BOT)，防止有群员被本项目 Demo 服务误封而无处申诉，请至少确保群组管理员们知晓此申诉方式
 - 建议申请者在群规中引用本项目的 **执行标准**<https://scp-079.org/rule> 
-- 建议申请者关注 [\@SCP_079_INFO](https://t.me/SCP_079_INFO) 频道以获取本项目的重要公告
+- 建议申请者关注 [SCP_079_INFO](https://t.me/SCP_079_INFO) 频道以获取本项目的重要公告

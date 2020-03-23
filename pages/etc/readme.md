@@ -58,7 +58,7 @@ title: README
 
 我们在征集义士，来作为项目组管理员，协助管理本项目组机器人。
 
-如您有意向参与，请联系：[\@SCP_079_PM_BOT](https://t.me/SCP_079_PM_BOT)
+如您有意向参与，请联系：[SCP_079_PM_BOT](https://t.me/SCP_079_PM_BOT)
 
 ## 自建机器人
 
