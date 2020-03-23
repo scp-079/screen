@@ -2,7 +2,7 @@
 title: Tools
 ---
 
-<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/tools/';" class="zh">点此转至中文页面</button>
+<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/tools-zh/';" class="zh">点此转至中文页面</button>
 
 ## Tools
 
