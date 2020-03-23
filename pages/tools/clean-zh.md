@@ -57,7 +57,7 @@ title: SCP-079-CLEAN
 - `vid`：视频
 - `ser`：服务类消息，对于加群消息将保留最后一条（默认过滤）
 - `sti`：贴纸
-- `aff`：传统 AFF 链接、支付宝淘宝红包、大陆 APP 的各类活动推广分享
+- `aff`：传统 AFF 链接、中国大陆各类活动推广分享
 - `exe`：可执行文件，例如 APK、BAT、CMD、COM、EXE、PIF、SCR、VBS 文件
 - `iml`：即时通讯软件的邀请链接或联系方式
 - `sho`：短链接
