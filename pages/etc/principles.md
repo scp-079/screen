@@ -12,7 +12,7 @@ A brief introduction to the design and management principles of SCP-079 series b
 
 ## Evidence Priority Principle
 
-For bots with anti-spam functionality in groups, if a message involves changing user's member status or increasing the user's score, all its actual operations (delete, ban, restrict, remove, score) shall be executed only if the evidence can be successfully forwarded. If the target message has been deleted (for whatever reason), the robot should not continue to do anything with the associated user. 
+For bots with anti-spam functionality in groups, if a message results in changing user's member status or increasing the user's score, all its actual operations (delete, ban, restrict, remove, score) shall be executed only if the evidence can be successfully forwarded. If the target message has been deleted (for whatever reason), the robot should not continue to do anything with the associated user. 
 
 Operations under the group's custom rules which won't  ban or score are not subject to this principle, but evidence forwarding may be performed as appropriate to find any error judgments generated automatically by the bot.
 
