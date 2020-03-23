@@ -56,6 +56,7 @@ title: Apply For Use
 
 ### 2. 阅读文档
 请申请者完整、仔细的阅读本 Demo 服务的下列文档：
+
 - [隐私政策](/PublicInformationAndPrivacyProtection/)
 - [免责声明](/readme/#免责声明)
 - [终止服务](/readme/#终止服务)
