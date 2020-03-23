@@ -17,7 +17,7 @@ title: Tools
 提供挑战为新加入的成员
 - [SCP-079-CLEAN](/clean-zh/): 
 过滤特殊类型的消息
-- [SCP-079-CONFIG](/config/): 
+- [SCP-079-CONFIG](/config-zh/): 
 管理每个机器人的设置
 - [SCP-079-HIDE](/hide/): 
 隐藏真正的发信者

@@ -2,37 +2,41 @@
 title: SCP-079-CONFIG
 ---
 
+<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/config-zh/';" class="zh">点此转至中文页面</button>
+
+---
+
 <link rel="stylesheet" href="/css/chinese.css">
 
-**项目编号：**SCP-079-CONFIG
+**Item #：**SCP-079-CONFIG
 
-**项目等级：**Safe
+**Object Class：**Safe
 
-**特殊收容措施：**SCP-079-CONFIG 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-CONFIG 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。其应该作为频道 SCP-079-CRITICAL 、频道 SCP-079-EXCHANGE 、频道 SCP-079-CONFIG 、频道 SCP-079-HIDE 的管理员，并加入 SCP-079-TEST 群组。
+**Special Containment Procedures：**SCP-079-CONFIG is recommended to operate in a Linux environment. The program is available for Python 3.6 and above. Required third-party modules are listed in the `requirements.txt`. It should be the administrator of channel SCP-079-CRITICAL, SCP-079-EXCHANGE, SCP-079-CONFIG, SCP-079-HIDE and join the SCP-079-TEST group.
 
-**描述：**SCP-079-CONFIG 是一个用于管理各机器人设置的机器人，其项目位于 GitLab ，镜像同步并开源于 <a href="https://github.com/scp-079/scp-079-config" target="_blank">GitHub</a> 。机器人本体位于 <a href="https://t.me/SCP_079_CONFIG_BOT" class="079" target="_blank">SCP-079-CONFIG</a> ，并不接受任何直接管理。其加入了 SCP-079-TEST 群组，用于其自身运行状态。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：根据其他机器人的请求，在 SCP-079-CONFIG 频道中提供带按钮的设置会话，每个会话的有效时间为 5 分钟。具体操作详见附录中的使用说明。
-
----
-
-**附录：**使用说明
-
-发起设置请求的群组管理员：
-
-在群组中发送请求设置某个机器人的命令，例如：`/config warn`
-
-通过某机器人在群组内提供的链接，到达 SCP-079-CONFIG 频道，于 5 分钟内在此对某机器人进行设置，设置完毕后，点击提交按钮更新设置。
-
-SCP-079-TEST 中的成员：
-
-- `/version` ：检查机器人版本
+**Description：**SCP-079-CONFIG is a bot for configuring how other bots perform. The project is located in Gitlab, with mirrored source codes on <a href="https://github.com/scp-079/scp-079-config" target="_blank">GitHub</a> . The bot is presented as <a href="https://t.me/SCP_079_CONFIG_BOT" class="079" target="_blank">SCP-079-CONFIG</a> , but its real identity is hidden and does not accept any direct management. It joined SCP-079-TEST to test basic functions usage. ███ takes charge of this project. Bots based on this project have similar functions: open a configuration session with buttons in channel SCP-079-CONFIG in response to other bots’ requests, with a five-minute valid period for each session. Please refer to the instructions in the appendix for details.
 
 ---
 
-**附录：**自建机器人的方法
+**Appendix：**Operation instructions
 
-可先查看<a href="/how-zh/">自建说明书</a>
+For administrators in certain group：
 
-克隆项目：
+Send command to request configuration for certain bots in group, like：`/config warn`
+
+Jump to channel SCP-079-CONFIG using links given by certain bot, and configure settings to it in 5 minutes. When finished, click submit for updates to take effect.
+
+For members of SCP-079-TEST：
+
+- `/version`：Check the version of the bot.
+
+---
+
+**Appendix：**Steps to run a bot on your own
+
+See <a href="/how/">Self Hosting Instructions</a> for general how-tos building a bot.
+
+Clone Project：
 
 ```bash
 git clone https://github.com/scp-079/scp-079-config.git ~/scp-079/config
@@ -40,17 +44,17 @@ git clone https://github.com/scp-079/scp-079-config.git ~/scp-079/config
 
 ---
 
-**文件#config.ini：**
+**Document#config.ini：**
 
-修改配置文件：
+Modify the configuration file：
 
-需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。 API ID 与 API Hash 在 <a href="https://my.telegram.org" target="_blank">官网</a> 获取
+You will need to modify all the key values with `[DATA EXPUNGED]` in `config.ini`. API ID and API Hash are available on the <a href="https://my.telegram.org" target="_blank">official site</a> .
 
 ```ini
 [pyrogram]
 api_id = [DATA EXPUNGED]
 api_hash = [DATA EXPUNGED]
-; 以上两条信息从官网申请获得
+; Obtain information above from the official site
 
 [plugins]
 root = plugins
@@ -61,64 +65,64 @@ include =
 
 [proxy]
 enabled = False
-; 可根据需要自行决定是否使用 SOCKS5 代理
+; Use a SOCKS5 proxy at your own demand
 hostname = 127.0.0.1
 port = 1080
 
 [basic]
 bot_token = [DATA EXPUNGED]
-; 此处填写在 @BotFather 处获得的 token
+; Fill in the token obtained from @BotFather
 prefix = /!
-; 命令前的可用字符，如在群组中使用非常规命令前缀，需要机器人有获取普通消息的权限
+; Fill in available characters before the command ONLY if you want to use a NON-conventional command prefix in group. Bots will need the permission to get ordinary messages handling this.
 
 [channels]
 config_channel_id = [DATA EXPUNGED]
-; 此处填写设置频道 SCP-079-CONFIG 的 ID
+; Fill in the ID of SCP-079-CONFIG
 critical_channel_id = [DATA EXPUNGED]
-; 此处填写紧急频道 SCP-079-CRITICAL 的 ID
+; Fill in. The ID of SCP-079-CRITICAL
 debug_channel_id = [DATA EXPUNGED]
-; 此处填写调试频道 SCP-079-DEBUG 的 ID
+; Fill in the ID of SCP-079-DEBUG
 exchange_channel_id = [DATA EXPUNGED]
-; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID
-; 关于数据交换频道的详情，请查看 https://scp-079.org/exchange/
+; Fill in the ID of SCP-079-EXCHANGE
+; Go to https://scp-079.org/exchange/ for more details on Data Exchange
 hide_channel_id = [DATA EXPUNGED]
-; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
+; Fill in the ID of SCP-079-HIDE 
 test_group_id = [DATA EXPUNGED]
-; 此处填写测试群组 SCP-079-TEST 的 ID
+; Fill in the ID of SCP-079-TEST
 
 [custom]
 backup = [DATA EXPUNGED]
-; 此处填写 True 或 False，代表程序是否为备份副本
+; Fill in True or False to indicate whether this program is a backup
 date_reset = [DATA EXPUNGED]
-; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
+; Fill in the date of monthly data reset, e.g., 1st Mon, represents the first Monday of each month 
 project_link = https://scp-079.org/config/
-; 此处填写项目网址
+; Fill in the project URL
 project_name = SCP-079-CONFIG
-; 此处填写项目名称
+; Fill in the project name
 zh_cn = [DATA EXPUNGED]
-; 此处填写 True 或 False，代表程序是否启用简体中文模式
+; Fill in True or False to indicate whether this program enables Simplified Chinese mode
 
 [encrypt]
 password = [DATA EXPUNGED]
-; 加密文件所用的密码
+; Fill in the password used to encrypt files
 ```
 
 ---
 
-**附录：**开发备忘
+**Appendix：**Development Notes
 
-1. 在 SCP-079-EXCHANGE 频道中等待来自其他机器人的设置请求
-2. 收到请求，在 CONFIG 频道中发送设置会话，有效时间 5 分钟
-3. 用户提交新的设置后，把数据传送回给请求的机器人
+1. Wait for configuration requests from other bots in SCP-079-EXCHANGE
+2. Open a session in CONFIG upon receipt, valid for 5 minutes
+3. Deliver updated data to certain bot after new settings was submitted
 
-CONFIG 能够向 BACKUP、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、TIP、USER、WARN 发送数据。对所有这些接收者的数据，其操作仅可为 `config` ，操作类型可为 `commit` 、`reply`
+CONFIG is allowed to send data to BACKUP、CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、TIP、USER、WARN. 对所有这些接收者的数据, 其操作仅可为 `config` , 操作类型可为 `commit` 、`reply`
 
-情形 1：向 BACKUP 传送数据备份文件。每日 UTC 时间 20:00 。`exchange_text` 文本作为该文件的 `caption`
+Scene 1：Send daily backup files to BACKUP at UTC 20:00. `exchange_text` is its `caption`
 
 ```python
 exchange_text = format_data(
     sender="CONFIG",
-    receviers=[
+    receivers=[
         "BACKUP"
     ],
     action="backup",
@@ -127,12 +131,12 @@ exchange_text = format_data(
 )
 ```
 
-情形 2：向 BACKUP 汇报上线状态。每次程序启动时
+Scene 2：Report online status to BACKUP, during each startup
 
 ```python
 exchange_text = format_data(
     sender="CONFIG",
-    receviers=[
+    receivers=[
         "BACKUP"
     ],
     action="backup",
@@ -144,12 +148,12 @@ exchange_text = format_data(
 )
 ```
 
-情形 3：向 BACKUP 汇报在线状态。每个小时的第 30 分钟：
+Scene 3：Report online status to BACKUP, at the 30th minute of each hour
 
 ```python
 exchange_text = format_data(
     sender="CONFIG",
-    receviers=[
+    receivers=[
         "BACKUP"
     ],
     action="backup",
@@ -158,12 +162,12 @@ exchange_text = format_data(
 )
 ```
 
-情形 4：向其他 Bot（CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、TIP、USER）回复设置请求的对话链接。这里以 WARN 为例：
+Scene 4：Reply links to configuration session for other Bots（CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、TIP、USER）. Take WARN as an example：
 
 ```python
 exchange_text = format_data(
     sender="CONFIG",
-    receviers=[
+    receivers=[
         "WARN"
     ],
     action="config",
@@ -176,12 +180,12 @@ exchange_text = format_data(
 )
 ```
 
-情形 5：向其他 Bot（CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、TIP、USER）提交新的设置。这里以 WARN 为例：
+Scene 5：Apply updated settings for other Bots（CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、RECHECK、TIP、USER）. Take WARN as an example：
 
 ```python
 exchange_text = format_data(
     sender="CONFIG",
-    receviers=[
+    receivers=[
         "WARN"
     ],
     action="config",
@@ -203,12 +207,12 @@ exchange_text = format_data(
 )
 ```
 
-特殊情形：向所有 bot 发送数据交换频道转移指令
+Special Case：Send location migration command for Data Exchange Channel to all other bots
 
 ```python
 exchange_text = format_data(
     sender="CONFIG",
-    receviers=[
+    receivers=[
         "EMERGENCY"
     ],
     action="backup",

@@ -6,7 +6,7 @@ title: About
 
 ## About
 
-SCP-079, an open source project, is dedicated to providing solutions for 
+SCP-079, an open source project, aims to provide solutions 
 blocking spammers in the Telegram groups.
 
 Using the name of this project as a tribute to one of the `SCP Foundation` 
