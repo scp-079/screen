@@ -8,44 +8,44 @@ title: Suggestions
 
 # Suggestions
 
-## Use Public Services with Care
+## Use Public Services Cautiously 
 
 ### Group bots
 
-A bot with the `Ban users` permission can: Kick off all members of the group when you are not paying attention.
+A bot with `Ban users` permission may: Kick off all members in the group without paying attention.
 
-A bot with the `Delete messages` permission can: delete all messages in the group when you are not paying attention.
+A bot with `Delete messages` permission may: delete all messages in the group without paying attention.
 
-A bot with administrator permissions can: Collect most of the messages in the group. However, anonymous User-Bots may also exist in your group, and they exist in the form of normal human user accounts, which can quietly collect all the data without administrator permissions.
+A bot with administrator permissions may: Collect most of the messages in the group. However, anonymous User-Bots may also exist in your group, and they appear as normal human user accounts, which can quietly collect all the data without administrator permissions.
 
-For security reasons, you should not use any group management bots that are not yours, or even you should not use the public demo services hosted by us. With third-party bots, in addition to possible damage to group members and messages, internal rules or models that the bot cannot be completely transparent to public can be suspected of misconduct. You should be aware that even if the bot's owner open the source code, it does not mean that the public service it is hosting is running this code, which means that its bot is entirely likely to have additional behaviors.
+For security reasons, you should only use your own group management bots, and you even shall not use the public demo services hosted by us. The use of third-party bots, may lead to probable damage to group members and messages, meanwhile, semi-private internal rules or models of the bot may be suspected for abuse. You should be aware that even the bot is open source, it does not mean that the hosted public service is running on this code, which means that certain bot has the entire ability to perform additional behaviors.
 
-If your group is very private, you should not share the group link to any promotion platform or unreliable people. If even the spammer is free to enter your group to send ads, your group is no longer private.
+If your group is super private, you should not share the group link to any promotion platform or unreliable people. Your group is no longer private even if spammers are free to join and send ads.
 
 ### Private Chat Bot
 
-Needless to say, if you use a third-party hosted private chat bot, the content of your private conversations with other people will no longer be private, and the conversation will be completely transparent to the service custodian. This not only brings inconvenience, but also greatly increases the risk of privacy leakage and relationship disclosure.
+There is no doubt that by using a third-party hosted private chat bot, your conversation details with others will no longer be private, and the chat will be entirely transparent to the service provider. This not only brings inexpediency, but greatly increases the risk of privacy leak and relationship disclosure.
 
 ## Build Your Own Bots
 
 ### WHY
 
-As mentioned above, third-party bots are not controllable. And if you create and host your own bots based on the source code, this risk will be greatly reduced. You should not trust others, nor should you believe in us, but you can trust yourself to some extent.
+As mentioned above, third-party bots are out of your control. Risk will be significantly lowered when you start to host your own bots build on source codes. You should not trust others, nor should you believe in us, but you can rely on yourself in some aspects.
 
 ### HOW TO
 
 The SCP-079 Project provides [source code](/projects/), and detailed [instructions](/how/), as well as a [separate introduction](/tools/) to each bot project, according to which you can quickly build your own bot. If you have technical problems, you can also [contact us](/contact/).
 
-### Protection
+### Defence
 
-The basic security protections that your server needs to take include, but are not limited to: finding a trusted VPS service provider, changing the SSH default port, disabling the root user from logging in, disabling password login, logging in with a key, and requiring two-step authentication when logging in, opening the SSH port only, the VPS should be mainly used only to run SCP-079 bot programs, and upgrading or maintaining the system regularly.
+The basic security protections that your server needs include, but are not limited to: finding a trusted VPS service provider, changing the default SSH port, disabling logging in as root user, using key instead of password to login, requiring two-step authentication each time, opening SSH port only, upgrading and maintaining the system regularly and the VPS should be mainly used to run SCP-079 bot programs only.
 
 ### Privacy
 
-Some of the channels required for SCP-079 bots to operate may have a risk of spreading user privacy, and it is recommended to carefully review the joining personnels.
+Some of the channels required for SCP-079 bots to operate may have a risk of spreading user privacy, so it is recommended to carefully review revalant staffs.
 
 ### Management
 
-You should invite some reliable friends as the service administrators. Or the entire service is managed by youself.
+You shall invite some reliable friends as the service administrators. Managing the entire service on your own is also a good duty.
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>
