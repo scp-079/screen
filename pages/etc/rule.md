@@ -12,7 +12,7 @@ title: Rule
 
 本标准仍然存在缺陷，日后将会修改，所有修改将公示在 [SCP_079_INFO](https://t.me/SCP_079_INFO)，请以最新的版本为准
 
-本项目组最新版本执行标准请[查看此处](/rule/)
+ SCP-079 工作组最新版本执行标准请[查看此处](/rule/)
 
 如有疑问或建议，请在 [SCP_079_CHAT](https://t.me/SCP_079_CHAT) 或 [SCP_079_TICKET_BOT](https://t.me/SCP_079_TICKET_BOT) 中提出
 
