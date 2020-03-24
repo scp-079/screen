@@ -46,7 +46,7 @@ Additional notes: Some channels such as SCP-079-EXCHANGE and SCP-079-WATCH are p
 
 ## Mutual Choice Principle
 
-Groups using the bot should understand and have the willingness to adopt the rules and functions of specific bot; the project team should review the group's application and check if the bot is suitable for them upon approval. Requests must be authorized before joining a normal group, i.e., the bot can only be invited via SCP-079-USER to groups.
+Groups using the bot should understand and have the willingness to adopt the rules and functions of specific bot; workgroup members should review the group's application and check if the bot is suitable for them upon approval. Requests must be authorized before joining a normal group, i.e., the bot can only be invited via SCP-079-USER to groups.
 
 ## Silence Principle
 

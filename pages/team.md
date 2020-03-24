@@ -14,9 +14,9 @@ title: Team
 ## Team
 
 In order to avoid unnecessary troubles, it's essential for 
-project members to stay anonymous, and those who intend 
-to join the team should pay attention to that. Anyone who 
-wants to contribute to the project is welcome.
+Project Team and Workgroup members to stay anonymous, and 
+those who intend to join the team should pay attention to 
+that. Anyone who wants to contribute to the project is welcome.
 
 In alphabetical order:
 
