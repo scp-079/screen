@@ -46,7 +46,7 @@ title: Apply For Use
 | [SCP-079-WARN](/WARN/)      | 根据群组管理员的命令警告、封禁、或踢出用户      |
 | [SCP-079-CLEAN](/CLEAN/)     | 根据群组的设置过滤特定类型的消息            |
 | [SCP-079-NOSPAM](/NOSPAM/)    | 自动封禁广告用户，自动删除广告消息          |
-|[SCP-079-CAPTCHA](/CAPTCHA/)<sup>[2]<sup/> | 提供对新入群用户的验证审核   |
+| [SCP-079-CAPTCHA](/CAPTCHA/)<sup>[2]<sup/> | 提供对新入群用户的验证审核   |
 | [SCP-079-LANG](/LANG/)      | 可通过本 Bot 删除中东地区使用的语言消息     |
 | [SCP-079-LONG](/LONG/)      | 可通过本 Bot 删除超长消息                   |
 | [SCP-079-NOFLOOD](/NOFLOOD/)   | 可通过本 Bot 更加灵活的控制消息发送频率     |
