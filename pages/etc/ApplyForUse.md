@@ -21,7 +21,7 @@ title: Apply For Use
 
 1. 放任群员互相辱骂、人身攻击的群组
 2. 刚刚建立的群组（或群员不超过 100 人）
-3. 申请者过往或现在存在违反[`执行标准`](/rule/)的行为
+3. 申请者过往或现在存在违反[执行标准](/rule/)的行为
 4. 以 NSFW 内容为主导的群组（NSFW = Not Safe for Work）
 5. 以黑产、灰产、广告、博彩、招聘求职、个人信息曝光为主要话题的群组
 6. 东南亚地区的本地群组
@@ -37,7 +37,7 @@ title: Apply For Use
 
 注意：群组管理性质的机器人均不会响应任何私聊，所有设置指令均在群组中进行。（[原因](/principles-zh/#操作可查原则)）
 
-有任何疑问请至讨论群 [SCP_079_CHAT](https://t.me/SCP_079_CHAT) 提出。
+有任何疑问请至讨论群 [SCP-079-CHAT](https://t.me/SCP_079_CHAT) 提出。
 
 | 名称              | 介绍                                        |
 | ----------------- | ------------------------------------------- |
@@ -62,31 +62,31 @@ title: Apply For Use
 请申请者完整、仔细的阅读本 Demo 服务的下列文档：
 
 - [隐私政策](/PublicInformationAndPrivacyProtection/)
-- [免责声明](/readme/##免责声明)
-- [终止服务](/readme/##终止服务)
+- [免责声明](/readme/#免责声明)
+- [终止服务](/readme/#终止服务)
 - [执行标准](/rule/) 
 
 并确定接受其所描述的策略或标准。当申请者提升 SCP-079 旗下机器人为管理员时，即视为您已经充分理解并同意上述文档全部内容。
 
 ### 3. 提出申请
 
-点击加入讨论群 [SCP_079_CHAT](https://t.me/SCP_079_CHAT)
+点击加入讨论群 [SCP-079-CHAT](https://t.me/SCP_079_CHAT)
 
 在加入的讨论群里，说明自己的群组需要什么功能的机器人，并发送自己的群组链接（请确保您的群组为 *supergroup*）
 
-管理员审核通过后会令 [SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT) 加入您的群组
+管理员审核通过后会令 [SCP-079-USER](https://t.me/SCP_079_USER_BOT) 加入您的群组
 
-申请者也可以选择自行添加 [SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT)
+申请者也可以选择自行添加 [SCP-079-USER](https://t.me/SCP_079_USER_BOT)
 
 [点击查看如何自行添加 USER](https://telegra.ph/SCP-079-USER-JOIN-12-04)
 
 ### 4. 赋予权限
 
-当 [SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT) 加入了自己的群组后，群主需要提升其为管理员并 *赋予如下图所示的这五项权限* （[为什么？](https://telegra.ph/SCP-079-USER-12-04#%E9%97%AE%E4%B8%8E%E7%AD%94)）
+当 [SCP-079-USER](https://t.me/SCP_079_USER_BOT) 加入了自己的群组后，群主需要提升其为管理员并 *赋予如下图所示的这五项权限* （[为什么？](https://telegra.ph/SCP-079-USER-12-04#%E9%97%AE%E4%B8%8E%E7%AD%94)）
 
 ![](/images/user-permissions.png)
 
-权限赋予齐全后，请在讨论群内告知项目管理员，之后 [SCP_079_USER_BOT](https://t.me/SCP_079_USER_BOT) 会为您添加您所申请的机器人。
+权限赋予齐全后，请在讨论群内告知项目管理员，之后 [SCP-079-USER](https://t.me/SCP_079_USER_BOT) 会为您添加您所申请的机器人。
 
 ### 5. 等待审核
 
@@ -100,6 +100,6 @@ title: Apply For Use
 
 ### 6. 一些建议
 
-- 建议申请者在群组置顶，或群组简介里说明机器人申诉方式 —— [SCP_079_TICKET_BOT](https://t.me/SCP_079_TICKET_BOT)，防止有群员被本项目 Demo 服务误封而无处申诉，请至少确保群组管理员们知晓此申诉方式
-- 建议申请者在群规中引用本项目的 **执行标准**<https://scp-079.org/rule> 
-- 建议申请者关注 [SCP_079_INFO](https://t.me/SCP_079_INFO) 频道以获取本项目的重要公告
+- 建议申请者在群组置顶，或群组简介里说明机器人申诉方式 —— [SCP-079-TICKET](https://t.me/SCP_079_TICKET_BOT)，防止有群员被本项目 Demo 服务误封而无处申诉，请至少确保群组管理员们知晓此申诉方式
+- 建议申请者在群规中引用本项目的 **执行标准** <https://scp-079.org/rule> 
+- 建议申请者关注 [SCP-079-INFO](https://t.me/SCP_079_INFO) 频道以获取本项目的重要公告
