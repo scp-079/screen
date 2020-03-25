@@ -12,33 +12,31 @@ title: Tools
 按照字母顺序：
 
 - [SCP-079-AVATAR](/avatar-zh/): 
-获得新群员的头像
+获取新群员的头像
 - [SCP-079-CAPTCHA](/captcha-zh/):
-提供挑战为新加入的成员
+为新加入的群员提供入群验证
 - [SCP-079-CLEAN](/clean-zh/): 
-过滤特殊类型的消息
+过滤特定类型的消息
 - [SCP-079-CONFIG](/config-zh/): 
 管理每个机器人的设置
 - [SCP-079-HIDE](/hide/): 
 隐藏真正的发信者
 - [SCP-079-LANG](/lang/): 
-删除或封禁 指定语言的消息
+删除或封禁指定语言的消息
 - [SCP-079-LONG](/long/): 
 控制超长的消息
 - [SCP-079-MANAGE](/manage/): 
-One ring to rule them all
+至尊戒驭众戒
 - [SCP-079-MIRROR](/mirror/): 
-我所看到的全部
+我能看到什么
 - [SCP-079-NOFLOOD](/noflood/): 
-阻止消息泛滥
+阻止刷屏消息
 - [SCP-079-NOPORN](/noporn/): 
 自动删除 NSFW 媒体消息
 - [SCP-079-NOSPAM](/nospam/): 
-封锁 spam 在群组中
+在群组中阻止 spam
 - [SCP-079-PM](/pm-zh/): 
-每个人可以拥有自己的私聊机器人
-- [SCP-079-RECHECK](/recheck/): 
-重新检查 NSFW 媒体消息
+每个人都可以拥有属于自己的私聊机器人
 - [SCP-079-REGEX](/regex/): 
 管理 regex 表达式
 - [SCP-079-USER](/user-zh/): 

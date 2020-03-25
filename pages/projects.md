@@ -8,7 +8,7 @@ title: Projects
 
 ## Projects
 
-Currently, all open source subprojects are hosted on GitLab, mirrored on [GitHub](https://github.com/scp-079). Most of the projects will remain closed until we officially open the public service.
+Currently, all subprojects are hosted on GitLab, mirrored and open source on [GitHub](https://github.com/scp-079).
 
 In alphabetical order:
 
@@ -38,8 +38,6 @@ Auto delete NSFW media messages
 Block spam in groups
 - [SCP-079-PM](https://github.com/scp-079/scp-079-pm): 
 Everyone can have their own private chat bot
-- [SCP-079-RECHECK](https://github.com/scp-079/scp-079-recheck): 
-Recheck NSFW media messages
 - [SCP-079-REGEX](https://github.com/scp-079/scp-079-regex): 
 Manage the regex patterns
 - [SCP-079-USER](https://github.com/scp-079/scp-079-user): 

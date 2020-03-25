@@ -16,9 +16,9 @@ title: Team
 
 ## 团队
 
-为避免不必要的麻烦，有意加入项目团队的人应注意：SCP-079 项目组和 SCP-079 工作组的成员保持匿名是重要的。欢迎每个想为这个想为这个项目做出贡献的人。
+为避免不必要的麻烦，有意加入项目团队的人员应注意：对于 SCP-079 项目组和 SCP-079 工作组的成员来说，保持匿名是相当重要的。欢迎每个想为这个项目做出贡献的人。
 
-按照字母顺序：
+按照字母排序：
 
 - <a class="no" target="_blank" style="color: #ddd; font-weight: 700;">Action Filament</a> 
 <a href="/action/" class="key" target="_blank">C9E1 46A8 B142 6D1C 8A8C 5B56 1F18 6244 E534 392E</a>
