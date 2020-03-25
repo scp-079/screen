@@ -51,7 +51,6 @@ title: Apply For Use
 | [SCP-079-LONG](/LONG/)      | 可通过本 Bot 删除超长消息                   |
 | [SCP-079-NOFLOOD](/NOFLOOD/)   | 可通过本 Bot 更加灵活的控制消息发送频率     |
 | [SCP-079-NOPORN](/NOPORN/)    | 可自动删除包含色情画面的媒体消息            |
-| [SCP-079-RECHECK](/RECHECK/)   | 对媒体进行严格的色情检查                    |
 
 1.  SCP-079 旗下任意其他机器人都需要 SCP-079-USER 配合，SCP-079-USER 为必选项
 2. 根据目前的观测结果表明，炸群期间有很多昵称中包含`中东语言`的成员加入。作为运营建议，建议在引入 SCP-079-CAPTCHA 的同时引入 SCP-079-LANG 和 SCP-079-NOSPAM
