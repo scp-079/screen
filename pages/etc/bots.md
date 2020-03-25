@@ -5,6 +5,7 @@ title: Bots
 <link rel="stylesheet" href="/css/chinese.css">
 
 # Bots
+本目录仅包含 SCP-079 旗下可供群组申请使用的机器人，其他机器人例如 SCP-079-MANAGE 、 SCP-079-REGEX 不接受群组申请，完整的项目目录请查阅 [Project](/projects-zh) 。
 
 ## SCP-079-USER
 
