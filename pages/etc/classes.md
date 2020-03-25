@@ -41,7 +41,6 @@ Euclid projects:
 - [SCP-079-NOFLOOD](/noflood/)
 - [SCP-079-NOPORN](/noporn/)
 - [SCP-079-NOSPAM](/nospam/)
-- [SCP-079-RECHECK](/recheck/)
 - [SCP-079-USER](/user/)
 - [SCP-079-WARN](/warn/)
 

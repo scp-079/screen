@@ -43,7 +43,6 @@ title: Classes
 - [SCP-079-NOFLOOD](/noflood-zh/)
 - [SCP-079-NOPORN](/noporn-zh/)
 - [SCP-079-NOSPAM](/nospam-zh/)
-- [SCP-079-RECHECK](/recheck-zh/)
 - [SCP-079-USER](/user-zh/)
 - [SCP-079-WARN](/warn-zh/)
 

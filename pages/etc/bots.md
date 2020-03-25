@@ -88,14 +88,6 @@ title: Bots
 
 ---
 
-## SCP-079-RECHECK
-
-对媒体进行严格的色情检查，不依赖 NOPORN，可以单独使用。
-
-详见：<https://telegra.ph/SCP-079-RECHECK-12-04>
-
----
-
 ## SCP-079-TIP
 
 发送入群欢迎消息；
