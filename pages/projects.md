@@ -4,6 +4,8 @@ title: Projects
 
 <button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/projects-zh/';" class="zh">点此转至中文页面</button>
 
+---
+
 ## Projects
 
 Currently, all open source subprojects are hosted on GitLab, mirrored on [GitHub](https://github.com/scp-079). Most of the projects will remain closed until we officially open the public service.
