@@ -14,7 +14,7 @@ title: Rule
 
  SCP-079 工作组最新版本执行标准请[查看此处](/rule/)
 
-如有疑问或建议，请在 [SCP-079-CHAT](https://t.me/SCP_079_CHAT) 或 [SCP-079-TICKET-BOT](https://t.me/SCP_079_TICKET_BOT) 中提出
+如有疑问或建议，请在 [SCP-079-CHAT](https://t.me/SCP_079_CHAT) 或 [SCP-079-TICKET](https://t.me/SCP_079_TICKET_BOT) 中提出
 
 ## 自动封禁
 

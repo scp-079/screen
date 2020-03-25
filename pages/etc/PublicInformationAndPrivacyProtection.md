@@ -44,4 +44,4 @@ title: Public information and privacy protection
 
 SCP-079 工作组将于 [SCP-079-LOGGING](https://t.me/SCP_079_LOGGING)、[SCP-079-DEBUG](https://t.me/SCP_079_DEBUG)、[SCP-079-CONFIG](https://t.me/SCP_079_CONFIG) 公开记录 SCP-079 旗下所有机器人的自动操作记录及触发机器人自动操作的消息（部分内容因涉及隐私而不记录），和群组管理员对 SCP-079 旗下机器人的操作、配置记录。
 
-SCP-079 工作组将于 [SCP-079-ERROR](https://t.me/SCP_079_ERROR) 记录 SCP-079 旗下的机器人的错误的自动操作记录及触发错误的消息。上述频道中的记录如涉及您的隐私，您有权联系 [SCP-079-TICKET-BOT](https://t.me/SCP_079_TICKET_BOT) 要求删除。
+SCP-079 工作组将于 [SCP-079-ERROR](https://t.me/SCP_079_ERROR) 记录 SCP-079 旗下的机器人的错误的自动操作记录及触发错误的消息。上述频道中的记录如涉及您的隐私，您有权联系 [SCP-079-TICKET](https://t.me/SCP_079_TICKET_BOT) 要求删除。

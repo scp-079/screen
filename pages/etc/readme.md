@@ -61,7 +61,7 @@ title: README
 
 我们在征集义士，来作为 SCP-079 工作组管理员，协助管理 SCP-079 旗下机器人。
 
-如您有意向参与，请联系：[SCP-079-PM-BOT](https://t.me/SCP_079_PM_BOT)
+如您有意向参与，请联系：[SCP-079-PM](https://t.me/SCP_079_PM_BOT)
 
 ## 自建机器人
 
