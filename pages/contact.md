@@ -15,7 +15,7 @@ You can also send an email to `admin@scp-079.org` if you intend to cooperate.
 
 ## Appeal
 
-We monthly clear all user related data, including blacklist contents(see [Data Minimize Principle](/principles/Data Minimize Principle)). You shall appeal a certain case only if you have been banned and are still in the blacklist. Be aware that we would never give excuse to those who pradically spammed.
+We monthly clear all user related data, including blacklist contents (see [Data Minimize Principle](/principles/Data Minimize Principle)). You shall appeal a certain case only if you have been banned and are still in the blacklist. Be aware that we would never give excuse to those who pradically spammed.
 
 ---
 
