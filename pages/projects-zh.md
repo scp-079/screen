@@ -48,7 +48,7 @@ title: Projects
 - [SCP-079-WATCH](https://github.com/scp-079/scp-079-watch)：
 观察并追踪可疑的 spam 行为
 - [Screen](https://github.com/scp-079/screen)：
-一个 `Hakyll` 的暗色主题
+一个 Hakyll 的暗色主题
 - [Scripts](https://github.com/scp-079/scripts)：
 一些脚本
 - [Units](https://github.com/scp-079/units)：
