@@ -65,6 +65,7 @@ img {
 }
 
 a {
+    outline: none;
     text-decoration: none;
     color: #DDDDDD;
     font-weight: bold;
