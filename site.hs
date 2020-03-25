@@ -103,14 +103,6 @@ main = hakyllWith config $ do
             >>= relativizeUrls
             >>= cleanIndexHtmls
 
-    -- Compile keys page
-    match "keys/*" $ do
-        route   $ cleanRoute
-        compile $ pandocCompiler
-            >>= loadAndApplyTemplate "templates/default.html" defaultContext
-            >>= relativizeUrls
-            >>= cleanIndexUrls
-
     -- Render Atom / Rss feeds
     create ["atom.xml"] $ do
         route idRoute
