@@ -42,7 +42,7 @@ Project management operations can be checked: All bots must absolutely ignore an
 
 Channel operations can be checked: all public channels must have signature on all messages so as to trace back the original poster. Once the robot publishes a message on the channel, it can by no means be manually or automatically deleted or edited unless it involves privacy or hazard information, or if it is unblocked, clarified, indexed, or deleted by MANAGE.
 
-Additional notes: Some channels such as SCP-079-EXCHANGE and SCP-079-WATCH are private channels for internal uses. These channels are only opened to staff, supervisors, witnesses, and anti-spam partners. We will review the identity of whom applies to join the channels and make a [public list](/transparency/).
+Additional notes: Some channels such as SCP-079-EXCHANGE and SCP-079-WATCH are private channels for internal uses. These channels are only opened to internal personnel, supervisors, witnesses, and anti-spam partners. We will review the identity of whom applies to join the channels and make a [public list](/transparency/).
 
 ## Mutual Choice Principle
 
@@ -54,7 +54,7 @@ Messages should only be sent on necessary demand by the bot in normal groups. Ef
 
 ## Worst Estimation Principle
 
-The scenarios covered by this principle may include: server downtime, data loss, exchange channel failure, internal staff's disruption.
+The scenarios covered by this principle may include: server downtime, data loss, exchange channel failure, internal personnel's disruption.
 
 Solutions to these scenarios: SCP-079-BACKUP project. The BACKUP bot, located on a different server than others, periodically receives backup files from all bots every day, downloads and stores them to appropriate place. Meanwhile, since other bots transfer backup files through the exchange channel, data naturally gets an extra backup in this channel.
 
@@ -62,6 +62,6 @@ BACKUP will check the online status of each bot hourly. If any bot down is down,
 
 SCP-079-HIDE channel is a backup for the EXCHANGE, prepared to automatically switch on after the origin channel failed for any reason.
 
-Storage data loss and unauthorized whitelist addition deliberatly caused by internal staff can be restored by backup; forged messages in EXCHANGE channel sent by staff can be checked by message signature within 48 hours; damages to the server and backup site caused by internal personnel can be recovered by the open source code and stored data in exchange channel.
+Storage data loss and unauthorized whitelist addition deliberatly caused by internal personnel can be restored by backup; forged messages in EXCHANGE channel sent by internal personnel can be checked by message signature within 48 hours; damages to the server and backup site caused by internal personnel can be recovered by the open source code and stored data in exchange channel.
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>

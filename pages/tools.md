@@ -48,4 +48,3 @@ Warn or ban someone by admin commands
 Observe and track suspicious spam behaviors
 
 <audio src="/audio/page/tools.ogg" autoplay></audio>
-<audio id="dooropen079" src="/audio/door/dooropen079.ogg"/>

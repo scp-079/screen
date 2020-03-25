@@ -11,40 +11,39 @@ title: Tools
 
 按照字母顺序：
 
-- [SCP-079-AVATAR](/avatar-zh/): 
+- [SCP-079-AVATAR](/avatar-zh/)：
 获取新群员的头像
-- [SCP-079-CAPTCHA](/captcha-zh/):
+- [SCP-079-CAPTCHA](/captcha-zh/)：
 为新加入的群员提供入群验证
-- [SCP-079-CLEAN](/clean-zh/): 
+- [SCP-079-CLEAN](/clean-zh/)：
 过滤特定类型的消息
-- [SCP-079-CONFIG](/config-zh/): 
+- [SCP-079-CONFIG](/config-zh/)：
 管理每个机器人的设置
-- [SCP-079-HIDE](/hide/): 
+- [SCP-079-HIDE](/hide/)：
 隐藏真正的发信者
-- [SCP-079-LANG](/lang/): 
+- [SCP-079-LANG](/lang/)：
 删除或封禁指定语言的消息
-- [SCP-079-LONG](/long/): 
+- [SCP-079-LONG](/long/)：
 控制超长的消息
-- [SCP-079-MANAGE](/manage/): 
+- [SCP-079-MANAGE](/manage/)：
 至尊戒驭众戒
-- [SCP-079-MIRROR](/mirror/): 
+- [SCP-079-MIRROR](/mirror/)：
 我能看到什么
-- [SCP-079-NOFLOOD](/noflood/): 
+- [SCP-079-NOFLOOD](/noflood/)：
 阻止刷屏消息
-- [SCP-079-NOPORN](/noporn/): 
+- [SCP-079-NOPORN](/noporn/)：
 自动删除 NSFW 媒体消息
-- [SCP-079-NOSPAM](/nospam/): 
+- [SCP-079-NOSPAM](/nospam/)：
 在群组中阻止 spam
-- [SCP-079-PM](/pm-zh/): 
+- [SCP-079-PM](/pm-zh/)：
 每个人都可以拥有属于自己的私聊机器人
-- [SCP-079-REGEX](/regex/): 
+- [SCP-079-REGEX](/regex/)：
 管理 regex 表达式
-- [SCP-079-USER](/user-zh/): 
+- [SCP-079-USER](/user-zh/)：
 邀请并协助其他机器人
-- [SCP-079-WARN](/warn/): 
+- [SCP-079-WARN](/warn/)：
 通过管理员的指令封禁或警告某人
-- [SCP-079-WATCH](/watch/): 
+- [SCP-079-WATCH](/watch/)：
 观察并追踪可疑的 spam 行为
 
 <audio src="/audio/page/tools.ogg" autoplay></audio>
-<audio id="dooropen079" src="/audio/door/dooropen079.ogg"/>
