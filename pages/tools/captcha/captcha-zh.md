@@ -57,7 +57,7 @@ title: SCP-079-CAPTCHA
 
 **附录：**使用说明
 
-请[点击此处](/captcha-muanual-zh/)以查看使用手册。
+请[点击此处](/captcha-manual-zh/)以查看使用手册。
 
 ---
 
