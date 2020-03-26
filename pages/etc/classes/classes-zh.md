@@ -19,10 +19,10 @@ title: Classes
 开发中的 Safe 级项目：
 
 - [SCP-079-ANALYZE](/analyze-zh/)
-- [SCP-079-APPEAL](/appeal-zh/)
 - [SCP-079-APPLY](/apply-zh/)
 - [SCP-079-BACKUP](/backup-zh/)
 - [SCP-079-CONFIG](/config-zh/)
+- [SCP-079-GET](/get/)
 - [SCP-079-HIDE](/hide-zh/)
 - [SCP-079-MANAGE](/manage-zh/)
 - [SCP-079-MIRROR](/mirror-zh/)

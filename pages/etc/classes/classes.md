@@ -17,10 +17,10 @@ Bot entities created using the source code of these projects are less likely to 
 Safe projects:
 
 - [SCP-079-ANALYZE](/analyze/)
-- [SCP-079-APPEAL](/appeal/)
 - [SCP-079-APPLY](/apply/)
 - [SCP-079-BACKUP](/backup/)
 - [SCP-079-CONFIG](/config/)
+- [SCP-079-GET](/get/)
 - [SCP-079-HIDE](/hide/)
 - [SCP-079-MANAGE](/manage/)
 - [SCP-079-MIRROR](/mirror/)
