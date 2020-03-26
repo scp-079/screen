@@ -34,4 +34,8 @@ title: Projects
 - [Scripts](https://github.com/scp-079/scripts)：一些脚本
 - [Units](https://github.com/scp-079/units)：一些 systemd 服务文件 
 
+以下为本项目开发者的个人代码，由于其风格与本项目代码非常相同，故出于隐私和其他考虑，以本项目的身份开源：
+
+- [FoxyGFW](https://github.com/scp-079/foxygfw)
+
 <audio src="/audio/page/projects.ogg" autoplay></audio>

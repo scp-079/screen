@@ -33,4 +33,8 @@ In alphabetical order:
 - [Scripts](https://github.com/scp-079/scripts): Some scripts
 - [Units](https://github.com/scp-079/units): Some systemd units
 
+The following is the personal code of the project developers. Since its style is very similar to the code of SCP-079 project, for privacy and other considerations, we open source it in the SCP-079 capacity:
+
+- [FoxyGFW](https://github.com/scp-079/foxygfw)
+
 <audio src="/audio/page/projects.ogg" autoplay></audio>
