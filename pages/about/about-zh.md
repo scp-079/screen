@@ -11,7 +11,7 @@ title: About
 
 SCP-079，一个开源项目，致力于为 Telegram 群组中封锁 spammer 提供解决方案。
 
-本项目的名字是为了向一篇 `SCP 基金会故事` 致敬。查看[SCP-079](http://www.scp-wiki.net/scp-079)了解更多细节。
+本项目的名字是为了向一篇 `SCP 基金会故事` 致敬。查看 [SCP-079](http://www.scp-wiki.net/scp-079) 了解更多细节。
 
 订阅我们的公告频道以获得动态更新：[SCP-079-INFO](https://t.me/SCP_079_INFO)。
 
