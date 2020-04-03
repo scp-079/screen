@@ -11,7 +11,7 @@ the steps defined in [`.gitlab-ci.yml`](.gitlab-ci.yml).
 
 We call this Hakyll theme `Screen`. 
 
-This is a theme intended to use to [SCP-079](https://scp-079.org) website. 
+This is a theme intended to use on [SCP-079](https://scp-079.org) website. 
 The theme is converted from a Jekyll theme [darcli](https://github.com/gildasio/darcli). 
 We made some changes to make it responsive and more suitable for our site.
 
