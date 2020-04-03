@@ -13,14 +13,14 @@ Currently, all subprojects are hosted on GitLab, mirrored and open source on [Gi
 In alphabetical order:
 
 - [SCP-079-AVATAR](https://github.com/scp-079/scp-079-avatar): Get newly joined member's profile photo
-- [SCP-079-CAPTCHA](https://github.com/scp-079/scp-079-captcha):Provide challenges for newly joined members
+- [SCP-079-CAPTCHA](https://github.com/scp-079/scp-079-captcha): Provide challenges for newly joined members
 - [SCP-079-CLEAN](https://github.com/scp-079/scp-079-clean): Filter specific types of messages
 - [SCP-079-CONFIG](https://github.com/scp-079/scp-079-config): Manage the settings of each bot
 - [SCP-079-HIDE](https://github.com/scp-079/scp-079-hide): Hide the real sender
 - [SCP-079-LANG](https://github.com/scp-079/scp-079-lang): Ban or delete by detecting the language
 - [SCP-079-LONG](https://github.com/scp-079/scp-079-long): Control super long messages
 - [SCP-079-MANAGE](https://github.com/scp-079/scp-079-manage): One ring to rule them all
-- [SCP-079-MIRROR](https://github.com/scp-079/scp-079-mirror): What I will see
+- [SCP-079-MIRROR](https://github.com/scp-079/scp-079-mirror): What will I see
 - [SCP-079-NOFLOOD](https://github.com/scp-079/scp-079-noflood): Message-flooding prevention
 - [SCP-079-NOPORN](https://github.com/scp-079/scp-079-noporn): Auto delete NSFW media messages
 - [SCP-079-NOSPAM](https://github.com/scp-079/scp-079-nospam): Block spam in groups
