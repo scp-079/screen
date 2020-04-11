@@ -179,13 +179,22 @@ SCP-079-TIP
 
 规则集代号：wb
 
+SCP-079-CAPTCHA：
+SCP-079-CLEAN：
+SCP-079-NOFLOOD：
+SCP-079-NOPORN：
+SCP-079-NOSPAM：
+SCP-079-RECHECK：
+SCP-079-TIP：
+SCP-079-WATCH：
 
 
 ### 追踪删除
 
 规则集代号：wd
 
-
+SCP-079-NOSPAM：
+SCP-079-WATCH：
 
 ### 测试用例
 
@@ -193,8 +202,4 @@ SCP-079-TIP
 
 
 
-无
-
-
-
-仅供测试，SCP-070-TEST 群组成员可发送消息至 SCP-070-TEST 群组检测是否匹配正则表达式。
+SCP-079-REGEX：SCP-070-TEST 群组成员可发送消息至 SCP-070-TEST 群组检测是否匹配正则表达式。
