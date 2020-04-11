@@ -10,8 +10,8 @@ title: Tools
 
 In alphabetical order:
 
-- [SCP-079-AVATAR](/avatar/): Get new joined member's profile photo
-- [SCP-079-CAPTCHA](/captcha/): Provide challenges for new joined members
+- [SCP-079-AVATAR](/avatar/): Get newly joined member's profile photo
+- [SCP-079-CAPTCHA](/captcha/): Provide challenges for newly joined members
 - [SCP-079-CLEAN](/clean/): Filter specific types of messages
 - [SCP-079-CONFIG](/config/): Manage the settings of each bot
 - [SCP-079-HIDE](/hide/): Hide the real sender
@@ -23,7 +23,7 @@ In alphabetical order:
 - [SCP-079-NOPORN](/noporn/): Auto delete NSFW media messages
 - [SCP-079-NOSPAM](/nospam/): Block spam in groups
 - [SCP-079-PM](/pm/): Everyone can have their own private chat bot
-- [SCP-079-REGEX](/regex/): Manage the regex patterns
+- [SCP-079-REGEX](/regex/): Manage regex patterns
 - [SCP-079-USER](/user/): Invite and help other bots
 - [SCP-079-WARN](/warn/): Warn or ban someone by admin commands
 - [SCP-079-WATCH](/watch/): Observe and track suspicious spam behaviors
