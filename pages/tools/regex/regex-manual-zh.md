@@ -15,7 +15,7 @@ SCP-079 工作组 通过 SCP_079_REGEX_BOT 管理着 SCP-079 旗下所有机器�
 
 *注：*
 
-1. SCP-079-REGEX 项目未公开 [SCP-079-REGEX](https://t.me/SCP-079_REGEX_BOT) 所使用的正则表达式且暂无公开 [SCP-079-REGEX](https://t.me/SCP-079_REGEX_BOT) 所使用的正则表达式的计划。
+1. [SCP-079-REGEX](https://github.com/scp-079/scp-079-regex) 项目未公开 [SCP-079-REGEX](https://t.me/SCP-079_REGEX_BOT) 所使用的正则表达式且暂无公开 [SCP-079-REGEX](https://t.me/SCP-079_REGEX_BOT) 所使用的正则表达式的计划。
 2. 本文不讲述正则表达式的语法，请有管理正则表达式需求者自行学习正则表达式的相关语法。
 3. 本文介绍如何使用 SCP-079-REGEX 机器人实例，对应的搭建说明在[此处](/regex/)。
 
@@ -67,7 +67,16 @@ NOSPAM 将使用该类规则分析用户头像 OCR 结果，触发该类规则�
 
 #### 其他使用者
 
-
+SCP-079-AVATAR
+SCP-079-CAPTCHA
+SCP-079-CLEAN
+SCP-079-LANG
+SCP-079-LONG
+SCP-079-NOPORN
+SCP-079-NOSPAM
+SCP-079-RECHECK
+SCP-079-TIP
+SCP-079-WATCH
 
 #### 效果
 
@@ -83,7 +92,16 @@ NOSPAM 将使用该类规则分析用户头像 OCR 结果，触发该类规则�
 
 #### 其他使用者
 
-
+SCP-079-AVATAR
+SCP-079-CAPTCHA
+SCP-079-CLEAN
+SCP-079-LANG
+SCP-079-LONG
+SCP-079-NOPORN
+SCP-079-NOSPAM
+SCP-079-RECHECK
+SCP-079-TIP
+SCP-079-WATCH
 
 #### 效果
 
@@ -195,7 +213,7 @@ NOSPAM 将使用该类规则分析用户头像 OCR 结果，触发该类规则�
 
 #### 其他使用者
 
-
+SCP-079-TIP
 
 #### 效果
 
