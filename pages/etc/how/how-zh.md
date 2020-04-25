@@ -68,7 +68,7 @@ SCP-079 系列机器人的搭建涉及多个频道、群组、机器人帐号、
 
 - Debian 10
 - Python 3.7.3
-- 系统的用户名为 `scp` （请注意用户名涉及到的路径问题，例如 systemd unit 文件中的路径）
+- 系统的用户名为 `scp` （请注意用户名涉及到的路径问题）
 
 另见：[为什么你应该自行建立机器人](/suggestions-zh/)
 
@@ -92,37 +92,24 @@ sudo apt autoremove -y
 sudo apt install build-essential git python3-dev python3-venv vim -y
 ```
 
-## 其他软件包
-
-有些项目需要额外安装其他软件包，请务必查阅各项目[单独页面](/tools-zh/)中的描述。
-
-## 创建虚拟环境
-
-机器人一般可共用同一个虚拟环境，通常情况下无需额外创建。
-
-注意：如需使用 NOPORN 或 RECHECK ，请单独根据其源代码中 `README.md` 或[单独页面](/tools-zh/)中所给出的命令操作。
+如需搭建完整实例，可在此时安装其他依赖：
 
 ```bash
-mkdir ~/scp-079
-python3 -m venv ~/scp-079/venv
+sudo apt install caffe-cpu fonts-arphic-gkai00mp fonts-freefont-ttf libzbar0 opencc tesseract-ocr tesseract-ocr-chi-sim tesseract-ocr-chi-tra -y
 ```
+
+> 注：对于 NOPORN，请参照其源代码中 `fix.py` 内的描述，对系统环境做些许更改。
+
+如仅需搭建部分实例，则请查看各项目源代码中的 `README.md` 中的描述进行依赖的安装。
 
 ---
 
-## 设置 systemd 服务
-
-除有更新 units 的必要，下次搭建其他机器人无需重复克隆：
-
-```bash
-mkdir -p ~/.config/systemd
-git clone https://github.com/scp-079/units.git ~/.config/systemd/user
-```
-
 ## 配置脚本
 
-除有更新 scripts 的必要，下次搭建其他机器人无需重复克隆：
+除有更新 scripts 的必要，下次搭建其他机器人时，无需重复克隆：
 
 ```bash
+mkdir -p ~/scp-079
 git clone https://github.com/scp-079/scripts.git ~/scp-079/scripts
 ```
 
@@ -137,7 +124,10 @@ vim ~/.bash_aliases
 添加如下内容：
 
 ```bash
-alias scp-079="source ~/scp-079/venv/bin/activate"
+alias base="deactivate"
+alias build="bash ~/scp-079/scripts/build.sh"
+alias venv="source ~/scp-079/scripts/venv.sh"
+
 alias config="bash ~/scp-079/scripts/config.sh"
 alias log="bash ~/scp-079/scripts/log.sh"
 alias restart="bash ~/scp-079/scripts/restart.sh"
@@ -145,6 +135,12 @@ alias status="bash ~/scp-079/scripts/status.sh"
 alias start="bash ~/scp-079/scripts/start.sh"
 alias stop="bash ~/scp-079/scripts/stop.sh"
 alias update="bash ~/scp-079/scripts/update.sh"
+
+alias disable="bash ~/scp-079/scripts/disable.sh"
+alias enable="bash ~/scp-079/scripts/enable.sh"
+alias refresh="bash ~/scp-079/scripts/refresh.sh"
+alias shut="bash ~/scp-079/scripts/shut.sh"
+alias upgrade="bash ~/scp-079/scripts/upgrade.sh"
 ```
 
 令其生效：
@@ -153,23 +149,19 @@ alias update="bash ~/scp-079/scripts/update.sh"
 source ~/.bash_aliases
 ```
 
+至此，便携命令设置完毕。
+
 ---
 
-## 克隆某个项目
+## 创建机器人
 
-例如，使用 `SCP-079-PM` ，根据项目中的[单独使用说明](/pm-zh/)提供的地址克隆：
-
-```bash
-git clone https://github.com/scp-079/scp-079-pm.git ~/scp-079/pm
-```
-
-## 使用 pip 安装依赖
+以 SCP-079-PM 为例：
 
 ```bash
-scp-079    # 切换到虚拟环境
-pip install -r ~/scp-079/pm/requirements.txt
-deactivate    # 退出虚拟环境
+build pm
 ```
+
+准备工作结束后，将要求用户修改 `config.ini` 文件。
 
 ## 更改配置文件
 
@@ -194,9 +186,23 @@ key = Fernet.generate_key()
 print(key.decode())    # 接着复制打印出的 key，填写至 config.ini 文件中
 ```
 
+文件 `config.ini` 修改结束后，请妥善保存并退出。
+
+## 设置每日定时重启
+
+```bash
+enable 00:00:00
+```
+
+请务必确保参数格式与示例一致，例如 `00:00:00` 代表在系统时间的 0 点 0 分 0 秒重启所有机器人。
+
+可根据需要自行调整此参数，建议将重启时间设置为机器人负载较低的时间段。
+
 ## 需采取的额外操作
 
-有些机器人可能需要一些额外的更改，例如对环境的更改、下载所需模型、添加自定义文件等。请参照[各项目单独使用说明](/tools-zh/)中 `附录：自建机器人的方法` 一节的说明。
+有些机器人可能需要一些额外的更改，例如：CAPTCHA 可以添加自定义的图片文件。
+
+因此，请先查阅[各项目单独使用说明](/tools-zh/)中 `附录：自建机器人的方法` 一节的说明，确保必要的操作被正确执行。
 
 ---
 
@@ -205,14 +211,13 @@ print(key.decode())    # 接着复制打印出的 key，填写至 config.ini 文
 对于常规普通机器人，比如本文的 SCP-079-PM，可直接启动服务：
 
 ```bash
-bash ~/scp-079/scripts/enable.sh
 start pm
 ```
 
 对于使用普通用户帐号的 User Bot，则需先进行登录操作（以 SCP-079-USER 为例）：
 
 ```bash
-scp-079    # 切换到虚拟环境
+venv user    # 切换到虚拟环境
 cd ~/scp-079/user
 python main.py    # 临时启动程序
 ```
@@ -220,10 +225,15 @@ python main.py    # 临时启动程序
 此时，将提示登录帐号，按要求操作即可，注意手机号输入时中间无空格、符号，省略最前方的加号。如登录成功，则按 Ctrl + C 退出程序，接着，启动服务：
 
 ```bash
-deactivate    # 退出虚拟环境
-bash ~/scp-079/scripts/enable.sh
+base    # 退出虚拟环境
 start user
 ```
+
+至此，机器人应已成功运行。
+
+---
+
+## 设置自动重启
 
 ---
 
