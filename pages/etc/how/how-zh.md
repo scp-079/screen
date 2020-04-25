@@ -161,7 +161,7 @@ source ~/.bash_aliases
 build
 ```
 
-按要求分别输入 SCP-079 的某个项目代号（小写，例如：`pm`），自定义的名称（小写，无空格，例如：`ticket`），之后此脚本将根据预设配置相应文件。
+按要求分别输入 SCP-079 的某个项目代号（小写，例如：`pm`，本文示例填写的是 `pm`），自定义的名称（小写，无空格，例如：`ticket`，本文示例填写的是 `pm`），之后此脚本将根据预设配置相应文件。
 
 准备工作结束后，将要求用户修改 `config.ini` 文件。
 
@@ -281,6 +281,36 @@ status pm
 
 ```bash
 update pm
+```
+
+停用所有机器人：
+
+```bash
+disable
+```
+
+启用所有机器人，并指定每日定时重启的时间：
+
+```bash
+enable 00:00:00
+```
+
+重启所有机器人：
+
+```bash
+refresh
+```
+
+停止所有机器人的运行：
+
+```bash
+shut
+```
+
+更新所有机器人：
+
+```bash
+upgrade
 ```
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>
