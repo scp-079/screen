@@ -139,6 +139,7 @@ alias update="bash ~/scp-079/scripts/update.sh"
 alias disable="bash ~/scp-079/scripts/disable.sh"
 alias enable="bash ~/scp-079/scripts/enable.sh"
 alias refresh="bash ~/scp-079/scripts/refresh.sh"
+alias show="bash ~/scp-079/scripts/show.sh"
 alias shut="bash ~/scp-079/scripts/shut.sh"
 alias upgrade="bash ~/scp-079/scripts/upgrade.sh"
 ```
@@ -166,13 +167,6 @@ build
 准备工作结束后，将要求用户修改 `config.ini` 文件。
 
 ## 更改配置文件
-
-根据需要修改项目的 `config.ini` 文件：
-
-```bash
-cp ~/scp-079/pm/config.ini.example ~/scp-079/pm/config.ini
-config pm
-```
 
 需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改，`config.ini` 文件中参数代表的含义，可在各机器人的[单独使用说明](/pm-zh/)中 `文件#config.ini` 一节查看。
 
@@ -295,6 +289,12 @@ enable 00:00:00
 
 ```bash
 refresh
+```
+
+输出所有机器人的日志：
+
+```bash
+show
 ```
 
 停止所有机器人的运行：
