@@ -137,6 +137,8 @@ normalize = True
 ; 此处填写 True 或 False，代表程序是否对消息文字进行转换处理
 
 [limit]
+limit_length = [DATA EXPUNGED]
+; 此处填写整数，代表有效消息包含文本的最小长度
 limit_message = [DATA EXPUNGED]
 ; 此处填写整数，代表用户加入白名单待选列表前，所需的有效发言的累计条数
 
