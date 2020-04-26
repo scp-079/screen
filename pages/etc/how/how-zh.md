@@ -174,7 +174,7 @@ build
 
 ## 更改配置文件
 
-需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改，`config.ini` 文件中参数代表的含义，可在各机器人的[单独使用说明](/pm-zh/)中 `文件#config.ini` 一节查看。
+需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改，`config.ini` 文件中参数代表的含义，可在各机器人的[单独使用说明](/pm-zh/)中 **文件#config.ini** 一节查看。
 
 注意：部分机器人需要在 `[encrypt]` 中填写 `key` 值，整体项目统一使用相同的 `key`，其需要通过程序生成，获取方式如下：
 
