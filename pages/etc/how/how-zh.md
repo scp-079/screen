@@ -173,7 +173,7 @@ build
 注意：部分机器人需要在 `[encrypt]` 中填写 `key` 值，整体项目统一使用相同的 `key`，其需要通过程序生成，获取方式如下：
 
 ```bash
-python3 ~/scripts/key.py
+python3 ~/scp-079/scripts/key.py
 ```
 
 接着复制打印出的 `key`，粘贴至 `config.ini` 文件的相应位置。
