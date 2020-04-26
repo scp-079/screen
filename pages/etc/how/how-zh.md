@@ -84,7 +84,7 @@ sudo apt full-upgrade -y
 sudo apt autoremove -y
 ```
 
-## 设置自启 systemd 服务：
+## 设置自启 systemd 服务
 
 ```bash
 sudo loginctl enable-linger scp
