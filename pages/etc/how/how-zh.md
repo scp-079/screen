@@ -84,6 +84,12 @@ sudo apt full-upgrade -y
 sudo apt autoremove -y
 ```
 
+## 设置自启 systemd 服务：
+
+```bash
+sudo loginctl enable-linger scp
+```
+
 ## 安装搭建所需基本软件包
 
 安装 vim、git 等工具：
