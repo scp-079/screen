@@ -173,14 +173,10 @@ build
 注意：部分机器人需要在 `[encrypt]` 中填写 `key` 值，整体项目统一使用相同的 `key`，其需要通过程序生成，获取方式如下：
 
 ```bash
-python3
+python3 ~/scripts/key.py
 ```
 
-```python3
-from cryptography.fernet import Fernet
-key = Fernet.generate_key()
-print(key.decode())    # 接着复制打印出的 key，填写至 config.ini 文件中
-```
+接着复制打印出的 `key`，粘贴至 `config.ini` 文件的相应位置。
 
 文件 `config.ini` 修改结束后，请妥善保存并退出。
 
