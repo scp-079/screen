@@ -142,6 +142,7 @@ alias start="bash ~/scp-079/scripts/start.sh"
 alias stop="bash ~/scp-079/scripts/stop.sh"
 alias update="bash ~/scp-079/scripts/update.sh"
 
+alias clear="bash ~/scp-079/scripts/clear.sh"
 alias disable="bash ~/scp-079/scripts/disable.sh"
 alias enable="bash ~/scp-079/scripts/enable.sh"
 alias refresh="bash ~/scp-079/scripts/refresh.sh"
@@ -273,6 +274,12 @@ status pm
 
 ```bash
 update pm
+```
+
+清空所有机器人的日志文件：
+
+```bash
+clear
 ```
 
 停用所有机器人：

@@ -31,7 +31,6 @@ In alphabetical order:
 - [SCP-079-WATCH](https://github.com/scp-079/scp-079-watch): Observe and track suspicious spam behaviors
 - [Screen](https://github.com/scp-079/screen): A dark theme for Hakyll
 - [Scripts](https://github.com/scp-079/scripts): Some scripts
-- [Units](https://github.com/scp-079/units): Some systemd units
 
 The following is personal codes of project developers. Since its style is very similar to that of SCP-079 project, for privacy and other considerations, we open its source in the name of SCP-079:
 
