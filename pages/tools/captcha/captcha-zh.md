@@ -7,12 +7,6 @@ title: SCP-079-CAPTCHA
 
 ---
 
-# 此为暂时性文档，以供自建参考
-
-搭建过程中如遇问题，请至 [SCP-079-CHAT](https://t.me/SCP_079_CHAT) 咨询
-
----
-
 **项目编号：**SCP-079-CAPTCHA
 
 **项目等级：**Euclid
@@ -28,24 +22,29 @@ title: SCP-079-CAPTCHA
 
 此机器人需要加入以下频道：
 
-- **SCP-079-DEBUG （必选）**
-- **SCP-079-EXCHANGE （必选）**
+- **SCP-079-DEBUG（必选）**
+- **SCP-079-EXCHANGE（必选）**
+- **SCP-079-LOGGING（必选）**
 - SCP-079-HIDE
 - SCP-079-CRITICAL
 
 > SCP-079-CAPTCHA 在上述频道中应具有发送消息的权限
 
+此机器人需要额外创建以下频道，机器人不必加入此频道中：
+
+- SCP-079-CAPTCHA
+
 此机器人需要加入以下群组：
 
-- **SCP-079-CAPTCHA （必选）（应具有封禁用户、删除消息、邀请用户的管理员权限）**
+- **SCP-079-CAPTCHA（必选）（应具有封禁用户、删除消息、邀请用户的管理员权限）**
 - SCP-079-TEST
 
 此机器人需要配合其他机器人使用：
 
-- **SCP-079-USER （必选）**
-- SCP-079-LANG （推荐）
-- SCP-079-REGEX （推荐）
-- SCP-079-NOSPAM （推荐）
+- **SCP-079-USER（必选）**
+- SCP-079-LANG（推荐）
+- SCP-079-REGEX（推荐）
+- SCP-079-NOSPAM（推荐）
 
 ---
 
@@ -57,7 +56,7 @@ title: SCP-079-CAPTCHA
 
 **附录：**使用说明
 
-请[点击此处](/captcha-manual-zh/)以查看使用手册。
+请[点击此处以查看本机器人实例的使用手册](/captcha-manual-zh/)。
 
 ---
 
@@ -65,11 +64,6 @@ title: SCP-079-CAPTCHA
 
 关于搭建机器人的通用说明，请先查看<a href="/how-zh/" target="_blank">自建说明书</a>
 
-克隆项目：
-
-```bash
-git clone https://github.com/scp-079/scp-079-captcha.git ~/scp-079/captcha
-```
 
 启用看图辨物的功能：如需启用此功能，服务托管者须在 `~/scp-079/captcha/assets/` 下创建 `pics` 文件夹，并适当存放图片，其结构描述如下：
 
@@ -93,6 +87,10 @@ git clone https://github.com/scp-079/scp-079-captcha.git ~/scp-079/captcha
 修改配置文件：
 
 需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。 API ID 与 API Hash 在 <a href="https://my.telegram.org" target="_blank">官网</a> 获取
+
+一些建议：
+
+`[captcha]` 中需要填写 `captcha_link`，这是 SCP-079-CAPTCHA 的频道链接，此频道用于在某些情况下提供加入专用验证群组的链接。我们建议自建者将 SCP-079-CAPTCHA 设置为公开频道。并且，SCP-079-CAPTCHA 中应该至少有一条明显的消息，用以指向加入专用验证群组的链接。我们建议自建者通过 [TIP](/tip-zh/) 自动维护此入群链接，即，TIP 加入专用验证群组中，并利用 TIP 将 SCP-079-CAPTCHA 频道作为专用验证群组的`入群频道`，
 
 ```ini
 [pyrogram]
@@ -126,6 +124,8 @@ captcha_id = [DATA EXPUNGED]
 ; SCP-079-CAPTCHA 的 ID
 clean_id = [DATA EXPUNGED]
 ; SCP-079-CLEAN 的 ID
+index_id = [DATA EXPUNGED]
+; SCP-079-INDEX 的 ID
 lang_id = [DATA EXPUNGED]
 ; SCP-079-LANG 的 ID
 long_id = [DATA EXPUNGED]
@@ -136,14 +136,25 @@ noporn_id = [DATA EXPUNGED]
 ; SCP-079-NOPORN 的 ID
 nospam_id = [DATA EXPUNGED]
 ; SCP-079-NOSPAM 的 ID
-recheck_id = [DATA EXPUNGED]
-; SCP-079-RECHECK 的 ID
 tip_id = [DATA EXPUNGED]
 ; SCP-079-TIP 的 ID
 user_id = [DATA EXPUNGED]
 ; SCP-079-USER 的 ID
 warn_id = [DATA EXPUNGED]
 ; SCP-079-WARN 的 ID
+
+[captcha]
+captcha_link = [DATA EXPUNGED]
+; 此处填写公开频道 SCP-079-CAPTCHA 的长期链接
+font_chinese = /usr/share/fonts/truetype/arphic-gkai00mp/gkai00mp.ttf
+; 此处填写中文字体的路径
+font_english = /usr/share/fonts/truetype/freefont/FreeMono.ttf
+; 此处填写英文字体的路径
+font_number = /usr/share/fonts/truetype/freefont/FreeMono.ttf
+; 此处填写数字字体的路径
+noise = [DATA EXPUNGED]
+; 此处填写噪声值，推荐 0.3 - 0.5 之间
+
 
 [channels]
 captcha_group_id = [DATA EXPUNGED]
@@ -156,50 +167,83 @@ exchange_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID
 hide_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
+logging_channel_id = [DATA EXPUNGED]
+; 此处填写证据存放频道 SCP-079-LOGGING 的 ID
 test_group_id = [DATA EXPUNGED]
 ; 此处填写测试群组 SCP-079-TEST 的 ID
 
 [custom]
-aio = False
-; 此处填写 True 或 False，代表程序是否与其他程序共用同一机器人帐号
-backup = False
-; 此处填写 True 或 False，代表程序是否为备份副本
-captcha_link = [DATA EXPUNGED]
-; 此处填写公开频道的长期链接
-date_reset = 1st mon
-; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
 default_group_link = https://t.me/SCP_079_DEBUG
 ; 此处填写 DEBUG 频道信息中默认的群组链接
-font_chinese = /usr/share/fonts/truetype/arphic-gkai00mp/gkai00mp.ttf
-; 此处填写中文字体的路径
-font_english = /usr/share/fonts/truetype/freefont/FreeMono.ttf
-; 此处填写英文字体的路径
-font_number = /usr/share/fonts/truetype/freefont/FreeMono.ttf
-; 此处填写数字字体的路径
-limit_mention = 20
-; 此处填写整数，代表同一条入群验证提示消息 mention 的最大人数
-limit_static = 10
-; 此处填写整数，代表正常模式下 time_captcha 时间内入群人数的最大值，超过则自动启用防轰炸模式
-limit_track = [DATA EXPUNGED]
-; 此处填写整数，代表用户短时间内加入多少群组才被认为是需要特殊对待的用户
-limit_try = 2
-; 此处填写整数，代表用户验证超时的机会次数
 more = True
 ; 此处填写 True 或 False，代表是否在用户验证通过后启用链接按钮
 more_link = https://scp-079.org/readme/
 ; 此处填写链接
 more_text = Know More
 ; 此处填写按钮文字
-noise = [DATA EXPUNGED]
-; 此处填写噪声值，推荐 0.3 - 0.5 之间
 project_link = https://scp-079.org/captcha-zh/
 ; 此处填写项目网址
 project_name = SCP-079-CAPTCHA
 ; 此处填写项目名称
+
+[emoji]
+emoji_ad_single = [DATA EXPUNGED]
+; 此处填写整数，代表多少个同样的 emoji 在消息中出现则被认为是 ad_ 类词组
+emoji_ad_total = [DATA EXPUNGED]
+; 此处填写整数，代表一共多少个 emoji 在消息中出现则被认为是 ad_ 类词组
+emoji_many = 15
+; 此处填写整数，代表多少个 emoji 在消息中出现则被认为该消息含有多个 emoji
+emoji_protect = \U0001F642
+; 此处填写字符串，其中包含的 emoji 将受到保护，不计入各类判断中，字符串中间无空格，请以 \UXXXXXXXX 的形式代表一个 emoji
+emoji_wb_single = [DATA EXPUNGED]
+; 此处填写整数，代表多少个同样的 emoji 在消息中出现则被认为是 wb 类词组
+emoji_wb_total = [DATA EXPUNGED]
+; 此处填写整数，代表一共多少个 emoji 在消息中出现则被认为是 wb 类词组
+
+[encrypt]
+key = [DATA EXPUNGED]
+; 各机器人加密字符串所用的统一密码，需由程序生成
+password = [DATA EXPUNGED]
+; 各机器人加密文件所用的统一密码，建议为长度 16 及以上的随机字符串
+
+[language]
+lang = cmn-Hans
+; 此处填写 languages 文件夹下所包含的 YAML 文件的对应名称
+normalize = True
+; 此处填写 True 或 False，代表程序是否对消息文字进行转换处理
+
+[limit]
+limit_flood = 10
+; 此处填写整数，代表正常模式下 time_captcha 时间内入群人数的最大值，超过则自动启用防轰炸模式
+limit_mention = 20
+; 此处填写整数，代表同一条入群验证提示消息 mention 的最大人数
+limit_track = [DATA EXPUNGED]
+; 此处填写整数，代表用户短时间内加入多少群组才被认为是需要特殊对待的用户
+limit_try = 2
+; 此处填写整数，代表用户验证超时的机会次数
+
+[mode]
+aio = False
+; 此处填写 True 或 False，代表程序是否与其他程序共用同一机器人帐号
+backup = False
+; 此处填写 True 或 False，代表程序是否为备份副本
+
+
+[mode]
+aio = False
+; 此处填写 True 或 False，代表程序是否与其他程序共用同一机器人帐号
+backup = False
+; 此处填写 True 或 False，代表程序是否为备份副本
+failed = False
+; 此处填写 True 或 False，代表程序是否每天将验证失败的用户列表以 TSV 文件的格式，发送至 REGEX 群组中以供工作组分析 spam 规律
 simple = False
 ; 此处填写 True 或 False，代表是否启用简单文字数学运算验证
 simple_only = False
-; 此处填写 True 或 False，代表是否仅使用简单文字数学运算验证模式，启用时，simple 值需要为 True
+; 此处填写 True 或 False，极简模式，代表是否仅使用简单文字数学运算验证模式、不使用其他相对复杂的验证问题，启用该模式时，simple 值需要为 True
+
+[time]
+date_reset = 1st mon
+; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
 time_captcha = 240
 ; 此处填写整数，代表等待用户验证时间的上限，单位为秒
 time_invite = [DATA EXPUNGED]
@@ -216,28 +260,6 @@ time_short = [DATA EXPUNGED]
 ; 此处填写整数，代表判断用户为刚刚入群的入群时长，用户在群组开启新用户限制时使用，单位为秒
 time_track = [DATA EXPUNGED]
 ; 此处填写整数，代表用户在多短时间内加入多个群组才被认为是需要特殊对待的用户
-zh_cn = [DATA EXPUNGED]
-; 此处填写 True 或 False，代表程序是否启用简体中文模式
-
-[emoji]
-emoji_ad_single = [DATA EXPUNGED]
-; 此处填写整数，代表多少个同样的 emoji 在消息中出现则被认为是 ad_ 类词组
-emoji_ad_total = [DATA EXPUNGED]
-; 此处填写整数，代表一共多少个 emoji 在消息中出现则被认为是 ad_ 类词组
-emoji_many = [DATA EXPUNGED]
-; 此处填写整数，代表多少个 emoji 在消息中出现则被认为该消息含有多个 emoji
-emoji_protect = [DATA EXPUNGED]
-; 此处填写字符串，其中包含的 emoji 将受到保护，不计入各类判断中，字符串中间无空格，请以 \UXXXXXXXX 的形式代表一个 emoji
-emoji_wb_single = [DATA EXPUNGED]
-; 此处填写整数，代表多少个同样的 emoji 在消息中出现则被认为是 wb 类词组
-emoji_wb_total = [DATA EXPUNGED]
-; 此处填写整数，代表一共多少个 emoji 在消息中出现则被认为是 wb 类词组
-
-[encrypt]
-key = [DATA EXPUNGED]
-; 加密字符串所用的密码
-password = [DATA EXPUNGED]
-; 加密文件所用的密码
 ```
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>

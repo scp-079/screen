@@ -39,7 +39,7 @@ title: SCP-079-AVATAR
 
 **附录：**使用说明
 
-请[点击此处](/avatar-manual-zh/)以查看使用手册。
+请[点击此处以查看本机器人实例的使用手册](/avatar-manual-zh/)。
 
 ---
 
