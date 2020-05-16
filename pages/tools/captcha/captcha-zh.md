@@ -227,13 +227,6 @@ aio = False
 ; 此处填写 True 或 False，代表程序是否与其他程序共用同一机器人帐号
 backup = False
 ; 此处填写 True 或 False，代表程序是否为备份副本
-
-
-[mode]
-aio = False
-; 此处填写 True 或 False，代表程序是否与其他程序共用同一机器人帐号
-backup = False
-; 此处填写 True 或 False，代表程序是否为备份副本
 failed = False
 ; 此处填写 True 或 False，代表程序是否每天将验证失败的用户列表以 TSV 文件的格式，发送至 REGEX 群组中以供工作组分析 spam 规律
 simple = False
