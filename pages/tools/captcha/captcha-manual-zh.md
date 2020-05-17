@@ -111,7 +111,7 @@ CAPTCHA 可以接收来自 NOSPAM 的针对某个用户的验证发起请求。�
 
 `/config captcha`
 
-即可通过 [SCP-079-CONFIG](/config-zh/) 调整机器人设置，机器人将回报前往设置的链接，5 分钟内设置将被锁定，无法再次更改。
+即可通过 [SCP-079-CONFIG](/config-zh/) 方便地调整机器人设置，机器人将回报前往设置的链接，5 分钟内设置将被锁定，无法再次更改。请记得在完成设置后点击「提交」按钮。
 
 ![SCP-079-CAPTCHA 的设置界面](/images/captcha/config.png)
 
