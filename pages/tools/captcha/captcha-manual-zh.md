@@ -184,6 +184,10 @@ CAPTCHA 可以接收来自 NOSPAM 的针对某个用户的验证发起请求。�
 
 ![示例效果](/images/captcha/example01.jpg)
 
+如需查看某个类别的设置，可如此操作：
+
+`/custom single`
+
 ---
 
 ## 实用命令
