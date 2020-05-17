@@ -5,7 +5,10 @@ title: Bots
 <link rel="stylesheet" href="/css/chinese.css">
 
 # Bots
-本目录仅包含 SCP-079 旗下可供群组申请使用的机器人，其他机器人例如 SCP-079-MANAGE 、 SCP-079-REGEX 不接受群组申请，完整的项目目录请查阅 [Project](/projects-zh) 。
+
+本目录仅包含 SCP-079 旗下可供群组申请使用的机器人，并提供对应使用手册的链接。其他机器人例如 SCP-079-MANAGE 、 SCP-079-REGEX 不接受群组申请，完整的机器人目录请查阅 [Tools](/tools-zh/) 。
+
+---
 
 ## SCP-079-USER
 
@@ -23,7 +26,7 @@ title: Bots
 并且，验证流程不会在群内呈现，多人进群也不会造成验证码的刷屏，
 本机器人力求以最简短最不干扰群组内正常交流的方式提醒用户进行验证。
 
-详见：<https://telegra.ph/SCP-079-CAPTCHA-12-03>
+详见：<https://scp-079.org/captcha-manual-zh/>
 
 ---
 
