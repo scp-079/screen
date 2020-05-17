@@ -15,6 +15,8 @@ author: Xiao
 
 请注意：各 bot 都需要采取独立的 Python 虚拟环境，若使用同一虚拟环境，程序运行会发生一些问题。您可藉由 `build.sh` [脚本](https://github.com/scp-079/scripts/)分别创建（已搭建的机器人也可利用此脚本重新创建，只要和之前通用搭建说明所推荐的环境和文件路径一致即可），具体细节请再次参照更新后的[搭建说明](https://scp-079.org/how-zh/)，此处不再赘述。
 
+---
+
 ## SCP-079-CAPTCHA
 
 CAPTCHA 更新至 0.5.0
@@ -40,6 +42,8 @@ CAPTCHA 更新至 0.5.0
 
 CAPTCHA 的使用手册也已全面更新，请见：<https://scp-079.org/captcha-manual-zh/>
 
+---
+
 ## 其他
 
 其他机器人也略有修改，主要是为配合本次 CAPTCHA 升级所做的临时修改。若需升级 CAPTCHA，请务必同时升级 AVATAR、HIDE、LANG、NOSPAM、**USER** 。
@@ -49,6 +53,8 @@ CAPTCHA 的使用手册也已全面更新，请见：<https://scp-079.org/captch
 由于其余四个机器人只是临时性的修改，并未正式释出更新，因此简略介绍：其中的 NOSPAM 对用户名广告中间的干扰字符现象作出一定调整；其他机器人的修改主要围绕配合新版 CAPTCHA 的工作。
 
 ---
+
+## 联系我们
 
 如更新遇到问题，请您反馈至[讨论群组](https://t.me/SCP_079_CHAT)中。
 
