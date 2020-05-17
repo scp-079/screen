@@ -180,6 +180,7 @@ main iframe {
 
 figcaption {
     font-style: italic;
+    margin-top: 5px;
 }
 
 /* Table */
