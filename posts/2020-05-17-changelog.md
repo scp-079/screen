@@ -41,6 +41,8 @@ CAPTCHA 更新至 0.5.0
 - [mode] 下的 failed
 - [limit] 中 limit_static 改名为 limit_flood ，请留意
 
+升级前，先停止机器人运行，再删除 data 文件夹下的 pinned_ids 和 .pinned_ids 。然后方可升级并重启。
+
 CAPTCHA 的使用手册也已全面更新，请见：<https://scp-079.org/captcha-manual-zh/>
 
 ---
