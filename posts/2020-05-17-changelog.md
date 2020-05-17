@@ -42,6 +42,8 @@ CAPTCHA 的使用手册也已全面更新，请见：<https://scp-079.org/captch
 
 ## 其他
 
-其他机器人也略有修改，主要是为配合本次 CAPTCHA 升级所做的临时修改。若需升级 CAPTCHA，请务必同时升级 AVATAR、HIDE、LANG、NOSPAM、USER 。
+其他机器人也略有修改，主要是为配合本次 CAPTCHA 升级所做的临时修改。若需升级 CAPTCHA，请务必同时升级 AVATAR、HIDE、LANG、NOSPAM、**USER** 。
 
 除 [AVATAR](https://scp-079.org/avatar-zh/) 外，其余四个机器人的 config.ini 并未发生变化。
+
+由于其余四个机器人只是临时性的修改，并未正式释出更新，因此简略介绍：其中的 NOSPAM 对用户名广告中间的干扰字符现象作出一定调整；其他机器人的修改主要围绕配合新版 CAPTCHA 的工作。
