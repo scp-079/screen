@@ -86,7 +86,7 @@ title: Apply For Use
 
 当 [SCP-079-USER](https://t.me/SCP_079_USER_BOT) 加入了自己的群组后，群主需要提升其为管理员并 _赋予如下图所示的这五项权限_ （[为什么？](https://telegra.ph/SCP-079-USER-12-04#%E9%97%AE%E4%B8%8E%E7%AD%94)）
 
-![PERMISSION](/images/user-permissions.png)
+![PERMISSIONS](/images/user/permissions.png)
 
 权限赋予齐全后，请在讨论群内告知项目管理员，之后 [SCP-079-USER](https://t.me/SCP_079_USER_BOT) 会为您添加您所申请的机器人。
 

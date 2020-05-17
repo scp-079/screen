@@ -90,7 +90,7 @@ title: SCP-079-CAPTCHA
 
 一些建议：
 
-`[captcha]` 中需要填写 `captcha_link`，这是 SCP-079-CAPTCHA 的频道链接，此频道用于在某些情况下提供加入专用验证群组的链接。我们建议自建者将 SCP-079-CAPTCHA 设置为公开频道。并且，SCP-079-CAPTCHA 中应该至少有一条明显的消息，用以指向加入专用验证群组的链接。我们建议自建者通过 [TIP](/tip-zh/) 自动维护此入群链接，即，TIP 加入专用验证群组中，并利用 TIP 将 SCP-079-CAPTCHA 频道作为专用验证群组的`入群频道`，
+`[captcha]` 中需要填写 `captcha_link`，这是 SCP-079-CAPTCHA 的频道链接，此频道用于在某些情况下提供加入专用验证群组的链接。我们建议自建者将 SCP-079-CAPTCHA 设置为公开频道。并且，SCP-079-CAPTCHA 中应该至少有一条明显的消息，用以指向加入专用验证群组的链接。我们建议自建者通过 [TIP](/tip-zh/) 自动维护此入群链接，即，TIP 加入专用验证群组中，并利用 TIP 将 SCP-079-CAPTCHA 频道作为专用验证群组的`入群频道`。
 
 ```ini
 [pyrogram]
