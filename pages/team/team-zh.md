@@ -29,6 +29,16 @@ title: Team
 - <a class="no" target="_blank" style="color: #ddd; font-weight: 700;">Xiao</a> 
 <a href="/xiao/" class="key" target="_blank">C1BE CBF6 E0BD 06AF 7802 2F93 FED1 BA4A 7D9E 2E29</a>
 
+## 招募
+
+我们长期招募以下志愿者：
+
+1. 帮助翻译一些页面到英文
+2. 参与项目开发
+3. 加入 Demo 机器人工作组，管理由本项目托管的实例
+
+如有兴趣，请联系 [SCP-079-TICKET](https://t.me/SCP_079_TICKET_BOT)，期待你的加入！
+
 <audio id="no_button" src="/audio/button/no.ogg"/>
 <audio id="no_click" src="/audio/button/no_click.ogg"/>
 <audio id="dooropen3" src="/audio/door/dooropen3.ogg"/>
