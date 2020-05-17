@@ -224,4 +224,12 @@ A：如在 “有限时间内” 通过了一次验证，该用户将同时在�
 
 A：若连续加入了多个群组，则以最开始加入群组的时间点为起点，240 秒后为终点，在此期间完成验证才视为有效，否则将导致超时。
 
+---
+
+## 申请使用或自建
+
+---
+
+如欲申请使用，请查看[申请方法](/ApplyForUse/)。然而，我们鼓励您通过[源代码](https://github.com/scp-079/scp-079-captcha)自行建立此机器人，如搭建过程中有任何疑问请至[讨论群](https://t.me/SCP_079_CHAT)提出。
+
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>
