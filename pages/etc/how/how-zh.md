@@ -142,6 +142,7 @@ alias start="bash ~/scp-079/scripts/start.sh"
 alias stop="bash ~/scp-079/scripts/stop.sh"
 alias update="bash ~/scp-079/scripts/update.sh"
 
+alias check="bash ~/scp-079/scripts/check.sh"
 alias clear="bash ~/scp-079/scripts/clear.sh"
 alias disable="bash ~/scp-079/scripts/disable.sh"
 alias enable="bash ~/scp-079/scripts/enable.sh"
@@ -276,6 +277,12 @@ status pm
 
 ```bash
 update pm
+```
+
+查看所有机器人的 systemd 服务状态：
+
+```bash
+check
 ```
 
 清空所有机器人的日志文件：
