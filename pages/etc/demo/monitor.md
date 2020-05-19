@@ -1,5 +1,5 @@
 ---
-title: Status
+title: Monitor
 ---
 
 <link rel="stylesheet" href="/css/chinese.css">
