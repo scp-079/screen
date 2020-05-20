@@ -37,12 +37,17 @@ title: Monitor
         }
         
         main iframe {
-            margin-left: 8px;
+            margin-left: 16px;
             width: 80%;
         }
         
         h1, h2 {
             margin-left: 12px;
+        }
+        
+        p {
+            width: 90%;
+            margin: auto;
         }
     }
        
@@ -51,21 +56,13 @@ title: Monitor
             min-width: 350px !important;
             background: white;
             padding-right: 20px;
-        }
-        
-        h1, h2 {
-            margin-left: 12px;
+            margin-left: -6px;
+            width: 100%;
         }
         
         hr {
             display: none;
         }
-        
-        p {
-            width: 90%;
-            margin: auto;
-        }
-
     }
     
     @media only screen and (max-width: 321px) {
