@@ -58,6 +58,10 @@ title: Monitor
             margin-left: 5px;
         }
         
+        hr {
+            display: none;
+        }
+        
         p {
             width: 90%;
             margin: auto;
