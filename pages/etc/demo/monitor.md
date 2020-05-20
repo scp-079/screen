@@ -90,7 +90,7 @@ title: Monitor
 
 本页展示各服务器运行情况。本页引用来自 Telegram 频道的消息，部分地区可能需要使用代理服务器以正确显示网页。
 
-如欲查看运行情况的动态刷新，请在客户端中浏览频道：[SCP-079-CRITICAL](https://t.me/SCP_079_CRITICAL)。
+如欲查看运行情况的动态刷新，请在 Telegram 官方客户端中浏览频道：[SCP-079-CRITICAL](https://t.me/SCP_079_CRITICAL)。
 
 ---
 
