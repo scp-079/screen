@@ -47,9 +47,9 @@ title: Monitor
         }
         
         main iframe {
-            min-width: 334px;
+            min-width: 334px !important;
             margin-top: 0;
-            margin-botton: 0;
+            margin-bottom: 0;
             margin-left: -14px;
             background: white;
         }
