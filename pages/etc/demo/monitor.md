@@ -74,7 +74,7 @@ title: Monitor
             min-width: 334px !important;
             margin-top: 0;
             margin-bottom: 0;
-            margin-left: -14px;
+            margin-left: -18px;
             padding-right: 0;
         }
         
