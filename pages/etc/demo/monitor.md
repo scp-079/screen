@@ -49,6 +49,7 @@ title: Monitor
         p {
             width: 90%;
             margin: auto;
+            margin-bottom: 12px;
         }
     }
        
