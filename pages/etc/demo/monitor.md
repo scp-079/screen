@@ -47,6 +47,8 @@ title: Monitor
         }
         
         main iframe {
+            margin-top: 0;
+            margin-botton: 0;
             margin-left: -8px;
         }
     }
