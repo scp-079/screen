@@ -65,6 +65,10 @@ title: Monitor
     }
     
     @media only screen and (max-width: 321px) {
+        body {
+            border: none;
+        }
+        
         main {
             margin: 5px;
         }
