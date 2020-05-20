@@ -37,11 +37,15 @@ title: Monitor
         }
         
         main iframe {
-            margin-left: -8px;
+            margin-left: 8px;
+            width: 80%;
+        }
+        
+        h1, h2 {
+            margin-left: 12px;
         }
     }
-
-    @media only screen and (max-width: 361px) {        
+       
     @media only screen and (max-width: 361px) {        
         main iframe {
             min-width: 350px !important;
