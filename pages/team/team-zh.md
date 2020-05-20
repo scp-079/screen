@@ -3,10 +3,10 @@ title: Team
 ---
 
 <style>
-.key, .no {
-    color: rgba(255,255,255,0.7);
-    font-weight: normal;
-}
+    .key, .no {
+        color: rgba(255,255,255,0.7);
+        font-weight: normal;
+    }
 </style>
 
 <link rel="stylesheet" href="/css/chinese.css">

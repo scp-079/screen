@@ -170,12 +170,6 @@ main header {
     border: 0;
 }
 
-main iframe {
-    width: 80%;
-    margin-left: 10%;
-    border: 1px dashed rgba(255,255,255,0.5);
-}
-
 /* Image */
 
 figcaption {
@@ -317,7 +311,6 @@ footer {
         font-size: 7px;
     }
 }
-
 
 @media only screen and (max-width: 420px) {
     .site-name {
