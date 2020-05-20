@@ -40,6 +40,32 @@ title: Monitor
             margin-left: -8px;
         }
     }
+
+    @media only screen and (max-width: 361px) {
+        main {
+            margin: 5px;
+        }
+        
+        main iframe {
+            min-width: 350px !important;
+            background: white;
+            padding-right: 20px;
+        }
+        
+        h1, h2 {
+            margin-left: 12px;
+        }
+        
+        hr {
+            display: none;
+        }
+        
+        p {
+            width: 90%;
+            margin: auto;
+        }
+
+    }
     
     @media only screen and (max-width: 321px) {
         main {
@@ -56,15 +82,6 @@ title: Monitor
         
         h1, h2 {
             margin-left: 5px;
-        }
-        
-        hr {
-            display: none;
-        }
-        
-        p {
-            width: 90%;
-            margin: auto;
         }
     }
 </style>
