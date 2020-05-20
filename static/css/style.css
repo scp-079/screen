@@ -170,6 +170,10 @@ main header {
     border: 0;
 }
 
+main iframe {
+    margin: 15px auto;
+}
+
 /* Image */
 
 figcaption {

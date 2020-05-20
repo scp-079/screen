@@ -61,5 +61,3 @@ title: Monitor
 ## Site-19
 
 <script async src="https://telegram.org/js/telegram-widget.js?8" data-telegram-post="SCP_079_CRITICAL/22" data-width="100%"></script>
-
----
