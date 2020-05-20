@@ -47,9 +47,20 @@ title: Monitor
         }
         
         main iframe {
+            min-width: 334px;
             margin-top: 0;
             margin-botton: 0;
-            margin-left: -8px;
+            margin-left: -14px;
+            background: white;
+        }
+        
+        h1, h2 {
+            margin-left: 5px;
+        }
+        
+        p {
+            width: 90%;
+            margin: auto;
         }
     }
 </style>
