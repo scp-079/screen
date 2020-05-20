@@ -21,6 +21,7 @@ title: Monitor
             padding: 0px;
             margin: 0;
             width: 100%;
+            border: none;
         }
         
         .small-avatar {
@@ -65,10 +66,6 @@ title: Monitor
     }
     
     @media only screen and (max-width: 321px) {
-        body {
-            border: none;
-        }
-        
         main {
             margin: 5px;
         }
