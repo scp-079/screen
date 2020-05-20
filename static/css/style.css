@@ -272,6 +272,10 @@ footer {
     font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp";
 }
 
+.tgme_widget_message_link {
+    display: none;
+}
+
 /* Firefox */
 @-moz-document url-prefix() {
     pre {
@@ -323,6 +327,10 @@ footer {
     .site-name {
         font-size: 7px;
         margin-bottom: 2em;
+    }
+    
+    .tgme_widget_message_bubble {
+        width: 60%;
     }
 }
 
