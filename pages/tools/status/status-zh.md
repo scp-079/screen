@@ -27,7 +27,7 @@ title: SCP-079-STATUS
 
 ---
 
-**描述：**SCP-079-STATUS 是一个提供 Linux 服务器运行状态信息的机器人，其项目位于 GitLab ，镜像同步并开源于 [GitHub](https://github.com/scp-079/scp-079-status)。Demo 机器人本体位于 <a href="https://t.me/SCP_079_STATUS_BOT" class="079" target="_blank">SCP-079-STATUS</a> ，仅供展示。通过源码搭建的机器人可拥有类似功能：根据所有者的设置，在指定频道中定时更新所在服务器的运行状态，示例效果见[此频道](https://t.me/SCP_079_CRITICAL/13)。
+**描述：**SCP-079-STATUS 是一个提供 Linux 服务器运行状态信息的机器人，其项目位于 GitLab ，镜像同步并开源于 [GitHub](https://github.com/scp-079/scp-079-status)。Demo 机器人本体位于 <a href="https://t.me/SCP_079_STATUS_BOT" class="079" target="_blank">SCP-079-STATUS</a>，仅供展示。通过源码搭建的机器人可拥有类似功能：根据所有者的设置，在指定频道中定时更新所在服务器的运行状态，示例效果见[此频道](https://t.me/SCP_079_CRITICAL/13)。
 
 - 此机器人的性质：常规机器人，需要获取 bot token
 
