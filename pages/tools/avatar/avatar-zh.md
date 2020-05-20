@@ -51,6 +51,8 @@ title: SCP-079-AVATAR
 
 **文件#config.ini：**
 
+这是一个自定义的文件。文件应位于 `config.ini.example` 同目录下。
+
 需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。
 
 API ID 与 API Hash 可在[官网](https://my.telegram.org)获取。

@@ -84,7 +84,7 @@ title: SCP-079-CAPTCHA
 
 **文件#config.ini：**
 
-修改配置文件：
+这是一个自定义的文件。文件应位于 `config.ini.example` 同目录下。
 
 需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。 API ID 与 API Hash 在 <a href="https://my.telegram.org" target="_blank">官网</a> 获取
 
