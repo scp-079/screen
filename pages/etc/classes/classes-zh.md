@@ -28,6 +28,7 @@ title: Classes
 - [SCP-079-MIRROR](/mirror-zh/)
 - [SCP-079-PM](/pm-zh/)
 - [SCP-079-REGEX](/regex-zh/)
+- [SCP-079-STATUS](/status-zh/)
 - [SCP-079-TIP](/tip-zh/)
 
 ## Euclid

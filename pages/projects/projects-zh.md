@@ -27,6 +27,7 @@ title: Projects
 - [SCP-079-NOSPAM](https://github.com/scp-079/scp-079-nospam)：在群组中阻止 spam
 - [SCP-079-PM](https://github.com/scp-079/scp-079-pm)：每个人都可以拥有属于自己的私聊机器人
 - [SCP-079-REGEX](https://github.com/scp-079/scp-079-regex)：管理 regex 表达式
+- [SCP-079-STATUS](https://github.com/scp-079/scp-079-status)：显示 Linux 服务器的运行状态信息
 - [SCP-079-USER](https://github.com/scp-079/scp-079-user)：邀请并协助其他机器人
 - [SCP-079-WARN](https://github.com/scp-079/scp-079-warn)：通过管理员的指令封禁或警告某人
 - [SCP-079-WATCH](https://github.com/scp-079/scp-079-watch)：观察并追踪可疑的 spam 行为

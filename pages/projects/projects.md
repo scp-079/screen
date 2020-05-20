@@ -26,6 +26,7 @@ In alphabetical order:
 - [SCP-079-NOSPAM](https://github.com/scp-079/scp-079-nospam): Block spam in groups
 - [SCP-079-PM](https://github.com/scp-079/scp-079-pm): Everyone can have their own private chat bot
 - [SCP-079-REGEX](https://github.com/scp-079/scp-079-regex): Manage regex patterns
+- [SCP-079-STATUS](https://github.com/scp-079/scp-079-status): Check Linux server status
 - [SCP-079-USER](https://github.com/scp-079/scp-079-user): Invite and help other bots
 - [SCP-079-WARN](https://github.com/scp-079/scp-079-warn): Warn or ban someone by admin commands
 - [SCP-079-WATCH](https://github.com/scp-079/scp-079-watch): Observe and track suspicious spam behaviors

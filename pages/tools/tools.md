@@ -24,6 +24,7 @@ In alphabetical order:
 - [SCP-079-NOSPAM](/nospam/): Block spam in groups
 - [SCP-079-PM](/pm/): Everyone can have their own private chat bot
 - [SCP-079-REGEX](/regex/): Manage regex patterns
+- [SCP-079-STATUS](/status/): Check Linux server status
 - [SCP-079-USER](/user/): Invite and help other bots
 - [SCP-079-WARN](/warn/): Warn or ban someone by admin commands
 - [SCP-079-WATCH](/watch/): Observe and track suspicious spam behaviors

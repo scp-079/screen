@@ -26,6 +26,7 @@ Safe projects:
 - [SCP-079-MIRROR](/mirror/)
 - [SCP-079-PM](/pm/)
 - [SCP-079-REGEX](/regex/)
+- [SCP-079-STATUS](/status/)
 - [SCP-079-TIP](/tip/)
 
 ## Euclid

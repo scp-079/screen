@@ -25,6 +25,7 @@ title: Tools
 - [SCP-079-NOSPAM](/nospam/)：在群组中阻止 spam
 - [SCP-079-PM](/pm-zh/)：每个人都可以拥有属于自己的私聊机器人
 - [SCP-079-REGEX](/regex/)：管理 regex 表达式
+- [SCP-079-STATUS](/status-zh/)：显示 Linux 服务器的运行状态信息
 - [SCP-079-USER](/user-zh/)：邀请并协助其他机器人
 - [SCP-079-WARN](/warn/)：通过管理员的指令封禁或警告某人
 - [SCP-079-WATCH](/watch/)：观察并追踪可疑的 spam 行为
