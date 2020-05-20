@@ -53,11 +53,10 @@ title: Monitor
        
     @media only screen and (max-width: 361px) {        
         main iframe {
-            min-width: 350px !important;
             background: white;
-            padding-right: 20px;
-            margin-left: -6px;
-            width: 100%;
+            padding-right: 18px;
+            margin-left: -5px;
+            width: 98%;
         }
         
         hr {
@@ -76,6 +75,7 @@ title: Monitor
             margin-bottom: 0;
             margin-left: -18px;
             padding-right: 0;
+            width: 100%;
         }
         
         h1, h2 {
