@@ -41,11 +41,8 @@ title: Monitor
         }
     }
 
-    @media only screen and (max-width: 361px) {
-        main {
-            margin: 5px;
-        }
-        
+    @media only screen and (max-width: 361px) {        
+    @media only screen and (max-width: 361px) {        
         main iframe {
             min-width: 350px !important;
             background: white;
@@ -77,7 +74,7 @@ title: Monitor
             margin-top: 0;
             margin-bottom: 0;
             margin-left: -14px;
-            background: white;
+            padding-right: 0;
         }
         
         h1, h2 {
