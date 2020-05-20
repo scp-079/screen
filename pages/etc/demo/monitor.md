@@ -31,6 +31,24 @@ title: Monitor
             font-size: 6px;
             margin-bottom: 3em;
         }
+        
+        main {
+            margin: 5px;
+        }
+        
+        main iframe {
+            margin-left: -8px;
+        }
+    }
+    
+    @media only screen and (max-width: 321px) {
+        main {
+            margin: 5px;
+        }
+        
+        main iframe {
+            margin-left: -8px;
+        }
     }
 </style>
 
