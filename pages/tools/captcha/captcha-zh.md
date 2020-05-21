@@ -175,6 +175,12 @@ test_group_id = [DATA EXPUNGED]
 [custom]
 default_group_link = https://t.me/SCP_079_DEBUG
 ; 此处填写 DEBUG 频道信息中默认的群组链接
+leave_button = 申请使用
+; 此处填写未授权使用时，发送说明消息的按钮文字
+leave_link = https://scp-079.org/ApplyForUse/
+; 此处填写未授权使用时，发送说明消息的按钮链接
+leave_reason = 需要授权方可使用
+; 此处填写未授权使用时，退出群组的原因
 more = True
 ; 此处填写 True 或 False，代表是否在用户验证通过后启用链接按钮
 more_link = https://scp-079.org/readme/
