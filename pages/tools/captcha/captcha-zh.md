@@ -185,7 +185,7 @@ more = True
 ; 此处填写 True 或 False，代表是否在用户验证通过后启用链接按钮
 more_link = https://scp-079.org/readme/
 ; 此处填写链接
-more_text = Know More
+more_text = 点击了解本项目
 ; 此处填写按钮文字
 project_link = https://scp-079.org/captcha-zh/
 ; 此处填写项目网址

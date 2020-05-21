@@ -116,8 +116,12 @@ lang = cmn-Hans
 ```
 站点：<code>Site-01</code>
 
+备注：<code>示例</code>
+更新间隔：<code>$interval$</code>
+
 UTC 时间：<code>$last$</code>
 操作系统：<code>$dist$</code>
+内核：<code>$kernel$</code>
 开机时长：<code>$up_time$</code>
 
 平均负载：<code>$load$</code>
