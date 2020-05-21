@@ -118,8 +118,9 @@ lang = cmn-Hans
 
 备注：<code>示例</code>
 更新间隔：<code>$interval$</code>
+时区：<code>UTC</code>
 
-UTC 时间：<code>$last$</code>
+最后在线：<code>$last$</code>
 操作系统：<code>$dist$</code>
 内核：<code>$kernel$</code>
 开机时长：<code>$up_time$</code>
