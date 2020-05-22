@@ -69,7 +69,6 @@ a {
     text-decoration: none;
     color: #DDDDDD;
     font-weight: bold;
-    word-break: break-all;
 }
 
 a:hover {
@@ -163,6 +162,10 @@ nav ul li a:hover {
 
 main {
     margin: 15px 22px 15px 22px;
+}
+
+main a {
+    word-break: break-all;
 }
 
 main header {
