@@ -71,6 +71,8 @@ SCP-079 系列机器人的搭建涉及多个频道、群组、机器人帐号、
 - Python 3.7.3
 - 系统的用户名为 `scp`
 
+**请不要使用 root 用户搭建机器人**
+
 另见：[为什么你应该自行建立机器人](/suggestions-zh/)
 
 ---
@@ -86,6 +88,8 @@ sudo apt autoremove -y
 ```
 
 ## 设置自启 systemd 服务
+
+注意替换下方命令中的 `scp` 为当前的用户名：
 
 ```bash
 sudo loginctl enable-linger scp
