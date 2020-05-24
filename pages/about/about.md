@@ -22,6 +22,7 @@ Learn more:
 - [README of Demo Instances](/readme/)
 - [Transparency](/transparency/)
 - [Object Classes](/classes/)
+- [Contribute](/help/)
 
 All bots are hosted on ████████. IP address is [57.32.███.███](http://www.scp-wiki.net/scp-614).
 

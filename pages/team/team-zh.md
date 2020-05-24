@@ -16,7 +16,7 @@ title: Team
 
 ## 团队
 
-为避免不必要的麻烦，有意加入项目团队的人员应注意：对于 SCP-079 项目组和 SCP-079 工作组的成员来说，保持匿名是相当重要的。欢迎每个想为这个项目做出贡献的人。
+为避免不必要的麻烦，有意加入项目团队的人员应注意：对于 SCP-079 项目组和 SCP-079 工作组的成员来说，保持匿名是相当重要的。欢迎每个想为这个项目[作出贡献](/help-zh/)的人。
 
 按照字母排序：
 
@@ -30,16 +30,6 @@ title: Team
 <a href="/uze4h6il/" class="key" target="_blank">AD6D 5622 8F5F B87F 2A24 60CC ACC0 64F9 3E44 E061</a>
 - <a class="no" target="_blank" style="color: #ddd; font-weight: 700;">Xiao</a> 
 <a href="/xiao/" class="key" target="_blank">C1BE CBF6 E0BD 06AF 7802 2F93 FED1 BA4A 7D9E 2E29</a>
-
-## 招募
-
-我们长期招募以下志愿者：
-
-1. 帮助翻译一些页面到英文
-2. 参与项目开发
-3. 加入 Demo 机器人工作组，管理由本项目托管的实例
-
-如有兴趣，请联系 [SCP-079-TICKET](https://t.me/SCP_079_TICKET_BOT)，期待你的加入！
 
 <audio id="no_button" src="/audio/button/no.ogg"/>
 <audio id="no_click" src="/audio/button/no_click.ogg"/>

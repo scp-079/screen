@@ -23,6 +23,7 @@ SCP-079，一个开源项目，致力于为 Telegram 群组中封锁 spammer 提
 - [Demo 服务文档](/readme/)
 - [透明度](/transparency-zh/)
 - [项目等级](/classes-zh/)
+- [加入我们](/help-zh/)
 
 所有的机器人托管在 ████████ 上。IP 地址为 [57.32.███.███](http://www.scp-wiki.net/scp-614)。
 
