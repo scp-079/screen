@@ -24,6 +24,4 @@ title: Help
 
 期待你的加入！
 
----
-
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>
