@@ -2,19 +2,20 @@
 title: Transparency
 ---
 
-<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/transparency-zh/';" class="zh">点此转至中文页面</button>
+<link rel="stylesheet" href="/css/chinese.css">
+<button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/transparency/';" class="en">Click Here to English Page</button>
 
 ---
 
-# Transparency
+# 信息公开
 
-Shows groups or individuals who interact with the Project (other than [project administrators and developers](/team/)) to increase transparency.
+展示除[项目管理员、开发者](/team-zh/)外，与项目有交互的团体或个人，提高透明度。
 
-The information included in `Joined` field indicates the private channels' names.
+其中，`Joined` 包括的信息表示其加入的项目私有频道名。
 
-## List of witnesses
+## 监督员及证人名单
 
-In alphabetical order:
+按拼头或字母顺序：
 
 - [MXtao_dada](https://t.me/mrwangzhe) 
 <a class="no">- ID: 347437156 - Joined: WATCH</a>

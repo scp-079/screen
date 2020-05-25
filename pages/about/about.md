@@ -16,11 +16,10 @@ Follow our announcement channel to get updates: [SCP-079-INFO](https://t.me/SCP_
 
 Learn more:
 
-- [Design Principles](/principles/)
-- [Suggestions](/suggestions/)
 - [Self Hosting Instructions](/how/)
 - [README of Demo Instances](/readme/)
-- [Transparency](/transparency/)
+- [Suggestions](/suggestions/)
+- [Design Principles](/principles/)
 - [Object Classes](/classes/)
 - [Contribute](/help/)
 
