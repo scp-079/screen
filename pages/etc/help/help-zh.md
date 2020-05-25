@@ -22,6 +22,6 @@ title: Help
 
 如对以上工作内容中的某项或某几项感兴趣，请发送您的申请至：[SCP-079-TICKET](https://t.me/SCP_079_TICKET_BOT)
 
-期待你的加入！
+期待您的加入！
 
 <audio src="/audio/door/dooropenpage.ogg" autoplay></audio>
