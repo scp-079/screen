@@ -13,7 +13,7 @@ title: Team
 
 ---
 
-## Team
+# Team
 
 In order to avoid unnecessary troubles, it's essential for Project Team and Workgroup members to stay anonymous, and those who intend to join the team should pay attention to 
 that. Welcome anyone [contributes](/help/) to the project.

@@ -7,7 +7,7 @@ title: Projects
 
 ---
 
-## Projects
+# 项目列表
 
 目前，所有子项目均托管在 `GitLab` 上，镜像并开源于 [GitHub](https://github.com/scp-079)。
 

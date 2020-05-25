@@ -6,7 +6,7 @@ title: Projects
 
 ---
 
-## Projects
+# Projects
 
 Currently, all subprojects are hosted on GitLab, mirrored and open source on [GitHub](https://github.com/scp-079).
 

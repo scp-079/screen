@@ -6,7 +6,7 @@ title: About
 
 ---
 
-## About
+# About
 
 SCP-079, an open source project, aims to provide solutions blocking spammers in the Telegram groups.
 
