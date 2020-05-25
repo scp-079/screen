@@ -2,6 +2,8 @@
 title: Ticket
 ---
 
+<link rel="stylesheet" href="/css/chinese.css">
+
 # 工单
 
 ## 申诉
