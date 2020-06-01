@@ -90,6 +90,8 @@ title: Apply For Use
 
 权限赋予齐全后，请在讨论群内告知项目管理员，之后 [SCP-079-USER](https://t.me/SCP_079_USER_BOT) 会为您添加您所申请的机器人。
 
+待 USER 添加完所要求的机器人后，如有需要，可将 USER 调整回只有 Delete messages 和 Ban users 两种权限（此二者为日常运行时所必需的权限）的状态。
+
 ### 5. 等待审核
 
 请耐心等待工作组成员审核。
