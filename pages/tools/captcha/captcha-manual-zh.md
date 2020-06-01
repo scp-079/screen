@@ -163,6 +163,7 @@ CAPTCHA 可以接收来自 NOSPAM 的针对某个用户的验证发起请求。�
 - `nospam`：NOSPAM 降级触发验证的提示
 - `single`：只有一名待验证用户时的提示
 - `static`：手动获取的静态消息的提示
+- `multi`：多名用户带验证时的提示
 
 自定义内容中可以添加与用户相关的代号：
 
@@ -170,11 +171,13 @@ CAPTCHA 可以接收来自 NOSPAM 的针对某个用户的验证发起请求。�
 - `$mention_name`：此代号将自动被替换为用户昵称 并 @ 该用户
 - `$code_id`：代号将自动被替换为用户的 ID
 - `$code_name`：此代号将自动被替换为用户的昵称
+- `$code_count`：此代号仅在 `multi` 类别下有效，将替换为待验证用户的数量，例如：`3 名`
 
 注意事项：
 
 1. 当类别为 `nospam` 时，自定义内容应至少包含 `$mention_id` 和 `$mention_name` 中的一个
-2. 当类别为 `flood` 和 `static` 时，自定义内容不应该包含 `$mention_id` 或 `$mention_name` 
+2. 当类别为 `flood` 和 `static` 时，自定义内容不应该包含 `$mention_id` 或 `$mention_name`
+3. 仅当类别为 `multi` 时，`$code_count` 代号才会被有效替换
 
 示例，自定义单用户入群时的提示：
 
