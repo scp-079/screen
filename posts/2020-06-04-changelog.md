@@ -19,7 +19,7 @@ author: Xiao
 
 ## SCP-079-CAPTCHA
 
-CAPTCHA 更新至 0.6.0
+CAPTCHA 更新至 0.6.0（需同时更新 USER）
 
 主要的更改有：
 
@@ -58,7 +58,15 @@ stop captcha && python3 ~/scp-079/scripts/qns.py && update captcha
 rm ~/scp-079/scripts/qns.py
 ```
 
-更新完毕，可查看服务运行状态。
+更新完毕，可查看服务运行状态。接下来请更新 USER。
+
+## SCP-079-USER
+
+更新以配合 CAPTCHA 的新炸群应对模式。
+
+## SCP-079-AVATAR
+
+修复若干影响运行的 bug。
 
 ---
 
