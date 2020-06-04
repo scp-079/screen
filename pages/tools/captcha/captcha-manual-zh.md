@@ -324,7 +324,7 @@ CAPTCHA 可以接收来自 NOSPAM 的针对某个用户的验证发起请求。�
 
 显示问题的命令为：`/show`
 
-![删除问题](/images/captcha-zh/qns-show.png)
+![显示所有问题](/images/captcha-zh/qns-show.png)
 
 如图，将显示该问题的详情，和在群组中的提出次数、通过率、参与率、答错率。
 
