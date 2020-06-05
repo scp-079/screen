@@ -62,7 +62,7 @@ title: SCP-079-CAPTCHA
 
 **附录：**自建机器人的方法
 
-关于搭建机器人的通用说明，请先查看<a href="/how-zh/" target="_blank">自建说明书</a>
+关于搭建机器人的通用说明，请先查看<a href="/how-zh/" target="_blank">自建说明书</a>。
 
 
 启用看图辨物的功能：如需启用此功能，服务托管者须在 `~/scp-079/captcha/assets/` 下创建 `pics` 文件夹，并适当存放图片，其结构描述如下：
@@ -86,11 +86,13 @@ title: SCP-079-CAPTCHA
 
 这是一个自定义的文件。文件应位于 `config.ini.example` 同目录下。
 
-需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。 API ID 与 API Hash 在 <a href="https://my.telegram.org" target="_blank">官网</a> 获取
+需要对 `config.ini` 文件中内容为 `[DATA EXPUNGED]` 的全部键值进行修改。 API ID 与 API Hash 在 <a href="https://my.telegram.org" target="_blank">官网</a> 获取。
 
 一些建议：
 
-`[captcha]` 中需要填写 `captcha_link`，这是 SCP-079-CAPTCHA 的频道链接，此频道用于在某些情况下提供加入专用验证群组的链接。我们建议自建者将 SCP-079-CAPTCHA 设置为公开频道。并且，SCP-079-CAPTCHA 中应该至少有一条明显的消息，用以指向加入专用验证群组的链接。我们建议自建者通过 [TIP](/tip-zh/) 自动维护此入群链接，即，TIP 加入专用验证群组中，并利用 TIP 将 SCP-079-CAPTCHA 频道作为专用验证群组的`入群频道`。
+- `[captcha]` 中需要填写 `captcha_link`，这是一个备用频道链接，此频道用于在某些情况下提供加入专用验证群组的链接。
+- 建议自建者将备用频道设置为公开频道。并且，备用频道中应该至少有一条明显的消息，用以指向加入专用验证群组的链接。
+- 建议自建者通过 [TIP](/tip-zh/) 自动维护公开备用频道入群链接，即，TIP 加入专用验证群组中，并利用 TIP 将备用频道作为专用验证群组的`入群频道`。
 
 ```ini
 [pyrogram]
