@@ -23,6 +23,4 @@ Learn more:
 - [Object Classes](/classes/)
 - [Contribute](/help/)
 
-All bots are hosted on ████████. IP address is [57.32.███.███](http://www.scp-wiki.net/scp-614).
-
 <audio src="/audio/page/about.ogg" autoplay></audio>
