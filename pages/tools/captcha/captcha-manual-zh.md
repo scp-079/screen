@@ -186,6 +186,7 @@ CAPTCHA 可以接收来自 NOSPAM 的针对某个用户的验证发起请求。�
 1. 当类别为 `nospam` 时，自定义内容应至少包含 `$mention_id` 和 `$mention_name` 中的一个
 2. 当类别为 `flood` 和 `static` 时，自定义内容不应该包含 `$mention_id` 或 `$mention_name`
 3. 仅当类别为 `multi` 时，`$code_count` 代号才会被有效替换
+4. 当设定自定义提示的样式时（链接、加粗、斜体、代码块），请内容遵从 HTML 格式，请见：<https://docs.pyrogram.org/topics/text-formatting#html-style>
 
 示例，自定义单用户入群时的提示：
 
@@ -290,6 +291,8 @@ CAPTCHA 可以接收来自 NOSPAM 的针对某个用户的验证发起请求。�
 2. 单个答案长度不得超过 64 字节，换算即：以全部是汉字为例，字数不得超过 21 ；以全部是英文字符为例，字数不得超过 64。
 3. 正确答案和错误答案的总数不得超过 6 个。
 4. 群组自定义问题的总数不得超过 20 个。
+5. 当设定自定义问题的样式时（链接、加粗、斜体、代码块），请内容遵从 HTML 格式，请见：<https://docs.pyrogram.org/topics/text-formatting#html-style>
+6. 只有问题可以设置样式，答案不可设置样式
 
 ![添加问题](/images/captcha-zh/qns-add.png)
 
