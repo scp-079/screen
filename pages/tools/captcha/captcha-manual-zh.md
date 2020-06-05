@@ -189,11 +189,11 @@ CAPTCHA 可以接收来自 NOSPAM 的针对某个用户的验证发起请求。�
 
 示例，自定义单用户入群时的提示：
 
-`/custom single 你好，请您点击下方按钮进行验证，以证明您不是机器人`
+`/custom single 您好 $mention_name，请您点击下方按钮进行验证，以证明您不是机器人`
 
 本示例对应的效果：
 
-![示例效果](/images/captcha-zh/example01.jpg)
+![示例效果](/images/captcha-zh/custom-example.png)
 
 如需查看某个类别的设置，可如此操作：`/custom single`
 
