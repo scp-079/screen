@@ -105,7 +105,7 @@ title: Apply For Use
 
 当 [SCP-079-USER](https://t.me/SCP_079_USER_BOT) 加入了自己的群组后，群主需要提升其为管理员并**赋予如下图所示的这五项权限**：
 
-![PERMISSIONS](/images/user/permissions.png)
+![所需权限](/images/user-zh/permissions.png)
 
 - 所需的五权为`临时性的使用和校验`。
 - 赋予五权，以便令 USER 可自动地赋予其他机器人所需的特定权限（[待实现功能](https://t.me/c/1227852906/12447)，目前仍为工作组管理员手动赋权）。
