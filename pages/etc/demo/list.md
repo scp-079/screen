@@ -4,7 +4,7 @@ title: List
 
 <link rel="stylesheet" href="/css/chinese.css">
 
-# 公共服务列表
+# 公开服务列表
 
 本页将列出：除本项目 [Demo](/readme/) 实例外，其他公开接受用户使用申请的 SCP-079 实例托管方。
 
