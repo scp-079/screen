@@ -105,7 +105,7 @@ lang = cmn-Hans
 
 这是一个自定义的文件。文件应位于 `template.txt` 同目录下。
 
-设定内容的格式时（链接、加粗、斜体、代码块），请内容遵从 HTML 格式，请见：<https://docs.pyrogram.org/topics/text-formatting#html-style>
+当设定消息内容的样式时（链接、加粗、斜体、代码块），请内容遵从 HTML 格式，请见：<https://docs.pyrogram.org/topics/text-formatting#html-style>
 
 此文件中可用的代号（以两个 `$` 所包裹）可见文件 `template.txt`。代号将在运行时被替换为对应的系统状态信息。
 
