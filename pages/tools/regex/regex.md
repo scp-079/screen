@@ -10,7 +10,7 @@ title: SCP-079-REGEX
 
 **特殊收容措施：**SCP-079-REGEX 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-REGEX 。运行所需要安装的第三方模块已在 `requirements.txt` 中列出。其应该作为频道 SCP-079-CRITICAL 、频道 SCP-079-EXCHANGE 、频道 SCP-079-HIDE 的管理员，并加入 SCP-079-REGEX 、 SCP-079-TEST 群组。
 
-**描述：**SCP-079-REGEX 是一个用于管理正则表达式的机器人，其项目位于 GitLab ，镜像同步并准备（尚未）开源于 <a href="https://github.com/scp-079/scp-079-regex" target="_blank">GitHub</a> 。机器人本体位于 <a href="https://t.me/SCP_079_REGEX_BOT" class="079" target="_blank">SCP-079-REGEX</a> ，仅供 SCP-079 内部使用，并由同名群组 SCP-079-REGEX 的成员管理，所操作的正则模式将提供给其他机器人使用。其加入了 SCP-079-TEST ，用于测试文字所匹配的正则情况。该项目由 ███ 主要负责，基于 █████████ 机器人修改。通过该项目建立的机器人有类似的功能：管理不同种类的正则表达式、检查可能的重复、检索正则、显示正则命中频率，并与项目数据交换频道进行交互。具体操作详见附录中的使用说明。
+**描述：**SCP-079-REGEX 是一个用于管理正则表达式的机器人，其项目位于 GitLab ，镜像同步并准备（尚未）开源于 <a href="https://github.com/scp-079/scp-079-regex" target="_blank">GitHub</a> 。机器人本体位于 <a href="https://t.me/SCP_079_REGEX_BOT" class="079" target="_blank">SCP-079-REGEX</a> ，仅供 SCP-079 内部使用，并由同名群组 SCP-079-REGEX 的成员管理，所操作的正则表达式模式将提供给其他机器人使用。其加入了 SCP-079-TEST ，用于测试文字所匹配的正则表达式情况。该项目由 ███ 主要负责，基于 █████████ 机器人修改。通过该项目建立的机器人有类似的功能：管理不同种类的正则表达式、检查可能的重复、检索正则表达式、显示正则表达式命中频率，并与项目数据交换频道进行交互。具体操作详见附录中的使用说明。
 
 ---
 
@@ -227,7 +227,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 3：向其他 Bot（CLEAN、LONG、NOFLOOD、NOPORN、NOSPAM、WATCH）推送正则更新文件。`exchange_text` 文本作为该文件的 `caption`
+情形 3：向其他 Bot（CLEAN、LONG、NOFLOOD、NOPORN、NOSPAM、WATCH）推送正则表达式更新文件。`exchange_text` 文本作为该文件的 `caption`
 
 ```python
 exchange_text = format_data(
@@ -242,7 +242,7 @@ exchange_text = format_data(
 )
 ```
 
-情形 4：向其他 Bot（CLEAN、LONG、NOFLOOD、NOPORN、NOSPAM、WATCH）要求更新正则使用计数
+情形 4：向其他 Bot（CLEAN、LONG、NOFLOOD、NOPORN、NOSPAM、WATCH）要求更新正则表达式使用计数
 
 ```python
 exchange_text = format_data(

@@ -23,6 +23,7 @@ title: Public information and privacy protection
   - 姓
   - 名
   - 简介
+  - 头像
   - 用户名
 - 用户权限
 - 入群时间
