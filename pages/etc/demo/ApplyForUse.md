@@ -116,6 +116,8 @@ title: Apply For Use
 - 说明自己的群组需要哪些机器人
 - 发送自己的群组链接，以便本项目工作组核对
 
+> 例如：群组 @SCP_079_CHAT 申请使用 CAPTCHA、TIP
+
 **注：**待工作组审核通过，并令 USER 添加完您所要求的机器人后，如您的群组有需要，可将 USER 调整回只有 `Delete messages` 和 `Ban users` 两种权限**（必选）**的状态。
 
 ---
