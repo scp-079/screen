@@ -40,7 +40,7 @@ title: List
 
 **申请方式：**[Xtao 联盟审核 Chat](https://t.me/Xtao_Bot_News/42)
 
-**提供服务：**WARN、CLEAN、NOSPAM、NOFLOOD、TIP、CAPTCHA、LANG、LONG、USER
+**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOSPAM、TIP、USER、WARN
 
 **面向群体：**技术交流相关群组
 
