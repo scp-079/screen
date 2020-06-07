@@ -30,6 +30,18 @@ title: List
 
 ---
 
+### Xtao 联盟
+
+**申请方式：**[Xtao 联盟审核 Chat](https://t.me/Xtao_Bot_News/42)
+
+**提供服务：**WARN、CLEAN、NOSPAM、NOFLOOD、TIP、CAPTCHA、LANG、LONG、USER
+
+**面向群体：**技术交流相关群组
+
+**自我介绍：**不如来点鸽子？
+
+---
+
 ## 加入本列表
 
 如您已在运行 SCP-079 大部分实例，公开并接受其他人的使用请求，且能保证以下规范：
