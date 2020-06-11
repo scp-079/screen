@@ -18,7 +18,7 @@ SCP-079 系列机器人的搭建涉及多个频道、群组、机器人帐号、
     - 频道中应提供一个消息，其中包含链接，链接为 CAPTCHA 的专用验证群组的邀请链接，此链接可使用 TIP 的「入群频道」功能生成，以保持定时刷新链接的特性
 - [SCP-079-CONFIG](https://t.me/SCP_079_CONFIG)
     - 此频道用于 CONFIG 机器人在非私聊的模式下提供设置会话
-- [SCP-079-CRITICAL]((https://t.me/SCP_079_CRITICAL)
+- [SCP-079-CRITICAL](https://t.me/SCP_079_CRITICAL)
     - 此频道用于 STATUS 机器人更新各节点服务器的状态
     - 其他各主要 Bot 也应加入此频道，用于汇报各种突发情况
 - [SCP-079-DEBUG](https://t.me/SCP_079_DEBUG)
