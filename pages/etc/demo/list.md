@@ -12,7 +12,7 @@ title: List
 
 ## 服务列表
 
-`注意：`
+注意：
 
 - `本项目不对以下第三方的服务提供者做出任何担保，请根据实际情况谨慎选择。`
 - `本项目不对您使用任何第三方服务带来的损失负责。`
@@ -26,13 +26,13 @@ title: List
 
 ### RED-X
 
-**申请方式：**[RED-X-用户反馈交流群](https://t.me/RedXChat)
+**申请方式：**[RED-X-CHAT](https://t.me/redxchat_channel)
 
-**提供服务：**CAPTCHA、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER、WARN
+**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、TIP、USER、WARN
 
 **面向群体：**面向受广告、炸群等困扰的群组
 
-**自我介绍：**待补充
+**自我介绍：**咕咕咕？
 
 ---
 
