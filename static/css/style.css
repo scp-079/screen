@@ -178,6 +178,10 @@ main iframe {
     margin: 15px auto;
 }
 
+main li {
+    word-break: break-word;
+}
+
 /* Image */
 
 figcaption {
