@@ -21,6 +21,8 @@ title: List
 
 - 您可以根据以下服务提供者所面向的群体、自我介绍等信息来做出选择。
 - 不同群体的自建实例对广告的判断标准、容忍程度，和过滤效果可能会不同。
+- 对于启用`独立工作模式`的服务，群组一般情况下需要根据自身的功能需求，选择拉入某几个独立的机器人。
+- 对于启用 `All-In-One 模式`的服务，群组一般情况下仅需拉入两个机器人（user-bot 和 bot）即可使用该服务的全部功能。
 
 ---
 
@@ -29,6 +31,8 @@ title: List
 **申请方式：**[RED-X-CHAT](https://t.me/redxchat_channel)
 
 **提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、TIP、USER、WARN
+
+**服务模式：**独立工作
 
 **面向群体：**面向受广告、炸群等困扰的群组
 
@@ -42,9 +46,25 @@ title: List
 
 **提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOSPAM、TIP、USER、WARN
 
+**服务模式：**独立工作
+
 **面向群体：**技术交流相关群组
 
 **自我介绍：**不如来点鸽子？
+
+---
+
+### 小鬼当家
+
+**申请方式：**[小鬼当家-CHAT](https://t.me/XiaoGuiDangJia_CHAT)
+
+**提供服务：**CAPTCHA、CLEAN、TIP、WARN、USER
+
+**服务模式：**All-In-One
+
+**面向群体：**非 SPAM / NSFW 类群组
+
+**自我介绍：**待定
 
 ---
 
