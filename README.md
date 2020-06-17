@@ -43,8 +43,8 @@ To work locally with this project, you'll have to follow the steps below:
 3. Use stack:
     1. `stack setup`
     2. `stack install --only-dependencies`
-    3. `stack exec site build`
-    4. `stack build`
+    3. `stack build`
+    4. `stack exec site build`
     5. `stack exec site watch`
 4. View the site locally
 
