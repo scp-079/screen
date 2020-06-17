@@ -25,7 +25,6 @@ title: Classes
 - [SCP-079-HIDE](/hide-zh/)
 - [SCP-079-INDEX](/index-zh/)
 - [SCP-079-MANAGE](/manage-zh/)
-- [SCP-079-MIRROR](/mirror-zh/)
 - [SCP-079-PM](/pm-zh/)
 - [SCP-079-REGEX](/regex-zh/)
 - [SCP-079-STATUS](/status-zh/)

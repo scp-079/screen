@@ -19,7 +19,6 @@ title: Tools
 - [SCP-079-LANG](/lang/)：删除或封禁指定语言的消息
 - [SCP-079-LONG](/long/)：控制超长的消息
 - [SCP-079-MANAGE](/manage/)：至尊戒驭众戒
-- [SCP-079-MIRROR](/mirror/)：我能看到什么
 - [SCP-079-NOFLOOD](/noflood/)：阻止刷屏消息
 - [SCP-079-NOPORN](/noporn/)：自动删除 NSFW 媒体消息
 - [SCP-079-NOSPAM](/nospam/)：在群组中阻止 spam

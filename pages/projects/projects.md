@@ -20,7 +20,6 @@ In alphabetical order:
 - [SCP-079-LANG](https://github.com/scp-079/scp-079-lang): Ban or delete by detecting the language
 - [SCP-079-LONG](https://github.com/scp-079/scp-079-long): Control super long messages
 - [SCP-079-MANAGE](https://github.com/scp-079/scp-079-manage): One ring to rule them all
-- [SCP-079-MIRROR](https://github.com/scp-079/scp-079-mirror): What will I see
 - [SCP-079-NOFLOOD](https://github.com/scp-079/scp-079-noflood): Message-flooding prevention
 - [SCP-079-NOPORN](https://github.com/scp-079/scp-079-noporn): Auto delete NSFW media messages
 - [SCP-079-NOSPAM](https://github.com/scp-079/scp-079-nospam): Block spam in groups

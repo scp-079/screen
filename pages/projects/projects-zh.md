@@ -21,7 +21,6 @@ title: Projects
 - [SCP-079-LANG](https://github.com/scp-079/scp-079-lang)：删除或封禁指定语言的消息
 - [SCP-079-LONG](https://github.com/scp-079/scp-079-long)：控制超长的消息
 - [SCP-079-MANAGE](https://github.com/scp-079/scp-079-manage)：至尊戒驭众戒
-- [SCP-079-MIRROR](https://github.com/scp-079/scp-079-mirror)：我能看到什么
 - [SCP-079-NOFLOOD](https://github.com/scp-079/scp-079-noflood)：阻止刷屏消息
 - [SCP-079-NOPORN](https://github.com/scp-079/scp-079-noporn)：自动删除 NSFW 媒体消息
 - [SCP-079-NOSPAM](https://github.com/scp-079/scp-079-nospam)：在群组中阻止 spam
