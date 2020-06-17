@@ -28,8 +28,9 @@ jobs:
           stack-version: 'latest'
 
       - name: Build
-        run: stack --version
-        run: stack exec site build
+        run: |
+          stack --version
+          stack exec site build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
