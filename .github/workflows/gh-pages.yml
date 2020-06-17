@@ -21,11 +21,11 @@ jobs:
             .stack-work
           key: ${{ runner.os }}-${{ hashFiles('./stack.yaml.lock') }}
 
+      - name: Home directory
+        run: pwd ~ && echo "------------------------" && ls -a ~
+
       - name: Current working directory
         run: pwd && echo "------------------------" && ls -a
-
-      - name: Home directory
-        run: ls -a ~
 
       - name: Prepare Haskell environment
         uses: actions/setup-haskell@v1.1
