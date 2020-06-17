@@ -1,8 +1,8 @@
-resolver: lts-14.8
+resolver: lts-15.6
 
 packages:
   - '.'
 
 extra-deps:
-- 'hakyll-4.13.0.1'
+- 'hakyll-4.13.3.0'
 - 'lrucache-1.2.0.1'
