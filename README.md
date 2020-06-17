@@ -62,9 +62,8 @@ Welcome to contribute to this
 
 ## License
 
-This theme is under [GPLv3](LICENSE_GNU_GPLv3).
+This theme is under [GPLv3](LICENSES/GPL-3.0).
 The theme is based on [darcli](https://github.com/gildasio/darcli).
-
 
 All documents of this project is under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 
@@ -73,8 +72,6 @@ All the sound effects in `static/audio/` are under
 and come from 
 [SCP - Containment Breach](http://www.scpcbgame.com/) 
 game.
-
-
 
 [ci]: https://about.gitlab.com/gitlab-ci/
 [hakyll]: https://jaspervdj.be/hakyll/
