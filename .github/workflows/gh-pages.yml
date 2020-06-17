@@ -22,7 +22,7 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('./stack.yaml.lock') }}
 
       - name: Compile
-      - uses: actions/setup-haskell@v1.1
+        uses: actions/setup-haskell@v1.1
         with:
           ghc-version: '8.8.3'
           stack-version: 'latest'
