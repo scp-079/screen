@@ -26,9 +26,9 @@ jobs:
         with:
           ghc-version: '8.8.3'
           stack-version: 'latest'
-      - run: stack --version
 
       - name: Build
+        run: stack --version
         run: stack exec site build
 
       - name: Deploy
