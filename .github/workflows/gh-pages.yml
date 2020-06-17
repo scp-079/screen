@@ -21,13 +21,15 @@ jobs:
             .stack-work
           key: ${{ runner.os }}-${{ hashFiles('./stack.yaml.lock') }}
 
+      - name: Compile
       - uses: actions/setup-haskell@v1.1
         with:
           ghc-version: '8.8.3'
           stack-version: 'latest'
+      - run: stack --version
 
       - name: Build
-        run: stack exec site build || stack exec site rebuild
+        run: stack exec site build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
