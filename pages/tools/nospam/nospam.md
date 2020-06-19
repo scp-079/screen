@@ -133,7 +133,7 @@ default_group_link = [DATA EXPUNGED]
 ; 此处填写调试信息中默认的群组链接
 image_size = [DATA EXPUNGED]
 ; 此处填写整数，代表分析图片文档的最大大小，超过此大小则不通过下载原文件进行二维码，单位为 B
-invalid = [DATA EXPUNGED]
+invalid = admin admins BotFather gamebot gif SpamBot Stickers telegram vote
 ; 此处填写不被机器人认为是 Telegram 链接的 username ，用空格分隔，无 @ 前缀
 limit_track = [DATA EXPUNGED]
 ; 此处填写整数，代表用户短时间内加入多少群组才被认为是需要特殊对待的用户
