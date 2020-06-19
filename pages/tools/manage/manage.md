@@ -98,6 +98,10 @@ bot_token = [DATA EXPUNGED]
 prefix = /!
 ; 命令前的可用字符，如在群组中使用非常规命令前缀，需要机器人有获取普通消息的权限
 
+[bots]
+ticket_id = [DATA EXPUNGED]
+; 此处填写工单机器人 SCP-079-TICKET 的 ID
+
 [channels]
 critical_channel_id = [DATA EXPUNGED]
 ; 此处填写紧急频道 SCP-079-CRITICAL 的 ID
@@ -107,29 +111,42 @@ error_channel_id = [DATA EXPUNGED]
 ; 此处填写错误存档频道 SCP-079-ERROR 的 ID
 exchange_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID
-; 关于数据交换频道的详情，请查看 https://scp-079.org/exchange/
 hide_channel_id = [DATA EXPUNGED]
 ; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID
 logging_channel_id = [DATA EXPUNGED]
 ; 此处填写证据存放频道 SCP-079-LOGGING 的 ID
+manage_channel_id = [DATA EXPUNGED]
+; 此处填写内部操作存放频道 SCP-079-M 的 ID
 manage_group_id = [DATA EXPUNGED]
 ; 此处填写管理群组 SCP-079-MANAGE 的 ID
 test_group_id = [DATA EXPUNGED]
 ; 此处填写测试群组 SCP-079-TEST 的 ID
+watch_channel_id = [DATA EXPUNGED]
+; 此处填写追踪证据频道 SCP-079-WATCH 的 ID
 
 [custom]
-project_link = [DATA EXPUNGED]
-; 此处填写项目网址
-project_name = [DATA EXPUNGED]
-; 此处填写项目名称
-reset_day = [DATA EXPUNGED]
+aio = False
+; 此处填写 True 或 False，代表程序是否与其他程序共用同一机器人帐号
+backup = False
+; 此处填写 True 或 False，代表程序是否为备份副本
+date_reset = 1st mon
 ; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一
+per_page = 10
+; 每页显示的 ID 数量
+project_link = https://scp-079.org/manage/
+; 此处填写项目网址
+project_name = SCP-079-MANAGE
+; 此处填写项目名称
+query = CAS 黑名单：<a href="https://cas.chat/query?u={}">查询</a>
+; 此处填写自定义的与用户 ID 相关的字符串
+zh_cn = True
+; 此处填写 True 或 False，代表程序是否启用简体中文模式
 
 [encrypt]
 key = [DATA EXPUNGED]
-; 加密字符串所用的密码
+; 各机器人加密字符串所用的统一密码，需由程序生成
 password = [DATA EXPUNGED]
-; 加密文件所用的密码
+; 各机器人加密文件所用的统一密码，建议为长度 16 及以上的随机字符串
 ```
 
 ---

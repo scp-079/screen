@@ -66,8 +66,8 @@ captcha_id = [DATA EXPUNGED]
 ; SCP-079-CAPTCHA 的 ID
 clean_id = [DATA EXPUNGED]
 ; SCP-079-CLEAN 的 ID
-clean_id = [DATA EXPUNGED]
-; SCP-079-CLEAN 的 ID
+index_id = [DATA EXPUNGED]
+; SCP-079-INDEX 的 ID
 lang_id = [DATA EXPUNGED]
 ; SCP-079-LANG 的 ID
 long_id = [DATA EXPUNGED]
@@ -76,10 +76,9 @@ noflood_id = [DATA EXPUNGED]
 ; SCP-079-NOFLOOD 的 ID
 noporn_id = [DATA EXPUNGED]
 ; SCP-079-NOPORN 的 ID
+recheck_id = 1
 nospam_id = [DATA EXPUNGED]
 ; SCP-079-NOSPAM 的 ID
-recheck_id = [DATA EXPUNGED]
-; SCP-079-RECHECK 的 ID
 tip_id = [DATA EXPUNGED]
 ; SCP-079-TIP 的 ID
 user_id = [DATA EXPUNGED]
