@@ -21,6 +21,7 @@ Safe projects:
 - [SCP-079-CONFIG](/config/)
 - [SCP-079-GET](/get/)
 - [SCP-079-HIDE](/hide/)
+- [SCP-079-ID](/id-en/)
 - [SCP-079-INDEX](/index/)
 - [SCP-079-MANAGE](/manage/)
 - [SCP-079-MIRROR](/mirror/)

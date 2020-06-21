@@ -16,6 +16,7 @@ title: Tools
 - [SCP-079-CLEAN](/clean-zh/)：过滤特定类型的消息
 - [SCP-079-CONFIG](/config-zh/)：管理每个机器人的设置
 - [SCP-079-HIDE](/hide/)：隐藏真正的发信者
+- [SCP-079-ID](/id/)：获取 Telegram 上的 ID
 - [SCP-079-LANG](/lang/)：删除或封禁指定语言的消息
 - [SCP-079-LONG](/long/)：控制超长的消息
 - [SCP-079-MANAGE](/manage/)：至尊戒驭众戒

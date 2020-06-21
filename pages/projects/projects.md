@@ -17,6 +17,7 @@ In alphabetical order:
 - [SCP-079-CLEAN](https://github.com/scp-079/scp-079-clean): Filter specific types of messages
 - [SCP-079-CONFIG](https://github.com/scp-079/scp-079-config): Manage the settings of each bot
 - [SCP-079-HIDE](https://github.com/scp-079/scp-079-hide): Hide the real sender
+- [SCP-079-ID](https://github.com/scp-079/scp-079-id): Get Telegram ID
 - [SCP-079-LANG](https://github.com/scp-079/scp-079-lang): Ban or delete by detecting the language
 - [SCP-079-LONG](https://github.com/scp-079/scp-079-long): Control super long messages
 - [SCP-079-MANAGE](https://github.com/scp-079/scp-079-manage): One ring to rule them all

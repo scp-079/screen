@@ -18,6 +18,7 @@ title: Projects
 - [SCP-079-CLEAN](https://github.com/scp-079/scp-079-clean)：过滤特定类型的消息
 - [SCP-079-CONFIG](https://github.com/scp-079/scp-079-config)：管理每个机器人的设置
 - [SCP-079-HIDE](https://github.com/scp-079/scp-079-hide)：隐藏真正的发信者
+- [SCP-079-ID](https://github.com/scp-079/scp-079-id)：获取 Telegram 上的 ID
 - [SCP-079-LANG](https://github.com/scp-079/scp-079-lang)：删除或封禁指定语言的消息
 - [SCP-079-LONG](https://github.com/scp-079/scp-079-long)：控制超长的消息
 - [SCP-079-MANAGE](https://github.com/scp-079/scp-079-manage)：至尊戒驭众戒
