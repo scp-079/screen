@@ -53,7 +53,7 @@ title: Classes
 
 开发中的 Keter 级项目：
 
-- [SCP-079-AVATAR](/avatar-zh/)
+- [SCP-079-AVATAR](/avatar/)
 - [SCP-079-WATCH](/watch-zh/)
 
 ## Thaumiel

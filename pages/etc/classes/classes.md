@@ -52,7 +52,7 @@ The source code may be maliciously used by others for some improper purpose. The
 
 Keter projects：
 
-- [SCP-079-AVATAR](/avatar/)
+- [SCP-079-AVATAR](/avatar-en/)
 - [SCP-079-WATCH](/watch/)
 
 ## Thaumiel
