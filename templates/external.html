@@ -2,13 +2,10 @@
 <script>
 function targetBlank() {
   var internal = location.host.replace("www.", "");
-      internal = new RegExp(internal, "i");
-      
   var a = document.getElementsByTagName('a');
-  
   for (var i = 0; i < a.length; i++) {
-    var href = a[i].host;
-    if( !internal.test(href) ) {
+    var the_host = a[i].host.replace("www.", "");
+    if( the_host != internal ) {
       a[i].setAttribute('target', '_blank');
     }
   }
