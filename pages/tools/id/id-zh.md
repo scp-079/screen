@@ -1,5 +1,5 @@
 ---
-title: SCP-079-USER
+title: SCP-079-ID
 ---
 
 <link rel="stylesheet" href="/css/chinese.css">
