@@ -17,7 +17,7 @@ title: SCP-079-ID
 
 ---
 
-**描述：**SCP-079-ID 是一个用于 Telegram 用户、群组、频道 ID 的机器人，其项目开源于 [GitHub](https://github.com/scp-079/scp-079-id)。Demo 机器人本体位于 <a href="https://t.me/SCP_079_ID_BOT" class="079" target="_blank">SCP-079-ID</a>，可供所有用户随意使用。
+**描述：**SCP-079-ID 是一个用于获取 Telegram 用户、群组、频道 ID 的机器人，其项目开源于 [GitHub](https://github.com/scp-079/scp-079-id)。Demo 机器人本体位于 <a href="https://t.me/SCP_079_ID_BOT" class="079" target="_blank">SCP-079-ID</a>，可供所有用户随意使用。
 
 - 可根据 username、转发的消息、群组内使用命令回复某用户，来获取对应用户的 ID
 - 可根据 username、群组内的命令，来获取对应群组的 ID，并显示群组是否受到 Telegram 的限制，以及限制的理由
