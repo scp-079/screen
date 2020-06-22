@@ -17,7 +17,7 @@ SCP-079，一个开源项目，致力于为 Telegram 群组中封锁 spammer 提
 
 了解更多：
 
-- [自建说明书](/how-zh/)
+- [自建文档](https://docs.scp-079.org)
 - [Demo 服务文档](/readme/)
 - [建议](/suggestions-zh/)
 - [设计原则](/principles-zh/)

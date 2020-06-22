@@ -16,7 +16,7 @@ Follow our announcement channel to get updates: [SCP-079-INFO](https://t.me/SCP_
 
 Learn more:
 
-- [Self Hosting Instructions](/how/)
+- [Self Hosting Instructions](https://docs.scp-079.org)
 - [README of Demo Instances](/readme/)
 - [Suggestions](/suggestions/)
 - [Design Principles](/principles/)
