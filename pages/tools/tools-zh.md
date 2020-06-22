@@ -12,7 +12,7 @@ title: Tools
 按照字母排序：
 
 - [SCP-079-AVATAR](/avatar/)：获取新群员的头像
-- [SCP-079-CAPTCHA](/captcha-zh/)：为新加入的群员提供入群验证
+- [SCP-079-CAPTCHA](/captcha/)：为新加入的群员提供入群验证
 - [SCP-079-CLEAN](/clean-zh/)：过滤特定类型的消息
 - [SCP-079-CONFIG](/config-zh/)：管理每个机器人的设置
 - [SCP-079-HIDE](/hide/)：隐藏真正的发信者
