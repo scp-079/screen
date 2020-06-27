@@ -22,8 +22,6 @@ title: Team
 
 - <a class="no" target="_blank" style="color: #ddd; font-weight: 700;">Action Filament</a> 
 <a href="/action/" class="key" target="_blank">C9E1 46A8 B142 6D1C 8A8C 5B56 1F18 6244 E534 392E</a>
-- <a class="no" target="_blank" style="color: #ddd; font-weight: 700;">August</a> 
-<a href="/august/" class="key" target="_blank">D867 B82E B3C2 89A3 A4B9 99D7 0A33 C93F 0FA2 73FB</a>
 - <a href="https://t.me/Borschts" target="_blank">Borschts</a> 
 <a href="/borschts/" class="key" target="_blank">AE25 EE37 47A8 93D3 187F 5393 03BF 2D36 7118 1103</a> 
 - <a href="https://t.me/SCP_079_PM_BOT" target="_blank">UZE4H6IL</a>
