@@ -25,6 +25,12 @@ title: Public information and privacy protection
   - 简介
   - 头像
   - 用户名
+  - 用户id
+- 群组基本资料
+  - 群组名称
+  - 群组类型
+  - 群组简介
+  - 群组id
 - 用户权限
 - 入群时间
 - 文字消息
