@@ -47,6 +47,20 @@ title: List
 
 ---
 
+### System-Project
+
+**申请方式：**[申請使用 System-Project 服務](https://system-telegram.github.io/ApplyForUse)
+
+**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOSPAM、TIP、USER、WARN
+
+**服务模式：**独立工作
+
+**面向群体：**任何非 SPAM 群組
+
+**自我介绍：**繁體化 SCP-079 服務
+
+---
+
 ### Xtao 联盟
 
 **申请方式：**[Xtao 联盟审核 Chat](https://t.me/Xtao_Bot_News/42)
