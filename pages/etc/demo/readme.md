@@ -10,9 +10,9 @@ title: README
 
 <p style="font-family: vt323, monospace; font-size: 20px;">This article mainly introduces the related details and application procedures of the demonstration bots hosted by this project. The demonstration bots are only for Chinese users, so this article will not provide an English version. It is recommended that you <a href="../how/">create your own bots</a> from source code.</p>
 
----
-
 ![](/images/Confusion_grey.png) 提示：本条目的主题不是 `SCP 基金会`。
+
+---
 
 ## 简介
 
