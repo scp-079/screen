@@ -33,31 +33,27 @@ title: List
 
 ---
 
-### RED-X
+**申请方式：**[Luck6-Project](https://luck6.net/applyforuse)
 
-**申请方式：**[RED-X-CHAT](https://t.me/redxchat_channel)
+**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER、WARN
+
+**服务模式：**独立工作
+
+**面向群体：**饱受管群苦恼的群组
+
+**自我介绍：**404 Not Found
+
+---
+
+**申请方式：**[SANCTIONSER](https://t.me/SANCTIONSER)
 
 **提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、TIP、USER、WARN
 
 **服务模式：**独立工作
 
-**面向群体：**面向受广告、炸群等困扰的群组
+**面向群体：**不接受 SPAM 及广告群组申请
 
-**自我介绍：**咕咕咕？
-
----
-
-### System-Project
-
-**申请方式：**[申請使用 System-Project 服務](https://system-telegram.github.io/ApplyForUse)
-
-**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOSPAM、TIP、USER、WARN
-
-**服务模式：**独立工作
-
-**面向群体：**任何非 SPAM 群組
-
-**自我介绍：**繁體化 SCP-079 服務
+**自我介绍：**SANCTIONSER!
 
 ---
 
