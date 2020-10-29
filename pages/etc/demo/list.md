@@ -29,7 +29,21 @@ title: List
 - 对于启用 `独立工作模式` 的服务，群组一般情况下需要根据自身的功能需求，选择拉入某几个独立的机器人，这样各机器人职责更加清晰。
 - 对于启用 `All-In-One 模式` 的服务，群组一般情况下仅需拉入两个机器人（user-bot 和 bot）即可使用该服务的全部功能，这样使用更加方便。
 
-按照字母表升序排列：
+下列实例在功能性方面与 SCP-079 无差异：
+
+---
+
+### 小鬼当家
+
+**申请方式：**[小鬼当家-CHAT](https://t.me/XiaoGuiDangJia_CHAT)
+
+**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOSPAM、TIP、WARN、USER
+
+**服务模式：**All-In-One
+
+**面向群体：**非 SPAM / NSFW 类群组
+
+**自我介绍：**这个人很懒，什么都没留下
 
 ---
 
@@ -68,20 +82,6 @@ title: List
 **面向群体：**技术交流相关群组
 
 **自我介绍：**不如来点鸽子？
-
----
-
-### 小鬼当家
-
-**申请方式：**[小鬼当家-CHAT](https://t.me/XiaoGuiDangJia_CHAT)
-
-**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOSPAM、TIP、WARN、USER
-
-**服务模式：**All-In-One
-
-**面向群体：**非 SPAM / NSFW 类群组
-
-**自我介绍：**这个人很懒，什么都没留下
 
 ---
 
