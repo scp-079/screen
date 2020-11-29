@@ -61,6 +61,20 @@ title: List
 
 ---
 
+### Xtao 联盟
+
+**申请方式：**[Xtao 联盟审核 Chat](https://t.me/Xtao_Bot_News/42)
+
+**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOSPAM、TIP、USER、WARN
+
+**服务模式：**独立工作
+
+**面向群体：**技术交流相关群组
+
+**自我介绍：**不如来点鸽子？
+
+---
+
 **申请方式：**[Luck6-Project](https://luck6.net/applyforuse)
 
 **提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER、WARN
@@ -82,20 +96,6 @@ title: List
 **面向群体：**不接受 SPAM 及广告群组申请
 
 **自我介绍：**SANCTIONSER!
-
----
-
-### Xtao 联盟
-
-**申请方式：**[Xtao 联盟审核 Chat](https://t.me/Xtao_Bot_News/42)
-
-**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOSPAM、TIP、USER、WARN
-
-**服务模式：**独立工作
-
-**面向群体：**技术交流相关群组
-
-**自我介绍：**不如来点鸽子？
 
 ---
 
