@@ -28,7 +28,7 @@ jobs:
         run: pwd && echo "------------------------" && ls -a
 
       - name: Prepare Haskell environment
-        uses: actions/setup-haskell@v1.1
+        uses: actions/setup-haskell@v1
         with:
           ghc-version: '8.8.3'
           stack-version: 'latest'
