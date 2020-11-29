@@ -47,6 +47,20 @@ title: List
 
 ---
 
+### Nicholass
+
+**申请方式：**[Nicholass_TICKET_Bot](https://t.me/Nicholass_TICKET_Bot)
+
+**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER、WARN
+
+**服务模式：**独立工作
+
+**面向群体：**不接受 SPAM 及广告群组申请
+
+**自我介绍：**暂无
+
+---
+
 **申请方式：**[Luck6-Project](https://luck6.net/applyforuse)
 
 **提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER、WARN
