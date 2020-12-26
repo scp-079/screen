@@ -37,7 +37,7 @@ title: List
 
 **申请方式：**[小鬼当家-CHAT](https://t.me/XiaoGuiDangJia_CHAT)
 
-**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOSPAM、TIP、WARN、USER
+**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOPORN、NOSPAM、TIP、WARN、USER
 
 **服务模式：**All-In-One
 
