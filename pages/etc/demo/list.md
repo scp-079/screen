@@ -65,7 +65,7 @@ title: List
 
 **申请方式：**[Xtao 联盟审核 Chat](https://t.me/Xtao_Bot_News/42)
 
-**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOSPAM、TIP、USER、WARN
+**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、TIP、USER、WARN
 
 **服务模式：**独立工作
 
