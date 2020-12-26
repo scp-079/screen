@@ -51,7 +51,7 @@ title: List
 
 **申请方式：**[Nicholass_TICKET_Bot](https://t.me/Nicholass_TICKET_Bot)
 
-**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER、WARN
+**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、TIP、USER、WARN
 
 **服务模式：**独立工作
 
