@@ -103,6 +103,20 @@ title: List
 
 ---
 
+### WOCyo
+
+**申请方式：**[wocyo_ticket_bot](https://t.me/wocyo_ticket_bot)
+
+**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、TIP、USER、WARN
+
+**服务模式：**独立工作
+
+**面向群体：**非nsfw / spam 群组
+
+**自我介绍：**无
+
+---
+
 ## 加入本列表
 
 如您已在运行 SCP-079 大部分实例，公开并接受其他人的使用请求，且能保证以下规范：
