@@ -117,6 +117,20 @@ title: List
 
 ---
 
+### Jonathean
+
+
+**申请方式：**[Jonathean_Ticket_Bot](https://t.me/Jonathean_Ticket_Bot)
+
+**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、TIP、USER、WARN
+
+**服务模式：**All-In-One
+
+**面向群体：**不接受 SPAM 及广告群组申请
+
+**自我介绍：**暂无
+
+
 ## 加入本列表
 
 如您已在运行 SCP-079 大部分实例，公开并接受其他人的使用请求，且能保证以下规范：
