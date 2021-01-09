@@ -79,7 +79,7 @@ title: List
 
 **申请方式：**[Luck6-Project](https://luck6.net/applyforuse)
 
-**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、USER、WARN
+**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、TIP、USER、WARN
 
 **服务模式：**独立工作
 
