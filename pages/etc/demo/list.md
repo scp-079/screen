@@ -89,6 +89,16 @@ title: List
 
 ---
 
+### Luck6-AIO
+
+**申请方式：**[luck6.net](https://luck6.net)
+**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、TIP、USER、WARN
+**服务模式：**All-In-One
+**面向群体：**非NSFW群组
+**自我介绍：**无
+
+---
+
 ### SANCTIONSER
 
 **申请方式：**[SANCTIONSER](https://t.me/SANCTIONSER)
@@ -130,6 +140,7 @@ title: List
 
 **自我介绍：**暂无
 
+---
 
 ## 加入本列表
 
