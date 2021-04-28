@@ -75,31 +75,17 @@ title: List
 
 ---
 
-### Luck6
+### Luck6-Project
 
 **申请方式：**[Luck6-Project](https://luck6.net/applyforuse)
 
-**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、TIP、USER、WARN
+**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、TIP、USER、WARN、AIO
 
-**服务模式：**独立工作
+**服务模式：**独立工作 & Aall-In-One
 
 **面向群体：**饱受管群苦恼的群组
 
 **自我介绍：**404 Not Found
-
----
-
-### Luck6-AIO
-
-**申请方式：**[Luck6_AIO_TICKET_BOT](https://t.me/Luck6_AIO_TICKET_BOT)
-
-**提供服务：**CAPTCHA、CLEAN、LANG、LONG、NOFLOOD、NOPORN、NOSPAM、TIP、USER、WARN
-
-**服务模式：**All-In-One
-
-**面向群体：**非NSFW群组
-
-**自我介绍：**无
 
 ---
 
