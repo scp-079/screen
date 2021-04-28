@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>SCP-079</title>
+    <link href="https://scp-079.org/atom.xml" rel="self" />
+    <link href="https://scp-079.org" />
+    <id>https://scp-079.org/atom.xml</id>
+    <author>
+        <name>SCP-079</name>
+        <email>admin@scp-079.org</email>
+    </author>
+    <updated>2020-06-04T00:00:00Z</updated>
+    <entry>
+    <title>Changelog 20200604</title>
+    <link href="https://scp-079.org/posts/2020-06-04-changelog/index.html" />
+    <id>https://scp-079.org/posts/2020-06-04-changelog/index.html</id>
+    <published>2020-06-04T00:00:00Z</published>
+    <updated>2020-06-04T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="info">
+Posted on June  4, 2020
+
+    by Xiao
+
+</div>
+<p><link rel="stylesheet" href="/css/chinese.css"></p>
+<h1 id="更新日志-20200604">更新日志 20200604</h1>
+<hr />
+<h2 id="注意">注意</h2>
+<p>请注意：各 bot 都需要采取独立的 Python 虚拟环境，若使用同一虚拟环境，程序运行会发生一些问题。您可藉由 <code>build.sh</code> <a href="https://github.com/scp-079/scripts/">脚本</a>分别创建（已搭建的机器人也可利用此脚本重新创建，只要和之前通用搭建说明所推荐的环境和文件路径一致即可），具体细节请再次参照更新后的<a href="https://scp-079.org/how-zh/">搭建说明</a>，此处不再赘述。</p>
+<p><code>再次注意</code>：依赖包 <code>OpenCC</code> 有 breakchange，所以请务必分别使用独立 Python 虚拟环境。<strong>否则其他机器人将无法正常启动。</strong></p>
+<hr />
+<h2 id="scp-079-captcha">SCP-079-CAPTCHA</h2>
+<p>CAPTCHA 更新至 0.6.0（需同时更新 USER）</p>
+<p>主要的更改有：</p>
+<ul>
+<li>支持群组设置自定义的验证问题</li>
+<li>扩展 /pass 命令的使用方式</li>
+</ul>
+<p>此两种功能的详情请见手册：<a href="https://scp-079.org/captcha-manual-zh/" class="uri">https://scp-079.org/captcha-manual-zh/</a></p>
+<p>升级前，请务必在终端执行以下命令，如参照了推荐方式部署机器人，可将以下代码块<code>一次性全部复制</code>到 shell 中并粘贴执行：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">cd</span> ~/scp-079/scripts</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">git</span> pull</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">cat</span> <span class="op">&lt;&lt;&#39;TEXT&#39;</span> <span class="op">&gt;</span> <span class="ex">~/scp-079/scripts/qns.py</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>#!/usr/bin/env python3</span>
+<span id="cb1-6"><a href="#cb1-6"></a># -*- coding: utf-8 -*-</span>
+<span id="cb1-7"><a href="#cb1-7"></a></span>
+<span id="cb1-8"><a href="#cb1-8"></a>import pickle</span>
+<span id="cb1-9"><a href="#cb1-9"></a></span>
+<span id="cb1-10"><a href="#cb1-10"></a>with open(&quot;../captcha/data/user_ids&quot;, &quot;rb&quot;) as f:</span>
+<span id="cb1-11"><a href="#cb1-11"></a>    user_ids = pickle.load(f)</span>
+<span id="cb1-12"><a href="#cb1-12"></a></span>
+<span id="cb1-13"><a href="#cb1-13"></a>for uid in list(user_ids):</span>
+<span id="cb1-14"><a href="#cb1-14"></a>    user_ids[uid][&quot;qns&quot;] = {}</span>
+<span id="cb1-15"><a href="#cb1-15"></a>    print(f&quot;User {uid} done&quot;)</span>
+<span id="cb1-16"><a href="#cb1-16"></a></span>
+<span id="cb1-17"><a href="#cb1-17"></a>with open(&quot;../captcha/data/user_ids&quot;, &quot;wb&quot;) as f:</span>
+<span id="cb1-18"><a href="#cb1-18"></a>    pickle.dump(user_ids, f)</span>
+<span id="cb1-19"><a href="#cb1-19"></a></span>
+<span id="cb1-20"><a href="#cb1-20"></a>print(&quot;\nDone!\n&quot;)</span>
+<span id="cb1-21"><a href="#cb1-21"></a>TEXT</span>
+<span id="cb1-22"><a href="#cb1-22"></a></span>
+<span id="cb1-23"><a href="#cb1-23"></a>stop captcha &amp;&amp; python3 ~/scp-079/scripts/qns.py &amp;&amp; update captcha</span>
+<span id="cb1-24"><a href="#cb1-24"></a></span>
+<span id="cb1-25"><a href="#cb1-25"></a>rm ~/scp-079/scripts/qns.py</span></code></pre></div>
+<p>更新完毕，可查看服务运行状态。接下来请更新 USER。</p>
+<h2 id="scp-079-user">SCP-079-USER</h2>
+<p>更新以配合 CAPTCHA 的新炸群应对模式。</p>
+<h2 id="scp-079-avatar">SCP-079-AVATAR</h2>
+<p>修复若干影响运行的 bug。</p>
+<hr />
+<h2 id="联系我们">联系我们</h2>
+<p>如更新遇到问题，请您反馈至<a href="https://t.me/SCP_079_CHAT">讨论群组</a>中。</p>
+<audio src="/audio/door/dooropenpost.ogg" autoplay="true"/>
+]]></summary>
+</entry>
+<entry>
+    <title>Changelog 20200517</title>
+    <link href="https://scp-079.org/posts/2020-05-17-changelog/index.html" />
+    <id>https://scp-079.org/posts/2020-05-17-changelog/index.html</id>
+    <published>2020-05-17T00:00:00Z</published>
+    <updated>2020-05-17T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="info">
+Posted on May 17, 2020
+
+    by Xiao
+
+</div>
+<p><link rel="stylesheet" href="/css/chinese.css"></p>
+<h1 id="更新日志-20200517">更新日志 20200517</h1>
+<p>我们建议自建用户跟进此次的更新</p>
+<hr />
+<h2 id="注意">注意</h2>
+<p>请注意：各 bot 都需要采取独立的 Python 虚拟环境，若使用同一虚拟环境，程序运行会发生一些问题。您可藉由 <code>build.sh</code> <a href="https://github.com/scp-079/scripts/">脚本</a>分别创建（已搭建的机器人也可利用此脚本重新创建，只要和之前通用搭建说明所推荐的环境和文件路径一致即可），具体细节请再次参照更新后的<a href="https://scp-079.org/how-zh/">搭建说明</a>，此处不再赘述。</p>
+<hr />
+<h2 id="scp-079-captcha">SCP-079-CAPTCHA</h2>
+<p>CAPTCHA 更新至 0.5.0</p>
+<p>主要的更改有：</p>
+<ul>
+<li>只有一名用户待验证的时候，默认显示该用户 ID，并简化按钮（只提供「前往验证」）</li>
+<li>接受来自 USER 和 NOSPAM 的设置同步（每小时），能更好地配合 USER 和 NOSPAM 的工作</li>
+<li>备选答案的按钮在某些情况下考虑自动变为两排或三排</li>
+<li>允许群组自定义只有一名用户待验证时入群的提示语（类似 TIP 可使用 $mention_name 等）</li>
+<li>允许群组自定义手动触发验证时的提示语</li>
+<li>允许群组自定义 NOSPAM 降级时触发验证的提示语</li>
+<li>允许群组自定义加群轰炸时置顶消息的提示语</li>
+<li>对加群轰炸期间验证失败的用户集中处理，期间不占用 EXCHANGE 频道和 DEBUG 频道的资源，大幅减少 CAPTCHA 受加群轰炸时所承受的压力</li>
+<li>对轰炸期间的 DEBUG 信息采用 TSV 表格形式统一发送到频道中</li>
+<li>因轰炸置顶消息时，在消息中提供前往原置顶的按钮链接</li>
+</ul>
+<p>升级时应当注意 config.ini 文件的格式发生变化，请参照 <a href="https://scp-079.org/captcha-zh/">CAPTCHA 搭建说明</a> 修改，此处提及几个需要注意的点：</p>
+<ul>
+<li>[bots] 下新增 index_id ，此为预留 ID，请填写任意非零整数</li>
+<li>[channels] 下新增 logging_channel_id ，同时要求 CAPTCHA 加入 LOGGING 频道中，具有发送消息的权限</li>
+<li>[mode] 下的 failed</li>
+<li>[limit] 中 limit_static 改名为 limit_flood ，请留意</li>
+</ul>
+<p>升级前，先停止机器人运行，再删除 data 文件夹下的 pinned_ids 和 .pinned_ids 。然后方可升级并重启。</p>
+<p>CAPTCHA 的使用手册也已全面更新，请见：<a href="https://scp-079.org/captcha-manual-zh/" class="uri">https://scp-079.org/captcha-manual-zh/</a></p>
+<hr />
+<h2 id="其他">其他</h2>
+<p>其他机器人也略有修改，主要是为配合本次 CAPTCHA 升级所做的临时修改。若需升级 CAPTCHA，请务必同时升级 AVATAR、HIDE、LANG、NOSPAM、<strong>USER</strong> 。</p>
+<p>除 <a href="https://scp-079.org/avatar-zh/">AVATAR</a> 外，其余四个机器人的 config.ini 并未发生变化。</p>
+<p>由于其余四个机器人只是临时性的修改，并未正式释出更新，因此简略介绍：其中的 NOSPAM 对用户名广告中间的干扰字符现象作出一定调整；其他机器人的修改主要围绕配合新版 CAPTCHA 的工作。</p>
+<hr />
+<h2 id="联系我们">联系我们</h2>
+<p>如更新遇到问题，请您反馈至<a href="https://t.me/SCP_079_CHAT">讨论群组</a>中。</p>
+<hr />
+<h2 id="招募">招募</h2>
+<p>我们长期招募以下志愿者：</p>
+<ol type="1">
+<li>帮助翻译一些本站的页面到英文</li>
+<li>参与各机器人项目的开发</li>
+<li>加入 Demo 机器人工作组，管理由本项目托管的实例</li>
+</ol>
+<p>如有兴趣，请联系 <a href="https://t.me/SCP_079_TICKET_BOT">SCP-079-TICKET</a>，期待你的加入！</p>
+<audio src="/audio/door/dooropenpost.ogg" autoplay="true"/>
+]]></summary>
+</entry>
+<entry>
+    <title>Chinese Test</title>
+    <link href="https://scp-079.org/posts/2019-04-11-chinese-test/index.html" />
+    <id>https://scp-079.org/posts/2019-04-11-chinese-test/index.html</id>
+    <published>2019-04-11T00:00:00Z</published>
+    <updated>2019-04-11T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="info">
+Posted on April 11, 2019
+
+    by UZE4H6IL
+
+</div>
+<p><link rel="stylesheet" href="/css/chinese.css"></p>
+<h1 id="中文测试">中文测试</h1>
+<h2 id="项脊轩志">项脊轩志</h2>
+<p><em>归有光</em></p>
+<p>项脊轩，旧南阁子也。室仅方丈，可容一人居。百年老屋，尘泥渗漉，雨泽下注；每移案，顾视无可置者。又北向，不能得日，日过午已昏。余稍为修葺，使不上漏。前辟四窗，垣墙周庭，以当南日，日影反照，室始洞然。又杂植兰桂竹木于庭，旧时栏，亦遂增胜。借书满架，偃仰啸歌，冥然兀坐，万簌有声；而庭阶寂寂，小鸟时来啄食，人至不去。三五之夜，明月半墙，桂影斑驳，风移影动，珊珊可爱。</p>
+<p>然余居于此，多可喜，亦多可悲。先是，庭中通南北为一。迨诸父异爨，内外多置小门，墙往往而是。东犬西吠，客逾庖而宴，鸡栖于厅。庭中始为篱，已为墙，凡再变矣。家有老妪，尝居于此。妪，先大母婢也，乳二世，先妣抚之甚厚。室西连于中闺，先妣尝一至，妪每谓余曰：“某所，而母立于兹。”妪又曰：“汝姊在吾怀，呱呱而泣；娘以指叩门扉曰：‘儿寒乎？欲食乎？’吾从板外相为应答。”语未毕，余泣，妪也泣。余自束发读书轩中，一日，大母过余曰：“吾儿，久不见若影，何竟日默默在此，大类女郎也？”比去，以手阖门，自语曰：“吾家读书久不效，儿之成，则可待乎！”顷之，持一象笏至，曰：“此吾祖太常公宣德间执此以朝，他日汝当用之！”瞻顾遗迹，如在昨日，令人长号不自禁。</p>
+<p>轩东故尝为厨，人往，从轩前过。余扃牖而居，久之，能以足音辨人。轩凡四遭火，得不焚，殆有神护者。</p>
+<p>项脊生曰：“蜀清守丹穴，利甲天下，其后秦皇帝筑女怀清台；刘玄德与曹操争天下，诸葛孔明起陇中。方二人之昧昧于一隅也，世何足以知之，余区区处败屋中，方扬眉、瞬目，谓有奇景。人知之者，其谓与坎井之蛙何异？”</p>
+<hr />
+<p>余既为此志，后五年，吾妻来归，时至轩中，从余问古事，或凭几学书。吾妻归宁，述诸小妹语曰：“闻姊家有阁子，且何谓阁子也？”其后六年，吾妻死，室坏不修。其后二年，余久卧病无聊，乃使人复葺南阁子，其制稍异于前。然自后余多在外，不常居。</p>
+<p>庭有枇杷树，吾妻死之年所手植也，今已亭亭如盖矣。</p>
+<audio src="/audio/door/dooropenpost.ogg" autoplay="true"/>
+]]></summary>
+</entry>
+<entry>
+    <title>Post Test</title>
+    <link href="https://scp-079.org/posts/2019-03-29-post-test/index.html" />
+    <id>https://scp-079.org/posts/2019-03-29-post-test/index.html</id>
+    <published>2019-03-29T00:00:00Z</published>
+    <updated>2019-03-29T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="info">
+Posted on March 29, 2019
+
+    by UZE4H6IL
+
+</div>
+<h1 id="post-test">Post Test</h1>
+<h2 id="style">Style</h2>
+<p>Bold:</p>
+<p><strong>test</strong></p>
+<p>Italic:</p>
+<p><em>test</em></p>
+<p>Strikethrough:</p>
+<p><del>test</del></p>
+<p>Selection:</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A</li>
+<li><input type="checkbox" disabled="" checked="" />
+B</li>
+</ul>
+<h2 id="quote">Quote</h2>
+<blockquote>
+<p>Where is SCP-682?</p>
+</blockquote>
+<h2 id="table">Table</h2>
+<table>
+<thead>
+<tr class="header">
+<th>First Header</th>
+<th>Second Header</th>
+<th>Third Header</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Content Cell</td>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr class="even">
+<td>Content Cell</td>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<h2 id="image">Image</h2>
+<p><img src="/images/cover.png" /></p>
+<h2 id="code">Code</h2>
+<p>Bash:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">echo</span> <span class="st">&quot;Hello!&quot;</span></span></code></pre></div>
+<p>Python3:</p>
+<pre class="python3"><code>#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import logging
+
+from pyrogram import Client
+
+# Enable logging
+logger = logging.getLogger(__name__)
+
+# Config session
+app = Client(&quot;bot&quot;)
+
+# Run
+app.run()</code></pre>
+<h2 id="text">Text</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lectus non sem venenatis varius. In dignissim in est sed malesuada. Sed mattis lacinia erat, eget gravida metus gravida eget. Nunc nibh nisi, molestie eu porttitor ac, ultrices eu nunc. Vivamus consectetur vehicula enim, sit amet rutrum nulla blandit vitae. Nulla sit amet condimentum turpis, eu tempus mauris. Nullam fringilla libero dolor, non ultricies nisi suscipit sit amet. Aliquam enim urna, vulputate vel tempus in, gravida nec nunc. Nulla placerat in ipsum non congue. Integer blandit aliquam ex, id tristique nisl efficitur eu. Praesent accumsan ac turpis ac vehicula. Aliquam eu erat a lorem gravida elementum.</p>
+<p>Morbi at aliquet neque. Vestibulum euismod ex nec dui posuere, nec facilisis mauris finibus. Integer porttitor lacinia mi, vel bibendum ligula tincidunt ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc scelerisque purus commodo diam eleifend sagittis. Vivamus interdum, urna in gravida efficitur, ante tellus luctus odio, et porta diam libero a mauris. Ut id venenatis massa. Quisque scelerisque lorem leo, ac ultricies quam iaculis at. Proin rutrum massa et est viverra, imperdiet elementum elit lobortis. Aliquam a tempor leo. Nullam eros orci, interdum a sem id, laoreet aliquam ligula. Maecenas bibendum enim facilisis nisl aliquet, dictum tristique purus vestibulum.</p>
+<p>Nullam tempus tincidunt semper. Curabitur eget mauris tempor, bibendum libero non, molestie massa. Nam iaculis magna neque, vitae posuere urna mollis et. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean id sapien ac massa viverra viverra. Pellentesque nec aliquam ipsum. Donec vitae ultricies ante.</p>
+<p>In pulvinar nec massa in volutpat. Pellentesque eget odio eu sapien hendrerit ornare id laoreet orci. Praesent id nisi sodales, euismod quam at, dictum dolor. In vitae ante eu enim pharetra finibus. Nulla convallis quis arcu et aliquet. Phasellus suscipit lacinia quam consectetur convallis. Ut et tempus felis. Nunc tempor lobortis mollis.</p>
+<p>Nulla dui turpis, maximus id neque in, vehicula dignissim felis. Nulla eros ex, molestie vitae porta at, pharetra sit amet libero. Aliquam iaculis, ante suscipit congue consectetur, lacus nisi pellentesque nibh, laoreet cursus nunc ante pharetra dui. Duis ultrices mi leo, sit amet commodo nisl volutpat non. Nullam sem magna, auctor a ornare eget, congue a justo. Quisque lectus urna, finibus id ante sed, vestibulum tempus massa. Mauris non urna vel purus rhoncus placerat a in nulla. Mauris luctus arcu ut consequat laoreet. Pellentesque rhoncus at ligula ac facilisis. Sed pulvinar porttitor nibh ac aliquam. Donec cursus viverra mauris, et rutrum leo convallis sit amet. Nunc consectetur lectus sit amet quam volutpat, quis lacinia elit tincidunt. Sed aliquet mi pharetra tempus pharetra.</p>
+<audio src="/audio/door/dooropenpost.ogg" autoplay="true"/>
+]]></summary>
+</entry>
+
+</feed>

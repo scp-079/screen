@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Basic information about this page -->
+<meta charset="utf-8">
+<title>SCP-079-NOFLOOD</title>
+<link rel="icon" href="../images/fav.png">
+<!-- Style and scripts files -->
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<!-- Meta tag looking for mobile devices -->
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="theme-color" content="#232323">
+<!-- Good information about this page -->
+<meta name="description" content="Anti-spam project for Telegram groups">
+<meta name="keywords" content="SCP-079, anti-spam, project, telegram, groups">
+<meta name="author" content="SCP-079">
+<!-- Feed links -->
+<link rel="alternate" type="application/rss+xml" title="SCP-079's RSS Feed" href="../rss.xml">
+<link rel="alternate" type="application/atom+xml" title="SCP-079's Atom Feed" href="../atom.xml">
+<!-- Open Graph -->
+<meta property="og:site_name" content="SCP-079" />
+<meta property="og:title" content="SCP-079-NOFLOOD" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Anti-spam project for Telegram groups" />
+<meta property="og:url" content="/noflood/index.html" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image" content="/images/cover.png" />
+<meta property="og:locale" content="en" />
+
+<!-- Highlight -->
+<link rel="stylesheet" href="../css/highlight.min.css">
+<script src="../js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Redirect -->
+<script>
+    if (location.hostname.search("gitlab.io") != -1) { 
+        var path;
+        if (location.pathname.lastIndexOf("/", 0) === 0) { 
+            path = location.pathname;
+        } else { 
+            path = "/" + location.pathname;
+        } 
+        location.href = "https://scp-079.org" + path + location.search + location.hash;
+    }
+</script>
+</head>
+
+<body>
+<header>
+<pre class="ascii logo">
+<!-- LARGE IMAGE BEGINS HERE -->
+<font size="-3" class="large-avatar">
+<pre><font color="black">0100000101110111011000010110101101100101001011100010</font><font color="#909090">0</font><font color="white">00001001110011001010111011001100101011100100010</font><br><font color="black">0000010100110110110001100101011001010111000000101110</font><font color="#909090">0</font><font color="white">01000000100000101110111011000010110101101100101</font><br><font color="black">0010111000100000010011100110010101110110011001010111</font><font color="#909090">0</font><font color="white">01000100000010100110110110001100101011001010111</font><br><font color="black">0000001011100010000001000001011101110110000101101011</font><font color="#909090">0</font><font color="white">11001010010111000100000010011100110010101110110</font><br><font color="black">0110010101110010001000000101001101101100011001010110</font><font color="#909090">0</font><font color="white">10101110000001011100010000001000001011101110110</font><br><font color="black">0001011010110110010100101110001000000100111001100101</font><font color="#939393">0</font><font color="white">11101100110010101110010001000000101001101101100</font><br><font color="black">0110010101100101011100000010111000100000010000010111</font><font color="#979797">0</font><font color="white">11101100001011010110110010100101110001000000100</font><br><font color="black">1110011001010111011001100101011100100010000001010011</font><font color="#9c9c9c">0</font><font color="white">11011000110010101100101011100000010111000100000</font><br><font color="black">0100000101110111011000010110101101100101001011100010</font><font color="#9f9f9f">0</font><font color="white">00001001110011001010111011001100101011100100010</font><br><font color="black">0000010100110110110001100101011001010111000000101110</font><font color="#a2a2a2">0</font><font color="white">01000000100000101110111011000010110101101100101</font><br><font color="black">0010111000100000010011100110010101110110011001010111</font><font color="#a2a2a2">0</font><font color="white">01000100000010100110110110001100101011001010111</font><br><font color="black">0000001011100010000001000001011101110110000101101011</font><font color="#a4a4a4">0</font><font color="white">110010100101</font><font color="#f7f7f7">1</font><font color="#c8c8c8">1</font><font color="#a4a4a4">0</font><font color="#909090">0</font><font color="#888888">0</font><font color="#8a8a8a">1</font><font color="#969696">0</font><font color="#aaaaaa">0</font><font color="#c6c6c6">0</font><font color="#ededed">0</font><font color="white">0010011100110010101110110</font><br><font color="black">011001010111001000100000</font><font color="#060606">0</font><font color="#202020">1</font><font color="#5e5e5e">0</font><font color="#8e8e8e">1</font><font color="#aaaaaa">0</font><font color="#b9b9b9">0</font><font color="#c2c2c2">1</font><font color="#c5c5c5">1</font><font color="#c4c4c4">0</font><font color="#bcbcbc">1</font><font color="#b1b1b1">1</font><font color="#a0a0a0">0</font><font color="#828282">1</font><font color="#515151">1</font><font color="#1a1a1a">0</font><font color="#040404">0</font><font color="black">011001010110</font><font color="#a6a6a6">0</font><font color="white">101011100</font><font color="#f5f5f5">0</font><font color="#b8b8b8">0</font><font color="#5a5a5a">0</font><font color="#131313">0</font><font color="#050505">1</font><font color="#010101">0</font><font color="black">1110</font><font color="#010101">0</font><font color="#040404">0</font><font color="#090909">1</font><font color="#333333">0</font><font color="#898989">0</font><font color="#e6e6e6">0</font><font color="#fefefe">0</font><font color="white">001000001011101110110</font><br><font color="black">0001011010110110010100</font><font color="#0a0a0a">1</font><font color="#555555">0</font><font color="#b8b8b8">1</font><font color="#f6f6f6">1</font><font color="white">100010000001</font><font color="#f1f1f1">0</font><font color="#aaaaaa">0</font><font color="#3d3d3d">1</font><font color="#010101">1</font><font color="black">1001100101</font><font color="#a8a8a8">0</font><font color="white">1110110</font><font color="#fafafa">0</font><font color="#ababab">1</font><font color="#343434">1</font><font color="black">00101011100100</font><font color="#161616">0</font><font color="#7f7f7f">1</font><font color="#e9e9e9">0</font><font color="white">00000101001101101100</font><br><font color="black">011001010110010101110</font><font color="#2b2b2b">0</font><font color="#c2c2c2">0</font><font color="#fcfcfc">0</font><font color="white">0010111000100000</font><font color="#f5f5f5">0</font><font color="#878787">1</font><font color="#020202">0</font><font color="black">000010111</font><font color="#ababab">0</font><font color="white">111011</font><font color="#eeeeee">0</font><font color="#585858">0</font><font color="#050505">0</font><font color="black">01011010110110010</font><font color="#282828">1</font><font color="#d9d9d9">0</font><font color="white">0101110001000000100</font><br><font color="black">11100110010101110110</font><font color="#1f1f1f">0</font><font color="#e6e6e6">1</font><font color="white">1001010111001000100</font><font color="#fefefe">0</font><font color="#666666">0</font><font color="black">001010011</font><font color="#afafaf">0</font><font color="white">11011</font><font color="#f3f3f3">0</font><font color="#393939">0</font><font color="black">01100101011001010111</font><font color="#242424">0</font><font color="#d7d7d7">0</font><font color="white">000010111000100000</font><br><font color="black">01000001011101110110</font><font color="#ababab">0</font><font color="white">001011010110110010100</font><font color="#e2e2e2">1</font><font color="#060606">0</font><font color="black">11100010</font><font color="#b4b4b4">0</font><font color="white">00001</font><font color="#8e8e8e">0</font><font color="black">0111001100101011101100</font><font color="#222222">1</font><font color="#e8e8e8">1</font><font color="white">00101011100100010</font><br><font color="black">0000010100110110110</font><font color="#080808">0</font><font color="#f7f7f7">0</font><font color="white">1100101011001010111000</font><font color="#2e2e2e">0</font><font color="black">00101110</font><font color="#b8b8b8">0</font><font color="white">01000</font><font color="#696969">0</font><font color="black">00100000101110111011000</font><font color="#a6a6a6">0</font><font color="white">10110101101100101</font><br><font color="black">0010111000100000010</font><font color="#010101">0</font><font color="#929292">1</font><font color="#f2f2f2">1</font><font color="#fefefe">1</font><font color="white">001100101011101100</font><font color="#f5f5f5">1</font><font color="#cecece">1</font><font color="#191919">0</font><font color="black">01010111</font><font color="#b4b4b4">0</font><font color="white">01000</font><font color="#b2b2b2">1</font><font color="#040404">0</font><font color="black">00000101001101101100</font><font color="#050505">0</font><font color="#545454">1</font><font color="#f5f5f5">1</font><font color="white">00101011001010111</font><br><font color="black">000000101110001000000</font><font color="#232323">1</font><font color="#6c6c6c">0</font><font color="#afafaf">0</font><font color="#d6d6d6">0</font><font color="#ececec">0</font><font color="#fbfbfb">0</font><font color="white">10111011</font><font color="#fdfdfd">1</font><font color="#f1f1f1">0</font><font color="#e0e0e0">1</font><font color="#cbcbcb">1</font><font color="#a1a1a1">0</font><font color="#686868">0</font><font color="#2e2e2e">0</font><font color="#020202">0</font><font color="black">101101011</font><font color="#4f4f4f">0</font><font color="#fefefe">1</font><font color="white">10010</font><font color="#9b9b9b">1</font><font color="#232323">0</font><font color="#010101">0</font><font color="black">1011100010000001</font><font color="#181818">0</font><font color="#525252">0</font><font color="#b7b7b7">1</font><font color="#fefefe">1</font><font color="white">100110010101110110</font><br><font color="black">011001010111001000100000</font><font color="#0e0e0e">0</font><font color="#232323">1</font><font color="#333333">0</font><font color="#484848">1</font><font color="#5a5a5a">0</font><font color="#656565">0</font><font color="#6b6b6b">11</font><font color="#666666">0</font><font color="#5b5b5b">1</font><font color="#4b4b4b">1</font><font color="#383838">0</font><font color="#292929">1</font><font color="#181818">1</font><font color="#060606">0</font><font color="black">0011001010110</font><font color="#030303">0</font><font color="#bfbfbf">1</font><font color="white">010111</font><font color="#eaeaea">0</font><font color="#b1b1b1">0</font><font color="#737373">0</font><font color="#484848">0</font><font color="#2c2c2c">0</font><font color="#161616">0</font><font color="#080808">1</font><font color="#010101">0</font><font color="black">11100</font><font color="#050505">0</font><font color="#1c1c1c">1</font><font color="#414141">0</font><font color="#717171">0</font><font color="#aeaeae">0</font><font color="#e0e0e0">0</font><font color="#fefefe">0</font><font color="white">01000001011101110110</font><br><font color="black">00010110101101100101001011100010000001001110011001010</font><font color="#3b3b3b">1</font><font color="#fefefe">1</font><font color="white">10110011</font><font color="#fbfbfb">0</font><font color="#f6f6f6">0</font><font color="#f1f1f1">1</font><font color="#eeeeee">0</font><font color="#e8e8e8">1</font><font color="#e1e1e1">0</font><font color="#dddddd">1</font><font color="#dcdcdc">11</font><font color="#e2e2e2">0</font><font color="#ececec">0</font><font color="#f3f3f3">1</font><font color="#fafafa">0</font><font color="white">001000000101001101101100</font><br><font color="black">01100101011001010111000000101110001000000100000101110</font><font color="#010101">1</font><font color="#cccccc">1</font><font color="white">101100001011010110110010100101110001000000100</font><br><font color="black">111001100101011101100110010101110010001000000</font><font color="#090909">1</font><font color="#151515">0</font><font color="#0e0e0e">1</font><font color="#070707">0</font><font color="#030303">0</font><font color="#010101">1</font><font color="black">10</font><font color="#070707">1</font><font color="#bebebe">1</font><font color="white">011000110010101100101011100000010111000100000</font><br><font color="black">010000010111011101100001011010110110010100101</font><font color="#050505">1</font><font color="#565656">1</font><font color="silver">0</font><font color="#e8e8e8">0</font><font color="#eaeaea">0</font><font color="#e6e6e6">1</font><font color="#e3e3e3">00</font><font color="#eaeaea">0</font><font color="#fdfdfd">0</font><font color="white">001001110011001010111011001100101011100100010</font><br><font color="black">00000101001101101100011001010110010101110000001</font><font color="#040404">0</font><font color="#4c4c4c">1</font><font color="#b5b5b5">1</font><font color="#f4f4f4">1</font><font color="white">0001000000100000101110111011000010110101101100101</font><br><font color="black">00101110001000000100111001100101011101100110010</font><font color="#030303">1</font><font color="#0f0f0f">0</font><font color="#202020">1</font><font color="#646464">1</font><font color="#e1e1e1">1</font><font color="white">001000100000010100110110110001100101011001010111</font><br><font color="black">000000101110001000000100000101</font><font color="#080808">1</font><font color="#3a3a3a">1</font><font color="#5a5a5a">0</font><font color="#7c7c7c">1</font><font color="#939393">1</font><font color="#979797">1</font><font color="#9b9b9b">0</font><font color="#9e9e9e">1</font><font color="#9f9f9f">1</font><font color="#a1a1a1">0</font><font color="#a6a6a6">0</font><font color="#ababab">0</font><font color="#b2b2b2">0</font><font color="#bababa">1</font><font color="#c3c3c3">0</font><font color="#cecece">1</font><font color="#dbdbdb">1</font><font color="#e7e7e7">0</font><font color="#ececec">1</font><font color="#f0f0f0">0</font><font color="#f4f4f4">1</font><font color="#fbfbfb">1</font><font color="white">011001010010111000100000010011100110010101110110</font><br><font color="black">0110010101110010001000000101001101</font><font color="#0d0d0d">1</font><font color="#2f2f2f">0</font><font color="#525252">1</font><font color="#757575">1</font><font color="#989898">0</font><font color="#bbbbbb">0</font><font color="#d4d4d4">0</font><font color="#e2e2e2">1</font><font color="#f0f0f0">1</font><font color="#fcfcfc">0</font><font color="white">01010110010101110000001011100010000001000001011101110110</font><br><font color="black">0001011010110110010100101110001000000100</font><font color="#080808">1</font><font color="#191919">1</font><font color="#2a2a2a">1</font><font color="#3c3c3c">0</font><font color="#555555">0</font><font color="#707070">1</font><font color="#898989">1</font><font color="#a1a1a1">0</font><font color="#b4b4b4">0</font><font color="#c4c4c4">1</font><font color="#d1d1d1">0</font><font color="#dcdcdc">1</font><font color="#e4e4e4">0</font><font color="#eaeaea">1</font><font color="#f4f4f4">1</font><font color="white">101100110010101110010001000000101001101101100</font><br><font color="black">011001010110010101110000001011100010000001000001</font><font color="#030303">0</font><font color="#080808">1</font><font color="#0c0c0c">1</font><font color="#0f0f0f">1</font><font color="#141414">0</font><font color="#242424">1</font><font color="#787878">1</font><font color="#f7f7f7">1</font><font color="white">01100001011010110110010100101110001000000100</font><br><font color="black">1110011001010111011001100101011100100010000001010</font><font color="#151515">0</font><font color="#353535">1</font><font color="#6e6e6e">1</font><font color="#b1b1b1">0</font><font color="#f2f2f2">1</font><font color="white">1011000110010101100101011100000010111000100000</font><br><font color="black">0100000101110111011000010110101101100101001011100</font><font color="#b1b1b1">0</font><font color="#fcfcfc">1</font><font color="white">0000001001110011001010111011001100101011100100010</font><br><font color="black">0000010100110110110001100101011001010111000000101</font><font color="#c5c5c5">1</font><font color="white">10001000000100000101110111011000010110101101100101</font><br><font color="black">0010111000100000010011100110010101110110011001010</font><font color="#c5c5c5">1</font><font color="white">11001000100000010100110110110001100101011001010111</font><br><font color="black">0000001011100010000001000001011101110110000101101</font><font color="#c5c5c5">0</font><font color="white">11011001010010111000100000010011100110010101110110</font><br><font color="black">0110010101110010001000000101001101101100011001010</font><font color="#c5c5c5">1</font><font color="white">10010101110000001011100010000001000001011101110110</font><br><font color="black">0001011010110110010100101110001000000100111001100</font><font color="#c5c5c5">1</font><font color="white">01011101100110010101110010001000000101001101101100</font><br><font color="black">0110010101100101011100000010111000100000010000010</font><font color="#c6c6c6">1</font><font color="white">11011101100001011010110110010100101110001000000100</font><br><font color="black">1110011001010111011001100101011100100010000001010</font><font color="#c6c6c6">0</font><font color="white">11011011000110010101100101011100000010111000100000</font><br><font color="black">0100000101110111011000010110101101100101001011100</font><font color="#c6c6c6">0</font><font color="white">10000001001110011001010111011001100101011100100010</font><br><font color="black">0000010100110110110001100101011001010111000000101</font><font color="#c6c6c6">1</font><font color="white">10001000000100000101110111011000010110101101100101</font><br><font color="black">0010111000100000010011100110010101110110011001010</font><font color="#c6c6c6">1</font><font color="white">11001000100000010100110110110001100101011001010111</font><br>
+</pre></font><!-- LARGE IMAGE ENDS HERE --><!-- SMALL IMAGE BEGINS HERE --><font size="-3" class="small-avatar"><pre><font color="black">010011110111010101110100001011100010</font><font color="#4b4b4b">0</font><font color="white">000010010010010000001110111011000</font><br><font color="black">010110111001110100001000000110111101</font><font color="#4b4b4b">1</font><font color="white">101010111010000101110001000000100</font><br><font color="black">111101110101011101000010111000100000</font><font color="#4b4b4b">0</font><font color="white">100100100100000011101110110000101</font><br><font color="black">101110011101000010000001101111011101</font><font color="#4c4c4c">0</font><font color="white">101110100001011100010000001001111</font><br><font color="black">011101010111010000101110001000000100</font><font color="#505050">1</font><font color="white">001001000000111011101100001011011</font><br><font color="black">100111010000100000011011110111010101</font><font color="#555555">1</font><font color="white">101000010111000100000010011110111</font><br><font color="black">010101110100001011100010000001001001</font><font color="#575757">0</font><font color="white">010000001110111011000010110111001</font><br><font color="black">110100001000000110111101110101011101</font><font color="#585858">0</font><font color="white">0001011100</font><font color="#f8f8f8">0</font><font color="#efefef">1</font><font color="#f1f1f1">0</font><font color="#fbfbfb">0</font><font color="white">0000100111101110101</font><br><font color="black">01110100001011100</font><font color="#010101">0</font><font color="#2c2c2c">1</font><font color="#595959">0</font><font color="#6d6d6d">0</font><font color="#767676">0</font><font color="#777777">0</font><font color="#717171">0</font><font color="#646464">0</font><font color="#4b4b4b">1</font><font color="#181818">0</font><font color="black">010010010</font><font color="#5a5a5a">0</font><font color="white">0000111</font><font color="#d9d9d9">0</font><font color="#818181">1</font><font color="#3f3f3f">1</font><font color="#212121">1</font><font color="#1d1d1d">01</font><font color="#232323">1</font><font color="#3c3c3c">0</font><font color="#6c6c6c">0</font><font color="#bababa">0</font><font color="#fefefe">0</font><font color="white">101101110011101</font><br><font color="black">000010000001101</font><font color="#151515">1</font><font color="#797979">1</font><font color="#dfdfdf">1</font><font color="white">01110101</font><font color="#fefefe">0</font><font color="#c3c3c3">1</font><font color="#4b4b4b">1</font><font color="#030303">1</font><font color="black">010000</font><font color="#5d5d5d">1</font><font color="white">01110</font><font color="#d3d3d3">0</font><font color="#4e4e4e">0</font><font color="#010101">1</font><font color="black">000000100</font><font color="#303030">1</font><font color="#b5b5b5">1</font><font color="#fdfdfd">1</font><font color="white">1011101010111</font><br><font color="black">01000010111000</font><font color="#272727">1</font><font color="#d8d8d8">0</font><font color="white">000001001001</font><font color="#fbfbfb">0</font><font color="#6f6f6f">0</font><font color="black">100000</font><font color="#606060">0</font><font color="white">1110</font><font color="#afafaf">1</font><font color="#121212">1</font><font color="black">101100001011</font><font color="#040404">0</font><font color="#969696">1</font><font color="white">1100111010000</font><br><font color="black">10000001101111</font><font color="#bdbdbd">0</font><font color="white">11101010111010</font><font color="#f2f2f2">0</font><font color="#111111">0</font><font color="black">01011</font><font color="#656565">1</font><font color="white">000</font><font color="#f3f3f3">1</font><font color="#111111">0</font><font color="black">00000100111101</font><font color="#060606">1</font><font color="#a5a5a5">1</font><font color="white">010101110100</font><br><font color="black">0010111000100</font><font color="#040404">0</font><font color="#e6e6e6">0</font><font color="white">00100100100100</font><font color="#f8f8f8">0</font><font color="#373737">0</font><font color="black">00111</font><font color="#676767">0</font><font color="white">111</font><font color="#ededed">0</font><font color="#070707">1</font><font color="black">10000101101110</font><font color="#030303">0</font><font color="#7d7d7d">1</font><font color="white">110100001000</font><br><font color="black">00011011110111</font><font color="#232323">0</font><font color="#787878">1</font><font color="#bababa">0</font><font color="#dddddd">1</font><font color="#f4f4f4">0</font><font color="white">11101</font><font color="#fcfcfc">0</font><font color="#ececec">0</font><font color="#d5d5d5">0</font><font color="#b6b6b6">0</font><font color="gray">1</font><font color="#3e3e3e">0</font><font color="#030303">1</font><font color="black">11000</font><font color="#303030">1</font><font color="#fafafa">0</font><font color="white">000</font><font color="#999999">0</font><font color="#1d1d1d">0</font><font color="black">10011110111</font><font color="#090909">0</font><font color="#3e3e3e">1</font><font color="#a1a1a1">0</font><font color="#fafafa">1</font><font color="white">011101000010</font><br><font color="black">1110001000000100</font><font color="#040404">1</font><font color="#131313">0</font><font color="#1f1f1f">0</font><font color="#2c2c2c">1</font><font color="#393939">0</font><font color="#3f3f3f">0</font><font color="#3c3c3c">1</font><font color="#333333">0</font><font color="#242424">0</font><font color="#1b1b1b">0</font><font color="#101010">0</font><font color="#030303">0</font><font color="black">011101110</font><font color="#a1a1a1">1</font><font color="white">1000</font><font color="#e9e9e9">0</font><font color="#b8b8b8">1</font><font color="#878787">0</font><font color="#686868">1</font><font color="#545454">1</font><font color="#484848">0</font><font color="#424242">1</font><font color="#414141">1</font><font color="#434343">1</font><font color="#515151">0</font><font color="#727272">0</font><font color="#a5a5a5">1</font><font color="#dbdbdb">1</font><font color="#f7f7f7">1</font><font color="white">01000010000001</font><br><font color="black">1011110111010101110100001011100010000</font><font color="#242424">0</font><font color="#fefefe">0</font><font color="white">1001111011101010111010000101110</font><br><font color="black">0010000001001001001000000111011</font><font color="#010101">1</font><font color="#2d2d2d">0</font><font color="#414141">1</font><font color="#3c3c3c">1</font><font color="#383838">0</font><font color="#373737">0</font><font color="#444444">0</font><font color="#fafafa">0</font><font color="white">1011011100111010000100000011011</font><br><font color="black">11011101010111010000101110001000</font><font color="#181818">0</font><font color="#6b6b6b">0</font><font color="#d7d7d7">0</font><font color="#f7f7f7">1</font><font color="#f6f6f6">0</font><font color="#fafafa">0</font><font color="white">11110111010101110100001011100010</font><br><font color="black">000001001001001000000</font><font color="#050505">1</font><font color="#111111">11</font><font color="#101010">0</font><font color="#0f0f0f">11</font><font color="#101010">1</font><font color="#121212">0</font><font color="#141414">1</font><font color="#161616">1</font><font color="#191919">0</font><font color="#1e1e1e">0</font><font color="#232323">0</font><font color="#333333">0</font><font color="#999999">1</font><font color="#fdfdfd">0</font><font color="white">110111001110100001000000110111101</font><br><font color="black">110101011101000010111</font><font color="#090909">0</font><font color="#252525">0</font><font color="#474747">0</font><font color="#6d6d6d">1</font><font color="#919191">0</font><font color="#aaaaaa">0</font><font color="#c2c2c2">0</font><font color="#d8d8d8">0</font><font color="#dddddd">0</font><font color="#e2e2e2">0</font><font color="#e9e9e9">1</font><font color="#f1f1f1">0</font><font color="#fbfbfb">0</font><font color="white">111101110101011101000010111000100000</font><br><font color="black">0100100100100000011101110</font><font color="#030303">1</font><font color="#0f0f0f">1</font><font color="#1a1a1a">0</font><font color="#292929">0</font><font color="#474747">0</font><font color="#646464">0</font><font color="gray">1</font><font color="#9a9a9a">0</font><font color="#b1b1b1">1</font><font color="#c6c6c6">1</font><font color="#d8d8d8">0</font><font color="#e4e4e4">1</font><font color="#ececec">1</font><font color="#fbfbfb">1</font><font color="white">0011101000010000001101111011101</font><br><font color="black">01011101000010111000100000010011110</font><font color="#0b0b0b">1</font><font color="#232323">1</font><font color="#666666">1</font><font color="#d2d2d2">0</font><font color="white">1010111010000101110001000000100</font><br><font color="black">1001001000000111011101100001011011</font><font color="#5e5e5e">1</font><font color="#cccccc">0</font><font color="#f4f4f4">0</font><font color="white">111010000100000011011110111010101</font><br><font color="black">1101000010111000100000010011110111</font><font color="#8a8a8a">0</font><font color="white">10101110100001011100010000001001001</font><br><font color="black">0010000001110111011000010110111001</font><font color="#8a8a8a">1</font><font color="white">10100001000000110111101110101011101</font><br><font color="black">0000101110001000000100111101110101</font><font color="#8a8a8a">0</font><font color="white">11101000010111000100000010010010010</font><br><font color="black">0000011101110110000101101110011101</font><font color="#8a8a8a">0</font><font color="white">00010000001101111011101010111010000</font><br><font color="black">1011100010000001001111011101010111</font><font color="#8b8b8b">0</font><font color="white">10000101110001000000100100100100000</font><br><font color="black">0111011101100001011011100111010000</font><font color="#8a8a8a">1</font><font color="white">00000011011110111010101110100001011</font><br><font color="black">1000100000010011110111010101110100</font><font color="#8a8a8a">0</font><font color="white">01011100010000001001001001000000111</font><br></pre></font>
+<!-- SMALL IMAGE ENDS HERE -->
+</pre>
+<pre class="ascii name site-name">
+███████╗ ██████╗██████╗        ██████╗ ███████╗ █████╗ 
+██╔════╝██╔════╝██╔══██╗      ██╔═████╗╚════██║██╔══██╗
+███████╗██║     ██████╔╝█████╗██║██╔██║    ██╔╝╚██████║
+╚════██║██║     ██╔═══╝ ╚════╝████╔╝██║   ██╔╝  ╚═══██║
+███████║╚██████╗██║           ╚██████╔╝   ██║   █████╔╝
+╚══════╝ ╚═════╝╚═╝            ╚═════╝    ╚═╝   ╚════╝ 
+                                                       
+</pre>
+</header>
+
+<nav>
+<ul>
+<li><a href="../">Home</a></li>
+<li><a href="../about/">About</a></li>
+<li><a href="../contact/">Contact</a></li>
+<li><a href="../team/">Team</a></li>
+<li><a href="../projects/" target>Projects</a></li>
+<li><a href="../tools/">Tools</a></li>
+<li><a href="../archives/">Posts</a></li>
+<li><a href="../rss.xml" class="rss" target="_blank">RSS</a>/<a href="../atom.xml" class="rss" target="_blank">Atom</a></li>
+</ul>
+</nav>
+
+<main>
+<p><link rel="stylesheet" href="../css/chinese.css"></p>
+<p><strong>项目编号：</strong>SCP-079-NOFLOOD</p>
+<p><strong>项目等级：</strong>Euclid</p>
+<p><strong>特殊收容措施：</strong>SCP-079-NOFLOOD 建议在 Linux 环境下运行。Python 3.6 及以上版本可以使用 SCP-079-NOFLOOD 。运行所需要安装的第三方模块已在 <code>requirements.txt</code> 中列出。务必要注意，其只能通过 SCP-079-USER 邀请入群，并由其赋予管理权限，如果有任何未授权的恶意使用，将可能给其他机器人的工作带来影响。其应该作为频道 SCP-079-CRITICAL 、频道 SCP-079-EXCHANGE 、频道 SCP-079-HIDE 的管理员，并加入 SCP-079-TEST 群组。</p>
+<p><strong>描述：</strong>SCP-079-NOFLOOD 是一个用于阻止洪水消息的机器人，其项目位于 GitLab ，镜像同步并准备（尚未）开源于 <a href="https://github.com/scp-079/scp-079-noporn" target="_blank">GitHub</a> 。机器人本体位于 <a href="https://t.me/SCP_079_NOFLOOD_BOT" class="079" target="_blank">SCP-079-NOFLOOD</a> ，仅供经过授权的群组使用，并由群组 SCP-079-MANAGE 中的成员对其进群、退群操作进行管理。其加入了 SCP-079-TEST ，用于测试分析结果。该项目由 ███ 主要负责。通过该项目建立的机器人有类似的功能：根据群组的自定义设置，对触发群组限制的消息进行自动删除。具体操作详见附录中的使用说明。</p>
+<hr />
+<p><strong>附录：</strong>使用说明</p>
+<p>群组中的管理员：</p>
+<ul>
+<li><code>/config noflood</code>：通过 <a href="../config/">SCP-079-CONFIG</a> 调整机器人设置，机器人将回报前往设置的链接，5 分钟内设置将被锁定，无法再次更改</li>
+</ul>
+<p>除使用 <code>/config noflood</code> 外，管理员也可以通过 <code>/config_noflood</code> 命令在群组中手动调整设置：</p>
+<ul>
+<li><code>/config_noflood show</code>：显示当前设置</li>
+<li><code>/config_noflood default</code>：恢复为默认设置</li>
+<li><code>/config_noflood delete off</code>：关闭协助删除功能（默认设置）</li>
+<li><code>/config_noflood delete on</code>：开启协助删除功能</li>
+<li><code>/config_noflood limit [number]</code>：设置消息条数上限，取值范围为 2 到 20 的整数，默认为 5</li>
+<li><code>/config_noflood time [number]</code>：设置检测消息的时间段，取值范围为 5 到 60 的 5 的整倍数，默认为 10</li>
+</ul>
+<p>SCP-079-TEST 中的成员：</p>
+<ul>
+<li><code>连续发送消息</code>：显示默认设置下的分析结果</li>
+<li><code>/version</code>：检查机器人版本</li>
+</ul>
+<hr />
+<p><strong>附录：</strong>自建机器人的方法</p>
+<p>可先查看<a href="../how-zh/">自建说明书</a></p>
+<p>克隆项目：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">git</span> clone https://github.com/scp-079/scp-079-noflood.git ~/bots/scp-079/noflood</span></code></pre></div>
+<hr />
+<p><strong>文件#config.ini：</strong></p>
+<p>修改配置文件：</p>
+<p>需要对 <code>config.ini</code> 文件中内容为 <code>[DATA EXPUNGED]</code> 的全部键值进行修改。 API ID 与 API Hash 在 <a href="https://my.telegram.org" target="_blank">官网</a> 获取</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode ini"><code class="sourceCode ini"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">[pyrogram]</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="dt">api_id </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="dt">api_hash </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="co">; 以上两条信息从官网申请获得</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="kw">[plugins]</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="dt">root </span><span class="ot">=</span><span class="st"> plugins</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="dt">include </span><span class="ot">=</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="dt">    handlers.command</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="dt">    handlers.message</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a></span>
+<span id="cb2-12"><a href="#cb2-12"></a><span class="kw">[proxy]</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a><span class="dt">enabled </span><span class="ot">=</span><span class="st"> </span><span class="kw">False</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="co">; 可根据需要自行决定是否使用 SOCKS5 代理</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="dt">hostname </span><span class="ot">=</span><span class="st"> </span><span class="dv">127</span><span class="st">.</span><span class="dv">0</span><span class="st">.</span><span class="fl">0.1</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a><span class="dt">port </span><span class="ot">=</span><span class="st"> </span><span class="dv">1080</span></span>
+<span id="cb2-17"><a href="#cb2-17"></a></span>
+<span id="cb2-18"><a href="#cb2-18"></a><span class="kw">[basic]</span></span>
+<span id="cb2-19"><a href="#cb2-19"></a><span class="dt">bot_token </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-20"><a href="#cb2-20"></a><span class="co">; 此处填写在 @BotFather 处获得的 token</span></span>
+<span id="cb2-21"><a href="#cb2-21"></a><span class="dt">prefix </span><span class="ot">=</span><span class="st"> /!</span></span>
+<span id="cb2-22"><a href="#cb2-22"></a><span class="co">; 命令前的可用字符，如在群组中使用非常规命令前缀，需要机器人有获取普通消息的权限</span></span>
+<span id="cb2-23"><a href="#cb2-23"></a></span>
+<span id="cb2-24"><a href="#cb2-24"></a><span class="kw">[bots]</span></span>
+<span id="cb2-25"><a href="#cb2-25"></a><span class="dt">avatar_id </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-26"><a href="#cb2-26"></a><span class="co">; SCP-079-AVATAR 的 ID</span></span>
+<span id="cb2-27"><a href="#cb2-27"></a><span class="dt">captcha_id </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-28"><a href="#cb2-28"></a><span class="co">; SCP-079-CAPTCHA 的 ID</span></span>
+<span id="cb2-29"><a href="#cb2-29"></a><span class="dt">clean_id </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-30"><a href="#cb2-30"></a><span class="co">; SCP-079-CLEAN 的 ID</span></span>
+<span id="cb2-31"><a href="#cb2-31"></a><span class="dt">lang_id </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-32"><a href="#cb2-32"></a><span class="co">; SCP-079-LANG 的 ID</span></span>
+<span id="cb2-33"><a href="#cb2-33"></a><span class="dt">long_id </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-34"><a href="#cb2-34"></a><span class="co">; SCP-079-LONG 的 ID</span></span>
+<span id="cb2-35"><a href="#cb2-35"></a><span class="dt">noflood_id </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-36"><a href="#cb2-36"></a><span class="co">; SCP-079-NOFLOOD 的 ID</span></span>
+<span id="cb2-37"><a href="#cb2-37"></a><span class="dt">noporn_id </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-38"><a href="#cb2-38"></a><span class="co">; SCP-079-NOPORN 的 ID</span></span>
+<span id="cb2-39"><a href="#cb2-39"></a><span class="dt">nospam_id </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-40"><a href="#cb2-40"></a><span class="co">; SCP-079-NOSPAM 的 ID</span></span>
+<span id="cb2-41"><a href="#cb2-41"></a><span class="dt">recheck_id </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-42"><a href="#cb2-42"></a><span class="co">; SCP-079-RECHECK 的 ID</span></span>
+<span id="cb2-43"><a href="#cb2-43"></a><span class="dt">tip_id </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-44"><a href="#cb2-44"></a><span class="co">; SCP-079-TIP 的 ID</span></span>
+<span id="cb2-45"><a href="#cb2-45"></a><span class="dt">user_id </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-46"><a href="#cb2-46"></a><span class="co">; SCP-079-USER 的 ID</span></span>
+<span id="cb2-47"><a href="#cb2-47"></a><span class="dt">warn_id </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-48"><a href="#cb2-48"></a><span class="co">; SCP-079-WARN 的 ID</span></span>
+<span id="cb2-49"><a href="#cb2-49"></a></span>
+<span id="cb2-50"><a href="#cb2-50"></a><span class="kw">[channels]</span></span>
+<span id="cb2-51"><a href="#cb2-51"></a><span class="dt">critical_channel_id </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-52"><a href="#cb2-52"></a><span class="co">; 此处填写紧急频道 SCP-079-CRITICAL 的 ID</span></span>
+<span id="cb2-53"><a href="#cb2-53"></a><span class="dt">debug_channel_id </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-54"><a href="#cb2-54"></a><span class="co">; 此处填写调试频道 SCP-079-DEBUG 的 ID</span></span>
+<span id="cb2-55"><a href="#cb2-55"></a><span class="dt">exchange_channel_id </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-56"><a href="#cb2-56"></a><span class="co">; 此处填写数据交换频道 SCP-079-EXCHANGE 的 ID</span></span>
+<span id="cb2-57"><a href="#cb2-57"></a><span class="co">; 关于数据交换频道的详情，请查看 https://scp-079.org/exchange/</span></span>
+<span id="cb2-58"><a href="#cb2-58"></a><span class="dt">hide_channel_id </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-59"><a href="#cb2-59"></a><span class="co">; 此处填写数据交换备份频道 SCP-079-HIDE 的 ID</span></span>
+<span id="cb2-60"><a href="#cb2-60"></a><span class="dt">logging_channel_id </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-61"><a href="#cb2-61"></a><span class="co">; 此处填写证据存放频道 SCP-079-LOGGING 的 ID</span></span>
+<span id="cb2-62"><a href="#cb2-62"></a><span class="dt">test_group_id </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-63"><a href="#cb2-63"></a><span class="co">; 此处填写测试群组 SCP-079-</span><span class="al">TEST</span><span class="co"> 的 ID</span></span>
+<span id="cb2-64"><a href="#cb2-64"></a></span>
+<span id="cb2-65"><a href="#cb2-65"></a><span class="kw">[custom]</span></span>
+<span id="cb2-66"><a href="#cb2-66"></a><span class="dt">default_group_link </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-67"><a href="#cb2-67"></a><span class="co">; 此处填写调试信息中默认的群组链接</span></span>
+<span id="cb2-68"><a href="#cb2-68"></a><span class="dt">project_link </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-69"><a href="#cb2-69"></a><span class="co">; 此处填写项目网址</span></span>
+<span id="cb2-70"><a href="#cb2-70"></a><span class="dt">project_name </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-71"><a href="#cb2-71"></a><span class="co">; 此处填写项目名称</span></span>
+<span id="cb2-72"><a href="#cb2-72"></a><span class="dt">punish_time </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-73"><a href="#cb2-73"></a><span class="co">; 惩罚用户的时间，期间用户发送的所有媒体消息将被删除，并且，在此期间内若其发送媒体消息将重新计时</span></span>
+<span id="cb2-74"><a href="#cb2-74"></a><span class="dt">reset_day </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-75"><a href="#cb2-75"></a><span class="co">; 此处填写每月重置数据的日期，例如 1st mon ，代表每月第一个星期一</span></span>
+<span id="cb2-76"><a href="#cb2-76"></a><span class="dt">time_ban </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-77"><a href="#cb2-77"></a><span class="co">; 建议追踪封禁状态维持的时间，单位为秒</span></span>
+<span id="cb2-78"><a href="#cb2-78"></a></span>
+<span id="cb2-79"><a href="#cb2-79"></a><span class="kw">[encrypt]</span></span>
+<span id="cb2-80"><a href="#cb2-80"></a><span class="dt">key </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-81"><a href="#cb2-81"></a><span class="co">; 加密字符串所用的密码</span></span>
+<span id="cb2-82"><a href="#cb2-82"></a><span class="dt">password </span><span class="ot">=</span><span class="st"> [DATA EXPUNGED]</span></span>
+<span id="cb2-83"><a href="#cb2-83"></a><span class="co">; 加密文件所用的密码</span></span></code></pre></div>
+<hr />
+<p><strong>附录：</strong>开发备忘</p>
+<ol type="1">
+<li>默认用户在所有群组中总计的发言频率上限为每 10 秒 5 条</li>
+<li>群组可自行调整频率上限</li>
+<li>超过上限者将被删除其在该群组中的所有消息，直到用户主动沉默一定时间后该限制解除</li>
+<li>根据某用户触发频率上限的群组数量，进行 noflood 评分</li>
+<li>如用户评分过高时触发频率上限，或受到追踪删除时触发，将进行追踪封禁类收录，并分享给其他机器人</li>
+</ol>
+<p>NOFLOOD 能够向 ANALYZE、AVATAR、BACKUP、CAPTCHA、CLEAN、CONFIG、LANG、LONG、MANAGE、NOPORN、NOSPAM、RECHECK、USER、WATCH 发送数据</p>
+<p>情形 1：向 BACKUP 传送数据备份文件。每日 UTC 时间 20:00 。<code>exchange_text</code> 文本作为该文件的 <code>caption</code></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>exchange_text <span class="op">=</span> format_data(</span>
+<span id="cb3-2"><a href="#cb3-2"></a>    sender<span class="op">=</span><span class="st">&quot;NOFLOOD&quot;</span>,</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    receviers<span class="op">=</span>[</span>
+<span id="cb3-4"><a href="#cb3-4"></a>        <span class="st">&quot;BACKUP&quot;</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>    ],</span>
+<span id="cb3-6"><a href="#cb3-6"></a>    action<span class="op">=</span><span class="st">&quot;backup&quot;</span>,</span>
+<span id="cb3-7"><a href="#cb3-7"></a>    action_type<span class="op">=</span><span class="st">&quot;pickle&quot;</span>,</span>
+<span id="cb3-8"><a href="#cb3-8"></a>    data<span class="op">=</span><span class="st">&quot;admin_ids&quot;</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a>)</span></code></pre></div>
+<p>情形 2：向 BACKUP 汇报在线状态。每个小时的第 30 分钟</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>exchange_text <span class="op">=</span> format_data(</span>
+<span id="cb4-2"><a href="#cb4-2"></a>    sender<span class="op">=</span><span class="st">&quot;NOFLOOD&quot;</span>,</span>
+<span id="cb4-3"><a href="#cb4-3"></a>    receviers<span class="op">=</span>[</span>
+<span id="cb4-4"><a href="#cb4-4"></a>        <span class="st">&quot;BACKUP&quot;</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>    ],</span>
+<span id="cb4-6"><a href="#cb4-6"></a>    action<span class="op">=</span><span class="st">&quot;backup&quot;</span>,</span>
+<span id="cb4-7"><a href="#cb4-7"></a>    action_type<span class="op">=</span><span class="st">&quot;status&quot;</span>,</span>
+<span id="cb4-8"><a href="#cb4-8"></a>    data<span class="op">=</span><span class="st">&quot;awake&quot;</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a>)</span></code></pre></div>
+<p>情形 3：向 CONFIG 询问。由于群组管理员在群组中发送 <code>/config noflood</code> 命令，故 NOFLOOD 令 CONFIG 在 SCP-079-CONFIG 频道中开启一个更新设置的会话</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>exchange_text <span class="op">=</span> format_data(</span>
+<span id="cb5-2"><a href="#cb5-2"></a>    sender<span class="op">=</span><span class="st">&quot;NOFLOOD&quot;</span>,</span>
+<span id="cb5-3"><a href="#cb5-3"></a>    receviers<span class="op">=</span>[</span>
+<span id="cb5-4"><a href="#cb5-4"></a>        <span class="st">&quot;CONFIG&quot;</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a>    ],</span>
+<span id="cb5-6"><a href="#cb5-6"></a>    action<span class="op">=</span><span class="st">&quot;config&quot;</span>,</span>
+<span id="cb5-7"><a href="#cb5-7"></a>    action_type<span class="op">=</span><span class="st">&quot;ask&quot;</span>,</span>
+<span id="cb5-8"><a href="#cb5-8"></a>    data<span class="op">=</span>{</span>
+<span id="cb5-9"><a href="#cb5-9"></a>        <span class="st">&quot;project_name&quot;</span>: <span class="st">&quot;SCP-079-NOFLOOD&quot;</span>,</span>
+<span id="cb5-10"><a href="#cb5-10"></a>        <span class="st">&quot;project_link&quot;</span>: <span class="st">&quot;https://scp-079.org/noflood/&quot;</span>,</span>
+<span id="cb5-11"><a href="#cb5-11"></a>        <span class="st">&quot;group_id&quot;</span>: <span class="op">-</span><span class="dv">10012345678</span>,</span>
+<span id="cb5-12"><a href="#cb5-12"></a>        <span class="st">&quot;group_name&quot;</span>: <span class="st">&quot;SCP-079-CHAT&quot;</span>,</span>
+<span id="cb5-13"><a href="#cb5-13"></a>        <span class="st">&quot;group_link&quot;</span>: <span class="st">&quot;https://t.me/SCP_079_CHAT&quot;</span>,</span>
+<span id="cb5-14"><a href="#cb5-14"></a>        <span class="st">&quot;user_id&quot;</span>: <span class="dv">12345678</span>,</span>
+<span id="cb5-15"><a href="#cb5-15"></a>        <span class="st">&quot;config&quot;</span>: {</span>
+<span id="cb5-16"><a href="#cb5-16"></a>            <span class="st">&quot;default&quot;</span>: <span class="va">False</span>,</span>
+<span id="cb5-17"><a href="#cb5-17"></a>            <span class="st">&quot;lock&quot;</span>: <span class="dv">1512345678</span>,</span>
+<span id="cb5-18"><a href="#cb5-18"></a>            <span class="st">&quot;delete&quot;</span>: <span class="va">True</span>,</span>
+<span id="cb5-19"><a href="#cb5-19"></a>            <span class="st">&quot;limit&quot;</span>: <span class="dv">10</span>,</span>
+<span id="cb5-20"><a href="#cb5-20"></a>            <span class="st">&quot;time&quot;</span>: <span class="dv">60</span></span>
+<span id="cb5-21"><a href="#cb5-21"></a>        },</span>
+<span id="cb5-22"><a href="#cb5-22"></a>        <span class="st">&quot;default&quot;</span>: {</span>
+<span id="cb5-23"><a href="#cb5-23"></a>            <span class="st">&quot;default&quot;</span>: <span class="va">True</span>,</span>
+<span id="cb5-24"><a href="#cb5-24"></a>            <span class="st">&quot;delete&quot;</span>: <span class="va">False</span>,</span>
+<span id="cb5-25"><a href="#cb5-25"></a>            <span class="st">&quot;lock&quot;</span>: <span class="dv">0</span>,</span>
+<span id="cb5-26"><a href="#cb5-26"></a>            <span class="st">&quot;limit&quot;</span>: <span class="dv">5</span>,</span>
+<span id="cb5-27"><a href="#cb5-27"></a>            <span class="st">&quot;time&quot;</span>: <span class="dv">10</span></span>
+<span id="cb5-28"><a href="#cb5-28"></a>        }</span>
+<span id="cb5-29"><a href="#cb5-29"></a>    }</span>
+<span id="cb5-30"><a href="#cb5-30"></a>)</span></code></pre></div>
+<p>情形 4：向 MANAGE 请求。由于没有在管理员列表中找到 SCP-079-USER ，或 USER 管理员身份缺失而请求离开某个群组</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>exchange_text <span class="op">=</span> format_data(</span>
+<span id="cb6-2"><a href="#cb6-2"></a>    sender<span class="op">=</span><span class="st">&quot;NOFLOOD&quot;</span>,</span>
+<span id="cb6-3"><a href="#cb6-3"></a>    receviers<span class="op">=</span>[</span>
+<span id="cb6-4"><a href="#cb6-4"></a>        <span class="st">&quot;MANAGE&quot;</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a>    ],</span>
+<span id="cb6-6"><a href="#cb6-6"></a>    action<span class="op">=</span><span class="st">&quot;leave&quot;</span>,</span>
+<span id="cb6-7"><a href="#cb6-7"></a>    action_type<span class="op">=</span><span class="st">&quot;request&quot;</span>,</span>
+<span id="cb6-8"><a href="#cb6-8"></a>    data<span class="op">=</span>{</span>
+<span id="cb6-9"><a href="#cb6-9"></a>        <span class="st">&quot;group_id&quot;</span>: <span class="op">-</span><span class="dv">10012345678</span>,</span>
+<span id="cb6-10"><a href="#cb6-10"></a>        <span class="st">&quot;group_name&quot;</span>: <span class="st">&quot;SCP-079-CHAT&quot;</span>,</span>
+<span id="cb6-11"><a href="#cb6-11"></a>        <span class="st">&quot;group_link&quot;</span>: <span class="st">&quot;https://t.me/SCP_079_CHAT&quot;</span>,</span>
+<span id="cb6-12"><a href="#cb6-12"></a>        <span class="st">&quot;reason&quot;</span>: <span class="st">&quot;user&quot;</span></span>
+<span id="cb6-13"><a href="#cb6-13"></a>    }</span>
+<span id="cb6-14"><a href="#cb6-14"></a>)</span></code></pre></div>
+<p>情形 5：向 MANAGE 请求。由于管理权限缺失而请求离开某个群组</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>exchange_text <span class="op">=</span> format_data(</span>
+<span id="cb7-2"><a href="#cb7-2"></a>    sender<span class="op">=</span><span class="st">&quot;NOFLOOD&quot;</span>,</span>
+<span id="cb7-3"><a href="#cb7-3"></a>    receviers<span class="op">=</span>[</span>
+<span id="cb7-4"><a href="#cb7-4"></a>        <span class="st">&quot;MANAGE&quot;</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>    ],</span>
+<span id="cb7-6"><a href="#cb7-6"></a>    action<span class="op">=</span><span class="st">&quot;leave&quot;</span>,</span>
+<span id="cb7-7"><a href="#cb7-7"></a>    action_type<span class="op">=</span><span class="st">&quot;request&quot;</span>,</span>
+<span id="cb7-8"><a href="#cb7-8"></a>    data<span class="op">=</span>{</span>
+<span id="cb7-9"><a href="#cb7-9"></a>        <span class="st">&quot;group_id&quot;</span>: <span class="op">-</span><span class="dv">10012345678</span>,</span>
+<span id="cb7-10"><a href="#cb7-10"></a>        <span class="st">&quot;group_name&quot;</span>: <span class="st">&quot;SCP-079-CHAT&quot;</span>,</span>
+<span id="cb7-11"><a href="#cb7-11"></a>        <span class="st">&quot;group_link&quot;</span>: <span class="st">&quot;https://t.me/SCP_079_CHAT&quot;</span>,</span>
+<span id="cb7-12"><a href="#cb7-12"></a>        <span class="st">&quot;reason&quot;</span>: <span class="st">&quot;permissions&quot;</span></span>
+<span id="cb7-13"><a href="#cb7-13"></a>    }</span>
+<span id="cb7-14"><a href="#cb7-14"></a>)</span></code></pre></div>
+<p>情形 6：向 MANAGE 通知。该机器人已因不在某群组中（确定的非网络原因的 Exception）而自行清空该群组资料</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>exchange_text <span class="op">=</span> format_data(</span>
+<span id="cb8-2"><a href="#cb8-2"></a>    sender<span class="op">=</span><span class="st">&quot;NOFLOOD&quot;</span>,</span>
+<span id="cb8-3"><a href="#cb8-3"></a>    receviers<span class="op">=</span>[</span>
+<span id="cb8-4"><a href="#cb8-4"></a>        <span class="st">&quot;MANAGE&quot;</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a>    ],</span>
+<span id="cb8-6"><a href="#cb8-6"></a>    action<span class="op">=</span><span class="st">&quot;leave&quot;</span>,</span>
+<span id="cb8-7"><a href="#cb8-7"></a>    action_type<span class="op">=</span><span class="st">&quot;info&quot;</span>,</span>
+<span id="cb8-8"><a href="#cb8-8"></a>    data<span class="op">=</span>{</span>
+<span id="cb8-9"><a href="#cb8-9"></a>        <span class="st">&quot;group_id&quot;</span>: <span class="op">-</span><span class="dv">10012345678</span>,</span>
+<span id="cb8-10"><a href="#cb8-10"></a>        <span class="st">&quot;group_name&quot;</span>: <span class="st">&quot;SCP-079-CHAT&quot;</span>,</span>
+<span id="cb8-11"><a href="#cb8-11"></a>        <span class="st">&quot;group_link&quot;</span>: <span class="st">&quot;https://t.me/SCP_079_CHAT&quot;</span></span>
+<span id="cb8-12"><a href="#cb8-12"></a>    }</span>
+<span id="cb8-13"><a href="#cb8-13"></a>)</span></code></pre></div>
+<p>情形 7：向 REGEX 更新规则使用计数文件，每日 UTC 时间 21:00 。<code>exchange_text</code> 文本作为该文件的 <code>caption</code></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>exchange_text <span class="op">=</span> format_data(</span>
+<span id="cb9-2"><a href="#cb9-2"></a>    sender<span class="op">=</span><span class="st">&quot;NOFLOOD&quot;</span>,</span>
+<span id="cb9-3"><a href="#cb9-3"></a>    receviers<span class="op">=</span>[</span>
+<span id="cb9-4"><a href="#cb9-4"></a>        <span class="st">&quot;REGEX&quot;</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>    ],</span>
+<span id="cb9-6"><a href="#cb9-6"></a>    action<span class="op">=</span><span class="st">&quot;update&quot;</span>,</span>
+<span id="cb9-7"><a href="#cb9-7"></a>    action_type<span class="op">=</span><span class="st">&quot;download&quot;</span>,</span>
+<span id="cb9-8"><a href="#cb9-8"></a>    data<span class="op">=</span><span class="st">&quot;wb_words&quot;</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a>)</span></code></pre></div>
+<p>情形 8：向 USER 发送协助请求，调用 delete all 功能，删除某用户全部消息，范围：所有群组（评分过高或受追踪时的触发）</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>exchange_text <span class="op">=</span> format_data(</span>
+<span id="cb10-2"><a href="#cb10-2"></a>    sender<span class="op">=</span><span class="st">&quot;NOFLOOD&quot;</span>,</span>
+<span id="cb10-3"><a href="#cb10-3"></a>    receviers<span class="op">=</span>[</span>
+<span id="cb10-4"><a href="#cb10-4"></a>        <span class="st">&quot;USER&quot;</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a>    ],</span>
+<span id="cb10-6"><a href="#cb10-6"></a>    action<span class="op">=</span><span class="st">&quot;help&quot;</span>,</span>
+<span id="cb10-7"><a href="#cb10-7"></a>    action_type<span class="op">=</span><span class="st">&quot;delete&quot;</span>,</span>
+<span id="cb10-8"><a href="#cb10-8"></a>    data<span class="op">=</span>{</span>
+<span id="cb10-9"><a href="#cb10-9"></a>        <span class="st">&quot;group_id&quot;</span>: <span class="op">-</span><span class="dv">10012345678</span>,</span>
+<span id="cb10-10"><a href="#cb10-10"></a>        <span class="st">&quot;user_id&quot;</span>: <span class="dv">12345678</span>,</span>
+<span id="cb10-11"><a href="#cb10-11"></a>        <span class="st">&quot;type&quot;</span>: <span class="st">&quot;global&quot;</span></span>
+<span id="cb10-12"><a href="#cb10-12"></a>    }</span>
+<span id="cb10-13"><a href="#cb10-13"></a>)</span></code></pre></div>
+<p>情形 9：向 USER 发送协助请求，调用 global ban 功能，用于查找某用户与机器人的所有共同群组，删除其全部消息，并对其进行限制</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>exchange_text <span class="op">=</span> format_data(</span>
+<span id="cb11-2"><a href="#cb11-2"></a>    sender<span class="op">=</span><span class="st">&quot;NOFLOOD&quot;</span>,</span>
+<span id="cb11-3"><a href="#cb11-3"></a>    receviers<span class="op">=</span>[</span>
+<span id="cb11-4"><a href="#cb11-4"></a>        <span class="st">&quot;USER&quot;</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a>    ],</span>
+<span id="cb11-6"><a href="#cb11-6"></a>    action<span class="op">=</span><span class="st">&quot;help&quot;</span>,</span>
+<span id="cb11-7"><a href="#cb11-7"></a>    action_type<span class="op">=</span><span class="st">&quot;ban&quot;</span>,</span>
+<span id="cb11-8"><a href="#cb11-8"></a>    data<span class="op">=</span>{</span>
+<span id="cb11-9"><a href="#cb11-9"></a>        <span class="st">&quot;group_id&quot;</span>: <span class="op">-</span><span class="dv">10012345678</span>,</span>
+<span id="cb11-10"><a href="#cb11-10"></a>        <span class="st">&quot;user_id&quot;</span>: <span class="dv">12345678</span></span>
+<span id="cb11-11"><a href="#cb11-11"></a>    }</span>
+<span id="cb11-12"><a href="#cb11-12"></a>)</span></code></pre></div>
+<p>情形 10：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、LANG、LONG、NOPORN、NOSPAM、RECHECK、USER）声明已删除某消息，一定程度上避免对同一条消息重复处理的资源浪费</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>exchange_text <span class="op">=</span> format_data(</span>
+<span id="cb12-2"><a href="#cb12-2"></a>    sender<span class="op">=</span><span class="st">&quot;NOFLOOD&quot;</span>,</span>
+<span id="cb12-3"><a href="#cb12-3"></a>    receviers<span class="op">=</span>[</span>
+<span id="cb12-4"><a href="#cb12-4"></a>        <span class="st">&quot;ANALYZE&quot;</span>,</span>
+<span id="cb12-5"><a href="#cb12-5"></a>        <span class="st">&quot;CAPTCHA&quot;</span>,</span>
+<span id="cb12-6"><a href="#cb12-6"></a>        <span class="st">&quot;CLEAN&quot;</span>,</span>
+<span id="cb12-7"><a href="#cb12-7"></a>        <span class="st">&quot;LANG&quot;</span>,</span>
+<span id="cb12-8"><a href="#cb12-8"></a>        <span class="st">&quot;LONG&quot;</span>,</span>
+<span id="cb12-9"><a href="#cb12-9"></a>        <span class="st">&quot;NOPORN&quot;</span>,</span>
+<span id="cb12-10"><a href="#cb12-10"></a>        <span class="st">&quot;NOSPAM&quot;</span>,</span>
+<span id="cb12-11"><a href="#cb12-11"></a>        <span class="st">&quot;RECHECK&quot;</span>,</span>
+<span id="cb12-12"><a href="#cb12-12"></a>        <span class="st">&quot;USER&quot;</span></span>
+<span id="cb12-13"><a href="#cb12-13"></a>    ],</span>
+<span id="cb12-14"><a href="#cb12-14"></a>    action<span class="op">=</span><span class="st">&quot;update&quot;</span>,</span>
+<span id="cb12-15"><a href="#cb12-15"></a>    action_type<span class="op">=</span><span class="st">&quot;declare&quot;</span>,</span>
+<span id="cb12-16"><a href="#cb12-16"></a>    data<span class="op">=</span>{</span>
+<span id="cb12-17"><a href="#cb12-17"></a>        <span class="st">&quot;group_id&quot;</span>: <span class="op">-</span><span class="dv">10012345678</span>,</span>
+<span id="cb12-18"><a href="#cb12-18"></a>        <span class="st">&quot;message_id&quot;</span>: <span class="dv">123</span></span>
+<span id="cb12-19"><a href="#cb12-19"></a>    }</span>
+<span id="cb12-20"><a href="#cb12-20"></a>)</span></code></pre></div>
+<p>情形 11：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、LANG、LONG、MANAGE、NOPORN、NOSPAM、RECHECK）更新用户分数</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>exchange_text <span class="op">=</span> format_data(</span>
+<span id="cb13-2"><a href="#cb13-2"></a>    sender<span class="op">=</span><span class="st">&quot;NOFLOOD&quot;</span>,</span>
+<span id="cb13-3"><a href="#cb13-3"></a>    receviers<span class="op">=</span>[</span>
+<span id="cb13-4"><a href="#cb13-4"></a>        <span class="st">&quot;ANALYZE&quot;</span>,</span>
+<span id="cb13-5"><a href="#cb13-5"></a>        <span class="st">&quot;CAPTCHA&quot;</span>,</span>
+<span id="cb13-6"><a href="#cb13-6"></a>        <span class="st">&quot;CLEAN&quot;</span>,</span>
+<span id="cb13-7"><a href="#cb13-7"></a>        <span class="st">&quot;LANG&quot;</span>,</span>
+<span id="cb13-8"><a href="#cb13-8"></a>        <span class="st">&quot;LONG&quot;</span>,</span>
+<span id="cb13-9"><a href="#cb13-9"></a>        <span class="st">&quot;MANAGE&quot;</span>,</span>
+<span id="cb13-10"><a href="#cb13-10"></a>        <span class="st">&quot;NOPORN&quot;</span>,</span>
+<span id="cb13-11"><a href="#cb13-11"></a>        <span class="st">&quot;NOSPAM&quot;</span>,</span>
+<span id="cb13-12"><a href="#cb13-12"></a>        <span class="st">&quot;RECHECK&quot;</span></span>
+<span id="cb13-13"><a href="#cb13-13"></a>    ],</span>
+<span id="cb13-14"><a href="#cb13-14"></a>    action<span class="op">=</span><span class="st">&quot;update&quot;</span>,</span>
+<span id="cb13-15"><a href="#cb13-15"></a>    action_type<span class="op">=</span><span class="st">&quot;score&quot;</span>,</span>
+<span id="cb13-16"><a href="#cb13-16"></a>    data<span class="op">=</span>{</span>
+<span id="cb13-17"><a href="#cb13-17"></a>        <span class="st">&quot;id&quot;</span>: <span class="dv">12345678</span>,</span>
+<span id="cb13-18"><a href="#cb13-18"></a>        <span class="st">&quot;score&quot;</span>: <span class="fl">0.6</span></span>
+<span id="cb13-19"><a href="#cb13-19"></a>    }</span>
+<span id="cb13-20"><a href="#cb13-20"></a>)</span></code></pre></div>
+<p>情形 12：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、LANG、LONG、MANAGE、NOPORN、NOSPAM、RECHECK、WATCH）更新用户追踪状态，以 watch ban 为例</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a>exchange_text <span class="op">=</span> format_data(</span>
+<span id="cb14-2"><a href="#cb14-2"></a>    sender<span class="op">=</span><span class="st">&quot;NOFLOOD&quot;</span>,</span>
+<span id="cb14-3"><a href="#cb14-3"></a>    receviers<span class="op">=</span>[</span>
+<span id="cb14-4"><a href="#cb14-4"></a>        <span class="st">&quot;ANALYZE&quot;</span>,</span>
+<span id="cb14-5"><a href="#cb14-5"></a>        <span class="st">&quot;CAPTCHA&quot;</span>,</span>
+<span id="cb14-6"><a href="#cb14-6"></a>        <span class="st">&quot;CLEAN&quot;</span>,</span>
+<span id="cb14-7"><a href="#cb14-7"></a>        <span class="st">&quot;LANG&quot;</span>,</span>
+<span id="cb14-8"><a href="#cb14-8"></a>        <span class="st">&quot;LONG&quot;</span>,</span>
+<span id="cb14-9"><a href="#cb14-9"></a>        <span class="st">&quot;MANAGE&quot;</span>,</span>
+<span id="cb14-10"><a href="#cb14-10"></a>        <span class="st">&quot;NOPORN&quot;</span>,</span>
+<span id="cb14-11"><a href="#cb14-11"></a>        <span class="st">&quot;NOSPAM&quot;</span>,</span>
+<span id="cb14-12"><a href="#cb14-12"></a>        <span class="st">&quot;RECHECK&quot;</span>,</span>
+<span id="cb14-13"><a href="#cb14-13"></a>        <span class="st">&quot;WATCH&quot;</span></span>
+<span id="cb14-14"><a href="#cb14-14"></a>    ],</span>
+<span id="cb14-15"><a href="#cb14-15"></a>    action<span class="op">=</span><span class="st">&quot;add&quot;</span>,</span>
+<span id="cb14-16"><a href="#cb14-16"></a>    action_type<span class="op">=</span><span class="st">&quot;watch&quot;</span>,</span>
+<span id="cb14-17"><a href="#cb14-17"></a>    data<span class="op">=</span>{</span>
+<span id="cb14-18"><a href="#cb14-18"></a>        <span class="st">&quot;id&quot;</span>: <span class="dv">12345678</span>,</span>
+<span id="cb14-19"><a href="#cb14-19"></a>        <span class="st">&quot;type&quot;</span>: <span class="st">&quot;ban&quot;</span>,</span>
+<span id="cb14-20"><a href="#cb14-20"></a>        <span class="st">&quot;until&quot;</span>: <span class="st">&quot;gAAAAABc1SZjduLGl1872VS6dD3osVJaOSQqdlSHy3SpDXeV4yu2FLbEung8neVMonokt5yI8qaLic8bi44X-y073-pGX6LtxKNQilSvci_gk5xHj4HNPFE=&quot;</span>    <span class="co"># 将追踪截止的时间戳转为加密字符串</span></span>
+<span id="cb14-21"><a href="#cb14-21"></a>    }</span>
+<span id="cb14-22"><a href="#cb14-22"></a>)</span></code></pre></div>
+<p>情形 13：向其他 Bot（ANALYZE、CAPTCHA、CLEAN、LANG、LONG、MANAGE、NOPORN、NOSPAM、RECHECK、USER、WATCH）添加黑名单用户</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a>exchange_text <span class="op">=</span> format_data(</span>
+<span id="cb15-2"><a href="#cb15-2"></a>    sender<span class="op">=</span><span class="st">&quot;NOFLOOD&quot;</span>,</span>
+<span id="cb15-3"><a href="#cb15-3"></a>    receviers<span class="op">=</span>[</span>
+<span id="cb15-4"><a href="#cb15-4"></a>        <span class="st">&quot;ANALYZE&quot;</span>,</span>
+<span id="cb15-5"><a href="#cb15-5"></a>        <span class="st">&quot;CAPTCHA&quot;</span>,</span>
+<span id="cb15-6"><a href="#cb15-6"></a>        <span class="st">&quot;CLEAN&quot;</span>,</span>
+<span id="cb15-7"><a href="#cb15-7"></a>        <span class="st">&quot;LANG&quot;</span>,</span>
+<span id="cb15-8"><a href="#cb15-8"></a>        <span class="st">&quot;LONG&quot;</span>,</span>
+<span id="cb15-9"><a href="#cb15-9"></a>        <span class="st">&quot;MANAGE&quot;</span>,</span>
+<span id="cb15-10"><a href="#cb15-10"></a>        <span class="st">&quot;NOPORN&quot;</span>,</span>
+<span id="cb15-11"><a href="#cb15-11"></a>        <span class="st">&quot;NOSPAM&quot;</span>,</span>
+<span id="cb15-12"><a href="#cb15-12"></a>        <span class="st">&quot;RECHECK&quot;</span>,</span>
+<span id="cb15-13"><a href="#cb15-13"></a>        <span class="st">&quot;USER&quot;</span>,</span>
+<span id="cb15-14"><a href="#cb15-14"></a>        <span class="st">&quot;WATCH&quot;</span></span>
+<span id="cb15-15"><a href="#cb15-15"></a>    ],</span>
+<span id="cb15-16"><a href="#cb15-16"></a>    action<span class="op">=</span><span class="st">&quot;add&quot;</span>,</span>
+<span id="cb15-17"><a href="#cb15-17"></a>    action_type<span class="op">=</span><span class="st">&quot;bad&quot;</span>,</span>
+<span id="cb15-18"><a href="#cb15-18"></a>    data<span class="op">=</span>{</span>
+<span id="cb15-19"><a href="#cb15-19"></a>        <span class="st">&quot;id&quot;</span>: <span class="dv">12345678</span>,</span>
+<span id="cb15-20"><a href="#cb15-20"></a>        <span class="st">&quot;type&quot;</span>: <span class="st">&quot;user&quot;</span></span>
+<span id="cb15-21"><a href="#cb15-21"></a>    }</span>
+<span id="cb15-22"><a href="#cb15-22"></a>)</span></code></pre></div>
+<p>特殊情形：向所有 bot 发送数据交换频道转移指令</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a>exchange_text <span class="op">=</span> format_data(</span>
+<span id="cb16-2"><a href="#cb16-2"></a>    sender<span class="op">=</span><span class="st">&quot;NOFLOOD&quot;</span>,</span>
+<span id="cb16-3"><a href="#cb16-3"></a>    receviers<span class="op">=</span>[</span>
+<span id="cb16-4"><a href="#cb16-4"></a>        <span class="st">&quot;EMERGENCY&quot;</span></span>
+<span id="cb16-5"><a href="#cb16-5"></a>    ],</span>
+<span id="cb16-6"><a href="#cb16-6"></a>    action<span class="op">=</span><span class="st">&quot;backup&quot;</span>,</span>
+<span id="cb16-7"><a href="#cb16-7"></a>    action_type<span class="op">=</span><span class="st">&quot;hide&quot;</span>,</span>
+<span id="cb16-8"><a href="#cb16-8"></a>    data<span class="op">=</span><span class="va">True</span></span>
+<span id="cb16-9"><a href="#cb16-9"></a>)</span></code></pre></div>
+<audio src="../audio/door/dooropenpage.ogg" autoplay>
+</audio>
+<audio id="dooropen079" src="../audio/door/dooropen079.ogg"></audio>
+</main>
+<footer>
+Site proudly generated by
+<a href="https://jaspervdj.be/hakyll/" target="_blank">Hakyll</a>
+</footer>
+<button onclick="topFunction();PlaySound('totop2')" onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" id="totop">Top</button>
+<script>
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+        if (document.body.scrollTop > 682 || document.documentElement.scrollTop > 682) {
+            document.getElementById("totop").style.display = "block";
+        } else {
+            document.getElementById("totop").style.display = "none";
+        }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+    }
+</script>
+
+<!-- https://gist.github.com/allybee/5871749 -->
+<script>
+function targetBlank() {
+  var internal = location.host.replace("www.", "");
+  var a = document.getElementsByTagName('a');
+  for (var i = 0; i < a.length; i++) {
+    var the_host = a[i].host.replace("www.", "");
+    if( the_host != internal ) {
+      a[i].setAttribute('target', '_blank');
+    }
+  }
+};
+targetBlank();
+</script>
+
+<audio id="a_button" src="../audio/button/hover.ogg"></audio>
+<audio id="click_button" src="../audio/button/click.ogg"></audio>
+<audio id="dooropen1" src="../audio/door/dooropen1.ogg"></audio>
+<audio id="dooropen2" src="../audio/door/dooropen2.ogg"></audio>
+<audio id="totop1" src="../audio/button/totop1.ogg"></audio>
+<audio id="totop2" src="../audio/button/totop2.ogg"></audio>
+<script>
+function PlaySound(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.play();
+}
+
+function StopSound(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.pause();
+    thissound.currentTime = 0;
+}
+
+document.body.addEventListener("mouseover",function(e) {
+    e = e || window.event;
+    var targetElem = e.target || e.srcElement;
+    if (targetElem.nodeName == "A" && targetElem.className != "sourceLine") {
+        switch(targetElem.className) {
+            case "no":
+                PlaySound("no_button")
+            break;
+            default:
+                PlaySound("a_button")
+        }
+    }
+},false);
+
+document.body.addEventListener("mouseout",function(e) {
+    e = e || window.event;
+    var targetElem = e.target || e.srcElement;
+    if (targetElem.nodeName == "A" && targetElem.className != "sourceLine") {
+        switch(targetElem.className) {
+            case "no":
+                StopSound("no_button")
+            break;
+            default:
+                StopSound("a_button")
+        }
+    }
+},false);
+
+document.body.addEventListener("click",function(e) {
+    e = e || window.event;
+    var targetElem = e.target || e.srcElement;
+    if (targetElem.nodeName == "A" && targetElem.className != "sourceLine") {
+        if (targetElem.className == "no") {
+            PlaySound("no_click")
+        } else {
+            PlaySound("click_button");
+            switch(targetElem.className) {
+                case "key":
+                    setTimeout(function(){ 
+                        PlaySound("dooropen3");
+                    }, 500);
+                break;
+                case "rss":
+                    setTimeout(function(){ 
+                        PlaySound("dooropen2");
+                    }, 500);
+                break;
+                case "079":
+                    setTimeout(function(){ 
+                        PlaySound("dooropen079");
+                    }, 500);
+                break;
+                default:
+                    setTimeout(function(){ 
+                        PlaySound("dooropen1");
+                    }, 500);
+            }
+        }
+    }
+},false);
+</script>
+
+
+</body>
+</html>

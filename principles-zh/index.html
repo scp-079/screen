@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Basic information about this page -->
+<meta charset="utf-8">
+<title>Principles</title>
+<link rel="icon" href="../images/fav.png">
+<!-- Style and scripts files -->
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<!-- Meta tag looking for mobile devices -->
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="theme-color" content="#232323">
+<!-- Good information about this page -->
+<meta name="description" content="Anti-spam project for Telegram groups">
+<meta name="keywords" content="SCP-079, anti-spam, project, telegram, groups">
+<meta name="author" content="SCP-079">
+<!-- Feed links -->
+<link rel="alternate" type="application/rss+xml" title="SCP-079's RSS Feed" href="../rss.xml">
+<link rel="alternate" type="application/atom+xml" title="SCP-079's Atom Feed" href="../atom.xml">
+<!-- Open Graph -->
+<meta property="og:site_name" content="SCP-079" />
+<meta property="og:title" content="Principles" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Anti-spam project for Telegram groups" />
+<meta property="og:url" content="/principles-zh/index.html" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image" content="/images/cover.png" />
+<meta property="og:locale" content="en" />
+
+<!-- Highlight -->
+<link rel="stylesheet" href="../css/highlight.min.css">
+<script src="../js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Redirect -->
+<script>
+    if (location.hostname.search("gitlab.io") != -1) { 
+        var path;
+        if (location.pathname.lastIndexOf("/", 0) === 0) { 
+            path = location.pathname;
+        } else { 
+            path = "/" + location.pathname;
+        } 
+        location.href = "https://scp-079.org" + path + location.search + location.hash;
+    }
+</script>
+</head>
+
+<body>
+<header>
+<pre class="ascii logo">
+<!-- LARGE IMAGE BEGINS HERE -->
+<font size="-3" class="large-avatar">
+<pre><font color="black">0100000101110111011000010110101101100101001011100010</font><font color="#909090">0</font><font color="white">00001001110011001010111011001100101011100100010</font><br><font color="black">0000010100110110110001100101011001010111000000101110</font><font color="#909090">0</font><font color="white">01000000100000101110111011000010110101101100101</font><br><font color="black">0010111000100000010011100110010101110110011001010111</font><font color="#909090">0</font><font color="white">01000100000010100110110110001100101011001010111</font><br><font color="black">0000001011100010000001000001011101110110000101101011</font><font color="#909090">0</font><font color="white">11001010010111000100000010011100110010101110110</font><br><font color="black">0110010101110010001000000101001101101100011001010110</font><font color="#909090">0</font><font color="white">10101110000001011100010000001000001011101110110</font><br><font color="black">0001011010110110010100101110001000000100111001100101</font><font color="#939393">0</font><font color="white">11101100110010101110010001000000101001101101100</font><br><font color="black">0110010101100101011100000010111000100000010000010111</font><font color="#979797">0</font><font color="white">11101100001011010110110010100101110001000000100</font><br><font color="black">1110011001010111011001100101011100100010000001010011</font><font color="#9c9c9c">0</font><font color="white">11011000110010101100101011100000010111000100000</font><br><font color="black">0100000101110111011000010110101101100101001011100010</font><font color="#9f9f9f">0</font><font color="white">00001001110011001010111011001100101011100100010</font><br><font color="black">0000010100110110110001100101011001010111000000101110</font><font color="#a2a2a2">0</font><font color="white">01000000100000101110111011000010110101101100101</font><br><font color="black">0010111000100000010011100110010101110110011001010111</font><font color="#a2a2a2">0</font><font color="white">01000100000010100110110110001100101011001010111</font><br><font color="black">0000001011100010000001000001011101110110000101101011</font><font color="#a4a4a4">0</font><font color="white">110010100101</font><font color="#f7f7f7">1</font><font color="#c8c8c8">1</font><font color="#a4a4a4">0</font><font color="#909090">0</font><font color="#888888">0</font><font color="#8a8a8a">1</font><font color="#969696">0</font><font color="#aaaaaa">0</font><font color="#c6c6c6">0</font><font color="#ededed">0</font><font color="white">0010011100110010101110110</font><br><font color="black">011001010111001000100000</font><font color="#060606">0</font><font color="#202020">1</font><font color="#5e5e5e">0</font><font color="#8e8e8e">1</font><font color="#aaaaaa">0</font><font color="#b9b9b9">0</font><font color="#c2c2c2">1</font><font color="#c5c5c5">1</font><font color="#c4c4c4">0</font><font color="#bcbcbc">1</font><font color="#b1b1b1">1</font><font color="#a0a0a0">0</font><font color="#828282">1</font><font color="#515151">1</font><font color="#1a1a1a">0</font><font color="#040404">0</font><font color="black">011001010110</font><font color="#a6a6a6">0</font><font color="white">101011100</font><font color="#f5f5f5">0</font><font color="#b8b8b8">0</font><font color="#5a5a5a">0</font><font color="#131313">0</font><font color="#050505">1</font><font color="#010101">0</font><font color="black">1110</font><font color="#010101">0</font><font color="#040404">0</font><font color="#090909">1</font><font color="#333333">0</font><font color="#898989">0</font><font color="#e6e6e6">0</font><font color="#fefefe">0</font><font color="white">001000001011101110110</font><br><font color="black">0001011010110110010100</font><font color="#0a0a0a">1</font><font color="#555555">0</font><font color="#b8b8b8">1</font><font color="#f6f6f6">1</font><font color="white">100010000001</font><font color="#f1f1f1">0</font><font color="#aaaaaa">0</font><font color="#3d3d3d">1</font><font color="#010101">1</font><font color="black">1001100101</font><font color="#a8a8a8">0</font><font color="white">1110110</font><font color="#fafafa">0</font><font color="#ababab">1</font><font color="#343434">1</font><font color="black">00101011100100</font><font color="#161616">0</font><font color="#7f7f7f">1</font><font color="#e9e9e9">0</font><font color="white">00000101001101101100</font><br><font color="black">011001010110010101110</font><font color="#2b2b2b">0</font><font color="#c2c2c2">0</font><font color="#fcfcfc">0</font><font color="white">0010111000100000</font><font color="#f5f5f5">0</font><font color="#878787">1</font><font color="#020202">0</font><font color="black">000010111</font><font color="#ababab">0</font><font color="white">111011</font><font color="#eeeeee">0</font><font color="#585858">0</font><font color="#050505">0</font><font color="black">01011010110110010</font><font color="#282828">1</font><font color="#d9d9d9">0</font><font color="white">0101110001000000100</font><br><font color="black">11100110010101110110</font><font color="#1f1f1f">0</font><font color="#e6e6e6">1</font><font color="white">1001010111001000100</font><font color="#fefefe">0</font><font color="#666666">0</font><font color="black">001010011</font><font color="#afafaf">0</font><font color="white">11011</font><font color="#f3f3f3">0</font><font color="#393939">0</font><font color="black">01100101011001010111</font><font color="#242424">0</font><font color="#d7d7d7">0</font><font color="white">000010111000100000</font><br><font color="black">01000001011101110110</font><font color="#ababab">0</font><font color="white">001011010110110010100</font><font color="#e2e2e2">1</font><font color="#060606">0</font><font color="black">11100010</font><font color="#b4b4b4">0</font><font color="white">00001</font><font color="#8e8e8e">0</font><font color="black">0111001100101011101100</font><font color="#222222">1</font><font color="#e8e8e8">1</font><font color="white">00101011100100010</font><br><font color="black">0000010100110110110</font><font color="#080808">0</font><font color="#f7f7f7">0</font><font color="white">1100101011001010111000</font><font color="#2e2e2e">0</font><font color="black">00101110</font><font color="#b8b8b8">0</font><font color="white">01000</font><font color="#696969">0</font><font color="black">00100000101110111011000</font><font color="#a6a6a6">0</font><font color="white">10110101101100101</font><br><font color="black">0010111000100000010</font><font color="#010101">0</font><font color="#929292">1</font><font color="#f2f2f2">1</font><font color="#fefefe">1</font><font color="white">001100101011101100</font><font color="#f5f5f5">1</font><font color="#cecece">1</font><font color="#191919">0</font><font color="black">01010111</font><font color="#b4b4b4">0</font><font color="white">01000</font><font color="#b2b2b2">1</font><font color="#040404">0</font><font color="black">00000101001101101100</font><font color="#050505">0</font><font color="#545454">1</font><font color="#f5f5f5">1</font><font color="white">00101011001010111</font><br><font color="black">000000101110001000000</font><font color="#232323">1</font><font color="#6c6c6c">0</font><font color="#afafaf">0</font><font color="#d6d6d6">0</font><font color="#ececec">0</font><font color="#fbfbfb">0</font><font color="white">10111011</font><font color="#fdfdfd">1</font><font color="#f1f1f1">0</font><font color="#e0e0e0">1</font><font color="#cbcbcb">1</font><font color="#a1a1a1">0</font><font color="#686868">0</font><font color="#2e2e2e">0</font><font color="#020202">0</font><font color="black">101101011</font><font color="#4f4f4f">0</font><font color="#fefefe">1</font><font color="white">10010</font><font color="#9b9b9b">1</font><font color="#232323">0</font><font color="#010101">0</font><font color="black">1011100010000001</font><font color="#181818">0</font><font color="#525252">0</font><font color="#b7b7b7">1</font><font color="#fefefe">1</font><font color="white">100110010101110110</font><br><font color="black">011001010111001000100000</font><font color="#0e0e0e">0</font><font color="#232323">1</font><font color="#333333">0</font><font color="#484848">1</font><font color="#5a5a5a">0</font><font color="#656565">0</font><font color="#6b6b6b">11</font><font color="#666666">0</font><font color="#5b5b5b">1</font><font color="#4b4b4b">1</font><font color="#383838">0</font><font color="#292929">1</font><font color="#181818">1</font><font color="#060606">0</font><font color="black">0011001010110</font><font color="#030303">0</font><font color="#bfbfbf">1</font><font color="white">010111</font><font color="#eaeaea">0</font><font color="#b1b1b1">0</font><font color="#737373">0</font><font color="#484848">0</font><font color="#2c2c2c">0</font><font color="#161616">0</font><font color="#080808">1</font><font color="#010101">0</font><font color="black">11100</font><font color="#050505">0</font><font color="#1c1c1c">1</font><font color="#414141">0</font><font color="#717171">0</font><font color="#aeaeae">0</font><font color="#e0e0e0">0</font><font color="#fefefe">0</font><font color="white">01000001011101110110</font><br><font color="black">00010110101101100101001011100010000001001110011001010</font><font color="#3b3b3b">1</font><font color="#fefefe">1</font><font color="white">10110011</font><font color="#fbfbfb">0</font><font color="#f6f6f6">0</font><font color="#f1f1f1">1</font><font color="#eeeeee">0</font><font color="#e8e8e8">1</font><font color="#e1e1e1">0</font><font color="#dddddd">1</font><font color="#dcdcdc">11</font><font color="#e2e2e2">0</font><font color="#ececec">0</font><font color="#f3f3f3">1</font><font color="#fafafa">0</font><font color="white">001000000101001101101100</font><br><font color="black">01100101011001010111000000101110001000000100000101110</font><font color="#010101">1</font><font color="#cccccc">1</font><font color="white">101100001011010110110010100101110001000000100</font><br><font color="black">111001100101011101100110010101110010001000000</font><font color="#090909">1</font><font color="#151515">0</font><font color="#0e0e0e">1</font><font color="#070707">0</font><font color="#030303">0</font><font color="#010101">1</font><font color="black">10</font><font color="#070707">1</font><font color="#bebebe">1</font><font color="white">011000110010101100101011100000010111000100000</font><br><font color="black">010000010111011101100001011010110110010100101</font><font color="#050505">1</font><font color="#565656">1</font><font color="silver">0</font><font color="#e8e8e8">0</font><font color="#eaeaea">0</font><font color="#e6e6e6">1</font><font color="#e3e3e3">00</font><font color="#eaeaea">0</font><font color="#fdfdfd">0</font><font color="white">001001110011001010111011001100101011100100010</font><br><font color="black">00000101001101101100011001010110010101110000001</font><font color="#040404">0</font><font color="#4c4c4c">1</font><font color="#b5b5b5">1</font><font color="#f4f4f4">1</font><font color="white">0001000000100000101110111011000010110101101100101</font><br><font color="black">00101110001000000100111001100101011101100110010</font><font color="#030303">1</font><font color="#0f0f0f">0</font><font color="#202020">1</font><font color="#646464">1</font><font color="#e1e1e1">1</font><font color="white">001000100000010100110110110001100101011001010111</font><br><font color="black">000000101110001000000100000101</font><font color="#080808">1</font><font color="#3a3a3a">1</font><font color="#5a5a5a">0</font><font color="#7c7c7c">1</font><font color="#939393">1</font><font color="#979797">1</font><font color="#9b9b9b">0</font><font color="#9e9e9e">1</font><font color="#9f9f9f">1</font><font color="#a1a1a1">0</font><font color="#a6a6a6">0</font><font color="#ababab">0</font><font color="#b2b2b2">0</font><font color="#bababa">1</font><font color="#c3c3c3">0</font><font color="#cecece">1</font><font color="#dbdbdb">1</font><font color="#e7e7e7">0</font><font color="#ececec">1</font><font color="#f0f0f0">0</font><font color="#f4f4f4">1</font><font color="#fbfbfb">1</font><font color="white">011001010010111000100000010011100110010101110110</font><br><font color="black">0110010101110010001000000101001101</font><font color="#0d0d0d">1</font><font color="#2f2f2f">0</font><font color="#525252">1</font><font color="#757575">1</font><font color="#989898">0</font><font color="#bbbbbb">0</font><font color="#d4d4d4">0</font><font color="#e2e2e2">1</font><font color="#f0f0f0">1</font><font color="#fcfcfc">0</font><font color="white">01010110010101110000001011100010000001000001011101110110</font><br><font color="black">0001011010110110010100101110001000000100</font><font color="#080808">1</font><font color="#191919">1</font><font color="#2a2a2a">1</font><font color="#3c3c3c">0</font><font color="#555555">0</font><font color="#707070">1</font><font color="#898989">1</font><font color="#a1a1a1">0</font><font color="#b4b4b4">0</font><font color="#c4c4c4">1</font><font color="#d1d1d1">0</font><font color="#dcdcdc">1</font><font color="#e4e4e4">0</font><font color="#eaeaea">1</font><font color="#f4f4f4">1</font><font color="white">101100110010101110010001000000101001101101100</font><br><font color="black">011001010110010101110000001011100010000001000001</font><font color="#030303">0</font><font color="#080808">1</font><font color="#0c0c0c">1</font><font color="#0f0f0f">1</font><font color="#141414">0</font><font color="#242424">1</font><font color="#787878">1</font><font color="#f7f7f7">1</font><font color="white">01100001011010110110010100101110001000000100</font><br><font color="black">1110011001010111011001100101011100100010000001010</font><font color="#151515">0</font><font color="#353535">1</font><font color="#6e6e6e">1</font><font color="#b1b1b1">0</font><font color="#f2f2f2">1</font><font color="white">1011000110010101100101011100000010111000100000</font><br><font color="black">0100000101110111011000010110101101100101001011100</font><font color="#b1b1b1">0</font><font color="#fcfcfc">1</font><font color="white">0000001001110011001010111011001100101011100100010</font><br><font color="black">0000010100110110110001100101011001010111000000101</font><font color="#c5c5c5">1</font><font color="white">10001000000100000101110111011000010110101101100101</font><br><font color="black">0010111000100000010011100110010101110110011001010</font><font color="#c5c5c5">1</font><font color="white">11001000100000010100110110110001100101011001010111</font><br><font color="black">0000001011100010000001000001011101110110000101101</font><font color="#c5c5c5">0</font><font color="white">11011001010010111000100000010011100110010101110110</font><br><font color="black">0110010101110010001000000101001101101100011001010</font><font color="#c5c5c5">1</font><font color="white">10010101110000001011100010000001000001011101110110</font><br><font color="black">0001011010110110010100101110001000000100111001100</font><font color="#c5c5c5">1</font><font color="white">01011101100110010101110010001000000101001101101100</font><br><font color="black">0110010101100101011100000010111000100000010000010</font><font color="#c6c6c6">1</font><font color="white">11011101100001011010110110010100101110001000000100</font><br><font color="black">1110011001010111011001100101011100100010000001010</font><font color="#c6c6c6">0</font><font color="white">11011011000110010101100101011100000010111000100000</font><br><font color="black">0100000101110111011000010110101101100101001011100</font><font color="#c6c6c6">0</font><font color="white">10000001001110011001010111011001100101011100100010</font><br><font color="black">0000010100110110110001100101011001010111000000101</font><font color="#c6c6c6">1</font><font color="white">10001000000100000101110111011000010110101101100101</font><br><font color="black">0010111000100000010011100110010101110110011001010</font><font color="#c6c6c6">1</font><font color="white">11001000100000010100110110110001100101011001010111</font><br>
+</pre></font><!-- LARGE IMAGE ENDS HERE --><!-- SMALL IMAGE BEGINS HERE --><font size="-3" class="small-avatar"><pre><font color="black">010011110111010101110100001011100010</font><font color="#4b4b4b">0</font><font color="white">000010010010010000001110111011000</font><br><font color="black">010110111001110100001000000110111101</font><font color="#4b4b4b">1</font><font color="white">101010111010000101110001000000100</font><br><font color="black">111101110101011101000010111000100000</font><font color="#4b4b4b">0</font><font color="white">100100100100000011101110110000101</font><br><font color="black">101110011101000010000001101111011101</font><font color="#4c4c4c">0</font><font color="white">101110100001011100010000001001111</font><br><font color="black">011101010111010000101110001000000100</font><font color="#505050">1</font><font color="white">001001000000111011101100001011011</font><br><font color="black">100111010000100000011011110111010101</font><font color="#555555">1</font><font color="white">101000010111000100000010011110111</font><br><font color="black">010101110100001011100010000001001001</font><font color="#575757">0</font><font color="white">010000001110111011000010110111001</font><br><font color="black">110100001000000110111101110101011101</font><font color="#585858">0</font><font color="white">0001011100</font><font color="#f8f8f8">0</font><font color="#efefef">1</font><font color="#f1f1f1">0</font><font color="#fbfbfb">0</font><font color="white">0000100111101110101</font><br><font color="black">01110100001011100</font><font color="#010101">0</font><font color="#2c2c2c">1</font><font color="#595959">0</font><font color="#6d6d6d">0</font><font color="#767676">0</font><font color="#777777">0</font><font color="#717171">0</font><font color="#646464">0</font><font color="#4b4b4b">1</font><font color="#181818">0</font><font color="black">010010010</font><font color="#5a5a5a">0</font><font color="white">0000111</font><font color="#d9d9d9">0</font><font color="#818181">1</font><font color="#3f3f3f">1</font><font color="#212121">1</font><font color="#1d1d1d">01</font><font color="#232323">1</font><font color="#3c3c3c">0</font><font color="#6c6c6c">0</font><font color="#bababa">0</font><font color="#fefefe">0</font><font color="white">101101110011101</font><br><font color="black">000010000001101</font><font color="#151515">1</font><font color="#797979">1</font><font color="#dfdfdf">1</font><font color="white">01110101</font><font color="#fefefe">0</font><font color="#c3c3c3">1</font><font color="#4b4b4b">1</font><font color="#030303">1</font><font color="black">010000</font><font color="#5d5d5d">1</font><font color="white">01110</font><font color="#d3d3d3">0</font><font color="#4e4e4e">0</font><font color="#010101">1</font><font color="black">000000100</font><font color="#303030">1</font><font color="#b5b5b5">1</font><font color="#fdfdfd">1</font><font color="white">1011101010111</font><br><font color="black">01000010111000</font><font color="#272727">1</font><font color="#d8d8d8">0</font><font color="white">000001001001</font><font color="#fbfbfb">0</font><font color="#6f6f6f">0</font><font color="black">100000</font><font color="#606060">0</font><font color="white">1110</font><font color="#afafaf">1</font><font color="#121212">1</font><font color="black">101100001011</font><font color="#040404">0</font><font color="#969696">1</font><font color="white">1100111010000</font><br><font color="black">10000001101111</font><font color="#bdbdbd">0</font><font color="white">11101010111010</font><font color="#f2f2f2">0</font><font color="#111111">0</font><font color="black">01011</font><font color="#656565">1</font><font color="white">000</font><font color="#f3f3f3">1</font><font color="#111111">0</font><font color="black">00000100111101</font><font color="#060606">1</font><font color="#a5a5a5">1</font><font color="white">010101110100</font><br><font color="black">0010111000100</font><font color="#040404">0</font><font color="#e6e6e6">0</font><font color="white">00100100100100</font><font color="#f8f8f8">0</font><font color="#373737">0</font><font color="black">00111</font><font color="#676767">0</font><font color="white">111</font><font color="#ededed">0</font><font color="#070707">1</font><font color="black">10000101101110</font><font color="#030303">0</font><font color="#7d7d7d">1</font><font color="white">110100001000</font><br><font color="black">00011011110111</font><font color="#232323">0</font><font color="#787878">1</font><font color="#bababa">0</font><font color="#dddddd">1</font><font color="#f4f4f4">0</font><font color="white">11101</font><font color="#fcfcfc">0</font><font color="#ececec">0</font><font color="#d5d5d5">0</font><font color="#b6b6b6">0</font><font color="gray">1</font><font color="#3e3e3e">0</font><font color="#030303">1</font><font color="black">11000</font><font color="#303030">1</font><font color="#fafafa">0</font><font color="white">000</font><font color="#999999">0</font><font color="#1d1d1d">0</font><font color="black">10011110111</font><font color="#090909">0</font><font color="#3e3e3e">1</font><font color="#a1a1a1">0</font><font color="#fafafa">1</font><font color="white">011101000010</font><br><font color="black">1110001000000100</font><font color="#040404">1</font><font color="#131313">0</font><font color="#1f1f1f">0</font><font color="#2c2c2c">1</font><font color="#393939">0</font><font color="#3f3f3f">0</font><font color="#3c3c3c">1</font><font color="#333333">0</font><font color="#242424">0</font><font color="#1b1b1b">0</font><font color="#101010">0</font><font color="#030303">0</font><font color="black">011101110</font><font color="#a1a1a1">1</font><font color="white">1000</font><font color="#e9e9e9">0</font><font color="#b8b8b8">1</font><font color="#878787">0</font><font color="#686868">1</font><font color="#545454">1</font><font color="#484848">0</font><font color="#424242">1</font><font color="#414141">1</font><font color="#434343">1</font><font color="#515151">0</font><font color="#727272">0</font><font color="#a5a5a5">1</font><font color="#dbdbdb">1</font><font color="#f7f7f7">1</font><font color="white">01000010000001</font><br><font color="black">1011110111010101110100001011100010000</font><font color="#242424">0</font><font color="#fefefe">0</font><font color="white">1001111011101010111010000101110</font><br><font color="black">0010000001001001001000000111011</font><font color="#010101">1</font><font color="#2d2d2d">0</font><font color="#414141">1</font><font color="#3c3c3c">1</font><font color="#383838">0</font><font color="#373737">0</font><font color="#444444">0</font><font color="#fafafa">0</font><font color="white">1011011100111010000100000011011</font><br><font color="black">11011101010111010000101110001000</font><font color="#181818">0</font><font color="#6b6b6b">0</font><font color="#d7d7d7">0</font><font color="#f7f7f7">1</font><font color="#f6f6f6">0</font><font color="#fafafa">0</font><font color="white">11110111010101110100001011100010</font><br><font color="black">000001001001001000000</font><font color="#050505">1</font><font color="#111111">11</font><font color="#101010">0</font><font color="#0f0f0f">11</font><font color="#101010">1</font><font color="#121212">0</font><font color="#141414">1</font><font color="#161616">1</font><font color="#191919">0</font><font color="#1e1e1e">0</font><font color="#232323">0</font><font color="#333333">0</font><font color="#999999">1</font><font color="#fdfdfd">0</font><font color="white">110111001110100001000000110111101</font><br><font color="black">110101011101000010111</font><font color="#090909">0</font><font color="#252525">0</font><font color="#474747">0</font><font color="#6d6d6d">1</font><font color="#919191">0</font><font color="#aaaaaa">0</font><font color="#c2c2c2">0</font><font color="#d8d8d8">0</font><font color="#dddddd">0</font><font color="#e2e2e2">0</font><font color="#e9e9e9">1</font><font color="#f1f1f1">0</font><font color="#fbfbfb">0</font><font color="white">111101110101011101000010111000100000</font><br><font color="black">0100100100100000011101110</font><font color="#030303">1</font><font color="#0f0f0f">1</font><font color="#1a1a1a">0</font><font color="#292929">0</font><font color="#474747">0</font><font color="#646464">0</font><font color="gray">1</font><font color="#9a9a9a">0</font><font color="#b1b1b1">1</font><font color="#c6c6c6">1</font><font color="#d8d8d8">0</font><font color="#e4e4e4">1</font><font color="#ececec">1</font><font color="#fbfbfb">1</font><font color="white">0011101000010000001101111011101</font><br><font color="black">01011101000010111000100000010011110</font><font color="#0b0b0b">1</font><font color="#232323">1</font><font color="#666666">1</font><font color="#d2d2d2">0</font><font color="white">1010111010000101110001000000100</font><br><font color="black">1001001000000111011101100001011011</font><font color="#5e5e5e">1</font><font color="#cccccc">0</font><font color="#f4f4f4">0</font><font color="white">111010000100000011011110111010101</font><br><font color="black">1101000010111000100000010011110111</font><font color="#8a8a8a">0</font><font color="white">10101110100001011100010000001001001</font><br><font color="black">0010000001110111011000010110111001</font><font color="#8a8a8a">1</font><font color="white">10100001000000110111101110101011101</font><br><font color="black">0000101110001000000100111101110101</font><font color="#8a8a8a">0</font><font color="white">11101000010111000100000010010010010</font><br><font color="black">0000011101110110000101101110011101</font><font color="#8a8a8a">0</font><font color="white">00010000001101111011101010111010000</font><br><font color="black">1011100010000001001111011101010111</font><font color="#8b8b8b">0</font><font color="white">10000101110001000000100100100100000</font><br><font color="black">0111011101100001011011100111010000</font><font color="#8a8a8a">1</font><font color="white">00000011011110111010101110100001011</font><br><font color="black">1000100000010011110111010101110100</font><font color="#8a8a8a">0</font><font color="white">01011100010000001001001001000000111</font><br></pre></font>
+<!-- SMALL IMAGE ENDS HERE -->
+</pre>
+<pre class="ascii name site-name">
+███████╗ ██████╗██████╗        ██████╗ ███████╗ █████╗ 
+██╔════╝██╔════╝██╔══██╗      ██╔═████╗╚════██║██╔══██╗
+███████╗██║     ██████╔╝█████╗██║██╔██║    ██╔╝╚██████║
+╚════██║██║     ██╔═══╝ ╚════╝████╔╝██║   ██╔╝  ╚═══██║
+███████║╚██████╗██║           ╚██████╔╝   ██║   █████╔╝
+╚══════╝ ╚═════╝╚═╝            ╚═════╝    ╚═╝   ╚════╝ 
+                                                       
+</pre>
+</header>
+
+<nav>
+<ul>
+<li><a href="../">Home</a></li>
+<li><a href="../about/">About</a></li>
+<li><a href="../contact/">Contact</a></li>
+<li><a href="../team/">Team</a></li>
+<li><a href="../projects/" target>Projects</a></li>
+<li><a href="../tools/">Tools</a></li>
+<li><a href="../archives/">Posts</a></li>
+<li><a href="../rss.xml" class="rss" target="_blank">RSS</a>/<a href="../atom.xml" class="rss" target="_blank">Atom</a></li>
+</ul>
+</nav>
+
+<main>
+<p><link rel="stylesheet" href="../css/chinese.css"> <button onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" onclick="window.location.href = '/principles/';" class="en">Click Here to English Page</button></p>
+<hr />
+<h1 id="设计与管理原则">设计与管理原则</h1>
+<p>简要介绍 SCP-079 系列机器人的设计和管理原则，此原则列表可能会在未来发生变化。</p>
+<hr />
+<h2 id="证据优先原则">证据优先原则</h2>
+<p>对于在群组中具有防 spam 功能的机器人，若某条消息涉及更改用户在群组中的状态或增加用户评分，则其所有实际操作（删除、封禁、移出、禁言、评分），均须在成功转发该条证据后执行。如目标消息已被删除（无论由于何种原因），机器人均不应继续对此消息所关联的用户进行任何操作。然而为防止证据被无意义大量更新，对于同一用户在同一群组中触发同一机器人的相同类别的操作时，应避免重复地转发，建议此类证据转发相隔的时长为 10 分钟。</p>
+<ul>
+<li>群组自定义且不涉及封禁及评分的规则，不受此原则强制限制，但可酌情进行证据转发，用于发现机器人自动处理时产生的判断错误。</li>
+<li>入群验证导致的移出、封禁用户和评分操作，不受此原则限制，但将记录触发操作的时间点信息。</li>
+<li>可能涉及隐私的消息（联系人卡片、定位、圆视频、语音），以及无法由机器人转发至频道的消息（游戏、服务消息），不受此原则限制。</li>
+<li>清除失效用户、定时删除贴纸，不受此原则限制。</li>
+</ul>
+<hr />
+<h2 id="文本命令原则">文本命令原则</h2>
+<p>通过按钮触发的操作，应有其对应的、只通过文本命令而达成相同效果的操作方式。</p>
+<ul>
+<li>SCP-079-CONFIG 机器人不受此原则限制。</li>
+<li>入群验证提供的按钮不受此原则限制。</li>
+</ul>
+<hr />
+<h2 id="数据最少原则">数据最少原则</h2>
+<p>普通数据的存储期限一般应为 24-48 小时，黑名单的存储期限应为 1 个月以内。</p>
+<p>以下内容的存储期限不受此原则限制：</p>
+<ul>
+<li>群组设置</li>
+<li>群组管理员列表</li>
+<li>白名单</li>
+<li>模型</li>
+<li>正则表达式库</li>
+<li>已在频道中存放的消息</li>
+</ul>
+<hr />
+<h2 id="操作可查原则">操作可查原则</h2>
+<p>此原则包括四方面：机器人操作可查，群组管理员操作可查，项目管理操作可查，频道操作可查。</p>
+<h3 id="机器人操作可查">机器人操作可查</h3>
+<p>机器人的所有删除、封禁、数据交换记录必须可查，并充分展示相关信息。</p>
+<p>然而为防止记录被无意义大量更新，对于同一用户在同一群组中触发同一机器人的相同类别的操作时，应避免重复地记录，建议此类记录相隔的时长为 10 分钟。</p>
+<h3 id="群组管理员操作可查">群组管理员操作可查</h3>
+<p>可能影响机器人综合评分的群组管理员操作必须可查，例如 /ban 命令，并同时转发相关证据信息。通过 SCP-079-CONFIG 对机器人进行设置的跨机器人的操作也须可查。</p>
+<ul>
+<li>允许群组管理员主动放弃群组设置的可查性，此时，托管方将不再保证对群组的任何设置负责。</li>
+</ul>
+<h3 id="项目管理操作可查">项目管理操作可查</h3>
+<p>所有在群组中工作的机器人应对任何私聊消息进行无条件忽略，包括项目管理员、普通用户的私聊对话。项目管理员只能在对应的管理群组中对某个机器人进行管理操作，所有管理操作产生的回应消息均须附加管理员个人 ID 以备查询。各项目管理群组中，除群主本身外，不设任何管理员。</p>
+<ul>
+<li>SCP-079-TICKET 专门用于私聊，故不受此限制。</li>
+</ul>
+<h3 id="频道操作可查">频道操作可查</h3>
+<p>所有公开频道须开启消息签名，防止发送的消息无法追溯到真正个体。</p>
+<p>机器人一旦在频道发布消息，除非其涉及个人隐私和危害信息、或由 MANAGE 解禁、解明、收录、删除，否则不可以凭借任何方式手动、自动地删除、编辑该消息。</p>
+<h3 id="额外说明">额外说明</h3>
+<p>部分频道如 SCP-079-EXCHANGE 、SCP-079-WATCH、SCP-079-M 属于项目私有频道，除项目内部人员外，仅公开给监督观察员、证人、防广告合作者，我们将对加入频道者的身份进行审核并<a href="../transparency/">公开名单</a>。</p>
+<hr />
+<h2 id="双向选择原则">双向选择原则</h2>
+<p>使用机器人的群组，应了解、并有主动的意愿采用具体机器人的规则和功能； SCP-079 工作组应对申请使用的群组进行核实，确定机器人适用于该群组，方才同意申请。</p>
+<p>所有群组管理类型的机器人在加入普通群组时，必须对授权情况进行校验，即：只能通过 SCP-079-USER 邀请入群。</p>
+<hr />
+<h2 id="最少发言原则">最少发言原则</h2>
+<p>机器人在普通群组中的发言，应该只在确实有必要的时候发出，设计过程中应努力减小机器人在普通群组中的出现频率。</p>
+<p>另外，除 SCP-079-TIP、SCP-079-WARN 发送的消息外，其余在普通群组中的机器人所发送的消息存留时长不得超过 5 分钟。</p>
+<hr />
+<h2 id="最坏估计原则">最坏估计原则</h2>
+<p>此原则包括的情景可包括：服务器宕机，数据丢失，交换频道失效，内部人员破坏。</p>
+<h3 id="服务器宕机">服务器宕机</h3>
+<p>每小时 SCP-079-BACKUP 将对各机器人的在线情况进行检查，如有任何机器人宕机，应在 SCP-079-MANAGE 群组中为管理员提供一键启用备份机上的机器人副本的按钮。</p>
+<h3 id="数据丢失">数据丢失</h3>
+<p>SCP-079-BACKUP 机器人，每日定时接收所有机器人的备份文件，下载并存储至备份机上的相应位置。同时，数据自然地得到在频道中的额外备份。</p>
+<h3 id="交换频道失效">交换频道失效</h3>
+<p>准备 SCP-079-HIDE 频道，此频道用于在原有 EXCHANGE 频道由于某种原因失效后作为备份自动切换频道。</p>
+<h3 id="内部人员破坏">内部人员破坏</h3>
+<ul>
+<li>蓄意造成的存储数据丢失，可由备份恢复。</li>
+<li>恶意添加白名单，可由备份重置。</li>
+<li>人员所控制的机器人在 EXCHANGE 频道中的伪造消息，可在 48 小时内由频道消息签名查出。</li>
+<li>对服务器、备份站点的破坏，可由开源代码和频道内存储的数据恢复。</li>
+<li>为避免管理人员恶意命令所有机器人退出所有正在使用的群组，SCP-079-MANAGE 每日只允许单个管理员执行一次主动退群的 /leave 请求。</li>
+</ul>
+<audio src="../audio/door/dooropenpage.ogg" autoplay>
+</audio>
+</main>
+<footer>
+Site proudly generated by
+<a href="https://jaspervdj.be/hakyll/" target="_blank">Hakyll</a>
+</footer>
+<button onclick="topFunction();PlaySound('totop2')" onmouseover="PlaySound('totop1')" onmouseout="StopSound('totop1')" id="totop">Top</button>
+<script>
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+        if (document.body.scrollTop > 682 || document.documentElement.scrollTop > 682) {
+            document.getElementById("totop").style.display = "block";
+        } else {
+            document.getElementById("totop").style.display = "none";
+        }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+    }
+</script>
+
+<!-- https://gist.github.com/allybee/5871749 -->
+<script>
+function targetBlank() {
+  var internal = location.host.replace("www.", "");
+  var a = document.getElementsByTagName('a');
+  for (var i = 0; i < a.length; i++) {
+    var the_host = a[i].host.replace("www.", "");
+    if( the_host != internal ) {
+      a[i].setAttribute('target', '_blank');
+    }
+  }
+};
+targetBlank();
+</script>
+
+<audio id="a_button" src="../audio/button/hover.ogg"></audio>
+<audio id="click_button" src="../audio/button/click.ogg"></audio>
+<audio id="dooropen1" src="../audio/door/dooropen1.ogg"></audio>
+<audio id="dooropen2" src="../audio/door/dooropen2.ogg"></audio>
+<audio id="totop1" src="../audio/button/totop1.ogg"></audio>
+<audio id="totop2" src="../audio/button/totop2.ogg"></audio>
+<script>
+function PlaySound(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.play();
+}
+
+function StopSound(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.pause();
+    thissound.currentTime = 0;
+}
+
+document.body.addEventListener("mouseover",function(e) {
+    e = e || window.event;
+    var targetElem = e.target || e.srcElement;
+    if (targetElem.nodeName == "A" && targetElem.className != "sourceLine") {
+        switch(targetElem.className) {
+            case "no":
+                PlaySound("no_button")
+            break;
+            default:
+                PlaySound("a_button")
+        }
+    }
+},false);
+
+document.body.addEventListener("mouseout",function(e) {
+    e = e || window.event;
+    var targetElem = e.target || e.srcElement;
+    if (targetElem.nodeName == "A" && targetElem.className != "sourceLine") {
+        switch(targetElem.className) {
+            case "no":
+                StopSound("no_button")
+            break;
+            default:
+                StopSound("a_button")
+        }
+    }
+},false);
+
+document.body.addEventListener("click",function(e) {
+    e = e || window.event;
+    var targetElem = e.target || e.srcElement;
+    if (targetElem.nodeName == "A" && targetElem.className != "sourceLine") {
+        if (targetElem.className == "no") {
+            PlaySound("no_click")
+        } else {
+            PlaySound("click_button");
+            switch(targetElem.className) {
+                case "key":
+                    setTimeout(function(){ 
+                        PlaySound("dooropen3");
+                    }, 500);
+                break;
+                case "rss":
+                    setTimeout(function(){ 
+                        PlaySound("dooropen2");
+                    }, 500);
+                break;
+                case "079":
+                    setTimeout(function(){ 
+                        PlaySound("dooropen079");
+                    }, 500);
+                break;
+                default:
+                    setTimeout(function(){ 
+                        PlaySound("dooropen1");
+                    }, 500);
+            }
+        }
+    }
+},false);
+</script>
+
+
+</body>
+</html>
